@@ -1,0 +1,332 @@
+namespace = game_start
+country_event = {
+	id = game_start.8
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		add_resource = { energy = 100	}
+		add_resource = { minerals = 100	}
+		add_resource = { alloys = 100	}
+		add_resource = { influence = 100 }
+
+		if = {
+			limit = {
+				OR = {
+					is_gestalt = no
+					has_valid_civic = civic_machine_servitor
+				}
+
+			}
+			add_resource = { consumer_goods = 100 }
+		}
+	
+		if = {
+			limit = {
+				OR = { has_civic = lrsk_gov_var_civic_automated_indolence has_origin = origin_mechanists }
+			}
+			give_technology = { message = no tech = tech_powered_exoskeletons }
+			give_technology = { message = no tech = tech_robotic_workers }
+		}
+		if = {
+			limit = {
+				has_civic = civic_corporate_dominion
+			}
+			give_technology = { message = no tech = tech_space_trading }
+		}
+	}
+
+	# Additional resources that may be changed by subspecies are granted in generate_start_buildings_and_districts
+}
+
+planet_event = {
+	id = game_start.22
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				is_capital = yes
+				NOT = { owner = { has_origin = origin_shattered_ring } }
+			}
+			add_district_and_planet_size_if_needed_effect = { district = district_mining }
+			add_district_and_planet_size_if_needed_effect = { district = district_generator }
+			add_district_and_planet_size_if_needed_effect = { district = district_generator }
+
+			if = {
+				limit = { owner = { has_authority = auth_machine_intelligence } }
+				add_district_and_planet_size_if_needed_effect = { district = district_nexus }
+				add_district_and_planet_size_if_needed_effect = { district = district_nexus }
+			}
+			else_if = {
+				limit = { owner = { has_authority = auth_hive_mind } }
+				add_district_and_planet_size_if_needed_effect = { district = district_hive }
+				add_district_and_planet_size_if_needed_effect = { district = district_hive }
+			}
+			else = {
+				add_district_and_planet_size_if_needed_effect = { district = district_city }
+				add_district_and_planet_size_if_needed_effect = { district = district_city }
+			}
+
+			if = {
+				limit = {
+					owner = { NOT = { has_authority = auth_machine_intelligence } }
+				}
+				add_district_and_planet_size_if_needed_effect = { district = district_farming }
+				add_district_and_planet_size_if_needed_effect = { district = district_farming }
+			}
+			if = {
+				limit = {
+					owner = { has_authority = auth_machine_intelligence }
+				}
+				add_district_and_planet_size_if_needed_effect = { district = district_generator }
+				add_district_and_planet_size_if_needed_effect = { district = district_generator }
+			}
+
+
+			if = {
+				limit = { owner = { is_gestalt = no } }
+				add_building = building_factory_1
+				add_building = building_commercial_zone
+			}
+		}
+		else_if = {
+			limit = {
+				is_capital = yes
+				owner = { has_origin = origin_shattered_ring }
+			}
+			add_building = building_foundry_1
+			add_building = building_factory_1
+			if = {
+				limit = {
+					owner = {
+						is_megacorp = no
+						is_spiritualist = no
+						is_gestalt = no
+					}
+				}
+				add_building = building_autochthon_monument
+			}
+			else_if = {
+				limit = {
+					owner = { is_spiritualist = yes }
+				}
+				add_building = building_temple
+			}
+			else_if = {
+				limit = {
+					owner = { is_megacorp = yes }
+				}
+				add_building = building_corporate_monument
+			}
+			else_if = {
+				limit = {
+					owner = { is_hive_empire = yes }
+				}
+				add_building = building_hive_node
+			}
+			else_if = {
+				limit = {
+					owner = {
+						is_machine_empire = yes
+						NOT = { has_valid_civic = civic_machine_servitor }
+					}
+				}
+				add_building = building_simulation_1
+			}
+			if = {
+				limit = {
+					owner = { is_gestalt = no }
+				}
+				add_district = district_rw_commercial
+			}
+			else_if = {
+				limit = {
+					owner = { is_hive_empire = yes }
+				}
+				add_district = district_rw_hive
+			}
+			else = {
+				add_district = district_rw_nexus
+			}
+		}
+		else = {
+			add_district_and_planet_size_if_needed_effect = { district = district_generator }
+			add_district_and_planet_size_if_needed_effect = { district = district_mining }
+
+			if = {
+				limit = { owner = { has_authority = auth_machine_intelligence } }
+				add_district_and_planet_size_if_needed_effect = { district = district_nexus }
+				add_district_and_planet_size_if_needed_effect = { district = district_generator }
+				add_district_and_planet_size_if_needed_effect = { district = district_generator }
+			}
+			else_if = {
+				limit = { owner = { has_authority = auth_hive_mind } }
+				add_district_and_planet_size_if_needed_effect = { district = district_hive }
+				add_district_and_planet_size_if_needed_effect = { district = district_farming }
+			}
+			else = {
+				add_district_and_planet_size_if_needed_effect = { district = district_city }
+				add_district_and_planet_size_if_needed_effect = { district = district_farming }
+			}
+
+			if = {
+				limit = { owner = { OR = { has_civic = lrsk_gov_var_civic_automated_indolence has_origin = origin_mechanists } } }
+				add_building = building_robot_assembly_plant
+			}
+			if = {
+				limit = {
+					owner = {
+						has_origin = origin_necrophage
+						NOT = { has_civic = civic_fanatic_purifiers } #purges them instead
+						NOT = { has_ai_personality_behaviour = purger }
+					}
+				}
+				add_building = building_necrophage_elevation_chamber
+			}
+		}
+	}
+}
+
+# on_initialize_advanced_colony: add additional pops
+planet_event = {
+	id = game_start.23
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = { is_capital = yes }
+
+			if = {
+				limit = { owner = { has_authority = auth_machine_intelligence } }
+				while = {
+					count = 13
+					create_pop = { species = owner_main_species }
+				}
+			}
+			else_if = {
+				limit = { owner = { has_authority = auth_hive_mind } }
+				while = {
+					count = 16
+					create_pop = { species = owner_main_species }
+				}
+			}
+			else_if = {
+				limit = { owner = { OR = { has_civic = lrsk_gov_var_civic_automated_indolence has_origin = origin_mechanists } } }
+				random_galaxy_species = {
+					limit = {
+						has_species_flag = mechanical_species@root.owner
+					}
+					save_event_target_as = mechanical_species
+				}
+				while = {
+					count = 6
+					create_pop = {
+						species = event_target:mechanical_species
+					}
+				}
+				while = {
+					count = 12
+					create_pop = { species = owner_main_species }
+				}
+			}
+			else_if = {
+				limit = {
+					owner = {
+						OR = {
+							has_origin = origin_syncretic_evolution
+							has_origin = origin_necrophage
+						}
+					}
+				}
+				random_galaxy_species = {
+					limit = {
+						has_species_flag = syncretic_species@root.owner
+					}
+					save_event_target_as = syncretic_species
+				}
+				while = {
+					count = 8
+					create_pop = { species = event_target:syncretic_species }
+				}
+				while = {
+					count = 10
+					create_pop = { species = owner_main_species }
+				}
+			}
+			else = {
+				while = {
+					count = 18
+					create_pop = { species = owner_main_species }
+				}
+			}
+		}
+		else = {
+			if = {
+				limit = { owner = { has_authority = auth_machine_intelligence } }
+				while = {
+					count = 15
+					create_pop = { species = owner_main_species }
+				}
+			}
+			else_if = {
+				limit = { owner = { has_authority = auth_hive_mind } }
+				while = {
+					count = 18
+					create_pop = { species = owner_main_species }
+				}
+			}
+			else_if = {
+				limit = { owner = { OR = { has_civic = lrsk_gov_var_civic_automated_indolence has_origin = origin_mechanists } } }
+				random_galaxy_species = {
+					limit = {
+						has_species_flag = mechanical_species@root.owner
+					}
+					save_event_target_as = mechanical_species
+				}
+				while = {
+					count = 4
+					create_pop = {
+						species = event_target:mechanical_species
+					}
+				}
+				while = {
+					count = 7
+					create_pop = { species = owner_main_species }
+				}
+			}
+			else_if = {
+				limit = {
+					owner = {
+						OR = {
+							has_origin = origin_syncretic_evolution
+							has_origin = origin_necrophage
+						}
+					}
+				}
+				random_galaxy_species = {
+					limit = {
+						has_species_flag = syncretic_species@root.owner
+					}
+					save_event_target_as = syncretic_species
+				}
+				while = {
+					count = 4
+					create_pop = { species = event_target:syncretic_species }
+				}
+				while = {
+					count = 6
+					create_pop = { species = owner_main_species }
+				}
+			}
+			else = {
+				while = {
+					count = 10
+					create_pop = { species = owner_main_species }
+				}
+			}
+		}
+	}
+}

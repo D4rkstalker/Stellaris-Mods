@@ -1,0 +1,225 @@
+# ####################
+#  Planet killer beam?
+# ####################
+
+#weapon_component_template = {
+#	key = "PLANET_DESTRUCTION_COMPONENT"
+#	size = titanic
+#	type = instant
+#	use_ship_kill_target = no
+#
+#	icon = GFX_technology_unknown
+#	icon_frame = 1
+#
+#	component_set = "PLANET_KILLER_TITANIC_1"
+#
+#	planet_destruction_gfx = "neutron_planet_gfx"
+#}
+
+weapon_component_template = { # World Cracker
+	key = "PLANET_KILLER_TITANIC_CRACKER"
+	size = titanic
+	type = instant
+	use_ship_kill_target = no
+
+	prerequisites = { "tech_pk_cracker" }
+
+	icon = GFX_ship_part_world_cracker
+	icon_frame = 1
+
+	size_restriction = { colossus }
+	component_set = "PLANET_KILLER_TITANIC_CRACKER"
+
+	damage = 25000
+	windup = 50
+	total_fire_time = 125
+	range = 200
+	accuracy = 0.1
+	power = -375
+	
+	hull_damage = 1
+	armor_damage = 1
+	shield_damage = 1
+	tracking = 0.1
+
+	firing_arc = 25.0
+	min_range = 10
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_artillery weapon_role_anti_armor }
+
+	ai_weight = {
+		weight = 999
+	}
+}
+
+weapon_component_template = { # Pacifier
+	key = "PLANET_KILLER_TITANIC_SHIELDER"
+	size = titanic
+	type = instant
+	use_ship_kill_target = no
+
+	prerequisites = { "tech_pk_shielder" }
+
+	icon = GFX_ship_part_global_pacifier
+	icon_frame = 1
+
+	size_restriction = { colossus }
+	component_set = "PLANET_KILLER_TITANIC_SHIELDER"
+
+	damage = 15000
+	windup = 30
+	total_fire_time = 125
+	range = 275
+	accuracy = 0.5
+	power = -375
+	
+	hull_damage = 0.5
+	armor_damage = 0.25
+	shield_damage = 2.5
+	tracking = 0.5
+
+	firing_arc = 25.0
+	min_range = 10
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_artillery weapon_role_anti_shield }
+
+
+	planet_destruction_gfx = "global_pacifier_gfx"
+}
+
+weapon_component_template = { # Neutron Beam
+	key = "PLANET_KILLER_TITANIC_NEUTRON"
+	size = titanic
+	type = instant
+	use_ship_kill_target = no
+
+	prerequisites = { "tech_pk_neutron" }
+
+	icon = GFX_ship_part_neutron_sweep
+	icon_frame = 1
+
+	size_restriction = { colossus }
+	component_set = "PLANET_KILLER_TITANIC_NEUTRON"
+	
+	damage = 20000
+	windup = 50
+	total_fire_time = 125
+	range = 200
+	accuracy = 1
+	power = -375
+	
+	armor_penetration = 1
+	shield_penetration = 1
+	tracking = 0.1
+
+	firing_arc = 25.0
+	min_range = 10
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_artillery weapon_role_anti_hull }
+
+	planet_destruction_gfx = "neutron_planet_gfx"
+}
+
+weapon_component_template = { # God Ray
+	key = "PLANET_KILLER_TITANIC_GODRAY"
+	size = titanic
+	type = instant
+	use_ship_kill_target = no
+
+	prerequisites = { "tech_pk_godray" }
+
+	icon = GFX_ship_part_divine_enforcer
+	icon_frame = 1
+
+	size_restriction = { colossus }
+	component_set = "PLANET_KILLER_TITANIC_GODRAY"
+
+	damage = 25000
+	windup = 50
+	total_fire_time = 125
+	range = 200
+	accuracy = 0.1
+	power = -375
+	
+	hull_damage = 1.5
+	armor_damage = 0.50
+	shield_damage = 1.50
+	tracking = 0.1
+
+	firing_arc = 25.0
+	min_range = 10
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_artillery weapon_role_anti_shield }
+
+
+	planet_destruction_gfx = "god_ray_gfx"
+}
+
+weapon_component_template = { # Nanobot Assimilation
+	key = "PLANET_KILLER_TITANIC_NANOBOTS"
+	size = titanic
+	type = instant
+	use_ship_kill_target = no
+
+	prerequisites = { "tech_pk_nanobots" }
+
+	icon = GFX_ship_part_nanobot_diffuser
+	icon_frame = 1
+
+	size_restriction = { colossus }
+	component_set = "PLANET_KILLER_TITANIC_NANOBOTS"
+	
+	damage = 25000
+	windup = 50
+	total_fire_time = 125
+	range = 200
+	accuracy = 0.1
+	power = -375
+	
+	hull_damage = 1.50
+	armor_damage = 1.50
+	shield_damage = 0.50
+	tracking = 0.1
+
+	firing_arc = 25.0
+	min_range = 10
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_artillery weapon_role_anti_shield }
+
+	planet_destruction_gfx = "assimilation_nanobots_gfx"
+}
+
+weapon_component_template = {
+	key = "PLANET_KILLER_TITANIC_STAR_CRACKER"
+	size = titanic
+	type = instant
+	use_ship_kill_target = no
+	can_destroy_stars = yes
+
+	prerequisites = { "tech_btc_1" }
+
+	icon = GFX_ship_part_nanobot_diffuser
+	icon_frame = 1
+
+	size_restriction = { star_eater }
+	component_set = "PLANET_KILLER_TITANIC_STAR_CRACKER"
+
+	damage = 50000
+	windup = 50
+	total_fire_time = 125
+	range = 200
+	accuracy = 0.1
+	power = -375
+	
+	hull_damage = 1.00
+	armor_damage = 1.00
+	shield_damage = 1.00
+	tracking = 0.1
+
+	firing_arc = 25.0
+	min_range = 10
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_artillery weapon_role_anti_armor }
+
+	planet_destruction_gfx = "star_destroyer_effect_gfx"
+}

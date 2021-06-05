@@ -1,0 +1,49 @@
+namespace = immersive_robotics
+
+###################################################
+#			Assimilation Events				  	  #
+###################################################
+
+event = {
+	id = immersive_robotics.10
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		every_playable_country = {
+			limit = {
+				has_country_flag = synthetic_empire
+			}
+			country_event = { id = immersive_robotics.11 } 
+		}
+	}
+
+}
+
+country_event = {
+	id = immersive_robotics.11
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		every_owned_planet = {
+			limit = {
+				any_owned_pop = {
+					OR = {
+						has_job = synthetic_assimilation_worker
+						has_job = synthetic_assimilation_spec
+						has_job = synthetic_assimilation_ruler
+					}
+				}
+			}
+			
+			IR_synthetic_assimilation_effect = yes
+			
+
+		}
+	}
+
+}
+
+
+

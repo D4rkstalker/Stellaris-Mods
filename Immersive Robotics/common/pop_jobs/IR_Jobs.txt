@@ -1,0 +1,126 @@
+synthetic_assimilation_worker = {
+	category = worker
+	condition_string = WORKER_JOB_TRIGGER
+	clothes_texture_index = 3
+	icon = synthetic_assimilation
+
+	possible_pre_triggers = {
+		is_being_purged = no
+		is_being_assimilated = no
+	}
+
+	possible = {
+		NOT = { has_trait = trait_mechanical }
+		worker_job_check_trigger = yes
+	}
+
+	resources = {
+		category = planet_jobs
+		upkeep = {
+			trigger = {
+				is_organic_species = yes
+				is_lithoid = no
+			}
+			food = @living_standard_food_normal
+		}
+		upkeep = {
+			trigger = {
+				is_lithoid = yes
+			}
+			minerals = @living_standard_food_normal
+		}
+		upkeep = {
+			energy = @living_standard_energy_normal
+			alloys = 2
+		}
+	}
+
+	weight = {
+		weight = 2000
+
+	}
+}
+synthetic_assimilation_spec = {
+	category = specialist
+	condition_string = SPECIALIST_JOB_TRIGGER
+	clothes_texture_index = 3
+	icon = synthetic_assimilation
+
+	possible_pre_triggers = {
+		is_being_purged = no
+		is_being_assimilated = no
+	}
+
+	possible = {
+		NOT = { has_trait = trait_mechanical }
+		specialist_job_check_trigger = yes
+	}
+
+	resources = {
+		category = planet_jobs
+		upkeep = {
+			trigger = {
+				is_organic_species = yes
+				is_lithoid = no
+			}
+			food = @living_standard_food_normal
+		}
+		upkeep = {
+			trigger = {
+				is_lithoid = yes
+			}
+			minerals = @living_standard_food_normal
+		}
+		upkeep = {
+			energy = @living_standard_energy_normal
+			alloys = 2
+		}
+	}
+
+	weight = {
+		weight = 2000
+
+	}
+}
+synthetic_assimilation_ruler = {
+	category = ruler
+	condition_string = RULER_JOB_TRIGGER
+	clothes_texture_index = 3
+	icon = synthetic_assimilation
+
+	possible_pre_triggers = {
+		is_being_purged = no
+		is_being_assimilated = no
+	}
+
+	possible = {
+		NOT = { has_trait = trait_mechanical }
+		ruler_job_check_trigger = yes
+	}
+
+	resources = {
+		category = planet_jobs
+		upkeep = {
+			trigger = {
+				is_organic_species = yes
+				is_lithoid = no
+			}
+			food = @living_standard_food_normal
+		}
+		upkeep = {
+			trigger = {
+				is_lithoid = yes
+			}
+			minerals = @living_standard_food_normal
+		}
+		upkeep = {
+			energy = @living_standard_energy_normal
+			alloys = 2
+		}
+	}
+
+	weight = {
+		weight = 2000
+
+	}
+}

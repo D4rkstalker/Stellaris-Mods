@@ -1,0 +1,37 @@
+on_game_start = { # Origin setups (global scope)
+	events = {
+		AI_boost.0 
+		AI_boost.1
+	}
+}
+
+on_bi_yearly_pulse = {
+	events = {
+		fleet_reinforcement.1
+	}
+}
+
+on_five_year_pulse = {
+	events = {
+		fleet_reinforcement.10
+	}
+}
+
+on_yearly_pulse = {
+	events = {
+		AutoArmy.1
+	}
+}
+
+on_tech_increased = {
+	events = {
+		AI_boost.2
+	}
+}
+
+on_monthly_pulse = {
+	events = {
+		AI_boost.100
+	}
+
+}

@@ -1,0 +1,25 @@
+IR_synthetic_assimilation_effect = {
+	every_owned_pop = {
+		limit = {
+			OR = { 
+				has_job = synthetic_assimilation_worker
+				has_job = synthetic_assimilation_spec
+				has_job = synthetic_assimilation_ruler
+			}
+		}
+		kill_pop = yes
+		prev = {
+			create_pop = {
+				species = root.owner
+				ethos = root.owner
+			}
+			owner = {
+				if = {
+					limit = { has_ascension_perk = ap_become_the_crisis }
+					complete_crisis_objective = crisobj_purge_pops
+				}
+			}
+		}
+		
+	}
+}

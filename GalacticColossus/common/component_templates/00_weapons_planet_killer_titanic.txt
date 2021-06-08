@@ -30,17 +30,17 @@ weapon_component_template = { # World Cracker
 	size_restriction = { colossus }
 	component_set = "PLANET_KILLER_TITANIC_CRACKER"
 
-	damage = 25000
+	damage = 35000
 	windup = 50
 	total_fire_time = 125
 	range = 200
-	accuracy = 0.1
+	accuracy = 0.25
 	power = -375
 	
 	hull_damage = 1
 	armor_damage = 1
 	shield_damage = 1
-	tracking = 0.1
+	tracking = 0.25
 
 	firing_arc = 25.0
 	min_range = 10
@@ -66,7 +66,7 @@ weapon_component_template = { # Pacifier
 	size_restriction = { colossus }
 	component_set = "PLANET_KILLER_TITANIC_SHIELDER"
 
-	damage = 15000
+	damage = 25000
 	windup = 30
 	total_fire_time = 125
 	range = 275
@@ -204,17 +204,17 @@ weapon_component_template = {
 	size_restriction = { star_eater }
 	component_set = "PLANET_KILLER_TITANIC_STAR_CRACKER"
 
-	damage = 50000
+	damage = 80000
 	windup = 50
 	total_fire_time = 125
 	range = 200
-	accuracy = 0.1
+	accuracy = 0.3
 	power = -375
 	
 	hull_damage = 1.00
 	armor_damage = 1.00
 	shield_damage = 1.00
-	tracking = 0.1
+	tracking = 0.3
 
 	firing_arc = 25.0
 	min_range = 10

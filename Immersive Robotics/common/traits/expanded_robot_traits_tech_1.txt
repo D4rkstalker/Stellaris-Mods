@@ -18,8 +18,8 @@ trait_overhual_tech_1 = {
 		planet_pops_upkeep_mult = 0.1
 		pop_assembly_speed = -0.1
 		
-		pop_environment_tolerance = 0.1
-		planet_jobs_produces_mult = 0.1
+		#pop_environment_tolerance = 0.1
+		#planet_jobs_produces_mult = 0.1
 	}
 
 }
@@ -103,9 +103,9 @@ trait_overhual_missile_1 = {
 		planet_pop_assemblers_upkeep_mult = 0.1
 		planet_pops_upkeep_mult = 0.1
 				
-		army_damage_mult = 0.1
-		army_morale_damage_mult = 0.1
-		army_collateral_damage_mult = 0.1
+		army_damage_mult = 0.2
+		army_morale_damage_mult = 0.2
+		army_collateral_damage_mult = 0.2
 
 	}
 
@@ -128,6 +128,9 @@ trait_overhual_strikecraft_1 = {
 	}
 	
 	modifier = { 
+		species_empire_size_mult = -0.1
+		army_disengage_chance_mult = 0.2
+		army_health = 0.2
 	}
 
 }
@@ -149,7 +152,8 @@ trait_overhual_radar_1 = {
 	}
 	
 	modifier = { 
-
+		planet_jobs_unity_produces_mult = 0.1
+		species_empire_size_mult = -0.05
 	}
 
 }
@@ -254,6 +258,8 @@ trait_overhual_jamming_1 = {
 	}
 	
 	modifier = { 
+		army_health = 0.15
+		army_disengage_chance_mult = 0.15
 	}
 
 }

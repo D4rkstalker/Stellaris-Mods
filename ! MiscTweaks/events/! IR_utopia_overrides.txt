@@ -26,7 +26,7 @@ country_event = {
 			}
 
 			effect = {
-				if = { limit = { host_has_dlc = "Synthetic Dawn Story Pack" }
+				#if = { limit = { host_has_dlc = "Synthetic Dawn Story Pack" }
 					prev = {
 						switch = {
 							trigger = is_species_class
@@ -228,7 +228,7 @@ country_event = {
 							DRG = { prev = { change_species_characteristics = { portrait = dragon_normal } } }
 						}
 					}
-				}
+				#}
 				rename_species = {
 					prompt_country = root #If targeted country is a player they will get a popup asking for a name/plural/adjective combo. Otherwise the species will get a random name from the specified name_list
 					name_list = ascension_list

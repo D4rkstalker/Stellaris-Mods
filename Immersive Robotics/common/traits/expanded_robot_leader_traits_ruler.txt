@@ -121,3 +121,111 @@ trait_overhual_fabrication_4_ruler = {
 			starbase_shipyard_build_speed_mult = 0.4
         }
 }
+trait_overhual_jamming_1_ruler = {
+        icon =  "gfx/interface/icons/traits/trait_overhual_jamming_1.dds"
+        cost = 0
+        leader_trait = yes
+        leader_class = { ruler }
+        randomized = no
+        initial = no
+        modification = no
+        modifier = {
+			intel_encryption_add = 1
+        }
+}
+trait_overhual_jamming_2_ruler = {
+        icon =  "gfx/interface/icons/traits/trait_overhual_jamming_2.dds"
+        cost = 0
+        leader_trait = yes
+        leader_class = { ruler }
+        randomized = no
+        initial = no
+        modification = no
+        modifier = {
+			intel_encryption_add = 2
+        }
+}
+trait_overhual_jamming_3_ruler = {
+        icon =  "gfx/interface/icons/traits/trait_overhual_jamming_3.dds"
+        cost = 0
+        leader_trait = yes
+        leader_class = { ruler }
+        randomized = no
+        initial = no
+        modification = no
+        modifier = {
+			intel_encryption_add = 3
+        }
+}
+trait_overhual_jamming_4_ruler = {
+        icon =  "gfx/interface/icons/traits/trait_overhual_jamming_4.dds"
+        cost = 0
+        leader_trait = yes
+        leader_class = { ruler }
+        randomized = no
+        initial = no
+        modification = no
+        modifier = {
+			intel_encryption_add = 4
+        }
+}
+trait_overhual_radar_1_ruler = {
+        icon =  "gfx/interface/icons/traits/trait_overhual_radar_1.dds"
+        cost = 0
+        leader_trait = yes
+        leader_class = { ruler }
+        randomized = no
+        initial = no
+        modification = no
+        modifier = {
+			planet_sensor_range_add = 1
+			ship_sensor_range_add = 1
+			intel_decryption_add = 1
+			add_base_country_intel = 5
+        }
+}
+trait_overhual_radar_2_ruler = {
+        icon =  "gfx/interface/icons/traits/trait_overhual_radar_2.dds"
+        cost = 0
+        leader_trait = yes
+        leader_class = { ruler }
+        randomized = no
+        initial = no
+        modification = no
+        modifier = {
+			planet_sensor_range_add = 2
+			ship_sensor_range_add = 2
+			intel_decryption_add = 2
+			add_base_country_intel = 10
+        }
+}
+trait_overhual_radar_3_ruler = {
+        icon =  "gfx/interface/icons/traits/trait_overhual_radar_3.dds"
+        cost = 0
+        leader_trait = yes
+        leader_class = { ruler }
+        randomized = no
+        initial = no
+        modification = no
+        modifier = {
+			planet_sensor_range_add = 3
+			ship_sensor_range_add = 3
+			intel_decryption_add = 3
+			add_base_country_intel = 15
+        }
+}
+trait_overhual_radar_4_ruler = {
+        icon =  "gfx/interface/icons/traits/trait_overhual_radar_4.dds"
+        cost = 0
+        leader_trait = yes
+        leader_class = { ruler }
+        randomized = no
+        initial = no
+        modification = no
+        modifier = {
+			planet_sensor_range_add = 4
+			ship_sensor_range_add = 4
+			intel_decryption_add = 4
+			add_base_country_intel = 20
+        }
+}

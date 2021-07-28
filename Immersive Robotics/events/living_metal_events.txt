@@ -21,6 +21,7 @@ country_event = {
 			modify_species = {
 				species = this
 				add_trait = trait_living_metal
+				add_traits_at_start_of_list = yes
 			}
 			species = { save_event_target_as = living_metal_species }
 		}

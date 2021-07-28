@@ -18,7 +18,7 @@ trait_overhual_tech_3 = {
 		planet_pop_assemblers_exotic_gases_upkeep_add = 0.3
 		planet_pop_assemblers_rare_crystals_upkeep_add = 0.3
 		planet_pop_assemblers_nanites_upkeep_add = 0.1
-		planet_pops_upkeep_mult = 0.3
+		
 		pop_assembly_speed = -0.3
 		
 		pop_environment_tolerance = 0.3

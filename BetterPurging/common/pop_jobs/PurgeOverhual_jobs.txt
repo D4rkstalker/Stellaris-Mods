@@ -1,0 +1,434 @@
+PO_bio_slurry = {
+	category = purge
+	is_capped_by_modifier = yes
+	clothes_texture_index = 2
+	ignores_sapience = yes
+
+	pop_modifier = {
+		pop_housing_usage_add = -0.5
+	}
+
+	possible = {
+		has_purge_type = { type = purge_processing }
+	}
+
+	resources = {
+		category = planet_jobs
+		produces = {
+			energy = 30
+			food = 40
+			exotic_gases = 10
+		}
+		produces = {
+			trigger = {
+				planet = { has_active_building = building_energy_grid }
+			}
+			energy = 10
+		}
+		produces = {
+			trigger = {
+				planet = { has_active_building = building_energy_nexus }
+			}
+			energy = 20
+		}
+		produces = {
+			trigger = {
+				is_organic_species = yes
+				is_lithoid = no
+				planet = { has_active_building = building_food_processing_facility }
+			}
+			food = 10
+		}
+		produces = {
+			trigger = {
+				is_organic_species = yes
+				is_lithoid = no
+				planet = { has_active_building = building_food_processing_center }
+			}
+			food = 20
+		}
+	}
+
+	weight = {
+		weight = 9999
+	}
+}
+
+PO_bio_slurry_machine = {
+	category = purge
+	is_capped_by_modifier = yes
+	clothes_texture_index = 2
+	ignores_sapience = yes
+
+	pop_modifier = {
+		pop_housing_usage_add = -0.5
+	}
+
+	possible = {
+		has_purge_type = { type = purge_processing }
+	}
+
+	resources = {
+		category = planet_jobs
+		produces = {
+			energy = 60
+			exotic_gases = 10
+		}
+		produces = {
+			trigger = {
+				planet = { has_active_building = building_energy_grid }
+			}
+			energy = 10
+		}
+		produces = {
+			trigger = {
+				planet = { has_active_building = building_energy_nexus }
+			}
+			energy = 20
+		}
+	}
+
+	weight = {
+		weight = 9999
+	}
+}
+
+PO_lithoid_fracking = {
+	category = purge
+	is_capped_by_modifier = yes
+	clothes_texture_index = 2
+	ignores_sapience = yes
+
+	pop_modifier = {
+		pop_housing_usage_add = -0.5
+	}
+
+	possible = {
+		has_purge_type = { type = purge_processing }
+	}
+
+	resources = {
+		category = planet_jobs
+		produces = {
+			minerals = 60
+			volatile_motes = 10
+			rare_crystals = 10
+		}
+		produces = {
+			trigger = {
+				is_lithoid = yes
+				planet = { has_active_building = building_mineral_purification_plant }
+			}
+			minerals = 10
+		}
+		produces = {
+			trigger = {
+				is_lithoid = yes
+				planet = { has_active_building = building_mineral_purification_hub }
+			}
+			minerals = 20
+		}
+	}
+
+	weight = {
+		weight = 9999
+	}
+}
+PO_disassembly = {
+	category = purge
+	is_capped_by_modifier = yes
+	clothes_texture_index = 2
+	ignores_sapience = yes
+
+	pop_modifier = {
+		pop_housing_usage_add = -0.5
+	}
+
+	possible = {
+		has_purge_type = { type = purge_processing }
+	}
+	planet_modifier = {
+		trade_value_add = 10
+	}
+	planet_modifier = {
+		planet_pop_assembly_add = 2
+	}
+
+	resources = {
+		category = planet_jobs
+		produces = {
+			minerals = 10
+			alloys = 20
+			rare_crystals = 10
+			physics_research = 10
+			engineering_research = 10
+			consumer_goods = 10
+		}
+	}
+
+	weight = {
+		weight = 9999
+	}
+}
+
+PO_disassembly_machine = {
+	category = purge
+	is_capped_by_modifier = yes
+	clothes_texture_index = 2
+	ignores_sapience = yes
+
+	pop_modifier = {
+		pop_housing_usage_add = -0.5
+	}
+
+	possible = {
+		has_purge_type = { type = purge_processing }
+	}
+	planet_modifier = {
+		planet_pop_assembly_add = 5
+	}
+
+	resources = {
+		category = planet_jobs
+		produces = {
+			minerals = 10
+			alloys = 30
+			rare_crystals = 10
+			physics_research = 10
+			engineering_research = 10
+		}
+	}
+
+	weight = {
+		weight = 9999
+	}
+}
+
+PO_experimentation = {
+	category = purge
+	is_capped_by_modifier = yes
+	clothes_texture_index = 2
+	ignores_sapience = yes
+
+	pop_modifier = {
+		pop_housing_usage_add = -0.5
+	}
+
+	possible = {
+		has_purge_type = { type = purge_processing }
+	}
+
+	resources = {
+		category = planet_jobs
+		produces = {
+			physics_research = 40
+			engineering_research = 40
+			society_research = 40
+		}
+		produces = {
+			trigger = {
+				is_lithoid = yes
+			}
+			minerals = 10
+			physics_research = 10
+		}
+		produces = {
+			trigger = {
+				is_organic_species = yes
+			}
+			food = 10
+			society_research = 10
+		}
+		produces = {
+			trigger = {
+				is_robotic_species = yes
+			}
+			alloys = 10
+			engineering_research = 10
+		}
+		upkeep = {
+			trigger = {
+				is_robotic_species = yes
+			}
+			energy = 10
+		}
+		upkeep = {
+			trigger = {
+				is_organic_species = yes
+			}
+			food = 10
+		}
+		upkeep = {
+			trigger = {
+				is_lithoid = yes
+			}
+			minerals = 10
+		}
+
+	}
+
+	weight = {
+		weight = 9999
+	}
+}
+
+PO_gladiator = {
+	category = purge
+	is_capped_by_modifier = yes
+	clothes_texture_index = 2
+	ignores_sapience = yes
+
+	pop_modifier = {
+		pop_housing_usage_add = -0.5
+	}
+
+	possible = {
+		has_purge_type = { type = purge_processing }
+	}
+	
+	planet_modifier = {
+		planet_amenities_add = 20
+	}
+
+	resources = {
+		category = planet_entertainers
+		produces = {
+			unity = 50
+		}
+		produces = {
+			trigger = {
+				is_lithoid = yes
+			}
+			minerals = 10
+		}
+		produces = {
+			trigger = {
+				is_organic_species = yes
+			}
+			food = 10
+		}
+		produces = {
+			trigger = {
+				is_robotic_species = yes
+			}
+			alloys = 10
+		}
+	}
+
+	weight = {
+		weight = 9999
+	}
+}
+
+
+
+
+### Remove old processing purge job ### 
+PO_purge_standby = {
+	category = purge
+	is_capped_by_modifier = no
+	clothes_texture_index = 2
+
+	ignores_sapience = yes
+	possible = {
+		has_purge_type = { type = purge_processing }
+		OR = {
+			has_citizenship_type = { type = citizenship_purge_machine }
+			has_citizenship_type = { type = citizenship_purge }
+		}
+	}
+	
+	weight = {
+		weight = 1
+		modifier = {
+			factor = 0
+			planet = { 
+				OR = {
+					has_active_building = PO_Bio_Slurry 
+					has_active_building = PO_Bio_Slurry_Machine 
+					has_active_building = PO_Lithoid_Cracker 
+					has_active_building = PO_Dissassembly 
+					has_active_building = PO_Dissassembly_Machine 
+					has_active_building = PO_experimentation 
+					has_active_building = PO_colossium 
+				}
+			}
+
+		}
+	}
+
+}
+purge = {
+	category = purge
+	is_capped_by_modifier = no
+	clothes_texture_index = 2
+
+	ignores_sapience = yes
+
+	possible = {
+		NOT = { 
+			has_purge_type = { type = purge_processing }
+		}
+		OR = {
+			has_citizenship_type = { type = citizenship_purge_machine }
+			has_citizenship_type = { type = citizenship_purge }
+			has_pop_flag = event_purge
+		}
+	}
+
+	resources = {
+		category = planet_jobs
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { has_valid_civic = civic_fanatic_purifiers }
+			}
+			unity = 2
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { has_valid_civic = civic_hive_devouring_swarm }
+			}
+			society_research = 2
+		}
+	}
+
+	weight = {
+		weight = @special_job_weight
+
+		modifier = {
+			factor = 200 # brings @special_job_weight up to 2
+			exists = planet
+			exists = planet.controller
+			OR = {
+				has_pop_flag = event_purge
+				planet.controller = {
+					OR = {
+						is_country_type = swarm
+						is_country_type = ai_empire
+					}
+				}
+			}
+		}
+
+		modifier = {
+			factor = 9999 # u die when flagged
+			has_pop_flag = event_purge
+		}
+
+		modifier = {
+			factor = 9999 # u die when crisis'd
+			exists = planet
+			exists = planet.controller
+			planet.controller = {
+				OR = {
+					is_country_type = swarm
+					is_country_type = ai_empire
+					# extradimensionals just bombard you
+				}
+			}
+		}
+	}
+}
+

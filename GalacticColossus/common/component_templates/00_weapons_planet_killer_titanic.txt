@@ -32,8 +32,8 @@ weapon_component_template = { # World Cracker
 
 	damage = 35000
 	windup = 50
-	total_fire_time = 125
-	range = 200
+	total_fire_time = 100
+	range = 300
 	accuracy = 0.25
 	power = -375
 	
@@ -68,8 +68,8 @@ weapon_component_template = { # Pacifier
 
 	damage = 25000
 	windup = 30
-	total_fire_time = 125
-	range = 275
+	total_fire_time = 100
+	range = 400
 	accuracy = 0.5
 	power = -375
 	
@@ -103,8 +103,8 @@ weapon_component_template = { # Neutron Beam
 	
 	damage = 20000
 	windup = 50
-	total_fire_time = 125
-	range = 200
+	total_fire_time = 100
+	range = 300
 	accuracy = 1
 	power = -375
 	
@@ -136,8 +136,8 @@ weapon_component_template = { # God Ray
 
 	damage = 25000
 	windup = 50
-	total_fire_time = 125
-	range = 200
+	total_fire_time = 100
+	range = 300
 	accuracy = 0.1
 	power = -375
 	
@@ -171,8 +171,8 @@ weapon_component_template = { # Nanobot Assimilation
 	
 	damage = 25000
 	windup = 50
-	total_fire_time = 125
-	range = 200
+	total_fire_time = 100
+	range = 300
 	accuracy = 0.1
 	power = -375
 	
@@ -206,8 +206,8 @@ weapon_component_template = {
 
 	damage = 80000
 	windup = 50
-	total_fire_time = 125
-	range = 200
+	total_fire_time = 100
+	range = 300
 	accuracy = 0.3
 	power = -375
 	

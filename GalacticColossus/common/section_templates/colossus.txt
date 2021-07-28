@@ -34,7 +34,7 @@ ship_section_template = {
 
 	small_utility_slots = 0
 	medium_utility_slots = 0
-	large_utility_slots = 6
+	large_utility_slots = 20
 	aux_utility_slots = 9
 
 	resources = {

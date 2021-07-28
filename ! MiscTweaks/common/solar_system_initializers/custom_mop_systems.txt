@@ -1,0 +1,474 @@
+pc_mining_initializer = {
+    class = sc_black_hole
+    usage = misc_system_init
+    usage_odds = {
+		base = 9999
+		modifier = {
+			factor = 0
+			has_star_flag = empire_cluster
+		}
+        modifier = {
+            factor = 0
+            is_fe_cluster = yes
+        }
+    }
+	spawn_chance = 9999
+	max_instances = 1
+
+    planet = {
+        class = star
+    }
+
+    change_orbit = 40
+
+    planet = {
+        count = { min = 1 max = 4 }
+        orbit_distance = { min = 20 max = 25 }
+    }
+    planet = {
+        count = { min = 1 max = 4 }
+        orbit_distance = { min = 15 max = 25 }
+    }
+
+    planet = {
+        class = random_non_colonizable
+        orbit_distance = 30
+
+        moon = {
+            class = random_non_colonizable
+            orbit_distance = 10
+        }
+    }
+
+    change_orbit = 10
+
+    planet = {
+        count = { min = 1 max = 4 }
+        orbit_distance = { min = 25 max = 35 }
+
+        change_orbit = 5
+
+        moon = {
+            count = { min = 0 max = 2 }
+            orbit_distance = 5
+        }
+    }
+
+	change_orbit = 15
+     planet = {
+        class = pc_mining
+        orbit_distance = { min = 25 max = 35 }
+
+        change_orbit = 5
+
+        moon = {
+            count = { min = 1 max = 2 }
+            orbit_distance = 5
+        }
+    }
+
+}
+pc_energy_initializer = {
+    class = sc_a
+    usage = misc_system_init
+    usage_odds = {
+		base = 9999
+		modifier = {
+			factor = 0
+			has_star_flag = empire_cluster
+		}
+        modifier = {
+            factor = 0
+            is_fe_cluster = yes
+        }
+    }
+	spawn_chance = 9999
+	max_instances = 1
+
+    planet = {
+        class = star
+    }
+
+    change_orbit = 30
+
+    planet = {
+        count = { min = 1 max = 4 }
+        orbit_distance = { min = 20 max = 25 }
+    }
+    planet = {
+        count = { min = 1 max = 4 }
+        orbit_distance = { min = 15 max = 25 }
+    }
+
+    planet = {
+        class = pc_energy
+        orbit_distance = 30
+
+        moon = {
+            class = random_non_colonizable
+            orbit_distance = 10
+        }
+    }
+
+    change_orbit = 15
+
+    planet = {
+        count = { min = 1 max = 4 }
+        orbit_distance = { min = 25 max = 35 }
+
+        change_orbit = 5
+
+        moon = {
+            count = { min = 0 max = 2 }
+            orbit_distance = 5
+        }
+    }
+
+	change_orbit = 22
+     planet = {
+        orbit_distance = { min = 25 max = 35 }
+
+        change_orbit = 5
+
+        moon = {
+            count = { min = 1 max = 2 }
+            orbit_distance = 5
+        }
+    }
+
+}
+pc_trade_initializer = {
+    class = sc_a
+    usage = misc_system_init
+    usage_odds = {
+		base = 9999
+		modifier = {
+			factor = 0
+			has_star_flag = empire_cluster
+		}
+        modifier = {
+            factor = 0
+            is_fe_cluster = yes
+        }
+    }
+	spawn_chance = 9999
+	max_instances = 1
+
+    planet = {
+        class = star
+    }
+	
+    planet = {
+        class = pc_trade
+        orbit_distance = 20
+
+        moon = {
+            class = random_non_colonizable
+            orbit_distance = 10
+        }
+        moon = {
+            class = random_non_colonizable
+            orbit_distance = 12
+        }
+        moon = {
+            class = random_non_colonizable
+            orbit_distance = 8
+        }
+    }
+
+    change_orbit = 30
+
+    planet = {
+        count = { min = 1 max = 4 }
+        orbit_distance = { min = 20 max = 25 }
+    }
+    planet = {
+        count = { min = 1 max = 4 }
+        orbit_distance = { min = 15 max = 25 }
+    }
+
+
+    change_orbit = 15
+
+    planet = {
+        count = { min = 1 max = 4 }
+        orbit_distance = { min = 25 max = 35 }
+
+        change_orbit = 5
+
+        moon = {
+            count = { min = 0 max = 2 }
+            orbit_distance = 5
+        }
+    }
+
+	change_orbit = 22
+     planet = {
+        orbit_distance = { min = 25 max = 35 }
+
+        change_orbit = 5
+
+        moon = {
+            count = { min = 1 max = 2 }
+            orbit_distance = 5
+        }
+    }
+     planet = {
+        orbit_distance = { min = 35 max = 45 }
+
+        change_orbit = 5
+
+        moon = {
+            count = { min = 1 max = 2 }
+            orbit_distance = 5
+        }
+    }
+
+}
+pc_eco_initializer = {
+    class = sc_binary_1
+    usage = misc_system_init
+    usage_odds = {
+		base = 9999
+		modifier = {
+			factor = 0
+			has_star_flag = empire_cluster
+		}
+        modifier = {
+            factor = 0
+            is_fe_cluster = yes
+        }
+    }
+	spawn_chance = 9999
+	max_instances = 1
+
+    planet = {
+        class = star
+    }
+	
+    planet = {
+        orbit_distance = 20
+
+        moon = {
+            class = random_non_colonizable
+            orbit_distance = 10
+        }
+        moon = {
+            class = random_non_colonizable
+            orbit_distance = 12
+        }
+        moon = {
+            class = random_non_colonizable
+            orbit_distance = 8
+        }
+    }
+
+    change_orbit = 30
+
+    planet = {
+        count = { min = 1 max = 4 }
+        orbit_distance = { min = 20 max = 25 }
+    }
+    planet = {
+        count = { min = 1 max = 4 }
+        orbit_distance = { min = 15 max = 25 }
+    }
+
+
+    change_orbit = 15
+
+    planet = {
+        count = { min = 1 max = 4 }
+        orbit_distance = { min = 25 max = 35 }
+
+        change_orbit = 5
+
+        moon = {
+            count = { min = 0 max = 2 }
+            orbit_distance = 5
+        }
+    }
+
+	change_orbit = 22
+     planet = {
+        orbit_distance = { min = 25 max = 35 }
+        class = pc_eco
+
+        change_orbit = 5
+
+        moon = {
+            count = { min = 1 max = 2 }
+            orbit_distance = 5
+        }
+    }
+     planet = {
+        orbit_distance = { min = 35 max = 45 }
+
+        change_orbit = 5
+
+        moon = {
+            count = { min = 1 max = 2 }
+            orbit_distance = 5
+        }
+    }
+
+}
+pc_farming_initializer = {
+    class = sc_binary_1
+    usage = misc_system_init
+    usage_odds = {
+		base = 9999
+		modifier = {
+			factor = 0
+			has_star_flag = empire_cluster
+		}
+        modifier = {
+            factor = 0
+            is_fe_cluster = yes
+        }
+    }
+	spawn_chance = 9999
+	max_instances = 1
+
+    planet = {
+        class = star
+    }
+	
+    planet = {
+        orbit_distance = 20
+
+        moon = {
+            class = random_non_colonizable
+            orbit_distance = 10
+        }
+        moon = {
+            class = random_non_colonizable
+            orbit_distance = 12
+        }
+        moon = {
+            class = random_non_colonizable
+            orbit_distance = 8
+        }
+    }
+
+    change_orbit = 30
+
+    planet = {
+        count = { min = 1 max = 4 }
+        orbit_distance = { min = 20 max = 25 }
+    }
+    planet = {
+	   class = pc_farming
+
+        orbit_distance = { min = 20 max = 25 }
+    }
+
+    planet = {
+        count = { min = 1 max = 4 }
+        orbit_distance = { min = 15 max = 25 }
+    }
+
+
+    change_orbit = 15
+
+    planet = {
+        count = { min = 1 max = 4 }
+        orbit_distance = { min = 25 max = 35 }
+
+        change_orbit = 5
+
+        moon = {
+            count = { min = 0 max = 2 }
+            orbit_distance = 5
+        }
+    }
+
+	change_orbit = 22
+     planet = {
+        orbit_distance = { min = 25 max = 35 }
+
+        change_orbit = 5
+
+        moon = {
+            count = { min = 1 max = 2 }
+            orbit_distance = 5
+        }
+    }
+     planet = {
+        orbit_distance = { min = 35 max = 45 }
+
+        change_orbit = 5
+
+        moon = {
+            count = { min = 1 max = 2 }
+            orbit_distance = 5
+        }
+    }
+
+}
+pc_training_initializer = {
+    class = sc_binary_1
+    usage = misc_system_init
+    usage_odds = {
+		base = 9999
+		modifier = {
+			factor = 0
+			has_star_flag = empire_cluster
+		}
+        modifier = {
+            factor = 0
+            is_fe_cluster = yes
+        }
+    }
+	spawn_chance = 9999
+	max_instances = 1
+
+    planet = {
+        class = star
+    }
+	
+    planet = {
+        orbit_distance = 20
+
+        moon = {
+            class = random_non_colonizable
+            orbit_distance = 10
+        }
+    }
+
+    change_orbit = 30
+
+    planet = {
+        count = { min = 1 max = 4 }
+        orbit_distance = { min = 20 max = 25 }
+    }
+    planet = {
+	   class = pc_training
+
+        orbit_distance = { min = 20 max = 25 }
+    }
+
+
+	change_orbit = 22
+     planet = {
+        orbit_distance = { min = 25 max = 35 }
+
+        change_orbit = 5
+
+        moon = {
+            count = { min = 1 max = 2 }
+            orbit_distance = 5
+        }
+    }
+     planet = {
+        orbit_distance = { min = 35 max = 45 }
+
+        change_orbit = 5
+
+        moon = {
+            count = { min = 1 max = 2 }
+            orbit_distance = 5
+        }
+    }
+
+}

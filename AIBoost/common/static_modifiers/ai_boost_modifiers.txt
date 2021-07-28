@@ -14,4 +14,5 @@ modifiers_all = {
 	country_integration_cooldown_mult = -0.5
 	country_subject_integration_speed_add = 10
 	country_subject_acceptance_add = -1000
+	planet_resettlement_unemployed_mult = 2.0
 }

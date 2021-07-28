@@ -1,0 +1,48 @@
+namespace = purge_overhual
+
+event = {
+	id = purge_overhual.1
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		every_playable_country = {
+			limit = {
+				allows_purge = yes
+			}
+			country_event = { id = purge_overhual.2 days = 2} 
+		}
+	}
+
+}
+country_event = {
+	id = purge_overhual.2
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		every_owned_planet = {
+			limit = {
+				any_owned_pop = {
+					OR = {
+						has_job = PO_bio_slurry
+						has_job = PO_bio_slurry_machine
+						has_job = PO_lithoid_fracking
+						has_job = PO_disassembly
+						has_job = PO_disassembly_machine
+						has_job = PO_experimentation
+						has_job = PO_gladiator
+					}
+				}
+			}
+			
+			PO_purge_effect = yes
+			
+
+		}
+	}
+
+}
+
+
+

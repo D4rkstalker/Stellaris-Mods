@@ -4,7 +4,7 @@ colossus = {
 	acceleration = 0.2
 	rotation_speed = 0.15
 	collision_radius = @colossus_collision_radius
-	max_hitpoints = @colossus_hp
+	max_hitpoints = 75000
 	modifier = {
 		ship_evasion_add = @colossus_evasion
 	}
@@ -29,7 +29,6 @@ colossus = {
 	required_component_set = "ftl_components"
 	required_component_set = "thruster_components"
 	required_component_set = "combat_computers"
-	required_component_set = "ship_aura_components"
 
 	potential_construction = {
 		OR = {

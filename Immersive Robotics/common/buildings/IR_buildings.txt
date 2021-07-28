@@ -18,12 +18,8 @@ synthetic_conversion_facility = {
 				}
 			}
 		}
-		job_synthetic_assimilation_worker_per_pop = 0.05
-		job_synthetic_assimilation_worker_add = 1
-		job_synthetic_assimilation_spec_per_pop = 0.05
-		job_synthetic_assimilation_spec_add = 1
-		job_synthetic_assimilation_ruler_per_pop = 0.05
-		job_synthetic_assimilation_ruler_add = 1
+		job_synthetic_assimilation_per_pop = 0.05
+		job_synthetic_assimilation_add = 3
 	}
 
 	triggered_planet_modifier = {

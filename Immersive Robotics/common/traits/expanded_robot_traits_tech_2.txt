@@ -13,11 +13,12 @@ trait_overhual_tech_2 = {
 	
 	modifier = { 
 		planet_pop_assemblers_alloys_upkeep_add = 0.2
-		planet_pop_assemblers_minerals_upkeep_add = 4
+		planet_pop_assemblers_minerals_upkeep_add = 2
 		planet_pop_assemblers_volatile_motes_upkeep_add = 0.15
 		planet_pop_assemblers_exotic_gases_upkeep_add = 0.15
 		planet_pop_assemblers_rare_crystals_upkeep_add = 0.15
-		planet_pops_upkeep_mult = 0.2
+		
+		
 		pop_assembly_speed = -0.2
 		
 		pop_environment_tolerance = 0.2

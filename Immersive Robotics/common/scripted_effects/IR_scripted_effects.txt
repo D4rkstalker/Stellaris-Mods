@@ -1,11 +1,7 @@
 IR_synthetic_assimilation_effect = {
 	every_owned_pop = {
 		limit = {
-			OR = { 
-				has_job = synthetic_assimilation_worker
-				has_job = synthetic_assimilation_spec
-				has_job = synthetic_assimilation_ruler
-			}
+			has_job = synthetic_assimilation
 		}
 		kill_pop = yes
 		prev = {

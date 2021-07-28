@@ -29,11 +29,7 @@ country_event = {
 		every_owned_planet = {
 			limit = {
 				any_owned_pop = {
-					OR = {
-						has_job = synthetic_assimilation_worker
-						has_job = synthetic_assimilation_spec
-						has_job = synthetic_assimilation_ruler
-					}
+					has_job = synthetic_assimilation
 				}
 			}
 			

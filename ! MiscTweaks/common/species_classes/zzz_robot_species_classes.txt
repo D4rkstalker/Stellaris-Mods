@@ -32,8 +32,6 @@ ROBOT = {
 			"dragon_normal"
 			"dragon_cyber"
 			"dragon_cyber2"
-			"dragon_alien"
-			"dragon_aliensmall"
 			"dragon_glowing"
 			"dragon_glowingsmall"
 		}
@@ -92,8 +90,6 @@ MACHINE = {
 			"dragon_normal"
 			"dragon_cyber"
 			"dragon_cyber2"
-			"dragon_alien"
-			"dragon_aliensmall"
 			"dragon_glowing"
 			"dragon_glowingsmall"
 		}

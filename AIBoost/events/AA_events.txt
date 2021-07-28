@@ -1,5 +1,5 @@
 namespace = AutoArmy
-country_event = {
+event = {
 	id = AutoArmy.1
 	hide_window = yes
 	is_triggered_only = yes
@@ -7,7 +7,7 @@ country_event = {
 		any_country = {
 			is_ai = yes
 			is_country_type = default
-			num_armies < 20
+			is_at_war = yes
 		}
 	}
 
@@ -16,7 +16,7 @@ country_event = {
 			limit = {
 				is_ai = yes
 				is_country_type = default
-				num_armies < 20
+				is_at_war = yes
 			}
 
 			country_event = { id = AutoArmy.2 }
@@ -37,7 +37,7 @@ country_event = {
 				effect = {
 					set_owner = event_target:target_country
 					while = {
-						count = 20
+						count = 5
 						create_army_transport = {
 							ship_name = "NAME_Prethoryn_Transport"
 							graphical_culture = target_country

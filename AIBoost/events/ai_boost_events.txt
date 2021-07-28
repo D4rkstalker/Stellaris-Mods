@@ -3,6 +3,7 @@ namespace = AI_boost
 country_event = {
 	id = AI_boost.0
 	hide_window = yes
+	is_triggered_only = yes
 	immediate = {
 		every_country = {
 			limit = {
@@ -16,6 +17,7 @@ country_event = {
 event = {
 	id = AI_boost.1
 	hide_window = yes
+	is_triggered_only = yes
 	immediate = {
 		every_country = {
 			add_modifier = { modifier = modifiers_all days = -1 }
@@ -26,6 +28,7 @@ event = {
 country_event = {
 	id = AI_boost.2
 	hide_window = yes
+	is_triggered_only = yes
 	immediate = {
 		if = {
 			limit = {
@@ -37,303 +40,354 @@ country_event = {
 	}
 	
 }
-country_event = {
+event = {
 	id = AI_boost.100
 	hide_window = yes
+	is_triggered_only = yes
 	immediate = {
-		if = {
-			limit = {
-				is_ai = yes
-			}
-			random_list = { 
-				3 = {}
-				1 = {
-					add_random_research_option = {
-						area = physics
-						tier = 2
-						ignore_prereqs = no
-						add_progress = 1
-						fail_effects = {
-							add_random_research_option = {
-								area = physics
-								tier = 3
-								ignore_prereqs = no
-								add_progress = 1
-								fail_effects = {
-									add_random_research_option = {
-										area = physics
-										tier = 4
-										ignore_prereqs = no
-										add_progress = 1
-										fail_effects = {
-											add_monthly_resource_mult = {
-												resource = physics_research
-												value = 6
-											}
-										}
-									}
-								}
-							}
-						}
-					}				
+		every_country = { 
+			if = {
+				limit = {
+					is_ai = yes
 				}
-				1 = {
-					add_random_research_option = {
-						area = society
-						tier = 2
-						ignore_prereqs = no
-						add_progress = 1
-						fail_effects = {
-							add_random_research_option = {
-								area = society
-								tier = 3
-								ignore_prereqs = no
-								add_progress = 1
-								fail_effects = {
-									add_random_research_option = {
-										area = society
-										tier = 4
-										ignore_prereqs = no
-										add_progress = 1
-										fail_effects = {
-											add_monthly_resource_mult = {
-												resource = society_research
-												value = 6
+				random_list = { 
+					1 = {
+						add_random_research_option = {
+							area = physics
+							tier = 1
+							ignore_prereqs = no
+							add_progress = 1
+							fail_effects = {
+								add_random_research_option = {
+									area = physics
+									tier = 2
+									ignore_prereqs = no
+									add_progress = 1
+									fail_effects = {
+										add_random_research_option = {
+											area = physics
+											tier = 3
+											ignore_prereqs = no
+											add_progress = 1
+											fail_effects = {
+												add_random_research_option = {
+													area = physics
+													tier = 4
+													ignore_prereqs = no
+													add_progress = 1
+													fail_effects = {
+															add_random_research_option = {
+																area = physics
+																tier = 5
+																ignore_prereqs = no
+																add_progress = 1
+																fail_effects = {
+																	add_monthly_resource_mult = {
+																		resource = physics_research
+																		value = 6
+																	}
+																}
+															}
+														}
+													}
+												}
 											}
 										}
 									}
 								}
 							}
-						}
-					}				
+						}				
+					}
+					1 = {
+						add_random_research_option = {
+							area = society
+							tier = 1
+							ignore_prereqs = no
+							add_progress = 1
+							fail_effects = {
+								add_random_research_option = {
+									area = society
+									tier = 2
+									ignore_prereqs = no
+									add_progress = 1
+									fail_effects = {
+										add_random_research_option = {
+											area = society
+											tier = 3
+											ignore_prereqs = no
+											add_progress = 1
+											fail_effects = {
+												add_random_research_option = {
+													area = society
+													tier = 4
+													ignore_prereqs = no
+													add_progress = 1
+													fail_effects = {
+														add_random_research_option = {
+															area = society
+															tier = 5
+															ignore_prereqs = no
+															add_progress = 1
+															fail_effects = {
+																add_monthly_resource_mult = {
+																	resource = society_research
+																	value = 6
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}				
+					}
+					1 = {
+						add_random_research_option = {
+							area = engineering
+							tier = 1
+							ignore_prereqs = no
+							add_progress = 1
+							fail_effects = {
+								add_random_research_option = {
+									area = engineering
+									tier = 2
+									ignore_prereqs = no
+									add_progress = 1
+									fail_effects = {
+										add_random_research_option = {
+											area = engineering
+											tier = 3
+											ignore_prereqs = no
+											add_progress = 1
+											fail_effects = {
+												add_random_research_option = {
+													area = engineering
+													tier = 4
+													ignore_prereqs = no
+													add_progress = 1
+													fail_effects = {
+														add_random_research_option = {
+															area = engineering
+															tier = 5
+															ignore_prereqs = no
+															add_progress = 1
+															fail_effects = {
+																add_monthly_resource_mult = {
+																	resource = engineering_research
+																	value = 6
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}				
+					}
 				}
-				1 = {
-					add_random_research_option = {
-						area = engineering
-						tier = 2
-						ignore_prereqs = no
-						add_progress = 1
-						fail_effects = {
-							add_random_research_option = {
-								area = engineering
-								tier = 3
-								ignore_prereqs = no
-								add_progress = 1
-								fail_effects = {
-									add_random_research_option = {
-										area = engineering
-										tier = 4
-										ignore_prereqs = no
-										add_progress = 1
-										fail_effects = {
-											add_monthly_resource_mult = {
-												resource = engineering_research
-												value = 6
-											}
-										}
-									}
-								}
-							}
-						}
-					}				
+			} 
+			if = {
+				limit = {
+					mid_game_years_passed > 0
+					is_ai = yes
 				}
-			}
-		} 
-		if = {
-			limit = {
-				mid_game_years_passed > 0
-				is_ai = yes
-			}
-			random_list = { 
-				3 = {}
-				1 = {
-					add_random_research_option = {
-						area = physics
-						tier = 2
-						ignore_prereqs = no
-						add_progress = 1
-						fail_effects = {
-							add_random_research_option = {
-								area = physics
-								tier = 3
-								ignore_prereqs = no
-								add_progress = 1
-								fail_effects = {
-									add_random_research_option = {
-										area = physics
-										tier = 4
-										ignore_prereqs = no
-										add_progress = 1
-										fail_effects = {
-											add_monthly_resource_mult = {
-												resource = physics_research
-												value = 6
+				random_list = { 
+					2 = {}
+					1 = {
+						add_random_research_option = {
+							area = physics
+							tier = 2
+							ignore_prereqs = no
+							add_progress = 1
+							fail_effects = {
+								add_random_research_option = {
+									area = physics
+									tier = 3
+									ignore_prereqs = no
+									add_progress = 1
+									fail_effects = {
+										add_random_research_option = {
+											area = physics
+											tier = 4
+											ignore_prereqs = no
+											add_progress = 1
+											fail_effects = {
+												add_monthly_resource_mult = {
+													resource = physics_research
+													value = 6
+												}
 											}
 										}
 									}
 								}
 							}
-						}
-					}				
+						}				
+					}
+					1 = {
+						add_random_research_option = {
+							area = society
+							tier = 2
+							ignore_prereqs = no
+							add_progress = 1
+							fail_effects = {
+								add_random_research_option = {
+									area = society
+									tier = 3
+									ignore_prereqs = no
+									add_progress = 1
+									fail_effects = {
+										add_random_research_option = {
+											area = society
+											tier = 4
+											ignore_prereqs = no
+											add_progress = 1
+											fail_effects = {
+												add_monthly_resource_mult = {
+													resource = society_research
+													value = 6
+												}
+											}
+										}
+									}
+								}
+							}
+						}				
+					}
+					1 = {
+						add_random_research_option = {
+							area = engineering
+							tier = 2
+							ignore_prereqs = no
+							add_progress = 1
+							fail_effects = {
+								add_random_research_option = {
+									area = engineering
+									tier = 3
+									ignore_prereqs = no
+									add_progress = 1
+									fail_effects = {
+										add_random_research_option = {
+											area = engineering
+											tier = 4
+											ignore_prereqs = no
+											add_progress = 1
+											fail_effects = {
+												add_monthly_resource_mult = {
+													resource = engineering_research
+													value = 6
+												}
+											}
+										}
+									}
+								}
+							}
+						}				
+					}
 				}
-				1 = {
-					add_random_research_option = {
-						area = society
-						tier = 2
-						ignore_prereqs = no
-						add_progress = 1
-						fail_effects = {
-							add_random_research_option = {
-								area = society
-								tier = 3
-								ignore_prereqs = no
-								add_progress = 1
-								fail_effects = {
-									add_random_research_option = {
-										area = society
-										tier = 4
-										ignore_prereqs = no
-										add_progress = 1
-										fail_effects = {
-											add_monthly_resource_mult = {
-												resource = society_research
-												value = 6
-											}
-										}
-									}
-								}
-							}
-						}
-					}				
+			} 
+			if = {
+				limit = {
+					end_game_years_passed > 0
+					is_ai = yes
 				}
-				1 = {
-					add_random_research_option = {
-						area = engineering
-						tier = 2
-						ignore_prereqs = no
-						add_progress = 1
-						fail_effects = {
-							add_random_research_option = {
-								area = engineering
-								tier = 3
-								ignore_prereqs = no
-								add_progress = 1
-								fail_effects = {
-									add_random_research_option = {
-										area = engineering
-										tier = 4
-										ignore_prereqs = no
-										add_progress = 1
-										fail_effects = {
-											add_monthly_resource_mult = {
-												resource = engineering_research
-												value = 6
+				random_list = { 
+					3 = {}
+					1 = {
+						add_random_research_option = {
+							area = physics
+							tier = 2
+							ignore_prereqs = no
+							add_progress = 1
+							fail_effects = {
+								add_random_research_option = {
+									area = physics
+									tier = 3
+									ignore_prereqs = no
+									add_progress = 1
+									fail_effects = {
+										add_random_research_option = {
+											area = physics
+											tier = 4
+											ignore_prereqs = no
+											add_progress = 1
+											fail_effects = {
+												add_monthly_resource_mult = {
+													resource = physics_research
+													value = 6
+												}
 											}
 										}
 									}
 								}
 							}
-						}
-					}				
-				}
-			}
-		} 
-		if = {
-			limit = {
-				end_game_years_passed > 0
-				is_ai = yes
-			}
-			random_list = { 
-				3 = {}
-				1 = {
-					add_random_research_option = {
-						area = physics
-						tier = 2
-						ignore_prereqs = no
-						add_progress = 1
-						fail_effects = {
-							add_random_research_option = {
-								area = physics
-								tier = 3
-								ignore_prereqs = no
-								add_progress = 1
-								fail_effects = {
-									add_random_research_option = {
-										area = physics
-										tier = 4
-										ignore_prereqs = no
-										add_progress = 1
-										fail_effects = {
-											add_monthly_resource_mult = {
-												resource = physics_research
-												value = 6
+						}				
+					}
+					1 = {
+						add_random_research_option = {
+							area = society
+							tier = 2
+							ignore_prereqs = no
+							add_progress = 1
+							fail_effects = {
+								add_random_research_option = {
+									area = society
+									tier = 3
+									ignore_prereqs = no
+									add_progress = 1
+									fail_effects = {
+										add_random_research_option = {
+											area = society
+											tier = 4
+											ignore_prereqs = no
+											add_progress = 1
+											fail_effects = {
+												add_monthly_resource_mult = {
+													resource = society_research
+													value = 6
+												}
 											}
 										}
 									}
 								}
 							}
-						}
-					}				
-				}
-				1 = {
-					add_random_research_option = {
-						area = society
-						tier = 2
-						ignore_prereqs = no
-						add_progress = 1
-						fail_effects = {
-							add_random_research_option = {
-								area = society
-								tier = 3
-								ignore_prereqs = no
-								add_progress = 1
-								fail_effects = {
-									add_random_research_option = {
-										area = society
-										tier = 4
-										ignore_prereqs = no
-										add_progress = 1
-										fail_effects = {
-											add_monthly_resource_mult = {
-												resource = society_research
-												value = 6
+						}				
+					}
+					1 = {
+						add_random_research_option = {
+							area = engineering
+							tier = 2
+							ignore_prereqs = no
+							add_progress = 1
+							fail_effects = {
+								add_random_research_option = {
+									area = engineering
+									tier = 3
+									ignore_prereqs = no
+									add_progress = 1
+									fail_effects = {
+										add_random_research_option = {
+											area = engineering
+											tier = 4
+											ignore_prereqs = no
+											add_progress = 1
+											fail_effects = {
+												add_monthly_resource_mult = {
+													resource = engineering_research
+													value = 6
+												}
 											}
 										}
 									}
 								}
 							}
-						}
-					}				
-				}
-				1 = {
-					add_random_research_option = {
-						area = engineering
-						tier = 2
-						ignore_prereqs = no
-						add_progress = 1
-						fail_effects = {
-							add_random_research_option = {
-								area = engineering
-								tier = 3
-								ignore_prereqs = no
-								add_progress = 1
-								fail_effects = {
-									add_random_research_option = {
-										area = engineering
-										tier = 4
-										ignore_prereqs = no
-										add_progress = 1
-										fail_effects = {
-											add_monthly_resource_mult = {
-												resource = engineering_research
-												value = 6
-											}
-										}
-									}
-								}
-							}
-						}
-					}				
+						}				
+					}
 				}
 			}
 		} 

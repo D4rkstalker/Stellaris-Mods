@@ -323,7 +323,7 @@ tech_trait_tech_1 = {
 	is_rare = yes
 	is_reverse_engineerable = no
 	category = { materials }
-	prerequisites = { "tech_robomodding" "tech_engineering_1" "tech_physics_1" "tech_society_1"}
+	prerequisites = { "tech_engineering_1" "tech_physics_1" "tech_society_1"}
 	ai_update_type = military
 	weight = @tier5weight3
 		

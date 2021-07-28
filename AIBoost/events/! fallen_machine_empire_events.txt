@@ -1,0 +1,68 @@
+############################
+#
+# Fallen Empire 'Awakening' Events
+#
+# Written by Martin Anward
+#
+############################
+
+namespace = fallen_machine_empire
+
+# Machine Fallen Empire - Awakening
+country_event = {
+	id = fallen_machine_empire.1
+	title = OK
+	desc = OK
+
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	immediate = {	
+		set_country_type = awakened_fallen_empire
+		
+		if = {
+			limit = {
+				has_country_flag = fallen_machine_empire_awaken_1
+			}
+			remove_country_flag = fallen_machine_empire_awaken_1
+			set_country_flag = fallen_machine_empire_awaken_2
+		}
+		change_government = {
+			civics = {
+				civic = civic_awakened_machine
+				civic = civic_malfunctioning_custodian
+			}
+		}			
+			
+			
+
+		# Changing country type resets resources, so give them full stores
+		add_awakened_fallen_empire_resources = yes
+		add_awakened_fallen_empire_fleet = yes #also some more fleet
+
+		# Establish communications
+		every_country = {
+			limit = {
+				OR = {
+					is_country_type = default
+					is_country_type = fallen_empire
+					is_country_type = awakened_fallen_empire
+				}
+				NOT = { has_communications = root }
+			}
+
+			establish_communications_no_message = root
+		}
+		
+		root = { save_event_target_as = awakened_machine_empire }
+		
+		# Notify players
+		every_country = {
+			limit = {
+				is_ai = no
+			}
+			country_event = { id = fallen_machine_empire.2 }
+		}
+	}
+}

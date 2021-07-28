@@ -1,0 +1,470 @@
+PO_Bio_Slurry = {
+	icon = PO_Bio_Slurry
+	base_buildtime = 180
+	can_demolish = yes
+	base_cap_amount = 1
+	category = resource
+
+	potential = {
+		exists = owner
+		owner = {
+			NOR = {
+				is_machine_empire = yes
+				is_mechanical_empire = yes
+				is_lithoid_empire = yes
+			}
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			any_pop = { 
+				is_organic_species = yes
+				is_lithoid = no
+				is_being_purged = yes
+			}
+		}
+		job_PO_bio_slurry_per_pop = 0.05
+		job_PO_bio_slurry_add = 3
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+			}
+			NOT = {
+				any_pop = { 
+					is_organic_species = yes
+					is_lithoid = no
+					is_being_purged = yes
+				}
+			}
+		}
+		modifier = {
+			job_farmer_add = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+			}
+			NOT = {
+				any_pop = { 
+					is_organic_species = yes
+					is_lithoid = no
+					is_being_purged = yes
+				}
+			}
+		}
+		modifier = {
+			job_agri_drone_add = 1
+		}
+	}
+	
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 500
+		}
+		upkeep = {
+			energy = @b1_upkeep
+		}
+	}
+
+}
+PO_Bio_Slurry_Machine = {
+	icon = PO_Bio_Slurry
+	base_buildtime = 180
+	can_demolish = yes
+	base_cap_amount = 1
+	category = resource
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				is_machine_empire = yes
+				is_mechanical_empire = yes
+				is_lithoid_empire = yes
+			}
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			any_pop = { 
+				is_organic_species = yes
+				is_lithoid = no
+				is_being_purged = yes
+			}
+		}
+		job_PO_bio_slurry_machine_per_pop = 0.05
+		job_PO_bio_slurry_machine_add = 3
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+			}
+			NOT = {
+				any_pop = { 
+					is_organic_species = yes
+					is_lithoid = no
+					is_being_purged = yes
+				}
+			}
+		}
+		modifier = {
+			job_technician_add = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+			}
+			NOT = {
+				any_pop = { 
+					is_organic_species = yes
+					is_lithoid = no
+					is_being_purged = yes
+				}
+			}
+		}
+		modifier = {
+			job_technician_drone_add = 1
+		}
+	}
+	
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 500
+		}
+		upkeep = {
+			energy = @b1_upkeep
+		}
+	}
+
+}
+PO_Lithoid_Cracker = {
+	icon = PO_Lithoid_Cracker
+	base_buildtime = 180
+	can_demolish = yes
+	base_cap_amount = 1
+	category = resource
+
+	triggered_planet_modifier = {
+		potential = {
+			any_pop = { 
+				is_organic_species = no
+				is_lithoid = yes
+				is_being_purged = yes
+			}
+		}
+		job_PO_lithoid_fracking_per_pop = 0.05
+		job_PO_lithoid_fracking_add = 3
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+			}
+			NOT = {
+				any_pop = { 
+					is_organic_species = no
+					is_lithoid = yes
+					is_being_purged = yes
+				}
+			}
+		}
+		modifier = {
+			job_miner_add = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+			}
+			NOT = {
+				any_pop = { 
+					is_organic_species = no
+					is_lithoid = yes
+					is_being_purged = yes
+				}
+			}
+		}
+		modifier = {
+			job_mining_drone_add = 1
+		}
+	}
+	
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 500
+		}
+		upkeep = {
+			energy = @b1_upkeep
+		}
+	}
+
+}
+PO_Dissassembly = {
+	icon = PO_Dissassembly
+	base_buildtime = 180
+	can_demolish = yes
+	base_cap_amount = 1
+	category = pop_assembly
+
+	potential = {
+		exists = owner
+		owner = {
+			is_machine_empire = no
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			any_pop = { 
+				is_robotic_species = yes
+				is_being_purged = yes
+			}
+		}
+		job_PO_disassembly_per_pop = 0.05
+		job_PO_disassembly_add = 3
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+			}
+			NOT = {
+				any_pop = { 
+					is_robotic_species = yes
+					is_being_purged = yes
+				}
+			}
+		}
+		modifier = {
+			job_roboticist_add = 1
+		}
+	}	
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 500
+		}
+		upkeep = {
+			energy = @b1_upkeep
+		}
+	}
+
+}
+PO_Dissassembly_Machine = {
+	icon = PO_Dissassembly
+	base_buildtime = 180
+	can_demolish = yes
+	base_cap_amount = 1
+	category = pop_assembly
+
+	potential = {
+		exists = owner
+		owner = {
+			is_machine_empire = yes
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			any_pop = { 
+				is_robotic_species = yes
+				is_being_purged = yes
+			}
+		}
+		job_PO_disassembly_machine_per_pop = 0.05
+		job_PO_disassembly_add = 3
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			NOT = {
+				any_pop = { 
+					is_robotic_species = yes
+					is_being_purged = yes
+				}
+			}
+		}
+		modifier = {
+			job_replicator_add = 1
+		}
+	}
+	
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 500
+		}
+		upkeep = {
+			energy = @b1_upkeep
+		}
+	}
+
+}
+PO_experimentation = {
+	icon = PO_experimentation
+	base_buildtime = 180
+	can_demolish = yes
+	base_cap_amount = 1
+	category = research
+
+	triggered_planet_modifier = {
+		potential = {
+			any_pop = { 
+				is_being_purged = yes
+			}
+		}
+		job_PO_experimentation_per_pop = 0.05
+		job_PO_experimentation_add = 3
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			NOT = {
+				any_pop = { 
+					is_being_purged = yes
+				}
+			}
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_researcher_add = @b1_jobs
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			NOT = {
+				any_pop = { 
+					is_being_purged = yes
+				}
+			}
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			job_brain_drone_add = @b1_jobs
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			NOT = {
+				any_pop = { 
+					is_being_purged = yes
+				}
+			}
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {
+			job_calculator_add = @b1_jobs
+		}
+	}
+	
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 500
+		}
+		upkeep = {
+			energy = @b1_upkeep
+		}
+	}
+
+}
+PO_colossium = {
+	icon = PO_colossium
+	base_buildtime = 180
+	can_demolish = yes
+	base_cap_amount = 1
+	category = unity
+
+	triggered_planet_modifier = {
+		potential = {
+			any_pop = { 
+				is_being_purged = yes
+			}
+		}
+		job_PO_gladiator_per_pop = 0.05
+		job_PO_gladiator_add = 3
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			NOT = {
+				any_pop = { 
+					is_being_purged = yes
+				}
+			}
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_culture_worker_add = @b1_jobs
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			NOT = {
+				any_pop = { 
+					is_being_purged = yes
+				}
+			}
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			job_synapse_drone_add = @b1_jobs
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			NOT = {
+				any_pop = { 
+					is_being_purged = yes
+				}
+			}
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {
+			job_evaluator_add = @b1_jobs
+		}
+	}
+	
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 500
+		}
+		upkeep = {
+			energy = @b1_upkeep
+		}
+	}
+
+}

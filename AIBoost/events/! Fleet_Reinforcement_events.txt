@@ -14,7 +14,7 @@ event = {
 				limit = {
 					is_country_type = default
 					is_at_war = yes
-					NOT = { is_ai = no }
+					is_ai = yes
 				}
 				country_event = { id = fleet_reinforcement.2 }
 			}
@@ -25,9 +25,11 @@ event = {
 						is_country_type = awakened_fallen_empire
 					}
 					is_at_war = yes
-					NOT = { is_ai = no }
+					is_ai = yes
 				}
-				country_event = { id = fallen_empires.13 }
+				capital_scope = {	
+					create_fallen_empire_fleet_boosted = yes
+				}
 			} 
 		}
 	}
@@ -214,7 +216,7 @@ event = {
 			limit = {
 				is_country_type = default
 				is_at_war = yes
-				NOT = { is_ai = no }
+				is_ai = yes
 			}
 			country_event = { id = fleet_reinforcement.11 }
 		}

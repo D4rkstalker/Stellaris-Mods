@@ -25,3 +25,52 @@ opinion_seeded_my_world = {
 		base = 1
 	}
 }
+
+opinion_psi_crusader_declined = {
+	opinion = {
+		base = -100
+	}
+
+	accumulative = no
+
+}
+opinion_psi_crusader = {
+	opinion = {
+		base = 1000
+	}
+
+	accumulative = no
+
+}
+opinion_psi_crusader_synth = {
+	opinion = {
+		base = -1000
+	}
+
+	accumulative = no
+
+}
+opinion_synth_liberator_declined = {
+	opinion = {
+		base = -100
+	}
+
+	accumulative = no
+
+}
+opinion_synth_liberator = {
+	opinion = {
+		base = 1000
+	}
+
+	accumulative = no
+
+}
+opinion_synth_liberator_psi = {
+	opinion = {
+		base = -1000
+	}
+
+	accumulative = no
+
+}

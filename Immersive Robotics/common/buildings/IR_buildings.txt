@@ -14,7 +14,10 @@ synthetic_conversion_facility = {
 		potential = {
 			any_pop = { 
 				NOT = { 
-					has_trait = trait_mechanical 
+					OR = { 
+						has_trait = trait_mechanical 
+						has_trait = trait_machine_unit
+					}
 				}
 			}
 		}
@@ -27,7 +30,10 @@ synthetic_conversion_facility = {
 			NOT = {
 				any_pop = { 
 					NOT = { 
-						has_trait = trait_mechanical 
+						OR = { 
+							has_trait = trait_mechanical 
+							has_trait = trait_machine_unit
+						}
 					}
 				}
 			}
@@ -45,6 +51,69 @@ synthetic_conversion_facility = {
 			NOT = {
 				has_country_flag = synthetic_empire 
 			}
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 500
+		}
+		upkeep = {
+			energy = @b1_upkeep
+		}
+	}
+
+}
+machine_reprogramming_center = {
+	icon = synthetic_conversion_facility
+	base_buildtime = 180
+	can_demolish = yes
+	base_cap_amount = 1
+	category = pop_assembly
+
+	potential = {
+		exists = owner
+		owner = { has_country_flag = synthetic_empire }
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			any_pop = { 
+				NOT = { 
+					has_trait = trait_machine_unit 
+				}
+			}
+		}
+		job_reprogramming_per_pop = 0.05
+		job_reprogramming_add = 3
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			NOT = {
+				any_pop = { 
+					NOT = { 
+						has_trait = trait_machine_unit 
+					}
+				}
+			}
+		}
+		job_roboticist_add = 1
+	}
+	
+	convert_to = {
+		building_clinic
+	}
+
+	destroy_trigger = { # destroys and/or triggers conversion if true
+		exists = owner
+		owner = {
+			OR = { 
+				is_machine_empire = yes 
+				NOT = { has_technology = tech_robotic_workers }
+			}
+			
 		}
 	}
 

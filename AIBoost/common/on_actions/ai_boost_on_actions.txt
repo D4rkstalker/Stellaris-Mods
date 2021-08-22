@@ -20,7 +20,8 @@ on_five_year_pulse = {
 on_yearly_pulse = {
 	events = {
 		AutoArmy.1
-		#AI_boost.100
+		AI_boost.100
+		AI_boost.200
 	}
 }
 

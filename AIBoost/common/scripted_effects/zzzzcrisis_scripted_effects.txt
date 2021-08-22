@@ -1,3 +1,249 @@
+swarm_vanguard = {
+	
+	random_list = {
+		10 = {
+			create_leader = {
+				class = admiral
+				species = event_target:prethoryn_species
+				name = random
+				skill = 30
+				set_age = 3452
+				traits = {
+					trait = leader_trait_void_swimmer
+				}
+			}
+		}
+		10 = {
+			create_leader = {
+				class = admiral
+				species = event_target:prethoryn_species
+				name = random
+				skill = 30
+				set_age = 2967
+				traits = {
+					trait = leader_trait_void_swimmer
+				}
+			}
+		}
+		10 = {
+			create_leader = {
+				class = admiral
+				species = event_target:prethoryn_species
+				name = random
+				skill = 30
+				set_age = 4126
+				traits = {
+					trait = leader_trait_void_swimmer
+				}
+			}
+		}
+		10 = {
+			create_leader = {
+				class = admiral
+				species = event_target:prethoryn_species
+				name = random
+				skill = 30
+				set_age = 756
+				traits = {
+					trait = leader_trait_void_swimmer
+				}
+			}
+		}
+		10 = {
+			create_leader = {
+				class = admiral
+				species = event_target:prethoryn_species
+				name = random
+				skill = 30
+				set_age = 1007
+				traits = {
+					trait = leader_trait_void_swimmer
+				}
+			}
+		}
+		10 = {
+			create_leader = {
+				class = admiral
+				species = event_target:prethoryn_species
+				name = random
+				skill = 30
+				set_age = 2510
+				traits = {
+					trait = leader_trait_void_swimmer
+				}
+			}
+		}
+		10 = {
+			create_leader = {
+				class = admiral
+				species = event_target:prethoryn_species
+				name = random
+				skill = 30
+				set_age = 4831
+				traits = {
+					trait = leader_trait_void_swimmer
+				}
+			}
+		}
+		10 = {
+			create_leader = {
+				class = admiral
+				species = event_target:prethoryn_species
+				name = random
+				skill = 30
+				set_age = 3367
+				traits = {
+					trait = leader_trait_void_swimmer
+				}
+			}
+		}
+		10 = {
+			create_leader = {
+				class = admiral
+				species = event_target:prethoryn_species
+				name = random
+				skill = 30
+				set_age = 987
+				traits = {
+					trait = leader_trait_void_swimmer
+				}
+			}
+		}
+		10 = {
+			create_leader = {
+				class = admiral
+				species = event_target:prethoryn_species
+				name = random
+				skill = 30
+				set_age = 4517
+				traits = {
+					trait = leader_trait_void_swimmer
+				}
+			}
+		}
+	}
+
+	create_fleet = {
+		name = "NAME_Prethoryn_Vanguard"
+		effect = {
+			set_owner = PREV
+			create_ship = {
+				name = random
+				design = "NAME_Swarm_Queen"
+				graphical_culture = "swarm_01"
+			}
+			assign_leader = last_created_leader
+			while = {
+				count = 25
+				create_ship = {
+					name = random
+					design = "NAME_Swarm_Large"
+					graphical_culture = "swarm_01"
+				}
+			}
+			while = {
+				count = 5
+				create_ship = {
+					name = random
+					design = "NAME_Swarm_Carrier"
+					graphical_culture = "swarm_01"
+				}
+			}
+			while = {
+				count = 50
+				create_ship = {
+					name = random
+					design = "NAME_Swarm_Small"
+					graphical_culture = "swarm_01"
+				}
+			}
+			set_location = {
+				target = PREVPREV
+				distance = 35
+				angle = random 
+			}
+			set_fleet_stance = aggressive
+			set_aggro_range = 500
+			set_aggro_range_measure_from = self
+			set_fleet_bombardment_stance = armageddon
+		}
+	}
+}
+
+swarm_brood = {
+	random_list = {
+		75 = {
+			create_leader = {
+				class = admiral
+				species = event_target:prethoryn_species
+				name = random
+				skill = 30
+				set_age = 1125
+			}
+		}
+		25 = {
+			create_leader = {
+				class = admiral
+				species = event_target:prethoryn_species
+				name = random
+				skill = 30
+				set_age = 1125
+				traits = {
+					trait = leader_trait_hive_affinity
+				}
+			}
+		}
+	}
+	create_fleet = {
+		name = "NAME_Prethoryn_Star_Brood"
+		effect = {
+			set_owner = event_target:prethoryn
+			create_ship = {
+				name = random
+				design = "NAME_Swarm_Queen"
+				graphical_culture = "swarm_01"
+			}
+			assign_leader = last_created_leader
+			while = {
+				count = 4
+				create_ship = {
+					name = random
+					design = "NAME_Swarm_Queen"
+					graphical_culture = "swarm_01"
+				}
+			}
+			while = {
+				count = 35
+				create_ship = {
+					name = random
+					design = "NAME_Swarm_Large"
+					graphical_culture = "swarm_01"
+				}
+			}
+			while = {
+				count = 15
+				create_ship = {
+					name = random
+					design = "NAME_Swarm_Carrier"
+					graphical_culture = "swarm_01"
+				}
+			}
+			while = {
+				count = 100
+				create_ship = {
+					name = random
+					design = "NAME_Swarm_Small"
+					graphical_culture = "swarm_01"
+				}
+			}
+			set_location = event_target:spawn_location
+			set_fleet_stance = aggressive
+			set_aggro_range = 500
+			set_aggro_range_measure_from = self
+			set_fleet_bombardment_stance = armageddon
+		}
+	}
+}
 
 create_ai_fleet = {
 	owner = {
@@ -5,7 +251,7 @@ create_ai_fleet = {
 			class = admiral
 			species = event_target:contingency_bot
 			name = random
-			skill = 3
+			skill = 30
 			effect = {
 				set_age = 0
 				save_event_target_as = contingency_fleet_leader
@@ -16,7 +262,7 @@ create_ai_fleet = {
 		effect = {
 			set_owner = event_target:AI_crisis
 			while = {
-				count = 1
+				count = 5
 				create_ship = {
 					name = random
 					design = "NAME_Uninstaller"
@@ -25,7 +271,7 @@ create_ai_fleet = {
 			}
 			assign_leader = event_target:contingency_fleet_leader
 			while = {
-				count = 15
+				count = 25
 				create_ship = {
 					name = random
 					design = "NAME_Euthanizer"
@@ -33,7 +279,7 @@ create_ai_fleet = {
 				}
 			}
 			while = {
-				count = 30
+				count = 75
 				create_ship = {
 					name = random
 					design = "NAME_Sterilizer"
@@ -47,4 +293,267 @@ create_ai_fleet = {
 			}
 		}
 	}
+}
+
+create_unbidden_fleet = {
+	random_list = {
+		25 = {
+			create_leader = {
+				class = admiral
+				species = event_target:extradimensional_species
+				name = random
+				skill = 30
+				traits = {
+					trait = leader_trait_ethereal
+				}
+			}
+		}
+		25 = {
+			create_leader = {
+				class = admiral
+				species = event_target:extradimensional_species
+				name = random
+				skill = 30
+				traits = {
+					trait = leader_trait_dimensional_stutter
+				}
+			}
+		}
+		50 = {
+			create_leader = {
+				class = admiral
+				species = event_target:extradimensional_species
+				name = random
+				skill = 30
+			}
+		}
+	}
+	create_fleet = {
+		effect = {
+			set_owner = PREV
+			create_ship = {
+				name = random
+				design = "NAME_Spectre"
+				graphical_culture = "extra_dimensional_01"
+			}
+			assign_leader = last_created_leader
+			while = {
+				count = 9
+				create_ship = {
+					name = random
+					design = "NAME_Spectre"
+					graphical_culture = "extra_dimensional_01"
+				}
+			}
+			while = {
+				count = 40
+				create_ship = {
+					name = random
+					design = "NAME_Revenant"
+					graphical_culture = "extra_dimensional_01"
+				}
+			}
+			while = {
+				count = 60
+				create_ship = {
+					name = random
+					design = "NAME_Phantom"
+					graphical_culture = "extra_dimensional_01"
+				}
+			}
+			while = {
+				count = 90
+				create_ship = {
+					name = random
+					design = "NAME_Wraith"
+					graphical_culture = "extra_dimensional_01"
+				}
+			}
+			set_location = {
+				target = event_target:dimensional_portal
+				distance = 5
+				angle = random
+			}
+			set_fleet_stance = aggressive
+			set_aggro_range = 500
+			set_aggro_range_measure_from = self
+			set_fleet_bombardment_stance = armageddon
+		}
+	}
+
+}
+
+create_aberrant_fleet = {
+	random_list = {
+		25 = {
+			create_leader = {
+				class = admiral
+				species = event_target:extradimensional_hunters_species
+				name = random
+				skill = 30
+				traits = {
+					trait = leader_trait_ethereal
+				}
+			}
+		}
+		25 = {
+			create_leader = {
+				class = admiral
+				species = event_target:extradimensional_hunters_species
+				name = random
+				skill = 30
+				traits = {
+					trait = leader_trait_dimensional_stutter
+				}
+			}
+		}
+		50 = {
+			create_leader = {
+				class = admiral
+				species = event_target:extradimensional_hunters_species
+				name = random
+				skill = 30
+			}
+		}
+	}
+	create_fleet = {
+		effect = {
+			set_owner = PREV
+			create_ship = {
+				name = random
+				design = "NAME_Shadowstalker"
+				graphical_culture = "extra_dimensional_02"
+			}
+			assign_leader = last_created_leader
+			while = {
+				count = 9
+				create_ship = {
+					name = random
+					design = "NAME_Shadowstalker"
+					graphical_culture = "extra_dimensional_02"
+				}
+			}
+			while = {
+				count = 40
+				create_ship = {
+					name = random
+					design = "NAME_Huntress"
+					graphical_culture = "extra_dimensional_02"
+				}
+			}
+			while = {
+				count = 60
+				create_ship = {
+					name = random
+					design = "NAME_Assassin"
+					graphical_culture = "extra_dimensional_02"
+				}
+			}
+			while = {
+				count = 90
+				create_ship = {
+					name = random
+					design = "NAME_Predator"
+					graphical_culture = "extra_dimensional_02"
+				}
+			}
+			set_location = {
+				target = event_target:second_portal
+				distance = 5
+				angle = random
+			}
+			set_fleet_stance = aggressive
+			set_aggro_range = 500
+			set_aggro_range_measure_from = self
+			set_fleet_bombardment_stance = armageddon
+		}
+	}
+} 
+
+create_vehement_fleet = {
+	random_list = {
+		25 = {
+			create_leader = {
+				class = admiral
+				species = event_target:extradimensional_trespassers_species
+				name = random
+				skill = 30
+				traits = {
+					trait = leader_trait_ethereal
+				}
+			}
+		}
+		25 = {
+			create_leader = {
+				class = admiral
+				species = event_target:extradimensional_trespassers_species
+				name = random
+				skill = 30
+				traits = {
+					trait = leader_trait_dimensional_stutter
+				}
+			}
+		}
+		50 = {
+			create_leader = {
+				class = admiral
+				species = event_target:extradimensional_trespassers_species
+				name = random
+				skill = 30
+			}
+		}
+	}
+	create_fleet = {
+		effect = {
+			set_owner = PREV
+			create_ship = {
+				name = random
+				design = "NAME_Exterminator"
+				graphical_culture = "extra_dimensional_03"
+			}
+			assign_leader = last_created_leader
+			while = {
+				count = 9
+				create_ship = {
+					name = random
+					design = "NAME_Exterminator"
+					graphical_culture = "extra_dimensional_03"
+				}
+			}
+			while = {
+				count = 40
+				create_ship = {
+					name = random
+					design = "NAME_Eradicator"
+					graphical_culture = "extra_dimensional_03"
+				}
+			}
+			while = {
+				count = 60
+				create_ship = {
+					name = random
+					design = "NAME_Annihilator"
+					graphical_culture = "extra_dimensional_03"
+				}
+			}
+			while = {
+				count = 90
+				create_ship = {
+					name = random
+					design = "NAME_Obliterator"
+					graphical_culture = "extra_dimensional_03"
+				}
+			}
+			set_location = {
+				target = event_target:third_portal
+				distance = 5
+				angle = random
+			}
+			set_fleet_stance = aggressive
+			set_aggro_range = 500
+			set_aggro_range_measure_from = self
+			set_fleet_bombardment_stance = armageddon
+		}
+	}
+
 }

@@ -1,0 +1,106 @@
+crusader_federation_psionic_connection = { 
+	members_modifier = {
+		pop_ethic_spiritualist_attraction_mult = 0.30
+		pop_ethics_shift_speed_mult = 0.50
+		empire_size_penalty_mult = -0.20
+	
+	}
+}
+crusader_federation_psionic_disruption = { 
+	members_modifier = {
+		ship_shield_penetration_mult = 0.15	
+		ship_armor_penetration_mult = 0.15	
+	}
+}	
+crusader_federation_foresight = { 
+	members_modifier = {
+		ship_accuracy_add = 15
+		ship_tracking_add = 15
+		ship_weapon_range_add = 15
+	}
+}
+crusader_federation_shroud_boost = { 
+	members_modifier = {
+		ship_speed_mult = 0.2
+		ship_ftl_jumpdrive_range_mult = 0.2
+		ship_evasion_mult = 0.2
+	}
+}
+crusader_federation_galactic_unification = { 
+	members_modifier = {
+		planet_jobs_unity_produces_mult = 0.5
+		pop_growth_speed = 0.2
+	}
+}
+crusader_federation_psionic_suppression = { 
+	members_modifier = {
+		planet_crime_add = -10
+		planet_crime_no_happiness_add = -10
+		planet_stability_add = 25
+		
+	}
+}
+crusader_federation_shroud_touched = { 
+	members_modifier = {
+		planet_pops_produces_mult = 0.1
+		ship_weapon_damage = 0.10
+		ship_hull_mult = 0.10
+	}
+}
+
+
+synthetic_federation_galactic_intel = { 
+	members_modifier = {
+		add_base_country_intel = 25
+		intel_decryption_add = 5
+		intel_encryption_add = 5
+	}
+}
+synthetic_federation_shipyard_standardization = { 
+	members_modifier = {
+		starbase_shipyard_build_cost_mult = -0.15
+		starbase_shipyard_build_speed_mult = 0.15
+	
+	}
+}
+synthetic_federation_robotics_assembly = { 
+	members_modifier = {
+		planet_pop_assemblers_upkeep_mult = -0.2
+		pop_assembly_speed = 0.2
+		planet_pops_robotics_produces_mult = 0.2
+		
+	}
+}
+synthetic_federation_combat_uplink = { 
+	members_modifier = {
+		country_command_limit_mult = 0.15
+		ship_fire_rate_mult = 0.1
+		ship_evasion_mult = 0.1
+		ship_emergency_ftl_mult = -0.1
+		ship_disengage_chance_mult = 0.1
+		ship_jumpdrive_cooldown_mult = -0.1
+	}
+}
+synthetic_federation_foundy_overhual = { 
+	members_modifier = {
+		planet_metallurgists_alloys_produces_add = 2
+	}
+}
+synthetic_federation_construction_techniques = { 
+	members_modifier = {
+			ship_hull_regen_add_perc = 0.1
+			ship_hull_mult = 0.1
+			ship_hull_add = 100
+			ship_armor_regen_add_perc = 0.1
+			ship_armor_mult = 0.1
+			ship_armor_add = 100
+	
+	}
+}
+synthetic_federation_advanced_algorithms = { 
+	members_modifier = {
+		leader_skill_levels = 5
+		species_leader_exp_gain = 1
+	
+	}
+}

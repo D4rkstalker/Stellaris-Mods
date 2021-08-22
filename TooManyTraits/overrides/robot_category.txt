@@ -1,0 +1,390 @@
+trait_robot_neural_lock = {
+	cost = -2
+
+	allowed_archetypes = { MACHINE ROBOT }
+	
+	modifier = {
+		planet_jobs_unity_produces_mult = -0.25
+	}
+}
+trait_robot_uncanny = {
+	cost = -1
+	opposites = { "trait_robot_emotion_emulators" }
+	allowed_archetypes = { MACHINE ROBOT }
+	custom_tooltip = TRAIT_UNCANNY_EFFECT
+}
+trait_td_rbot_adaptive_coating = {
+	cost = 2
+	icon = "gfx/interface/icons/traits/imported_icons/trait_extremely_adaptive.dds"
+
+	randomized = no
+
+	allowed_archetypes = { MACHINE ROBOT }
+
+	modifier = {
+		pop_environment_tolerance = 0.20
+	}
+}
+trait_agrarian_biorobot = {
+	cost = 2
+	potential_crossbreeding_chance = 1.0
+	initial = no
+	randomized = no
+	allowed_archetypes = { BIOMACHINE }
+	icon = gfx/interface/icons/traits/trait_agrarian.dds
+
+	species_potential_add = {
+		OR = {
+			has_trait = trait_biorobot
+			has_trait = trait_biorobot_2
+		}
+	}
+
+	modifier = {
+		planet_jobs_food_produces_mult = 0.15
+	}
+	slave_cost = {
+		energy = 50
+	}
+}
+trait_ingenious_biorobot = {
+	cost = 2
+	potential_crossbreeding_chance = 1.0
+	initial = no
+	randomized = no
+	allowed_archetypes = { BIOMACHINE }
+	icon = gfx/interface/icons/traits/trait_ingenious.dds
+
+	species_potential_add = {
+		OR = {
+			has_trait = trait_biorobot
+			has_trait = trait_biorobot_2
+		}
+	}
+
+	modifier = {
+		planet_jobs_energy_produces_mult = 0.15
+	}
+	slave_cost = {
+		energy = 50
+	}
+}
+trait_industrious_biorobot = {
+	cost = 2
+	potential_crossbreeding_chance = 1.0
+	initial = no
+	randomized = no
+	allowed_archetypes = { BIOMACHINE }
+	icon = gfx/interface/icons/traits/trait_industrious.dds
+
+	species_potential_add = {
+		OR = {
+			has_trait = trait_biorobot
+			has_trait = trait_biorobot_2
+		}
+	}
+
+	modifier = {
+		planet_jobs_minerals_produces_mult = 0.15
+	}
+	slave_cost = {
+		energy = 50
+	}
+}
+trait_intelligent_biorobot = {
+	cost = 2
+	potential_crossbreeding_chance = 1.0
+	initial = no
+	randomized = no
+	allowed_archetypes = { BIOMACHINE }
+	icon = gfx/interface/icons/traits/trait_intelligent.dds
+
+	species_potential_add = {
+		OR = {
+			has_trait = trait_biorobot
+			has_trait = trait_biorobot_2
+		}
+	}
+
+	modifier = {
+		planet_jobs_engineering_research_produces_mult = 0.1
+		planet_jobs_physics_research_produces_mult = 0.1
+		planet_jobs_society_research_produces_mult = 0.1
+	}
+}
+trait_rapid_breeders_biorobot = {
+	cost = 2
+	potential_crossbreeding_chance = 1.0
+    initial = no
+	randomized = no
+	allowed_archetypes = { BIOMACHINE }
+	icon = gfx/interface/icons/traits/trait_rapid_breeders.dds
+
+	species_potential_add = {
+		OR = {
+			has_trait = trait_biorobot
+			has_trait = trait_biorobot_2
+		}
+	}
+
+	modifier = {
+		pop_growth_speed = 0.10
+	}
+	slave_cost = {
+		energy = 100
+	}
+}
+trait_enduring_biorobot = {
+	cost = 2
+	potential_crossbreeding_chance = 1.0
+	initial = no
+	randomized = no
+	allowed_archetypes = { BIOMACHINE }
+	icon = gfx/interface/icons/traits/trait_enduring.dds
+
+	species_potential_add = {
+		OR = {
+			has_trait = trait_biorobot
+			has_trait = trait_biorobot_2
+		}
+	}
+
+	modifier = { 
+		leader_skill_levels = 2
+	}
+}
+trait_venerable_biorobot = {
+	cost = 3
+	potential_crossbreeding_chance = 1.0
+	initial = no
+	randomized = no
+	allowed_archetypes = { BIOMACHINE }
+	icon = gfx/interface/icons/traits/trait_venerable.dds
+
+	species_potential_add = {
+		OR = {
+			has_trait = trait_biorobot
+			has_trait = trait_biorobot_2
+		}
+	}
+
+	modifier = {
+		leader_skill_levels = 3
+	}
+}
+trait_natural_physicists_biorobot = {
+	cost = 1
+	potential_crossbreeding_chance = 1.0
+	allowed_archetypes = { BIOMACHINE }
+	initial = no
+	randomized = no
+	icon = gfx/interface/icons/traits/trait_natural_physicists.dds
+
+	species_potential_add = {
+		OR = {
+			has_trait = trait_biorobot
+			has_trait = trait_biorobot_2
+		}
+	}
+
+	modifier = {
+		planet_jobs_physics_research_produces_mult = 0.15
+	}
+}
+trait_natural_sociologists_biorobot = {
+	cost = 1
+	potential_crossbreeding_chance = 1.0
+	allowed_archetypes = { BIOMACHINE }
+	initial = no
+	randomized = no
+	icon = gfx/interface/icons/traits/trait_natural_sociologists.dds
+
+	species_potential_add = {
+		OR = {
+			has_trait = trait_biorobot
+			has_trait = trait_biorobot_2
+		}
+	}
+
+	modifier = {
+		planet_jobs_society_research_produces_mult = 0.15
+	}
+}
+trait_natural_engineers_biorobot = {
+	cost = 1
+	potential_crossbreeding_chance = 1.0
+	allowed_archetypes = { BIOMACHINE }
+	initial = no
+	randomized = no
+	icon = gfx/interface/icons/traits/trait_natural_engineers.dds
+
+	species_potential_add = {
+		OR = {
+			has_trait = trait_biorobot
+			has_trait = trait_biorobot_2
+		}
+	}
+
+	modifier = {
+		planet_jobs_engineering_research_produces_mult = 0.15
+	}
+}
+trait_quick_learners_biorobot = {
+	cost = 1
+	potential_crossbreeding_chance = 1.0
+	allowed_archetypes = { BIOMACHINE }
+	initial = no
+	randomized = no
+	icon = gfx/interface/icons/traits/trait_quick_learners.dds
+
+	species_potential_add = {
+		OR = {
+			has_trait = trait_biorobot
+			has_trait = trait_biorobot_2
+		}
+	}
+
+	modifier = {
+		species_leader_exp_gain = 0.25
+	}
+}
+trait_traditional_biorobot = {
+	cost = 1
+	potential_crossbreeding_chance = 1.0
+	allowed_archetypes = { BIOMACHINE }
+	initial = no
+	randomized = no
+	icon = gfx/interface/icons/traits/trait_traditional.dds
+
+	species_potential_add = {
+		OR = {
+			has_trait = trait_biorobot
+			has_trait = trait_biorobot_2
+		}
+	}
+
+	modifier = {
+		planet_jobs_unity_produces_mult = 0.15
+	}
+}
+trait_very_strong_biorobot = {
+	cost = 4
+	potential_crossbreeding_chance = 1.0
+	allowed_archetypes = { BIOMACHINE }
+    initial = no
+	randomized = no
+	icon = gfx/interface/icons/traits/trait_very_strong.dds
+
+	species_potential_add = {
+		OR = {
+			has_trait = trait_biorobot
+			has_trait = trait_biorobot_2
+		}
+	}
+
+	modifier = {
+		army_damage_mult = 0.40
+		planet_jobs_produces_mult = 0.05
+	}
+	slave_cost = {
+		energy = 150
+	}
+}
+trait_strong_biorobot = {
+	cost = 3
+	potential_crossbreeding_chance = 1.0
+    allowed_archetypes = { BIOMACHINE }
+    initial = no
+	randomized = no
+	icon = gfx/interface/icons/traits/trait_strong.dds
+
+	species_potential_add = {
+		OR = {
+			has_trait = trait_biorobot
+			has_trait = trait_biorobot_2
+		}
+	}
+
+	modifier = {
+		army_damage_mult = 0.20
+		planet_jobs_produces_mult = 0.025
+	}
+	slave_cost = {
+		energy = 50
+	}
+}
+trait_nomadic_biorobot = {
+	cost = 1
+	potential_crossbreeding_chance = 1.0
+    allowed_archetypes = { BIOMACHINE }
+    initial = no
+	randomized = no
+	icon = gfx/interface/icons/traits/trait_nomadic.dds
+
+	species_potential_add = {
+		OR = {
+			has_trait = trait_biorobot
+			has_trait = trait_biorobot_2
+		}
+	}
+
+	modifier = {
+		pop_growth_from_immigration = 0.15
+		pop_resettlement_cost_mult = -0.25
+	}
+}
+trait_communal_biorobot = {
+	cost = 1
+	potential_crossbreeding_chance = 1.0
+	allowed_archetypes = { BIOMACHINE }
+	initial = no
+	randomized = no
+	icon = gfx/interface/icons/traits/trait_communal.dds
+
+	species_potential_add = {
+		OR = {
+			has_trait = trait_biorobot
+			has_trait = trait_biorobot_2
+		}
+	}
+
+	modifier = {
+		pop_housing_usage_mult = -0.1
+	}
+}
+trait_talented_biorobot = {
+	icon =  gfx/interface/icons/traits/trait_talented.dds
+	cost = 1
+	initial =  no
+	randomized =  no
+	allowed_archetypes = { BIOMACHINE }
+	species_potential_add = {
+		OR = {
+			has_trait = trait_biorobot
+			has_trait = trait_biorobot_2
+}
+	}
+	opposites = { }
+	modifier = {
+		leader_skill_levels = 1
+	}
+}
+trait_conservational = {
+	cost = 1
+	potential_crossbreeding_chance = 1.0
+	allowed_archetypes = { BIOMACHINE }
+	initial = no
+	randomized = no
+	icon = gfx/interface/icons/traits/trait_conservational.dds
+
+	species_potential_add = {
+		OR = {
+			has_trait = trait_biorobot
+			has_trait = trait_biorobot_2
+		}
+	}
+
+	modifier = {
+		planet_pops_upkeep_mult = -0.10
+	}
+}

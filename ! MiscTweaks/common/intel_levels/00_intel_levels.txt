@@ -36,7 +36,7 @@ level_3 = {
 }
 level_4 = {
     frame = 2
-    intel = { 40 49 }
+    intel = { 40 44 }
     government = 2
     diplomacy = 2
     economy = 2
@@ -45,7 +45,7 @@ level_4 = {
 }
 level_5 = {
     frame = 2
-    intel = { 50 59 }
+    intel = { 45 49 }
     government = 2
     diplomacy = 2
     economy = 2
@@ -54,7 +54,7 @@ level_5 = {
 }
 level_6 = {
     frame = 2
-    intel = { 60 69 }
+    intel = { 50 59 }
     government = 3
     diplomacy = 3
     economy = 3
@@ -63,7 +63,7 @@ level_6 = {
 }
 level_7 = {
     frame = 3
-    intel = { 70 79 }
+    intel = { 60 69 }
     government = 3
     diplomacy = 3
     economy = 3
@@ -72,7 +72,7 @@ level_7 = {
 }
 level_8 = {
     frame = 3
-    intel = { 80 89 }
+    intel = { 70 79 }
     government = 4
     diplomacy = 4
     economy = 4
@@ -81,7 +81,7 @@ level_8 = {
 }
 level_9 = {
     frame = 3
-    intel = { 90 98 }
+    intel = { 80 89 }
     government = 4
     diplomacy = 4
     economy = 4
@@ -90,7 +90,7 @@ level_9 = {
 }
 level_10 = {
     frame = 4
-    intel = { 99 100 }
+    intel = { 90 100 }
     government = 4
     diplomacy = 4
     economy = 4

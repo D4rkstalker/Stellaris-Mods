@@ -10,6 +10,7 @@ synthetic_assimilation = {
 
 	possible = {
 		NOT = { has_trait = trait_mechanical }
+		NOT = { has_trait = trait_machine_unit }
 		worker_job_check_trigger = yes
 	}
 
@@ -31,6 +32,33 @@ synthetic_assimilation = {
 		upkeep = {
 			energy = @living_standard_energy_normal
 			alloys = 2
+		}
+	}
+
+	weight = {
+		weight = 9999
+
+	}
+}
+reprogramming = {
+	category = assimilation
+	clothes_texture_index = 2
+	icon = synthetic_assimilation
+
+	possible_pre_triggers = {
+		is_being_purged = no
+		is_being_assimilated = no
+	}
+
+	possible = {
+		has_trait = trait_machine_unit
+		worker_job_check_trigger = yes
+	}
+
+	resources = {
+		category = planet_jobs
+		upkeep = {
+			energy = @living_standard_energy_normal
 		}
 	}
 

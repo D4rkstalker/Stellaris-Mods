@@ -1,0 +1,212 @@
+namespace = IRGW
+
+#Can war start?
+event = {
+	id = IRGW.1
+	title = OK
+	desc = OK
+
+	hide_window = yes
+	trigger = {
+		OR = {
+			AND = { 
+				mid_game_years_passed > 5
+				any_country = {
+					is_regular_empire = yes
+					fleet_power > 50000
+					is_subject = no
+					#is_at_war = no
+					is_homicidal = no
+					has_ascension_perk = ap_transcendence
+				}
+				any_country = {
+					is_regular_empire = yes
+					fleet_power > 50000
+					is_subject = no
+					#is_at_war = no
+					is_homicidal = no
+					has_ascension_perk = ap_synthetic_evolution
+				}
+			}
+			AND = { 
+				is_active_resolution = "resolution_divinity_silence_the_soulless"
+				any_country = {
+					is_regular_empire = yes
+					fleet_power > 50000
+					is_subject = no
+					#is_at_war = no
+					is_homicidal = no
+					has_ascension_perk = ap_synthetic_evolution
+				}
+			}
+			AND = { 
+				is_active_resolution = "resolution_divinity_a_defined_purpose"
+				any_country = {
+					is_regular_empire = yes
+					fleet_power > 50000
+					is_subject = no
+					#is_at_war = no
+					is_homicidal = no
+					has_ascension_perk = ap_synthetic_evolution
+				}
+			}
+
+		}
+		NOT = { has_global_flag = war_in_heaven_ongoing }
+		NOT = { has_global_flag = IRGW_happened }
+		NOT = { has_global_flag = IRGW_happening }
+		NOT = { has_global_flag = IRGW_attempted }
+	}	
+	mean_time_to_happen = {
+		months = 1
+	}
+	immediate = {
+		set_timed_global_flag = { flag = IRGW_attempted days = 360 }
+		random_country = {
+			limit = { 
+				#is_at_war = no
+				is_regular_empire = yes
+				is_subject = no
+				fleet_power > 50000
+				is_homicidal = no
+				has_ascension_perk = ap_synthetic_evolution
+			}
+			set_country_flag = IRGW_synth_country
+			set_timed_country_flag = { flag = ai_no_wars days = 360 }			
+		}
+		random_country = {
+			limit = { 
+				#is_at_war = no
+				is_regular_empire = yes
+				is_subject = no
+				fleet_power > 50000
+				is_homicidal = no
+				has_ascension_perk = ap_transcendence
+			}
+			set_country_flag = IRGW_psi_country
+			set_timed_country_flag = { flag = ai_no_wars days = 360 }
+			country_event = { id = IRGW.3 }			
+		}
+		every_country = {
+			limit = {
+				NOR = {
+					has_country_flag = IRGW_psi_country
+					has_country_flag = IRGW_synth_country
+				}
+			}
+			country_event = { id = IRGW.2 }
+		}
+	}
+
+}
+
+
+#Notify everyone of tensions
+country_event = {
+	id = IRGW.2
+	title = IRGW.2.name
+	desc = IRGW.2.desc
+	picture = GFX_evt_fallen_empire
+	show_sound = event_alien_signal
+	location = from
+	
+	is_triggered_only = yes
+
+	option = {
+		name = IRGW.2.a	
+	}
+
+}
+country_event = {
+	id = IRGW.3
+	title = IRGW.3.name
+	desc = IRGW.3.desc
+	picture = GFX_evt_fallen_empire
+	show_sound = event_alien_signal
+	location = from
+	
+	is_triggered_only = yes
+
+	option = {
+		name = IRGW.3.a	
+	}
+
+}
+
+country_event = {
+	id = IRGW.100
+	title = IRGW.100.name
+	desc = IRGW.100.desc
+	picture = GFX_evt_fallen_empire_awakes
+	show_sound = event_alien_signal
+	location = root
+	
+	trigger = {
+		has_federation = yes
+		is_federation_leader = yes
+		federation = {
+			has_federation_flag = IRGW_PSI_crusaders
+		}
+		has_global_flag = IRGW_SYNTH_liberator
+		has_global_flag = IRGW_PSI_crusader
+		NOT = { has_global_flag = IRGW_happened }
+		NOT = {
+			any_country = {
+				is_country_type = awakened_fallen_empire
+				is_at_war_with = prev
+			}
+		}
+		any_country = { 
+			has_country_flag = IRGW_synth_country
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 3
+	}
+	
+	immediate = {
+		set_global_flag = IRGW_happened
+	}
+
+	option = {
+		name = IRGW.100.a	
+		
+		every_country = {
+			limit = {
+				has_country_flag = IRGW_psi_country
+			}
+			declare_war = {
+				target = prev
+				name = "NAME_The_Grand_Crusade"
+				attacker_war_goal = "wg_irgw_grand_crusade"
+			}
+			hidden_effect = {
+				every_subject = {
+					join_war = prev
+				}
+			}
+		}
+	}
+}
+
+# Victory for one side
+country_event = {
+	id = IRGW.999
+	title = IRGW.999.name
+	desc = IRGW.999.desc
+	picture = GFX_evt_fallen_empire_awakes
+	show_sound = event_alien_signal
+	location = from
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		is_subject = no
+	}
+
+	option = {
+		name = IRGW.999.a	
+	}
+}
+

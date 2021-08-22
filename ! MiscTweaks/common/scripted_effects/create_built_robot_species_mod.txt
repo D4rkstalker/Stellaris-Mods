@@ -58,6 +58,7 @@ create_built_robot_species = {
 					1 = { change_species_portrait = dragon_aliensmall }
 					1 = { change_species_portrait = dragon_glowing }
 					1 = { change_species_portrait = dragon_glowingsmall }
+					1 = { change_species_portrait = protogen }
 
 				}
 			}

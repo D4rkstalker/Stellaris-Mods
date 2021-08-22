@@ -1,0 +1,17 @@
+Wolf = { 
+	archetype = BIOLOGICAL
+	playable = { always = yes }
+	randomized = yes
+	robotic = no
+	
+	possible = { authority = { NOT = { value = auth_machine_intelligence text = SPECIES_CLASS_MUST_NOT_USE_MACHINE_INTELLIGENCE } } }
+
+	portraits = {
+		"Wolf"
+	}
+        # These should not be used for randomly generated species
+
+	graphical_culture = mammalian_01
+	name_list = "WOLF"
+	move_pop_sound_effect = "reptilian_pops_move"
+}

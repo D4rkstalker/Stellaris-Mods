@@ -22,6 +22,13 @@ trait_robot = {
 		planet_pop_assemblers_upkeep_mult = -0.1
 		pop_assembly_speed = 0.1
 	}
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0
+			is_same_species = owner_main_species
+		}
+	}
 }
 
 trait_android = {
@@ -45,6 +52,13 @@ trait_android = {
 		pop_environment_tolerance = -0.85
 		planet_jobs_produces_mult = 0.1
 		planet_pop_assemblers_upkeep_mult = 0.15
+	}
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0
+			is_same_species = owner_main_species
+		}
 	}
 }
 
@@ -72,6 +86,18 @@ trait_synthetic = {
 		planet_jobs_complex_drone_machine_produces_mult = 0.1
 		pop_assembly_speed = -0.1
 		
+	}
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0
+			is_same_species = owner_main_species
+		}
+		modifier = {
+			factor = 0
+			exists = owner
+			owner = { has_policy_flag = ai_outlawed } 
+		}
 	}
 }
 
@@ -101,6 +127,14 @@ trait_advanced_synthetic = {
 		pop_assembly_speed = -0.1
 		leader_skill_levels = 5
 		species_leader_exp_gain = 0.15
+	}
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0
+			exists = owner
+			owner = { has_policy_flag = ai_outlawed } 
+		}
 	}
 }
 

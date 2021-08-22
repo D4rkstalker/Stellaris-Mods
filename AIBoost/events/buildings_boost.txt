@@ -1,0 +1,68 @@
+namespace = AI_boost
+event = {
+	id = AI_boost.200
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		every_country = {
+			limit = { 
+				is_ai = yes
+				OR = {
+					has_technology = tech_robotic_workers
+					is_machine_empire = yes
+				}
+			}
+			country_event = { id = AI_boost.201 }
+		}	
+	}
+}
+country_event = {
+	id = AI_boost.201
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		if = {
+			limit = {
+				has_technology = tech_robotic_workers
+			}
+			every_owned_planet = {
+				limit = { 
+					is_colony = yes
+					NOT = {
+						has_building = building_robot_assembly_plant
+					}
+				}
+				add_building = building_robot_assembly_plant
+			}
+		}
+		else_if = {
+			limit = {
+				is_machine_empire = yes
+			}
+			every_owned_planet = {
+				limit = { 
+					is_colony = yes
+					NOT = {
+						has_building = building_machine_assembly_complex
+					}
+				}
+				add_building = building_machine_assembly_complex
+			}
+		}
+		if = {
+			limit = {
+				is_synthetic_empire = yes
+			}
+			every_owned_planet = {
+				limit = { 
+					is_colony = yes
+					NOT = {
+						has_building = synthetic_conversion_facility
+					}
+				}
+				add_building = synthetic_conversion_facility
+			}
+		}
+	}
+
+}

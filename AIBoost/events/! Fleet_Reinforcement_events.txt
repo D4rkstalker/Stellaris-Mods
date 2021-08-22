@@ -28,7 +28,7 @@ event = {
 					is_ai = yes
 				}
 				capital_scope = {	
-					create_fallen_empire_fleet_boosted = yes
+					create_fallen_empire_fleet = yes
 				}
 			} 
 		}

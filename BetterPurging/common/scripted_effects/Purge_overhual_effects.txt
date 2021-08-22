@@ -27,6 +27,11 @@ PO_purge_effect = {
 					category = economy
 					level >= 1
 				}
+				OR = { 
+					is_pacifist = yes
+					is_egalitarian = yes
+					is_xenophile = yes
+				}
 			}
 			add_opinion_modifier = { who = FROM modifier = opinion_genocidal }
 		}

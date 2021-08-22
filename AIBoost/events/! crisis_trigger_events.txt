@@ -34,13 +34,13 @@ event = {
 			}
 
 			### Prethoryn Scourge (Swarm)
-			country_event = { id = crisis.10 days = 200 random = 1000 }
+			country_event = { id = crisis.10 days = 200 random = 100 }
 
 			### Unbidden (Extradimensionals)
 			country_event = { id = crisis.1000 days = 3600 random = 600 }
 	
 			### Contingency (AI)
-			country_event = { id = crisis.2005 days = 200 random = 1000 }
+			country_event = { id = crisis.2005 days = 200 random = 100 }
 			set_global_flag = galactic_crisis_happened
 			
 		}

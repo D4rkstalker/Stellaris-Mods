@@ -29,12 +29,15 @@ country_event = {
 		every_owned_planet = {
 			limit = {
 				any_owned_pop = {
-					has_job = synthetic_assimilation
+					OR = { 
+						has_job = synthetic_assimilation
+						has_job = reprogramming
+					}
 				}
 			}
 			
 			IR_synthetic_assimilation_effect = yes
-			
+			IR_machine_reprogramming_effect = yes
 
 		}
 	}

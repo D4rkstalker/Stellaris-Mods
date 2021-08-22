@@ -1,0 +1,237 @@
+namespace = IRGW
+#Form PSI federation
+country_event = {
+	id = IRGW.10
+	title = OK
+	desc = OK
+	
+	hide_window = yes
+	trigger = {
+		any_country = {
+			has_country_flag = IRGW_psi_country
+		}
+		NOT = { has_global_flag = IRGW_PSI_crusader }
+	}
+	mean_time_to_happen = {
+		months = 1
+	}
+	immediate = {	
+		every_playable_country = { 
+			limit = { has_country_flag = IRGW_psi_country  }
+			country_event = { id = IRGW.11 }
+		}
+	}
+	
+}
+
+country_event = {
+	id = IRGW.11
+	title = OK
+	desc = OK
+	is_triggered_only = yes
+	hide_window = yes
+	immediate = {
+		set_global_flag = IRGW_happening 
+		set_country_flag = IRGW_PSI_crusader_leader
+		save_event_target_as = crusader_leader
+		if = {
+			limit = { has_federation = yes }
+			leave_alliance = {
+				override_requirements = yes
+			}
+		}
+		set_timed_country_flag = { flag = ai_no_leave_fed days = 7200 }
+		join_alliance = {
+			who = event_target:crusader_leader
+			name = NAME_IRGW_PSI_crusader
+			override_requirements = yes
+		}
+		if = { #end non-federation-sanctioned wars
+			limit = {
+				is_at_war = yes
+			}
+			every_war = {
+				remove_war_participant = prev
+			}
+			every_subject = {
+				every_war = {
+					remove_war_participant = prev
+				}
+			}
+		}
+		root.federation = {
+			add_federation_experience = 9600 #level 3 with some breathing room
+			set_federation_flag = IRGW_PSI_crusaders
+			set_federation_type = crusader_federation
+			
+			
+			if = {
+				limit = {
+					has_federation_perk = cohesion_join_1
+				}
+				add_cohesion = 100
+			}
+			else = { add_cohesion = 200 }
+		}
+
+		set_timed_country_flag = { flag = IRGW_PSI_crusader_timer days = 180 }
+		set_global_flag = IRGW_PSI_crusader
+				
+		every_playable_country = {
+			limit = {
+				has_ascension_perk = ap_synthetic_evolution
+			}
+			add_opinion_modifier = { who = root modifier = opinion_psi_crusader_synth } 
+			root = { add_opinion_modifier = { who = prev modifier = opinion_psi_crusader_synth } } 
+		}	
+		
+		every_playable_country = {
+			limit = {
+				AND = { 
+					is_subject = no
+					OR = { 
+						is_regular_empire = yes
+						is_gestalt = yes
+					}
+					NOR = {
+						has_ascension_perk = ap_synthetic_evolution
+						has_ethic = ethic_materialist
+						has_ethic = ethic_fanatic_materialist
+						is_machine_empire = yes
+						has_country_flag = IRGW_PSI_crusader_leader
+						
+					}
+				}
+			}
+			country_event = { id = IRGW.12 }
+		}
+		
+		country_event = { id = IRGW.20 days = 30}
+		
+		
+	}
+}
+
+country_event = {
+	id = IRGW.12
+	title = IRGW.12.name
+	picture = GFX_evt_fallen_empire_awakes
+	show_sound = event_alien_signal
+	
+	is_triggered_only = yes
+	
+	option = {
+		trigger = { is_materialist = no }
+		name = IRGW.12.a
+		ai_chance = { 
+			factor = 1
+			modifier = {
+				factor = 1000
+				is_spiritualist = yes
+				is_hive_empire = yes
+			}
+			modifier = {
+				factor = 1000
+				has_ascension_perk = ap_transcendence
+			}
+		}
+		if = {
+			limit = { has_federation = yes }
+			leave_alliance = {
+				override_requirements = yes
+			}
+		}
+		set_timed_country_flag = { flag = ai_no_leave_fed days = 7200 }
+		join_alliance = {
+			who = from
+			override_requirements = yes
+		}
+		add_opinion_modifier = { who = from modifier = opinion_psi_crusader }
+		from = { add_opinion_modifier = { who = prev modifier = opinion_psi_crusader } }
+		if = {
+			limit = {
+				any_rival_country = {
+					has_federation = yes
+					federation = {
+						is_same_value = root.federation
+					}
+				}
+			}
+			every_rival_country = {
+				limit = {
+					has_federation = yes
+					federation = {
+						is_same_value = root.federation
+					}
+				}
+				prev = { end_rivalry = prev }
+			}
+		}
+		root.federation = {
+			if = {
+				limit = {
+					any_member = {
+						is_rival = prevprev
+					}
+				}
+				every_member = {
+					limit = {
+						is_rival = prevprev
+					}
+					end_rivalry = prevprev
+				}
+			}
+		}
+		if = {
+			limit = {
+				is_at_war = yes
+			}
+			every_war = {
+				remove_war_participant = prev
+			}
+		}
+		hidden_effect = {
+			root.federation = {
+				if = { #counteract the -100 cohesion you'd normally get for new members
+					limit = {
+						has_federation_perk = cohesion_join_1
+					}
+					add_cohesion = 50
+				}
+				else = { add_cohesion = 100 }
+				add_federation_experience = 7500
+				set_federation_law = centralization_very_high 
+				set_federation_law = succession_type_challenge 
+				set_federation_law = federation_build_fleets_only_leader 
+				set_federation_law = vote_weight_diplomatic 
+				set_federation_law = challenge_type_psionic_battle 
+				set_federation_law = fleet_contribution_high 
+
+			}
+		}
+	}
+	option = {
+		name = IRGW.12.b
+		ai_chance = { 
+			factor = 0
+			modifier = {
+				factor = 0
+				OR = { 
+					is_spiritualist = yes
+					is_hive_empire = yes
+					has_ascension_perk = ap_transcendence
+				}
+			}
+		}	
+		hidden_effect = {
+			from = { add_opinion_modifier = { who = root modifier = opinion_psi_crusader_declined } }
+
+			if = {
+				limit = { is_ai = no }
+				country_event = { id = war_in_heaven.21 }
+			}
+								
+		}	
+	}
+}
+

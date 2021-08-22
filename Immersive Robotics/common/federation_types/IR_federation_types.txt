@@ -1,0 +1,95 @@
+@xp_to_level_2 = 1200
+@xp_to_level_3 = 2400
+@xp_to_level_4 = 4800
+@xp_to_level_5 = 9600
+
+crusader_federation = {
+	base_intel = 50
+	potential = {
+		always = no
+	}
+	levels = {
+		level_1 = { # Starting rank
+			experience = @xp_to_level_2 # Experience until next rank
+			perks = {
+				crusader_federation_psionic_connection
+			}
+		}
+
+		level_2 = {
+			experience = @xp_to_level_3
+			perks = {				
+				crusader_federation_psionic_disruption		
+				crusader_federation_foresight
+			}
+		}
+
+		level_3 = {
+			experience = @xp_to_level_4
+			perks = {
+				crusader_federation_shroud_boost
+			}
+		}
+
+		level_4 = {
+			experience = @xp_to_level_5
+			perks = {
+				crusader_federation_galactic_unification
+				crusader_federation_psionic_suppression
+			}
+		}
+
+		level_5 = {
+			perks = {
+				crusader_federation_shroud_touched
+			}
+		}
+	}
+	
+}
+
+synthetic_federation = {
+	base_intel = 50
+	potential = {
+		always = no
+	}
+	levels = {
+		level_1 = { # Starting rank
+			experience = @xp_to_level_2 # Experience until next rank
+			perks = {
+				synthetic_federation_galactic_intel
+			}
+		}
+
+		level_2 = {
+			experience = @xp_to_level_3
+			perks = {
+				synthetic_federation_shipyard_standardization
+				synthetic_federation_robotics_assembly
+			}
+		}
+
+		level_3 = {
+			experience = @xp_to_level_4
+			perks = {
+				synthetic_federation_advanced_algorithms
+
+			}
+		}
+
+		level_4 = {
+			experience = @xp_to_level_5
+			perks = {
+				synthetic_federation_foundy_overhual
+				synthetic_federation_construction_techniques
+			}
+		}
+
+		level_5 = {
+			perks = {
+				synthetic_federation_combat_uplink
+			}
+		}
+	}
+
+}

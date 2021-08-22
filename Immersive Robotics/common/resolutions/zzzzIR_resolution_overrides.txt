@@ -1,0 +1,919 @@
+@resolution_weight_hated = 3
+@resolution_weight_disliked = 4
+@resolution_weight_unpopular = 5
+@resolution_weight_normal = 6
+@resolution_weight_popular = 6.5
+@resolution_weight_loved = 7
+
+@resolution_cost_t1 = 100
+@resolution_cost_t2 = 150
+@resolution_cost_t3 = 200
+@resolution_cost_t4 = 250
+@resolution_cost_t5 = 300
+@resolution_cost_denounce = 25
+
+@resolution_flag_timer = 360
+resolution_divinity_comfort_the_fallen = {
+	icon = "GFX_resolution_robots_bad"
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_t1
+		}
+	}
+	target = no
+	level = 1
+
+	modifier = {
+		resolution_divinity_comfort_the_fallen = 1
+	}
+
+	effect = {
+		custom_tooltip = resolution_divinity_comfort_the_fallen_effect
+		hidden_effect = {
+			set_global_flag = galactic_community_resolution_passed
+			set_global_flag = galactic_community_resolution_divinity_comfort_the_fallen
+			set_timed_country_flag = { flag = galactic_community_resolution_passed_divinity days = @resolution_flag_timer }
+			add_modifier = {
+				modifier = resolution_passed_diplomatic_weight
+				days = 2200
+			}
+		}
+	}
+
+	fail_effects = {
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_failed_divinity days = @resolution_flag_timer }
+			add_modifier = {
+				modifier = resolution_failed_diplomatic_weight
+				days = 2200
+			}
+		}
+	}
+
+	allow = {
+		custom_tooltip = {
+			fail_text = "resolution_already_active"
+			NOR = {
+				is_active_resolution = "resolution_divinity_comfort_the_fallen"
+				is_active_resolution = "resolution_divinity_tithe_on_the_soulless"
+				is_active_resolution = "resolution_divinity_right_to_work"
+				is_active_resolution = "resolution_divinity_silence_the_soulless"
+				is_active_resolution = "resolution_divinity_a_defined_purpose"
+			}
+		}
+		NOT = { has_global_flag = IRGW_liberator_victory }
+	}
+
+	ai_weight = {
+		weight = @resolution_weight_loved
+
+		modifier = {
+			factor = 0.85
+			is_authoritarian = yes
+			is_spiritualist = no
+		}
+
+		modifier = {
+			factor = 0.85
+			is_megacorp = yes
+			is_spiritualist = no
+		}
+
+		modifier = {
+			factor = 0.5
+			is_materialist = yes
+		}
+
+		modifier = {
+			factor = 1.05
+			is_egalitarian = yes
+		}
+
+		modifier = {
+			factor = 0.0
+			is_machine_empire = yes
+		}
+
+		modifier = {
+			factor = 0.0
+			is_synthetic_empire = yes
+		}
+
+		modifier = {
+			factor = 150
+			is_spiritualist = yes
+		}
+
+		modifier = {
+			factor = 2
+			has_valid_civic = civic_shared_burden
+		}
+	}
+}
+
+resolution_divinity_tithe_on_the_soulless = {
+	icon = "GFX_resolution_robots_bad"
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_t2
+		}
+	}
+	target = no
+	level = 2
+
+	modifier = {
+		resolution_divinity_comfort_the_fallen = 1
+		resolution_divinity_tithe_on_the_soulless = 1
+	}
+
+	effect = {
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_passed_divinity days = @resolution_flag_timer }
+			add_modifier = {
+				modifier = resolution_passed_diplomatic_weight
+				days = 2200
+			}
+		}
+	}
+
+	fail_effects = {
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_failed_divinity days = @resolution_flag_timer }
+			add_modifier = {
+				modifier = resolution_failed_diplomatic_weight
+				days = 2200
+			}
+		}
+	}
+
+	allow = {
+		is_active_resolution = "resolution_divinity_comfort_the_fallen"
+		NOT = { has_global_flag = IRGW_liberator_victory }
+	}
+
+	ai_weight = {
+		weight = @resolution_weight_popular
+
+		modifier = {
+			factor = 0.5
+			has_ai_personality_behaviour = robot_exploiter
+		}
+
+		modifier = {
+			factor = 0.25
+			has_ai_personality_behaviour = robot_liberator
+		}
+
+		modifier = {
+			factor = 0.0
+			is_machine_empire = yes
+		}
+
+		modifier = {
+			factor = 0
+			is_synthetic_empire = yes
+		}
+
+		modifier = {
+			factor = 1.2
+			NOR = {
+				has_ai_personality_behaviour = robot_exploiter
+				has_ai_personality_behaviour = robot_liberator
+			}
+		}
+
+		modifier = {
+			factor = 150
+			is_spiritualist = yes
+		}
+	}
+}
+
+resolution_divinity_right_to_work = {
+	icon = "GFX_resolution_robots_bad"
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_t3
+		}
+	}
+	target = no
+	level = 3
+
+	modifier = {
+		resolution_divinity_comfort_the_fallen = 1
+		resolution_divinity_tithe_on_the_soulless = 1
+		resolution_divinity_right_to_work = 1
+	}
+
+	effect = {
+		custom_tooltip = resolution_divinity_right_to_work_effect
+		hidden_effect = {
+			set_global_flag = galactic_community_resolution_divinity_right_to_work
+			set_timed_country_flag = { flag = galactic_community_resolution_passed_divinity days = @resolution_flag_timer }
+			add_modifier = {
+				modifier = resolution_passed_diplomatic_weight
+				days = 2200
+			}
+		}
+	}
+
+	fail_effects = {
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_failed_divinity days = @resolution_flag_timer }
+			add_modifier = {
+				modifier = resolution_failed_diplomatic_weight
+				days = 2200
+			}
+		}
+	}
+
+	allow = {
+		is_active_resolution = "resolution_divinity_tithe_on_the_soulless"
+		NOT = { has_global_flag = IRGW_liberator_victory }
+	}
+
+	ai_weight = {
+		weight = @resolution_weight_popular
+
+		modifier = {
+			factor = 0.5
+			has_ai_personality_behaviour = robot_exploiter
+		}
+
+		modifier = {
+			factor = 0.25
+			has_ai_personality_behaviour = robot_liberator
+		}
+
+		modifier = {
+			factor = 0.0
+			is_machine_empire = yes
+		}
+
+		modifier = {
+			factor = 0
+			is_synthetic_empire = yes
+		}
+
+		modifier = {
+			factor = 1.2
+			NOR = {
+				has_ai_personality_behaviour = robot_exploiter
+				has_ai_personality_behaviour = robot_liberator
+			}
+		}
+
+		modifier = {
+			factor = 150
+			is_spiritualist = yes
+		}
+	}
+}
+
+resolution_divinity_silence_the_soulless = {
+	icon = "GFX_resolution_robots_bad"
+
+	potential = {
+		has_federations_dlc = yes
+	}
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_t4
+		}
+	}
+	target = no
+	level = 4
+
+	modifier = {
+		resolution_divinity_comfort_the_fallen = 1
+		resolution_divinity_tithe_on_the_soulless = 1
+		resolution_divinity_right_to_work = 1
+		resolution_divinity_silence_the_soulless = 1
+	}
+
+	triggered_modifier = {
+		potential = {
+			is_synthetic_empire = yes
+		}
+		modifier = {
+			resolution_divinity_silence_the_soulless_synthetic_empire_effect = 1
+		}
+	}
+
+	effect = {
+		custom_tooltip = resolution_divinity_silence_the_soulless_effect
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_passed_divinity days = @resolution_flag_timer }
+			add_modifier = {
+				modifier = resolution_passed_diplomatic_weight
+				days = 2200
+			}
+			set_global_flag = resolution_with_breach_effect_passed
+		}
+	}
+
+	fail_effects = {
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_failed_divinity days = @resolution_flag_timer }
+			add_modifier = {
+				modifier = resolution_failed_diplomatic_weight
+				days = 2200
+			}
+		}
+	}
+
+	allow = {
+		is_active_resolution = "resolution_divinity_right_to_work"
+		NOT = { has_global_flag = IRGW_liberator_victory }
+	}
+
+	breach = {
+		has_country_flag = resolution_breached_synthetic_evolution
+	}
+
+	ai_weight = {
+		weight = @resolution_weight_popular
+
+		modifier = {
+			factor = 0.5
+			has_ai_personality_behaviour = robot_exploiter
+		}
+
+		modifier = {
+			factor = 0.25
+			has_ai_personality_behaviour = robot_liberator
+		}
+
+		modifier = {
+			factor = 0.0
+			is_machine_empire = yes
+		}
+
+		modifier = {
+			factor = 0
+			is_synthetic_empire = yes
+		}
+
+		modifier = {
+			factor = 1.2
+			NOR = {
+				has_ai_personality_behaviour = robot_exploiter
+				has_ai_personality_behaviour = robot_liberator
+			}
+		}
+
+		modifier = {
+			factor = 150
+			is_spiritualist = yes
+		}
+	}
+}
+
+resolution_divinity_a_defined_purpose = {
+	icon = "GFX_resolution_robots_bad"
+
+	potential = {
+		has_federations_dlc = yes
+	}
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_t5
+		}
+	}
+	target = no
+	level = 5
+
+	modifier = {
+		resolution_divinity_comfort_the_fallen = 1
+		resolution_divinity_tithe_on_the_soulless = 1
+		resolution_divinity_right_to_work = 1
+		resolution_divinity_silence_the_soulless = 1
+		resolution_divinity_a_defined_purpose = 1
+	}
+
+	effect = {
+		custom_tooltip = resolution_divinity_a_defined_purpose_effect
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_passed_divinity days = @resolution_flag_timer }
+			add_modifier = {
+				modifier = resolution_passed_diplomatic_weight
+				days = 2200
+			}
+			every_playable_country = {
+				limit = {
+					is_galactic_community_member = yes
+					in_breach_of = resolution_divinity_a_defined_purpose
+				}
+				country_event = { id = federations.10340 }
+			}
+		}
+	}
+
+	fail_effects = {
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_failed_divinity days = @resolution_flag_timer }
+			add_modifier = {
+				modifier = resolution_failed_diplomatic_weight
+				days = 2200
+			}
+		}
+	}
+
+	allow = {
+		is_active_resolution = "resolution_divinity_silence_the_soulless"
+		NOT = { has_global_flag = IRGW_liberator_victory }
+	}
+
+	breach = {
+		OR = {
+			AND = {
+				is_machine_empire = no
+				has_policy_flag = ai_full_rights
+			}
+			AND = {
+				is_machine_empire = yes
+				NOT = { has_valid_civic = civic_machine_servitor }
+			}
+		}
+
+	}
+
+	ai_weight = {
+		weight = @resolution_weight_disliked
+
+		modifier = {
+			factor = 0.5
+			has_ai_personality_behaviour = robot_exploiter
+			NOT = { has_valid_civic = civic_machine_servitor }
+		}
+
+		modifier = {
+			factor = 0.25
+			has_ai_personality_behaviour = robot_liberator
+			NOT = { has_valid_civic = civic_machine_servitor }
+		}
+
+		modifier = {
+			factor = 0.0
+			is_machine_empire = yes
+		}
+
+		modifier = {
+			factor = 0
+			is_synthetic_empire = yes
+		}
+
+		modifier = {
+			factor = 1.2
+			NOR = {
+				has_ai_personality_behaviour = robot_exploiter
+				has_ai_personality_behaviour = robot_liberator
+			}
+		}
+
+		modifier = {
+			factor = 150
+			is_spiritualist = yes
+		}
+
+		modifier = {
+			factor = 100
+			has_valid_civic = civic_machine_servitor
+		}
+	}
+}
+
+# DIVINITY OF LIFE
+
+resolution_divinity_repeal_1 = {
+	icon = "GFX_repeal_blue"
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_t1
+		}
+	}
+	target = no
+
+	effect = {
+		custom_tooltip = resolution_divinity_repeal_1_effect_success
+		hidden_effect = {
+			remove_global_flag = galactic_community_resolution_divinity_comfort_the_fallen
+			set_timed_country_flag = { flag = galactic_community_resolution_passed_divinity_repeal days = @resolution_flag_timer }
+			add_modifier = {
+				modifier = resolution_passed_diplomatic_weight
+				days = 2200
+			}
+		}
+	}
+
+	fail_effects = {
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_failed_divinity_repeal days = @resolution_flag_timer }
+			add_modifier = {
+				modifier = resolution_failed_diplomatic_weight
+				days = 2200
+			}
+		}
+	}
+
+	potential = {
+		is_active_resolution = "resolution_divinity_comfort_the_fallen"
+	}
+
+	ai_weight = {
+		weight = @resolution_weight_unpopular
+
+		modifier = {
+			factor = 1.15
+			is_authoritarian = yes
+			is_spiritualist = no
+		}
+
+		modifier = {
+			factor = 1.15
+			is_megacorp = yes
+			is_spiritualist = no
+		}
+
+		modifier = {
+			factor = 1.25
+			is_materialist = yes
+		}
+
+		modifier = {
+			factor = 0.95
+			is_egalitarian = yes
+		}
+
+		modifier = {
+			factor = 1.5
+			is_gestalt = yes
+		}
+
+		modifier = {
+			factor = 20
+			is_synthetic_empire = yes
+		}
+
+		modifier = {
+			factor = 0.5
+			is_spiritualist = yes
+		}
+
+		modifier = {
+			factor = 0
+			has_valid_civic = civic_shared_burden
+		}
+	}
+}
+
+resolution_divinity_repeal_2 = {
+	icon = "GFX_repeal_blue"
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_t2
+		}
+	}
+	target = no
+
+	effect = {
+		custom_tooltip = resolution_divinity_repeal_2_effect_success
+		hidden_effect = {
+			pass_resolution = "resolution_divinity_comfort_the_fallen"
+			set_timed_country_flag = { flag = galactic_community_resolution_passed_divinity_repeal days = @resolution_flag_timer }
+			add_modifier = {
+				modifier = resolution_passed_diplomatic_weight
+				days = 2200
+			}
+		}
+	}
+
+	fail_effects = {
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_failed_divinity_repeal days = @resolution_flag_timer }
+			add_modifier = {
+				modifier = resolution_failed_diplomatic_weight
+				days = 2200
+			}
+		}
+	}
+
+	potential = {
+		is_active_resolution = "resolution_divinity_tithe_on_the_soulless"
+	}
+
+	modifier = {
+		resolution_divinity_comfort_the_fallen = 1
+	}
+
+	ai_weight = {
+		weight = @resolution_weight_unpopular
+
+		modifier = {
+			factor = 1.5
+			has_ai_personality_behaviour = robot_exploiter
+		}
+
+		modifier = {
+			factor = 1.75
+			has_ai_personality_behaviour = robot_liberator
+		}
+
+		modifier = {
+			factor = 1.2
+			is_gestalt = yes
+		}
+
+		modifier = {
+			factor = 20
+			is_synthetic_empire = yes
+		}
+
+		modifier = {
+			factor = 0.8
+			NOR = {
+				has_ai_personality_behaviour = robot_exploiter
+				has_ai_personality_behaviour = robot_liberator
+			}
+		}
+
+		modifier = {
+			factor = 00
+			is_spiritualist = yes
+		}
+	}
+}
+
+resolution_divinity_repeal_3 = {
+	icon = "GFX_repeal_blue"
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_t3
+		}
+	}
+	target = no
+
+	effect = {
+		custom_tooltip = resolution_divinity_repeal_3_effect_success
+		hidden_effect = {
+			pass_resolution = "resolution_divinity_tithe_on_the_soulless"
+			remove_global_flag = galactic_community_resolution_divinity_right_to_work
+			set_timed_country_flag = { flag = galactic_community_resolution_passed_divinity_repeal days = @resolution_flag_timer }
+			add_modifier = {
+				modifier = resolution_passed_diplomatic_weight
+				days = 2200
+			}
+		}
+	}
+
+	fail_effects = {
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_failed_divinity_repeal days = @resolution_flag_timer }
+			add_modifier = {
+				modifier = resolution_failed_diplomatic_weight
+				days = 2200
+			}
+		}
+	}
+
+	potential = {
+		is_active_resolution = "resolution_divinity_right_to_work"
+	}
+
+	modifier = {
+		resolution_divinity_comfort_the_fallen = 1
+		resolution_divinity_tithe_on_the_soulless = 1
+	}
+
+	allow = {}
+
+	ai_weight = {
+		weight = @resolution_weight_unpopular
+
+		modifier = {
+			factor = 1.5
+			has_ai_personality_behaviour = robot_exploiter
+		}
+
+		modifier = {
+			factor = 1.75
+			has_ai_personality_behaviour = robot_liberator
+		}
+
+		modifier = {
+			factor = 1.2
+			is_gestalt = yes
+		}
+
+		modifier = {
+			factor = 20
+			is_synthetic_empire = yes
+		}
+
+		modifier = {
+			factor = 0.8
+			NOR = {
+				has_ai_personality_behaviour = robot_exploiter
+				has_ai_personality_behaviour = robot_liberator
+			}
+		}
+
+		modifier = {
+			factor = 0.0
+			is_spiritualist = yes
+		}
+	}
+}
+
+resolution_divinity_repeal_4 = {
+	icon = "GFX_repeal_blue"
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_t4
+		}
+	}
+	target = no
+
+	effect = {
+		custom_tooltip = resolution_divinity_repeal_4_effect_success
+		hidden_effect = {
+			pass_resolution = "resolution_divinity_right_to_work"
+			set_timed_country_flag = { flag = galactic_community_resolution_passed_divinity_repeal days = @resolution_flag_timer }
+			add_modifier = {
+				modifier = resolution_passed_diplomatic_weight
+				days = 2200
+			}
+		}
+		custom_tooltip = resolution_rulesofwar_independent_tribunals_tooltip
+	}
+
+	fail_effects = {
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_failed_divinity_repeal days = @resolution_flag_timer }
+			add_modifier = {
+				modifier = resolution_failed_diplomatic_weight
+				days = 2200
+			}
+		}
+	}
+
+	potential = {
+		has_federations_dlc = yes
+		is_active_resolution = "resolution_divinity_silence_the_soulless"
+	}
+
+	modifier = {
+		resolution_divinity_comfort_the_fallen = 1
+		resolution_divinity_tithe_on_the_soulless = 1
+		resolution_divinity_right_to_work = 1
+	}
+
+	ai_weight = {
+		weight = @resolution_weight_unpopular
+
+		modifier = {
+			factor = 1.5
+			has_ai_personality_behaviour = robot_exploiter
+		}
+
+		modifier = {
+			factor = 1.75
+			has_ai_personality_behaviour = robot_liberator
+		}
+
+		modifier = {
+			factor = 1.2
+			is_gestalt = yes
+		}
+
+		modifier = {
+			factor = 20
+			is_synthetic_empire = yes
+		}
+
+		modifier = {
+			factor = 0.8
+			NOR = {
+				has_ai_personality_behaviour = robot_exploiter
+				has_ai_personality_behaviour = robot_liberator
+			}
+		}
+
+		modifier = {
+			factor = 00
+			is_spiritualist = yes
+		}
+	}
+}
+
+resolution_divinity_repeal_5 = {
+	icon = "GFX_repeal_blue"
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_t5
+		}
+	}
+	target = no
+
+	effect = {
+		custom_tooltip = resolution_divinity_repeal_5_effect_success
+		hidden_effect = {
+			pass_resolution = "resolution_divinity_silence_the_soulless"
+			set_timed_country_flag = { flag = galactic_community_resolution_passed_divinity_repeal days = @resolution_flag_timer }
+			add_modifier = {
+				modifier = resolution_passed_diplomatic_weight
+				days = 2200
+			}
+		}
+		custom_tooltip = resolution_rulesofwar_last_resort_doctrine_tooltip
+	}
+
+	fail_effects = {
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_failed_divinity_repeal days = @resolution_flag_timer }
+			add_modifier = {
+				modifier = resolution_failed_diplomatic_weight
+				days = 2200
+			}
+		}
+	}
+
+	potential = {
+		has_federations_dlc = yes
+		is_active_resolution = "resolution_divinity_a_defined_purpose"
+	}
+
+	modifier = {
+		resolution_divinity_comfort_the_fallen = 1
+		resolution_divinity_tithe_on_the_soulless = 1
+		resolution_divinity_right_to_work = 1
+		resolution_divinity_silence_the_soulless = 1
+	}
+
+	ai_weight = {
+		weight = @resolution_weight_unpopular
+
+		modifier = {
+			factor = 1.5
+			has_ai_personality_behaviour = robot_exploiter
+		}
+
+		modifier = {
+			factor = 1.75
+			has_ai_personality_behaviour = robot_liberator
+		}
+
+		modifier = {
+			factor = 1.2
+			is_gestalt = yes
+		}
+
+		modifier = {
+			factor = 20
+			is_synthetic_empire = yes
+		}
+
+		modifier = {
+			factor = 0.8
+			NOR = {
+				has_ai_personality_behaviour = robot_exploiter
+				has_ai_personality_behaviour = robot_liberator
+			}
+		}
+
+		modifier = {
+			factor = 0
+			is_spiritualist = yes
+		}
+
+		modifier = {
+			factor = 10
+			in_breach_of = resolution_divinity_a_defined_purpose
+		}
+
+		modifier = {
+			factor = 0
+			has_valid_civic = civic_machine_servitor
+		}
+	}
+}

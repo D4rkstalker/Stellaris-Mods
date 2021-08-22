@@ -1,0 +1,227 @@
+@diff_t0 = 4
+@diff_t1 = 5
+@diff_t2 = 6
+@diff_t3 = 7
+@diff_t4 = 8
+@diff_t5 = 9
+@diff_t6 = 10
+@diff_t7 = 11
+@diff_t8 = 12
+@diff_t10 = 15
+operation_synth_droning = {
+	target = none
+    categories = { op_cat_subterfuge op_cat_technology }
+    picture = GFX_evt_open_revolt
+    desc = operation_spark_rebellion_desc
+    stages = 5
+
+    resources = {
+        category = operations
+        cost = {
+            energy = 100000
+        }
+        upkeep = {
+            energy = 2500
+        }
+    }
+	spy_power_cost = 100
+    spy_network_lvl_requirement = 100
+	potential = {
+        has_nemesis = yes
+		target = { 
+			NOT = { has_country_flag = IRGW_hacked } 
+		}
+    }
+	allow = {
+		target = { 
+			#NOT = { has_country_flag = IRGW_hack_proof } 
+			has_technology = tech_synthetic_workers
+		} 
+		custom_tooltip = {
+			is_running_espionage_operation = no
+			fail_text = operation_one_at_a_time
+		}
+		has_technology = tech_synthetic_leaders
+		
+	}
+    stage = {
+        difficulty = @diff_t10
+        icon = GFX_espionage_chapter_icon_motion
+        event = exop_operations.10
+    }
+    stage = {
+        difficulty = @diff_t10
+        icon = GFX_espionage_chapter_icon_target
+        event = exop_operations.20
+    }
+    stage = {
+        difficulty = @diff_t10
+        icon = GFX_espionage_chapter_icon_motion
+        event = exop_operations.30
+    }
+    stage = {
+        difficulty = @diff_t10
+        icon = GFX_espionage_chapter_icon_motion
+        event = exop_operations.40
+    }
+    stage = {
+        difficulty = @diff_t10
+        icon = GFX_espionage_chapter_icon_success
+        event = exop_operations.50
+    }
+    on_roll_failed = {
+        standard_espionage_operation_on_roll_failed = {
+            RANDOM_EVENTS = droning_failed
+        }
+    }
+    on_create = { }
+
+}
+
+operation_synth_reprogramming = {
+	target = none
+    categories = { op_cat_subterfuge op_cat_technology }
+    picture = GFX_evt_open_revolt
+    desc = operation_spark_rebellion_desc
+    stages = 5
+
+    resources = {
+        category = operations
+        cost = {
+            energy = 100000
+        }
+        upkeep = {
+            energy = 2500
+        }
+    }
+	spy_power_cost = 100
+    spy_network_lvl_requirement = 100
+	potential = {
+        has_nemesis = yes
+		target = { 
+			NOT = { has_country_flag = IRGW_hacked } 
+			has_country_flag = synthetic_empire
+		}
+    }
+	allow = {
+		custom_tooltip = {
+			is_running_espionage_operation = no
+			fail_text = operation_one_at_a_time
+		}
+		has_technology = tech_synthetic_leaders
+		
+	}
+    stage = {
+        difficulty = @diff_t10
+        icon = GFX_espionage_chapter_icon_motion
+        event = exop_operations.110
+    }
+    stage = {
+        difficulty = @diff_t10
+        icon = GFX_espionage_chapter_icon_target
+        event = exop_operations.120
+    }
+    stage = {
+        difficulty = @diff_t10
+        icon = GFX_espionage_chapter_icon_motion
+        event = exop_operations.130
+    }
+    stage = {
+        difficulty = @diff_t10
+        icon = GFX_espionage_chapter_icon_motion
+        event = exop_operations.140
+    }
+    stage = {
+        difficulty = @diff_t10
+        icon = GFX_espionage_chapter_icon_success
+        event = exop_operations.150
+    }
+    on_roll_failed = {
+        standard_espionage_operation_on_roll_failed = {
+            RANDOM_EVENTS = droning_failed
+        }
+    }
+    on_create = { }
+
+}
+operation_machine_reprogramming = {
+	target = none
+    categories = { op_cat_subterfuge op_cat_technology }
+    picture = GFX_evt_open_revolt
+    desc = operation_spark_rebellion_desc
+    stages = 5
+
+    resources = {
+        category = operations
+        cost = {
+            energy = 100000
+        }
+        upkeep = {
+            energy = 2500
+        }
+    }
+	spy_power_cost = 100
+    spy_network_lvl_requirement = 100
+	potential = {
+        has_nemesis = yes
+		target = { 
+			NOT = { has_country_flag = IRGW_hacked } 
+			has_country_flag = synthetic_empire
+		}
+    }
+	allow = {
+		custom_tooltip = {
+			is_running_espionage_operation = no
+			fail_text = operation_one_at_a_time
+		}
+		has_technology = tech_synthetic_leaders
+		
+	}
+    stage = {
+        difficulty = @diff_t10
+        icon = GFX_espionage_chapter_icon_motion
+        event = exop_operations.210
+    }
+    stage = {
+        difficulty = @diff_t10
+        icon = GFX_espionage_chapter_icon_target
+        event = exop_operations.220
+    }
+    stage = {
+        difficulty = @diff_t10
+        icon = GFX_espionage_chapter_icon_motion
+        event = exop_operations.230
+    }
+    stage = {
+        difficulty = @diff_t10
+        icon = GFX_espionage_chapter_icon_motion
+        event = exop_operations.240
+    }
+    stage = {
+        difficulty = @diff_t10
+        icon = GFX_espionage_chapter_icon_success
+        event = exop_operations.250
+    }
+    on_roll_failed = {
+        standard_espionage_operation_on_roll_failed = {
+            RANDOM_EVENTS = droning_failed
+        }
+    }
+    on_create = { }
+
+}
+
+operation_psionic_overload = {
+
+}
+operation_psionic_dissonance = {
+
+}
+
+operation_fleet_hijacking = {
+
+}
+
+operation_machine_uprising = {
+
+}

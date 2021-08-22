@@ -1,6 +1,16 @@
 modifiers_ai = {
 	num_tech_alternatives_add = 10
-	
+	country_base_volatile_motes_produces_add = 10
+	country_base_exotic_gases_produces_add = 10
+	country_base_rare_crystals_produces_add = 10
+	country_base_sr_dark_matter_produces_add = 10
+	country_base_sr_zro_produces_add = 10
+	country_base_nanites_produces_add = 10
+	country_base_esc_psionic_charge_produces_add = 10
+	country_base_esc_gravitic_anomaly_produces_add = 10
+	country_base_esc_living_crystal_produces_add = 10
+	country_base_esc_transdimensional_vortex_produces_add = 10
+	country_base_esc_enigmatic_energy_produces_add = 10
 }
 
 modifiers_machine = {

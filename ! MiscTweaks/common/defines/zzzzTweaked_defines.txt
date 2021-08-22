@@ -11,6 +11,10 @@ NGameplay = {
 	VETO_COOLDOWN = 360 #1800		- 175					# time before a country can enact another veto
 	EMERGENCY_MEASURES_COOLDOWN = 360	#3600 - 365			# time before a country can propose another emergency measure
 	DEFAULT_VETO_COST_MULT = 2 #3						# proposed resolution cost is multiplied by this to determine the cost of vetoing that resolution
+
+
+	PLANET_COMBAT_WIDTH_BASE				= 10 # Maximum number of troops that can fight at the same time
+	PLANET_COMBAT_WIDTH_FROM_SIZE 			= 0.5 # Extra combat width per tile
 }
 
 NCamera = {
@@ -21,3 +25,16 @@ NPop = {
 	REQUIRED_POP_GROWTH_SCALE = 0.1
 	REQUIRED_POP_ASSEMBLY_SCALE = 0.1
 }
+
+NCombat = {
+		COMBAT_BACK_OFF_RATE							= 0.24
+		SHIP_SMOOTH_ROTATION_THRESHOLD					= 10.1
+		COMBAT_TARGET_STICKYNESS_FACTOR					= 5
+		
+		RANDOM_TARGETING_WEIGHT							= 3.0
+		
+		COMBAT_DETECT_RANGE_MULT				= 1.05 #1.4
+		COMBAT_DETECT_RANGE_MIN					= 30
+		
+		COMBAT_BASE_DAYS_UNTIL_EMERGENCY_FTL 			= 30.0 #30
+	}

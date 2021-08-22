@@ -150,59 +150,11 @@ country_event = {
 							#set_owner = event_target:portal_holder_1 #when first anchor built
 						}
 					}
-					create_leader = {
-						class = admiral
-						species = event_target:extradimensional_species
-						name = random
-						skill = 50
-						traits = {
-							trait = leader_trait_ethereal
-						}
-					}
-					create_fleet = {
-						effect = {
-							set_owner = PREV
-							create_ship = {
-								name = random
-								design = "NAME_Spectre"
-								graphical_culture = "extra_dimensional_01"
-							}
-							assign_leader = last_created_leader
-							while = {
-								count = 20
-								create_ship = {
-									name = random
-									design = "NAME_Revenant"
-									graphical_culture = "extra_dimensional_01"
-								}
-							}
-							while = {
-								count = 30
-								create_ship = {
-									name = random
-									design = "NAME_Phantom"
-									graphical_culture = "extra_dimensional_01"
-								}
-							}
-							while = {
-								count = 45
-								create_ship = {
-									name = random
-									design = "NAME_Wraith"
-									graphical_culture = "extra_dimensional_01"
-								}
-							}
-							set_location = {
-								target = event_target:dimensional_portal
-								distance = 5
-								angle = random
-							}
-							set_fleet_stance = aggressive
-							set_aggro_range = 500
-							set_aggro_range_measure_from = self
-							set_fleet_bombardment_stance = armageddon
-						}
-					}
+					create_unbidden_fleet = yes
+					create_unbidden_fleet = yes
+					create_unbidden_fleet = yes
+					create_unbidden_fleet = yes
+					create_unbidden_fleet = yes
 				}
 			}
 			if = {
@@ -293,82 +245,7 @@ fleet_event = {
 
 	immediate = {
 		event_target:extradimensionals = {
-			random_list = {
-				25 = {
-					create_leader = {
-						class = admiral
-						species = event_target:extradimensional_species
-						name = random
-						skill = 30
-						traits = {
-							trait = leader_trait_ethereal
-						}
-					}
-				}
-				25 = {
-					create_leader = {
-						class = admiral
-						species = event_target:extradimensional_species
-						name = random
-						skill = 30
-						traits = {
-							trait = leader_trait_dimensional_stutter
-						}
-					}
-				}
-				50 = {
-					create_leader = {
-						class = admiral
-						species = event_target:extradimensional_species
-						name = random
-						skill = 30
-					}
-				}
-			}
-			create_fleet = {
-				effect = {
-					set_owner = PREV
-					create_ship = {
-						name = random
-						design = "NAME_Spectre"
-						graphical_culture = "extra_dimensional_01"
-					}
-					assign_leader = last_created_leader
-					while = {
-						count = 8
-						create_ship = {
-							name = random
-							design = "NAME_Revenant"
-							graphical_culture = "extra_dimensional_01"
-						}
-					}
-					while = {
-						count = 12
-						create_ship = {
-							name = random
-							design = "NAME_Phantom"
-							graphical_culture = "extra_dimensional_01"
-						}
-					}
-					while = {
-						count = 20
-						create_ship = {
-							name = random
-							design = "NAME_Wraith"
-							graphical_culture = "extra_dimensional_01"
-						}
-					}
-					set_location = {
-						target = ROOT
-						distance = 5
-						angle = random
-					}
-					set_fleet_stance = aggressive
-					set_aggro_range = 500
-					set_aggro_range_measure_from = self
-					set_fleet_bombardment_stance = armageddon
-				}
-			}
+			create_unbidden_fleet = yes
 		}
 	}
 }
@@ -481,82 +358,11 @@ country_event = {
 							event_target:extradimensional_hunters = { country_event = { id = crisis.1260 days = 550 } } # Spawn Cycle starts
 						}
 					}
-					random_list = {
-						25 = {
-							create_leader = {
-								class = admiral
-								species = event_target:extradimensional_hunters_species
-								name = random
-								skill = 30
-								traits = {
-									trait = leader_trait_ethereal
-								}
-							}
-						}
-						25 = {
-							create_leader = {
-								class = admiral
-								species = event_target:extradimensional_hunters_species
-								name = random
-								skill = 30
-								traits = {
-									trait = leader_trait_dimensional_stutter
-								}
-							}
-						}
-						50 = {
-							create_leader = {
-								class = admiral
-								species = event_target:extradimensional_hunters_species
-								name = random
-								skill = 30
-							}
-						}
-					}
-					create_fleet = {
-						effect = {
-							set_owner = PREV
-							create_ship = {
-								name = random
-								design = "NAME_Shadowstalker"
-								graphical_culture = "extra_dimensional_02"
-							}
-							assign_leader = last_created_leader
-							while = {
-								count = 20
-								create_ship = {
-									name = random
-									design = "NAME_Huntress"
-									graphical_culture = "extra_dimensional_02"
-								}
-							}
-							while = {
-								count = 30
-								create_ship = {
-									name = random
-									design = "NAME_Assassin"
-									graphical_culture = "extra_dimensional_02"
-								}
-							}
-							while = {
-								count = 45
-								create_ship = {
-									name = random
-									design = "NAME_Predator"
-									graphical_culture = "extra_dimensional_02"
-								}
-							}
-							set_location = {
-								target = event_target:second_portal
-								distance = 5
-								angle = random
-							}
-							set_fleet_stance = aggressive
-							set_aggro_range = 500
-							set_aggro_range_measure_from = self
-							set_fleet_bombardment_stance = armageddon
-						}
-					}
+					create_aberrant_fleet = yes 
+					create_aberrant_fleet = yes 
+					create_aberrant_fleet = yes 
+					create_aberrant_fleet = yes 
+					create_aberrant_fleet = yes 
 				}
 			}
 			if = {
@@ -613,82 +419,7 @@ fleet_event = {
 
 	immediate = {
 		event_target:extradimensional_hunters = {
-			random_list = {
-				25 = {
-					create_leader = {
-						class = admiral
-						species = event_target:extradimensional_hunters_species
-						name = random
-						skill = 30
-						traits = {
-							trait = leader_trait_ethereal
-						}
-					}
-				}
-				25 = {
-					create_leader = {
-						class = admiral
-						species = event_target:extradimensional_hunters_species
-						name = random
-						skill = 30
-						traits = {
-							trait = leader_trait_dimensional_stutter
-						}
-					}
-				}
-				50 = {
-					create_leader = {
-						class = admiral
-						species = event_target:extradimensional_hunters_species
-						name = random
-						skill = 30
-					}
-				}
-			}
-			create_fleet = {
-				effect = {
-					set_owner = PREV
-					create_ship = {
-						name = random
-						design = "NAME_Shadowstalker"
-						graphical_culture = "extra_dimensional_02"
-					}
-					assign_leader = last_created_leader
-					while = {
-						count = 8
-						create_ship = {
-							name = random
-							design = "NAME_Huntress"
-							graphical_culture = "extra_dimensional_02"
-						}
-					}
-					while = {
-						count = 12
-						create_ship = {
-							name = random
-							design = "NAME_Assassin"
-							graphical_culture = "extra_dimensional_02"
-						}
-					}
-					while = {
-						count = 20
-						create_ship = {
-							name = random
-							design = "NAME_Predator"
-							graphical_culture = "extra_dimensional_02"
-						}
-					}
-					set_location = {
-						target = ROOT
-						distance = 5
-						angle = random
-					}
-					set_fleet_stance = aggressive
-					set_aggro_range = 500
-					set_aggro_range_measure_from = self
-					set_fleet_bombardment_stance = armageddon
-				}
-			}
+			create_aberrant_fleet = yes
 		}
 	}
 }
@@ -805,82 +536,11 @@ country_event = {
 								event_target:extradimensional_trespassers = { country_event = { 	id = crisis.1260 days = 550 } } # Spawn Cycle starts
 							}
 						}
-						random_list = {
-							25 = {
-								create_leader = {
-									class = admiral
-									species = event_target:extradimensional_trespassers_species
-									name = random
-									skill = 30
-									traits = {
-										trait = leader_trait_ethereal
-									}
-								}
-							}
-							25 = {
-								create_leader = {
-									class = admiral
-									species = event_target:extradimensional_trespassers_species
-									name = random
-									skill = 30
-									traits = {
-										trait = leader_trait_dimensional_stutter
-									}
-								}
-							}
-							50 = {
-								create_leader = {
-									class = admiral
-									species = event_target:extradimensional_trespassers_species
-									name = random
-									skill = 30
-								}
-							}
-						}
-						create_fleet = {
-							effect = {
-								set_owner = PREV
-								create_ship = {
-									name = random
-									design = "NAME_Exterminator"
-									graphical_culture = "extra_dimensional_03"
-								}
-								assign_leader = last_created_leader
-								while = {
-									count = 20
-									create_ship = {
-										name = random
-										design = "NAME_Eradicator"
-										graphical_culture = "extra_dimensional_03"
-									}
-								}
-								while = {
-									count = 30
-									create_ship = {
-										name = random
-										design = "NAME_Annihilator"
-										graphical_culture = "extra_dimensional_03"
-									}
-								}
-								while = {
-									count = 45
-									create_ship = {
-										name = random
-										design = "NAME_Obliterator"
-										graphical_culture = "extra_dimensional_03"
-									}
-								}
-								set_location = {
-									target = event_target:third_portal
-									distance = 5
-									angle = random
-								}
-								set_fleet_stance = aggressive
-								set_aggro_range = 500
-								set_aggro_range_measure_from = self
-								set_fleet_bombardment_stance = armageddon
-							}
-						}
+						create_vehement_fleet = yes 
+						create_vehement_fleet = yes 
+						create_vehement_fleet = yes 
+						create_vehement_fleet = yes 
+						create_vehement_fleet = yes 
 					}
 				}
 				if = {
@@ -936,82 +596,7 @@ fleet_event = {
 
 	immediate = {
 		event_target:extradimensional_trespassers = {
-			random_list = {
-				25 = {
-					create_leader = {
-						class = admiral
-						species = event_target:extradimensional_trespassers_species
-						name = random
-						skill = 30
-						traits = {
-							trait = leader_trait_ethereal
-						}
-					}
-				}
-				25 = {
-					create_leader = {
-						class = admiral
-						species = event_target:extradimensional_trespassers_species
-						name = random
-						skill = 30
-						traits = {
-							trait = leader_trait_dimensional_stutter
-						}
-					}
-				}
-				50 = {
-					create_leader = {
-						class = admiral
-						species = event_target:extradimensional_trespassers_species
-						name = random
-						skill = 30
-					}
-				}
-			}
-			create_fleet = {
-				effect = {
-					set_owner = PREV
-					create_ship = {
-						name = random
-						design = "NAME_Exterminator"
-						graphical_culture = "extra_dimensional_03"
-					}
-					assign_leader = last_created_leader
-					while = {
-						count = 8
-						create_ship = {
-							name = random
-							design = "NAME_Eradicator"
-							graphical_culture = "extra_dimensional_03"
-						}
-					}
-					while = {
-						count = 12
-						create_ship = {
-							name = random
-							design = "NAME_Annihilator"
-							graphical_culture = "extra_dimensional_03"
-						}
-					}
-					while = {
-						count = 20
-						create_ship = {
-							name = random
-							design = "NAME_Obliterator"
-							graphical_culture = "extra_dimensional_03"
-						}
-					}
-					set_location = {
-						target = ROOT
-						distance = 5
-						angle = random
-					}
-					set_fleet_stance = aggressive
-					set_aggro_range = 500
-					set_aggro_range_measure_from = self
-					set_fleet_bombardment_stance = armageddon
-				}
-			}
+			create_vehement_fleet = yes
 		}
 	}
 }
@@ -1061,256 +646,23 @@ country_event = {
 		# Extradimensionals 1
 		if = {
 			limit = { is_country_type = extradimensional }
-
-			# Create Admiral
-			random_list = {
-				25 = {
-					create_leader = {
-						class = admiral
-						species = event_target:extradimensional_species
-						name = random
-						skill = 30
-						traits = {
-							trait = leader_trait_ethereal
-						}
-					}
-				}
-				25 = {
-					create_leader = {
-						class = admiral
-						species = event_target:extradimensional_species
-						name = random
-						skill = 30
-						traits = {
-							trait = leader_trait_dimensional_stutter
-						}
-					}
-				}
-				50 = {
-					create_leader = {
-						class = admiral
-						species = event_target:extradimensional_species
-						name = random
-						skill = 30
-					}
-				}
-			}
-
-			# Create Fleet
-			create_fleet = {
-				effect = {
-					set_owner = ROOT
-					create_ship = {
-						name = random
-						design = "NAME_Spectre"
-						graphical_culture = "extra_dimensional_01"
-					}
-					assign_leader = last_created_leader
-					while = {
-						count = 5
-						create_ship = {
-							name = random
-							design = "NAME_Revenant"
-							graphical_culture = "extra_dimensional_01"
-						}
-					}
-					while = {
-						count = 8
-						create_ship = {
-							name = random
-							design = "NAME_Phantom"
-							graphical_culture = "extra_dimensional_01"
-						}
-					}
-					while = {
-						count = 15
-						create_ship = {
-							name = random
-							design = "NAME_Wraith"
-							graphical_culture = "extra_dimensional_01"
-						}
-					}
-					set_location = {
-						target = event_target:dimensional_portal
-						distance = 5
-						angle = random
-					}
-					set_fleet_stance = aggressive
-					set_aggro_range = 500
-					set_aggro_range_measure_from = self
-					set_fleet_bombardment_stance = armageddon
-				}
-			}
+			create_unbidden_fleet = yes
+			create_unbidden_fleet = yes
 		}
 
 		# Extradimensionals 2
 		else_if = {
 			limit = { is_country_type = extradimensional_2 }
-
-			# Create Admiral
-			random_list = {
-				25 = {
-					create_leader = {
-						class = admiral
-						species = event_target:extradimensional_species
-						name = random
-						skill = 30
-						traits = {
-							trait = leader_trait_ethereal
-						}
-					}
-				}
-				25 = {
-					create_leader = {
-						class = admiral
-						species = event_target:extradimensional_species
-						name = random
-						skill = 30
-						traits = {
-							trait = leader_trait_dimensional_stutter
-						}
-					}
-				}
-				50 = {
-					create_leader = {
-						class = admiral
-						species = event_target:extradimensional_species
-						name = random
-						skill = 30
-					}
-				}
-			}
-
-			# Create Fleet
-			create_fleet = {
-				effect = {
-					set_owner = ROOT
-					create_ship = {
-						name = random
-						design = "NAME_Shadowstalker"
-						graphical_culture = "extra_dimensional_02"
-					}
-					assign_leader = last_created_leader
-					while = {
-						count = 5
-						create_ship = {
-							name = random
-							design = "NAME_Huntress"
-							graphical_culture = "extra_dimensional_02"
-						}
-					}
-					while = {
-						count = 8
-						create_ship = {
-							name = random
-							design = "NAME_Assassin"
-							graphical_culture = "extra_dimensional_02"
-						}
-					}
-					while = {
-						count = 15
-						create_ship = {
-							name = random
-							design = "NAME_Predator"
-							graphical_culture = "extra_dimensional_02"
-						}
-					}
-					set_location = {
-						target = event_target:dimensional_portal
-						distance = 5
-						angle = random
-					}
-					set_fleet_stance = aggressive
-					set_aggro_range = 500
-					set_aggro_range_measure_from = self
-					set_fleet_bombardment_stance = armageddon
-				}
-			}
+			create_aberrant_fleet = yes
+			create_aberrant_fleet = yes
+			
 		}
 
 		# Extradimensionals 3
 		else_if = {
 			limit = { is_country_type = extradimensional_3 }
-
-			# Create Admiral
-			random_list = {
-				25 = {
-					create_leader = {
-						class = admiral
-						species = event_target:extradimensional_species
-						name = random
-						skill = 30
-						traits = {
-							trait = leader_trait_ethereal
-						}
-					}
-				}
-				25 = {
-					create_leader = {
-						class = admiral
-						species = event_target:extradimensional_species
-						name = random
-						skill = 30
-						traits = {
-							trait = leader_trait_dimensional_stutter
-						}
-					}
-				}
-				50 = {
-					create_leader = {
-						class = admiral
-						species = event_target:extradimensional_species
-						name = random
-						skill = 30
-					}
-				}
-			}
-
-			# Create Fleet
-			create_fleet = {
-				effect = {
-					set_owner = ROOT
-					create_ship = {
-						name = random
-						design = "NAME_Exterminator"
-						graphical_culture = "extra_dimensional_03"
-					}
-					assign_leader = last_created_leader
-					while = {
-						count = 5
-						create_ship = {
-							name = random
-							design = "NAME_Eradicator"
-							graphical_culture = "extra_dimensional_03"
-						}
-					}
-					while = {
-						count = 8
-						create_ship = {
-							name = random
-							design = "NAME_Annihilator"
-							graphical_culture = "extra_dimensional_03"
-						}
-					}
-					while = {
-						count = 15
-						create_ship = {
-							name = random
-							design = "NAME_Obliterator"
-							graphical_culture = "extra_dimensional_03"
-						}
-					}
-					set_location = {
-						target = event_target:dimensional_portal
-						distance = 5
-						angle = random
-					}
-					set_fleet_stance = aggressive
-					set_aggro_range = 500
-					set_aggro_range_measure_from = self
-					set_fleet_bombardment_stance = armageddon
-				}
-			}
+			create_vehement_fleet = yes
+			create_vehement_fleet = yes
 		}
 	}
 }
@@ -1351,7 +703,7 @@ ship_event = {
 				is_country_type = extradimensional_2
 				is_country_type = extradimensional_3
 			}
-			num_ships < 2001
+			num_ships < 4001
 		}
 	}
 
@@ -1374,256 +726,26 @@ ship_event = {
 			# Extradimensionals 1
 			if = {
 				limit = { is_country_type = extradimensional }
-
-				# Create Admiral
-				random_list = {
-					25 = {
-						create_leader = {
-							class = admiral
-							species = event_target:extradimensional_species
-							name = random
-							skill = 30
-							traits = {
-								trait = leader_trait_ethereal
-							}
-						}
-					}
-					25 = {
-						create_leader = {
-							class = admiral
-							species = event_target:extradimensional_species
-							name = random
-							skill = 30
-							traits = {
-								trait = leader_trait_dimensional_stutter
-							}
-						}
-					}
-					50 = {
-						create_leader = {
-							class = admiral
-							species = event_target:extradimensional_species
-							name = random
-							skill = 30
-						}
-					}
-				}
-
-				# Create Fleet
-				create_fleet = {
-					effect = {
-						set_owner = ROOT.owner
-						create_ship = {
-							name = random
-							design = "NAME_Spectre"
-							graphical_culture = "extra_dimensional_01"
-						}
-						assign_leader = last_created_leader
-						while = {
-							count = 5
-							create_ship = {
-								name = random
-								design = "NAME_Revenant"
-								graphical_culture = "extra_dimensional_01"
-							}
-						}
-						while = {
-							count = 8
-							create_ship = {
-								name = random
-								design = "NAME_Phantom"
-								graphical_culture = "extra_dimensional_01"
-							}
-						}
-						while = {
-							count = 15
-							create_ship = {
-								name = random
-								design = "NAME_Wraith"
-								graphical_culture = "extra_dimensional_01"
-							}
-						}
-						set_location = {
-							target = event_target:dimensional_portal
-							distance = 5
-							angle = random
-						}
-						set_fleet_stance = aggressive
-						set_aggro_range = 500
-						set_aggro_range_measure_from = self
-						set_fleet_bombardment_stance = armageddon
-					}
-				}
+				create_unbidden_fleet = yes
+				create_unbidden_fleet = yes
+				create_unbidden_fleet = yes
 			}
 
 			# Extradimensionals 2
 			else_if = {
 				limit = { is_country_type = extradimensional_2 }
-
-				# Create Admiral
-				random_list = {
-					25 = {
-						create_leader = {
-							class = admiral
-							species = event_target:extradimensional_species
-							name = random
-							skill = 30
-							traits = {
-								trait = leader_trait_ethereal
-							}
-						}
-					}
-					25 = {
-						create_leader = {
-							class = admiral
-							species = event_target:extradimensional_species
-							name = random
-							skill = 30
-							traits = {
-								trait = leader_trait_dimensional_stutter
-							}
-						}
-					}
-					50 = {
-						create_leader = {
-							class = admiral
-							species = event_target:extradimensional_species
-							name = random
-							skill = 30
-						}
-					}
-				}
-
-				# Create Fleet
-				create_fleet = {
-					effect = {
-						set_owner = ROOT.owner
-						create_ship = {
-							name = random
-							design = "NAME_Shadowstalker"
-							graphical_culture = "extra_dimensional_02"
-						}
-						assign_leader = last_created_leader
-						while = {
-							count = 5
-							create_ship = {
-								name = random
-								design = "NAME_Huntress"
-								graphical_culture = "extra_dimensional_02"
-							}
-						}
-						while = {
-							count = 8
-							create_ship = {
-								name = random
-								design = "NAME_Assassin"
-								graphical_culture = "extra_dimensional_02"
-							}
-						}
-						while = {
-							count = 15
-							create_ship = {
-								name = random
-								design = "NAME_Predator"
-								graphical_culture = "extra_dimensional_02"
-							}
-						}
-						set_location = {
-							target = event_target:dimensional_portal
-							distance = 5
-							angle = random
-						}
-						set_fleet_stance = aggressive
-						set_aggro_range = 500
-						set_aggro_range_measure_from = self
-						set_fleet_bombardment_stance = armageddon
-					}
-				}
+				create_aberrant_fleet = yes
+				create_aberrant_fleet = yes
+				create_aberrant_fleet = yes
+				
 			}
 
 			# Extradimensionals 3
 			else_if = {
 				limit = { is_country_type = extradimensional_3 }
-
-				# Create Admiral
-				random_list = {
-					25 = {
-						create_leader = {
-							class = admiral
-							species = event_target:extradimensional_species
-							name = random
-							skill = 30
-							traits = {
-								trait = leader_trait_ethereal
-							}
-						}
-					}
-					25 = {
-						create_leader = {
-							class = admiral
-							species = event_target:extradimensional_species
-							name = random
-							skill = 30
-							traits = {
-								trait = leader_trait_dimensional_stutter
-							}
-						}
-					}
-					50 = {
-						create_leader = {
-							class = admiral
-							species = event_target:extradimensional_species
-							name = random
-							skill = 30
-						}
-					}
-				}
-
-				# Create Fleet
-				create_fleet = {
-					effect = {
-						set_owner = ROOT.owner
-						create_ship = {
-							name = random
-							design = "NAME_Exterminator"
-							graphical_culture = "extra_dimensional_03"
-						}
-						assign_leader = last_created_leader
-						while = {
-							count = 5
-							create_ship = {
-								name = random
-								design = "NAME_Eradicator"
-								graphical_culture = "extra_dimensional_03"
-							}
-						}
-						while = {
-							count = 8
-							create_ship = {
-								name = random
-								design = "NAME_Annihilator"
-								graphical_culture = "extra_dimensional_03"
-							}
-						}
-						while = {
-							count = 15
-							create_ship = {
-								name = random
-								design = "NAME_Obliterator"
-								graphical_culture = "extra_dimensional_03"
-							}
-						}
-						set_location = {
-							target = event_target:dimensional_portal
-							distance = 5
-							angle = random
-						}
-						set_fleet_stance = aggressive
-						set_aggro_range = 500
-						set_aggro_range_measure_from = self
-						set_fleet_bombardment_stance = armageddon
-					}
-				}
+				create_vehement_fleet = yes
+				create_vehement_fleet = yes
+				create_vehement_fleet = yes
 			}
 		}
 	}

@@ -1,0 +1,55 @@
+namespace = exop_operations
+
+#Synth Hacking - Intercepting OS Updates
+
+exop_operations.10 = { 
+
+    id = exop_operations.0
+    title = exop_operations.0.name
+    espionage_operation = yes
+	
+    picture = {
+        trigger = {
+            OR = {
+                has_espionage_operation_flag = steal_tech_conference
+                has_espionage_operation_flag = steal_tech_lecture
+                has_espionage_operation_flag = steal_tech_outreach
+            }
+        }
+        picture = GFX_evt_voting
+    }
+
+    show_sound = event_default
+    is_triggered_only = yes
+
+	immediate = {
+		
+	}
+
+}
+
+#Synth Hacking - Reverse Engineering
+
+exop_operations.20 = { 
+
+
+#Synth Hacking - Setup Proxy Server
+
+exop_operations.30 = { 
+
+
+#Synth Hacking - Embed virus
+
+exop_operations.40 = { 
+
+
+#Synth Hacking - Trigger virus
+
+exop_operations.50 = { 
+
+
+#Synth Hacking - Results
+
+exop_operations.59 = { 
+
+

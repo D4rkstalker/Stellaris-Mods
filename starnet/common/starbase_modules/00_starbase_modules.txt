@@ -1,11 +1,3 @@
-# possible section models:
-# SHIPYARD_STARBASE_SECTION
-# REFINERY_STARBASE_SECTION
-# SCIENCE_STARBASE_SECTION
-# HANGAR_STARBASE_SECTION
-# ASSEMBLYYARD_STARBASE_SECTION
-#
-
 shipyard = {
 	icon = "GFX_starbase_shipyard"
 	section = "ASSEMBLYYARD_STARBASE_SECTION"
@@ -31,20 +23,25 @@ shipyard = {
 	ai_build_outside_chokepoint = yes
 	ai_weight = {
 		weight = 300
-		
+
 		modifier = {
 			factor = 0
 			not = { has_starbase_module = shipyard }
 			owner = { needs_shipyard = no }
 		}
-		
 		modifier = {
 			factor = 0
 			has_starbase_module = anchorage
 			not = { has_starbase_module = shipyard }
 		}
+		modifier = {
+			factor = 0
+			has_starbase_module = orbital_lab
+			not = { has_starbase_module = shipyard }
+		}
 	}
 }
+
 
 anchorage = {
 	icon = "GFX_starbase_anchorage"
@@ -63,11 +60,12 @@ anchorage = {
 	}
 
 	country_modifier = {
-		country_naval_cap_add = 4
+		country_naval_cap_add = 15
 	}
+
 	triggered_country_modifier = {
 		potential = { has_starbase_building = naval_logistics_office }
-		country_naval_cap_add = 2
+		country_naval_cap_add = 10
 	}
 
 	ai_build_at_chokepoint = yes
@@ -87,12 +85,25 @@ anchorage = {
 				count < 2
 			}
 		}
+		modifier = {
+			factor = 0
+			owner = { used_naval_capacity_percent < 0.7 }
+		}
+		modifier = {
+			factor = 0
+			has_starbase_module = asteroid_mining
+			years_passed < 70
+			owner = { resource_stockpile_compare = {
+				resource = minerals
+				value < 1000
+			} }
+		}
 	}
 }
 
+
 gun_battery = {
 	section = "BATTERY_STARBASE_SECTION"
-	icon = GFX_spaceport_modules
 	construction_days = 180
 
 	resources = {
@@ -107,16 +118,13 @@ gun_battery = {
 	}
 
 	station_modifier = {
-		ship_hull_mult = 0.10
-		ship_armor_mult = 0.10
-		starbase_trade_protection_range_add = 1
-		starbase_trade_protection_add = 5
+		starbase_trade_protection_add = 3
 	}
 
 	ai_build_at_chokepoint = yes
 	ai_build_outside_chokepoint = no
 	ai_weight = {
-		weight = 10
+		weight = 20
 		modifier = {
 			factor = 2
 			exists = owner
@@ -131,6 +139,7 @@ gun_battery = {
 
 	show_in_tech = "tech_mass_drivers_1"
 }
+
 
 missile_battery = {
 	section = "MISSILE_STARBASE_SECTION"
@@ -149,25 +158,85 @@ missile_battery = {
 	}
 
 	station_modifier = {
-		ship_hull_mult = 0.10
-		ship_armor_mult = 0.10
-		starbase_trade_protection_range_add = 1
-		starbase_trade_protection_add = 5
+		starbase_trade_protection_add = 3
 	}
 
-	ai_build_at_chokepoint = no
+	ai_build_at_chokepoint = yes
 	ai_build_outside_chokepoint = no
 	ai_weight = {
 		weight = 0
-		modifier = {
-			factor = 2
-			exists = owner
-			owner = { is_preferred_weapons = weapon_type_explosive }
-		}
 	}
 
 	show_in_tech = "tech_missiles_1"
 }
+
+
+pd_battery = {
+	section = "PD_STARBASE_SECTION"
+	icon = "GFX_starbase_pd_battery"
+	construction_days = 150
+	
+	resources = {
+		category = starbase_modules
+		cost = { alloys = 50 }
+		upkeep = { energy = 1 }
+	}
+	
+	station_modifier = { 
+		starbase_trade_protection_add = 3
+	}
+	
+	ai_build_at_chokepoint = yes
+	ai_build_outside_chokepoint = no
+	
+	potential = { 
+		exists = owner 
+		owner = { 
+			OR = {
+				has_technology = tech_pd_tracking_1 
+				has_technology = tech_pd_tracking_2
+				has_technology = tech_pd_tracking_3 
+				has_technology = tech_flak_batteries_1 
+				has_technology = tech_flak_batteries_2
+				has_technology = tech_flak_batteries_3
+			}
+		}
+		has_starbase_size >= starbase_starport #not for outposts
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+
+large_battery = {
+	section = "LARGE_STARBASE_SECTION"
+	icon = "GFX_starbase_large_battery"
+	construction_days = 240
+	
+	resources =	{
+		category = starbase_modules
+		cost = { alloys = 125 }
+		upkeep = { energy = 1 }
+	}
+	
+	station_modifier = { 
+		starbase_trade_protection_add = 3
+	}
+	
+	ai_build_at_chokepoint = yes
+	ai_build_outside_chokepoint = no
+	
+	potential = { 
+		has_starbase_size >= starbase_starfortress
+	}
+	
+	ai_weight = {
+		weight = 0
+	}	
+}
+
 
 hangar_bay = {
 	icon = "GFX_starbase_hangar_bay"
@@ -179,37 +248,165 @@ hangar_bay = {
 		owner = { has_technology = tech_strike_craft_1 }
 	}
 
+	possible = {
+		custom_tooltip = {
+			fail_text = "starbase_h_limit.tooltip.fail"
+			count_starbase_modules = { count < 6 type = hangar_bay }
+		}
+	}
+
 	resources = {
 		category = starbase_modules
-		cost = {
-			alloys = 50
-		}
-
-		upkeep = {
-			energy = 1
-		}
+		cost = { alloys = 50 }
+		upkeep = { alloys = 1 energy = 1 }
 	}
 
 	station_modifier = {
-		ship_hull_mult = 0.10
-		ship_armor_mult = 0.10
 		starbase_trade_protection_range_add = 1
-		starbase_trade_protection_add = 10
+		starbase_trade_protection_add = 5
 	}
 
-	ai_build_at_chokepoint = no
-	ai_build_outside_chokepoint = no
+	ai_build_outside_chokepoint = yes
 	ai_weight = {
-		weight = 0
-		modifier = {
-			factor = 2
-			exists = owner
-			owner = { is_preferred_weapons = weapon_type_strike_craft }
-		}
+		weight = 30
 	}
 
 	show_in_tech = "tech_strike_craft_1"
 }
+
+
+xl_battery = {
+	section = "EXTRA_LARGE_STARBASE_SECTION"
+	icon = "GFX_starbase_xl_battery"
+	construction_days = 320
+	
+	resources = {
+		category = starbase_modules
+		cost = { alloys = 300 }
+		upkeep = { alloys = 1 energy = 3 }
+	}
+	
+	station_modifier = {
+		starbase_trade_protection_range_add = 1
+		starbase_trade_protection_add = 5
+	}
+	
+	ai_build_at_chokepoint = yes
+	ai_build_outside_chokepoint = no
+
+	potential = { 
+		exists = owner 
+		owner = { 
+			OR = {
+				has_technology = tech_energy_lance_1 
+				has_technology = tech_energy_lance_2 
+				has_technology = tech_arc_emitter_1 
+				has_technology = tech_arc_emitter_2 
+				has_technology = tech_mass_accelerator_1
+				has_technology = tech_mass_accelerator_2 
+			}
+		}
+		has_starbase_size >= starbase_citadel
+
+	}
+	
+	possible = {
+		custom_tooltip = {
+			fail_text = "starbase_xl_limit.tooltip.fail"
+			count_starbase_modules = { count < 6 type = xl_battery }
+		}
+	}
+
+	ai_weight = {
+		weight = 50
+	}
+}
+
+
+titanic_battery = {
+	section = "TITANIC_STARBASE_SECTION"
+	icon = "GFX_starbase_titanic_battery"
+	construction_days = 420
+
+	resources = {
+		category = starbase_modules
+		cost = { alloys = 750 }
+		upkeep = { alloys = 3 energy = 5 }
+	}
+
+	station_modifier = { 
+		starbase_trade_protection_range_add = 2
+		starbase_trade_protection_add = 7
+	}
+
+	ai_build_at_chokepoint = yes
+	ai_build_outside_chokepoint = no
+
+	potential = { 
+		exists = owner owner = { has_technology = tech_titans }
+		has_starbase_size >= starbase_citadel
+	}
+
+	possible = {
+		custom_tooltip = {
+			fail_text = "starbase_t_limit.tooltip.fail"
+			count_starbase_modules = { count < 2 type = titanic_battery }
+		}
+	}
+
+	ai_weight = {
+		weight = 50
+	}
+
+	show_in_tech = "tech_titans"
+}
+
+
+shield_module = {
+	section = "ANCHORAGE_STARBASE_SECTION"
+	icon = "GFX_starbase_shield_module"
+	construction_days = 180
+	resources = {
+		category = starbase_modules
+		cost = { alloys = 75 }
+		upkeep = { energy = 1 }
+	}
+	station_modifier = { 
+		ship_shield_add = 3000
+	}
+	ai_build_at_chokepoint = yes
+	ai_build_outside_chokepoint = yes
+	potential = { 
+		has_starbase_size >= starbase_starport #not for outposts
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+
+armor_module = {
+	section = "ANCHORAGE_STARBASE_SECTION"
+	icon = "GFX_starbase_armor_module"
+	construction_days = 180
+	resources = {
+		category = starbase_modules
+		cost = { alloys = 75 }
+		upkeep = { alloys = 1 }
+	}
+	station_modifier = { 
+		ship_armor_add = 3000
+	}
+	ai_build_at_chokepoint = yes
+	ai_build_outside_chokepoint = yes
+	potential = {
+		has_starbase_size >= starbase_starport #not for outposts
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
 
 solar_panel_network = {
 	icon = "GFX_solar_panel_network"
@@ -248,7 +445,7 @@ solar_panel_network = {
 		}
 
 		produces = {
-			energy = 6
+			energy = 3
 		}
 
 		produces = {
@@ -264,7 +461,7 @@ solar_panel_network = {
 					is_active_resolution = "resolution_galacticstudies_extradimensional_experimentation"
 				}
 			}
-			energy = 6
+			energy = 3
 		}
 	}
 
@@ -303,6 +500,187 @@ trading_hub = {
 	}
 
 	ai_build_at_chokepoint = no
+	ai_weight = {
+		weight = 0
+	}
+}
+space_power_plant = {
+	section = "ANCHORAGE_STARBASE_SECTION"
+	icon = "GFX_starbase_space_power_plant"
+	construction_days = 120
+	resources = {
+		category = starbase_modules
+		cost = { alloys = 50 }
+		produces = { energy = 5 }
+		upkeep = { minerals = 2 }
+	}
+	ai_build_at_chokepoint = no
+	ai_build_outside_chokepoint = yes
+	ai_weight = {
+		weight = 0
+	}
+}
+
+asteroid_mining = {
+	section = "ANCHORAGE_STARBASE_SECTION"
+	icon = "GFX_starbase_asteroid_mining"
+	construction_days = 120
+	resources =	{
+		category = starbase_modules
+		cost = { alloys = 50 }
+		produces = { minerals = 10 }
+		produces = { trigger = { has_starbase_building = mining_experts } minerals = 2 }
+		upkeep = { energy = 2 }
+	}
+	possible = { custom_tooltip = { fail_text = "nsc.requires.asteroid" solar_system = { any_system_planet = { is_asteroid = yes }	} } }	
+	ai_build_at_chokepoint = yes
+	ai_build_outside_chokepoint = yes
+	ai_weight = {
+		weight = 800
+		modifier = {
+			factor = 0
+			or = { 
+			years_passed > 60
+			owner = { 
+			resource_stockpile_compare = {
+				resource = minerals
+				value > 2500
+			} }
+			owner = { 
+			resource_income_compare = {
+				resource = minerals
+				value > 150
+				} }
+			}
+		}
+	}
+}
+
+orbital_lab = {
+	section = "ANCHORAGE_STARBASE_SECTION"
+	icon = "GFX_starbase_starbase_lab"
+	construction_days = 120
+	resources = {
+		category = starbase_modules
+		cost = { alloys = 50 }
+		produces = { physics_research = 4 society_research = 4 engineering_research = 4 }
+		produces = { trigger = { has_starbase_building = orbital_physics_support_lab } physics_research = 3 }
+		produces = { trigger = { has_starbase_building = orbital_society_support_lab } society_research = 3 }
+		produces = { trigger = { has_starbase_building = orbital_engineering_support_lab } engineering_research = 3 }
+		upkeep = { energy = 2 }
+	}	
+	ai_build_at_chokepoint = yes
+	ai_build_outside_chokepoint = yes
+	ai_weight = {
+		weight = 300
+		modifier = {
+			factor = 0
+			not = { has_starbase_module = orbital_lab }
+			owner = { needs_shipyard = yes }
+		}	
+		modifier = {
+			factor = 0
+			has_starbase_module = shipyard
+			count_starbase_modules = {
+				type = shipyard
+				count < 2
+			}
+		}
+		modifier = {
+			factor = 0
+			owner = { used_naval_capacity_percent > 0.65 }
+			not = { has_starbase_module = orbital_lab }
+		}
+		modifier = {
+			factor = 0
+			has_starbase_module = asteroid_mining
+			years_passed < 70
+		}
+	}
+}
+
+space_foundry = {
+	section = "ANCHORAGE_STARBASE_SECTION"
+	icon = "GFX_starbase_space_foundry"
+	construction_days = 120
+	resources = {
+		category = starbase_modules
+		cost = { alloys = 75 }
+		produces = { alloys = 8 }
+		produces = { trigger = { has_starbase_building = chain_manufacturing } alloys = 1 }
+		upkeep = { minerals = 14 energy = 2 }
+	}	
+	ai_build_at_chokepoint = yes
+	ai_build_outside_chokepoint = yes
+	potential = { exists = owner owner = { has_technology = tech_alloys_1 } }
+	ai_weight = {
+		weight = 5000
+		modifier = {
+			factor = 0
+			nor = {
+				owner = {
+				resource_stockpile_compare = {
+					resource = minerals
+					value < 200
+				} }
+				owner = {
+				resource_income_compare = {
+					resource = minerals
+					value < 30
+				} }
+				solar_system = {
+					any_system_planet = {
+						or = {
+							has_designation = col_ecu_factory
+							has_designation = col_ecu_foundry
+							has_designation = col_foundry
+							has_designation = col_factory
+							has_designation = col_mac_factory
+						}
+					}
+				}
+			}
+		}
+	}
+	show_in_tech = "tech_alloys_1"
+}
+
+space_factory = {
+	section = "ANCHORAGE_STARBASE_SECTION"
+	icon = "GFX_starbase_space_factory"
+	construction_days = 120
+	resources = {
+		category = starbase_modules
+		cost = { alloys = 75 }
+		produces = { consumer_goods = 10 }
+		produces = { trigger = { has_starbase_building = chain_manufacturing } consumer_goods = 2 }
+		upkeep = { minerals = 10 energy = 2 }
+	}	
+	ai_build_at_chokepoint = no
+	ai_build_outside_chokepoint = yes
+	potential = {
+		exists = owner 
+		owner = { has_technology = tech_luxuries_1 }
+	}
+	ai_weight = {
+		weight = 0
+	}
+	show_in_tech = "tech_luxuries_1"
+}
+
+security_branch_office = {
+	section = "ANCHORAGE_STARBASE_SECTION"
+	icon = "GFX_starbase_security_branch_office"
+	construction_days = 120
+	resources = {
+		category = starbase_modules
+		cost = { alloys = 50 }
+		upkeep = { energy = 1 }
+	}	
+	station_modifier = { starbase_trade_protection_add = 25 starbase_trade_protection_range_add = 2 }
+	system_modifier = { planet_crime_add = -15 }
+	ai_build_at_chokepoint = no
+	ai_build_outside_chokepoint = yes
 	ai_weight = {
 		weight = 0
 	}

@@ -10,6 +10,10 @@ early_default_plan_4 = {
 		minerals = 200
 		alloys = 40
 
+		esc_gravitic_anomaly = 1
+		esc_psionic_charge = 1
+		esc_enigmatic_energy = 1
+		esc_transdimensional_vortex = 1
 		exotic_gases = 2
 		volatile_motes = 2
 		rare_crystals = 2
@@ -19,19 +23,7 @@ early_default_plan_4 = {
 		energy = 50
 		minerals = 50
 		alloys = 20
-	}	
-
-	subplan = {
-		potential = { always = yes }
-		income = { starnet_spice_melange = 100000}
-		focus = { starnet_spice_melange = 50000}
-	}
-
-
-	subplan = {
-		potential = { always = yes }
-		income = { unity = 500 }
-		focus = { unity = 200 }
+		esc_living_crystal = 15
 	}
 
 	subplan = {
@@ -82,7 +74,7 @@ early_default_plan_4 = {
 		}
 	}
 
-	subplan = {
+    subplan = {
 		potential = { has_country_flag = str_lets_terraform 
 			resource_stockpile_compare = {
 				resource = energy
@@ -98,7 +90,7 @@ early_default_plan_4 = {
 	}
 
 	subplan = {
-		potential = { 
+        potential = {
 			has_ascension_perk = ap_world_shaper
 			has_country_flag = str_has_terraformables
 			resource_income_compare = {
@@ -211,6 +203,11 @@ middle_default_plan_4 = {
 		society_research = 50
 		engineering_research = 50
 
+		nanites = 5
+		esc_gravitic_anomaly = 5
+		esc_psionic_charge = 5
+		esc_enigmatic_energy = 5
+		esc_transdimensional_vortex = 5
 		exotic_gases = 2
 		volatile_motes = 2
 		rare_crystals = 2
@@ -220,19 +217,7 @@ middle_default_plan_4 = {
 		energy = 50
 		minerals = 50
 		alloys = 30
-	}	
-
-	subplan = {
-		potential = { always = yes }
-		income = { starnet_spice_melange = 100000}
-		focus = { starnet_spice_melange = 50000}
-	}
-
-
-	subplan = {
-		potential = { always = yes }
-		income = { unity = 500 }
-		focus = { unity = 200 }
+		esc_living_crystal = 50
 	}
 
 	subplan = {
@@ -283,7 +268,7 @@ middle_default_plan_4 = {
 		}
 	}
 
-	subplan = {
+    subplan = {
 		potential = { has_country_flag = str_lets_terraform 
 			resource_stockpile_compare = {
 				resource = energy
@@ -413,6 +398,10 @@ end_default_plan_4 = {
 		society_research = 50
 		engineering_research = 50
 
+		esc_gravitic_anomaly = 5
+		esc_psionic_charge = 5
+		esc_enigmatic_energy = 5
+		esc_transdimensional_vortex = 5
 		exotic_gases = 2
 		volatile_motes = 2
 		rare_crystals = 2
@@ -422,19 +411,7 @@ end_default_plan_4 = {
 		energy = 100
 		minerals = 50
 		alloys = 30
-	}	
-
-	subplan = {
-		potential = { always = yes }
-		income = { starnet_spice_melange = 100000}
-		focus = { starnet_spice_melange = 50000}
-	}
-
-
-	subplan = {
-		potential = { always = yes }
-		income = { unity = 500 }
-		focus = { unity = 200 }
+		esc_living_crystal = 50
 	}
 
 	subplan = {
@@ -485,7 +462,7 @@ end_default_plan_4 = {
 		}
 	}
 
-	subplan = {
+    subplan = {
 		potential = { has_country_flag = str_lets_terraform 
 			resource_stockpile_compare = {
 				resource = energy
@@ -609,6 +586,10 @@ ultimate_default_plan_4 = {
 		society_research = 50
 		engineering_research = 50
 
+		esc_gravitic_anomaly = 5
+		esc_psionic_charge = 5
+		esc_enigmatic_energy = 5
+		esc_transdimensional_vortex = 5
 		exotic_gases = 2
 		volatile_motes = 2
 		rare_crystals = 2
@@ -620,20 +601,7 @@ ultimate_default_plan_4 = {
 	focus = {
 		energy = 100
 		minerals = 50
-		alloys = 0
-	}	
-
-	subplan = {
-		potential = { always = yes }
-		income = { starnet_spice_melange = 100000}
-		focus = { starnet_spice_melange = 50000}
-	}
-
-
-	subplan = {
-		potential = { always = yes }
-		income = { unity = 500 }
-		focus = { unity = 200 }
+		alloys = 500	esc_living_crystal = 50
 	}
 
 	subplan = {
@@ -684,7 +652,7 @@ ultimate_default_plan_4 = {
 		}
 	}
 
-	subplan = {
+    subplan = {
 		potential = { has_country_flag = str_lets_terraform 
 			resource_stockpile_compare = {
 				resource = energy

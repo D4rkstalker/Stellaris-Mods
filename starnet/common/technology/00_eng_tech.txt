@@ -7,7 +7,7 @@ tech_solar_panel_network = {
 	category = { voidcraft }
 	prerequisites = { "tech_starbase_2" }
 	start_tech = yes
-	
+
 	potential = {
 		is_gestalt = yes
 	}
@@ -18,69 +18,70 @@ tech_solar_panel_network = {
 # ##################
 tech_space_exploration = {
 	cost = 0
-	area = engineering	
+	area = engineering
 	start_tech = yes
 	category = { voidcraft }
 	prerequisites = { "tech_basic_science_lab_1" }
 	tier = 0
-	
+
 	prereqfor_desc = {
 		ship = {
 			title = "TECH_UNLOCK_SCIENCE_SHIP_CONSTRUCTION_TITLE"
 			desc = "TECH_UNLOCK_SCIENCE_SHIP_CONSTRUCTION_DESC"
 		}
-	}	
+	}
 }
 
 tech_corvettes = {
 	cost = 0
-	area = engineering	
+	area = engineering
 	start_tech = yes
 	category = { voidcraft }
 	prerequisites = { "tech_starbase_2" }
 	tier = 0
-	
+
 	prereqfor_desc = {
 		ship = {
 			title = "TECH_UNLOCK_CORVETTE_CONSTRUCTION_TITLE"
 			desc = "TECH_UNLOCK_CORVETTE_CONSTRUCTION_DESC"
 		}
-	}	
+	}
 }
 
 tech_destroyers = {
 	cost = @tier2cost1
 	area = engineering
 	tier = 2
-	category = { voidcraft }	
+	category = { voidcraft }
 	prerequisites = { "tech_corvettes" }
 	weight = @tier2weight1
-	
+
 	gateway = ship
-	
-	## unlock destroyer	
+
+	## unlock destroyer
 	prereqfor_desc = {
 		ship = {
 			title = "TECH_UNLOCK_DESTROYER_CONSTRUCTION_TITLE"
 			desc = "TECH_UNLOCK_DESTROYER_CONSTRUCTION_DESC"
 		}
 	}
-	
+
 	modifier = {
 		country_command_limit_add = 10
+		country_naval_cap_add = 20
 	}
 
 	weight_modifier = {
 		modifier = {
 			factor = 0.1
 			NOT = { years_passed > 10 }
-		}	
+		}
 		modifier = {
 			factor = 10
 			any_neighbor_country = {
 				has_technology = tech_destroyers
 			}
-		}		
+		}
 		modifier = {
 			factor = 2
 			years_passed > 15
@@ -105,10 +106,10 @@ tech_destroyers = {
 			}
 		}
 	}
-	
+
 	ai_weight = {
 		weight = 10
-		factor = 5 #scaling factor
+		factor = 100 #important tech
 		modifier = {
 			factor = 1000
 			has_technology = tech_lasers_3
@@ -132,35 +133,36 @@ tech_cruisers = {
 	cost = @tier3cost1
 	area = engineering
 	tier = 3
-	category = { voidcraft }	
+	category = { voidcraft }
 	prerequisites = { "tech_destroyers" }
 	weight = @tier3weight1
-	
+
 	gateway = ship
-		
-	## unlock cruisers	
+
+	## unlock cruisers
 	prereqfor_desc = {
 		ship = {
 			title = "TECH_UNLOCK_CRUISER_CONSTRUCTION_TITLE"
 			desc = "TECH_UNLOCK_CRUISER_CONSTRUCTION_DESC"
 		}
 	}
-	
+
 	modifier = {
 		country_command_limit_add = 10
+		country_naval_cap_add = 20
 	}
-		
+
 	weight_modifier = {
 		modifier = {
 			factor = 0.1
 			NOT = { years_passed > 20 }
-		}	
+		}
 		modifier = {
 			factor = 10
 			any_neighbor_country = {
 				has_technology = tech_cruisers
 			}
-		}		
+		}
 		modifier = {
 			factor = 2
 			years_passed > 30
@@ -185,7 +187,7 @@ tech_cruisers = {
 			}
 		}
 	}
-	
+
 	ai_weight = {
 		weight = 6000 
 		factor = 25 #scaling factor
@@ -203,27 +205,28 @@ tech_battleships = {
 	cost = @tier4cost1
 	area = engineering
 	tier = 4
-	category = { voidcraft }	
-	prerequisites = { "tech_cruisers" }
+	category = { voidcraft }
+	prerequisites = { "tech_Battlecruiser_1" }
 	weight = @tier4weight1
-		
-	## unlock battleships	
+
+	## unlock battleships
 	prereqfor_desc = {
 		ship = {
 			title = "TECH_UNLOCK_BATTLESHIP_CONSTRUCTION_TITLE"
 			desc = "TECH_UNLOCK_BATTLESHIP_CONSTRUCTION_DESC"
 		}
 	}
-	
+
 	modifier = {
 		country_command_limit_add = 10
+		country_naval_cap_add = 20
 	}
-	
+
 	weight_modifier = {
 		modifier = {
 			factor = 0.1
 			NOT = { years_passed > 50 }
-		}	
+		}
 		modifier = {
 			factor = 10
 			any_neighbor_country = {
@@ -254,7 +257,7 @@ tech_battleships = {
 			}
 		}
 	}
-	
+
 	ai_weight = {
 		weight = 1000 
 		factor = 125 #scaling factor
@@ -272,19 +275,20 @@ tech_titans = {
 	cost = @tier5cost1
 	area = engineering
 	tier = 5
-	category = { voidcraft }	
-	prerequisites = { "tech_battleships" }
+	category = { voidcraft }
+	prerequisites = { "tech_Dreadnought_1" }
 	weight = @tier5weight1
 	ai_update_type = military
-	
+
 	modifier = {
-		country_command_limit_add = 10
+		country_command_limit_add = 25
+		country_naval_cap_add = 50
 	}
-	
+
 	potential = {
 		host_has_dlc = "Apocalypse"
 	}
-	
+
 	## unlock titans
 	prereqfor_desc = {
 		hide_prereq_for_desc = component
@@ -297,12 +301,12 @@ tech_titans = {
 			desc = "TECH_UNLOCK_ION_CANNON_CONSTRUCTION_DESC"
 		}
 	}
-	
+
 	weight_modifier = {
 		modifier = {
 			factor = 0.1
-			NOT = { years_passed > 100 }
-		}	
+			NOT = { years_passed > 120 }
+		}
 		modifier = {
 			factor = 10
 			any_neighbor_country = {
@@ -333,7 +337,7 @@ tech_titans = {
 			}
 		}
 	}
-	
+
 	ai_weight = {
 		weight = 300 	
 		factor = 625
@@ -347,13 +351,12 @@ tech_titans = {
 	}
 }
 
-
 tech_juggernaut = {
 	cost = @tier5cost3
 	area = engineering
 	category = { voidcraft }
 	tier = 5
-	prerequisites = { "tech_starbase_5" "tech_battleships" }
+	prerequisites = { "tech_starbase_5" "tech_titans" }
 	weight = @tier5weight3
 	is_rare = yes
 
@@ -427,8 +430,6 @@ tech_juggernaut = {
 	}
 }
 
-
-
 # ##################
 # Corvette upgrades
 # ##################
@@ -440,12 +441,12 @@ tech_corvette_build_speed = {
 	category = { voidcraft }
 	prerequisites = { "tech_corvettes" }
 	weight = @tier1weight2
-	
+
 	modifier = {
 		shipsize_corvette_build_speed_mult = 0.25
 		ship_corvette_cost_mult = -0.05
 	}
-	
+
 	weight_modifier = {
 		modifier = {
 			factor = 1.25
@@ -455,7 +456,7 @@ tech_corvette_build_speed = {
 			}
 		}
 	}
-	
+
 	ai_weight = {
 		modifier = {
 			factor = 1.25
@@ -474,11 +475,11 @@ tech_corvette_hull_1 = {
 	category = { voidcraft }
 	prerequisites = { "tech_corvettes" }
 	weight = @tier1weight3
-	
+
 	modifier = {
 		shipsize_corvette_hull_add = 100
 	}
-	
+
 	weight_modifier = {
 		modifier = {
 			factor = 1.25
@@ -488,13 +489,17 @@ tech_corvette_hull_1 = {
 			}
 		}
 	}
-	
+
 	ai_weight = {
-		weight = 250 
+		weight = 10 
 		modifier ={
 			factor = 0
+			or = {
 			has_technology = tech_energy_torpedoes_1
+			has_technology = tech_cruisers
+			}
 		}
+
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -513,11 +518,11 @@ tech_corvette_hull_2 = {
 	category = { voidcraft }
 	prerequisites = { "tech_corvette_hull_1" }
 	weight = @tier2weight3
-	
+
 	modifier = {
 		shipsize_corvette_hull_add = 100
 	}
-	
+
 	weight_modifier = {
 		modifier = {
 			factor = 0.25
@@ -556,13 +561,9 @@ tech_corvette_hull_2 = {
 			}
 		}
 	}
-	
+
 	ai_weight = {
-		weight = 250 
-		modifier = {
-			factor = 0
-			has_technology = tech_energy_torpedoes_1
-		}
+		factor = 3 # ship upgrades are supposed to be good!
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -584,12 +585,12 @@ tech_destroyer_build_speed = {
 	category = { voidcraft }
 	prerequisites = { "tech_destroyers" }
 	weight = @tier2weight2
-		
+
 	modifier = {
 		shipsize_destroyer_build_speed_mult = 0.25
 		ship_destroyer_cost_mult = -0.05
 	}
-	
+
 	weight_modifier = {
 		modifier = {
 			factor = 1.25
@@ -599,10 +600,8 @@ tech_destroyer_build_speed = {
 			}
 		}
 	}
-	
+
 	ai_weight = {
-		weight = 25
-		factor = 25 #scaling factor
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -620,11 +619,11 @@ tech_destroyer_hull_1 = {
 	category = { voidcraft }
 	prerequisites = { "tech_destroyers" }
 	weight = @tier2weight3
-	
+
 	modifier = {
 		shipsize_destroyer_hull_add = 200
 	}
-	
+
 	weight_modifier = {
 		modifier = {
 			factor = 1.25
@@ -638,10 +637,9 @@ tech_destroyer_hull_1 = {
 			}
 		}
 	}
-	
+
 	ai_weight = {
-		weight = 2
-		factor = 5 #scaling factor
+		factor = 0 # ship upgrades are supposed to be good!
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -660,11 +658,11 @@ tech_destroyer_hull_2 = {
 	category = { voidcraft }
 	prerequisites = { "tech_destroyer_hull_1" }
 	weight = @tier3weight1
-	
+
 	modifier = {
 		shipsize_destroyer_hull_add = 200
 	}
-	
+
 	weight_modifier = {
 		modifier = {
 			factor = 0.25
@@ -707,10 +705,9 @@ tech_destroyer_hull_2 = {
 			}
 		}
 	}
-	
+
 	ai_weight = {
-		weight = 2 
-		factor = 25 #scaling factor
+		factor = 0 
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -732,12 +729,12 @@ tech_cruiser_build_speed = {
 	category = { voidcraft }
 	prerequisites = { "tech_cruisers" }
 	weight = @tier3weight2
-			
+
 	modifier = {
 		shipsize_cruiser_build_speed_mult = 0.25
 		ship_cruiser_cost_mult = -0.05
 	}
-	
+
 	weight_modifier = {
 		modifier = {
 			factor = 1.25
@@ -747,7 +744,7 @@ tech_cruiser_build_speed = {
 			}
 		}
 	}
-	
+
 	ai_weight = {
 		weight = 1
 		factor = 25 #scaling
@@ -768,11 +765,11 @@ tech_cruiser_hull_1 = {
 	category = { voidcraft }
 	prerequisites = { "tech_cruisers" }
 	weight = @tier3weight3
-	
+
 	modifier = {
 		shipsize_cruiser_hull_add = 500
 	}
-	
+
 	weight_modifier = {
 		modifier = {
 			factor = 1.25
@@ -786,13 +783,13 @@ tech_cruiser_hull_1 = {
 			}
 		}
 	}
-	
+
 	ai_weight = {
-		weight = 100
+		weight = 1
 		factor = 25 # scaling
 		modifier = {
-			factor = 10
-			cruisers_good = yes
+			factor = 1000
+			not = { has_technology = tech_battleships }
 		}
 		modifier = {
 			factor = 1.25
@@ -812,11 +809,11 @@ tech_cruiser_hull_2 = {
 	category = { voidcraft }
 	prerequisites = { "tech_cruiser_hull_1" }
 	weight = @tier4weight1
-	
+
 	modifier = {
 		shipsize_cruiser_hull_add = 500
 	}
-	
+
 	weight_modifier = {
 		modifier = {
 			factor = 0.25
@@ -859,13 +856,14 @@ tech_cruiser_hull_2 = {
 			}
 		}
 	}
-	
+
 	ai_weight = {
-		weight = 1000
+		weight = 1
 		factor = 25 # scaling
+		
 		modifier = {
-			factor = 10
-			cruisers_good = yes
+			factor = 1000
+			not = { has_technology = tech_battleships }
 		}
 		modifier = {
 			factor = 1.25
@@ -888,12 +886,12 @@ tech_battleship_build_speed = {
 	category = { voidcraft }
 	prerequisites = { "tech_battleships" }
 	weight = @tier4weight2
-			
+
 	modifier = {
 		shipsize_battleship_build_speed_mult = 0.25
 		ship_battleship_cost_mult = -0.05
 	}
-	
+
 	weight_modifier = {
 		modifier = {
 			factor = 1.25
@@ -903,7 +901,7 @@ tech_battleship_build_speed = {
 			}
 		}
 	}
-	
+
 	ai_weight = {
 		weight = 125
 		factor = 125 #scaling factor
@@ -924,11 +922,11 @@ tech_battleship_hull_1 = {
 	category = { voidcraft }
 	prerequisites = { "tech_battleships" }
 	weight = @tier4weight3
-	
+
 	modifier = {
 		shipsize_battleship_hull_add = 800
 	}
-	
+
 	weight_modifier = {
 		modifier = {
 			factor = 1.25
@@ -942,7 +940,7 @@ tech_battleship_hull_1 = {
 			}
 		}
 	}
-	
+
 	ai_weight = {
 		weight = 1000 
 		factor = 125 #scaling factor
@@ -964,11 +962,11 @@ tech_battleship_hull_2 = {
 	category = { voidcraft }
 	prerequisites = { "tech_battleship_hull_1" }
 	weight = @tier5weight1
-	
+
 	modifier = {
 		shipsize_battleship_hull_add = 800
 	}
-	
+
 	weight_modifier = {
 		modifier = {
 			factor = 0.25
@@ -1011,7 +1009,7 @@ tech_battleship_hull_2 = {
 			}
 		}
 	}
-	
+
 	ai_weight = {
 		weight = 5000 
 		modifier = {
@@ -1036,11 +1034,11 @@ tech_titan_hull_1 = {
 	category = { voidcraft }
 	prerequisites = { "tech_titans" }
 	weight = @tier5weight2
-	
+
 	modifier = {
 		shipsize_titan_hull_add = 2000
 	}
-	
+
 	weight_modifier = {
 		modifier = {
 			factor = 0.25
@@ -1083,7 +1081,7 @@ tech_titan_hull_1 = {
 			}
 		}
 	}
-	
+
 	ai_weight = {
 		weight = 1 
 		factor = 625 #scaling factor
@@ -1105,11 +1103,11 @@ tech_titan_hull_2 = {
 	category = { voidcraft }
 	prerequisites = { "tech_titan_hull_1" }
 	weight = @tier5weight3
-	
+
 	modifier = {
 		shipsize_titan_hull_add = 2000
 	}
-	
+
 	weight_modifier = {
 		modifier = {
 			factor = 0.25
@@ -1152,7 +1150,7 @@ tech_titan_hull_2 = {
 			}
 		}
 	}
-	
+
 	ai_weight = {
 		weight = 1 
 		factor = 625 #scaling factor
@@ -1177,14 +1175,14 @@ tech_starbase_1 = {
 	category = { voidcraft }
 	prerequisites = { "tech_space_construction" }
 	tier = 0
-	
-	prereqfor_desc = {	
+
+	prereqfor_desc = {
 		ship = {
 			title = "TECH_UNLOCK_OUTPOST_CONSTRUCTION_TITLE"
 			desc = "TECH_UNLOCK_OUTPOST_CONSTRUCTION_DESC"
 		}
 	}
-	
+
 	# unlocks Outposts
 }
 
@@ -1197,13 +1195,13 @@ tech_starbase_2 = {
 	tier = 0
 	prerequisites = { "tech_starbase_1" }
 
-	prereqfor_desc = {	
+	prereqfor_desc = {
 		ship = {
 			title = "TECH_UNLOCK_STARPORT_CONSTRUCTION_TITLE"
 			desc = "TECH_UNLOCK_STARPORT_CONSTRUCTION_DESC"
 		}
 	}
-	
+
 	# unlocks Starport
 }
 
@@ -1214,13 +1212,13 @@ tech_starbase_3 = {
 	tier = 2
 	prerequisites = { "tech_starbase_2" }
 	weight = @tier2weight2
-	
+
 	# unlocks Starhold
 	weight_modifier = {
 		modifier = {
 			factor = 0.1
 			NOT = { years_passed > 20 }
-		}	
+		}
 		modifier = {
 			factor = 10
 			any_neighbor_country = {
@@ -1258,14 +1256,14 @@ tech_starbase_3 = {
 			}
 		}
 	}
-	
-	prereqfor_desc = {	
+
+	prereqfor_desc = {
 		ship = {
 			title = "TECH_UNLOCK_STARHOLD_CONSTRUCTION_TITLE"
 			desc = "TECH_UNLOCK_STARHOLD_CONSTRUCTION_DESC"
 		}
 	}
-	
+
 	ai_weight = {
 		weight = 200
 		factor = 5 #scaling factor
@@ -1290,13 +1288,13 @@ tech_starbase_4 = {
 	tier = 3
 	prerequisites = { "tech_starbase_3" }
 	weight = @tier3weight2
-	
+
 	# unlocks Star Fortress
 	weight_modifier = {
 		modifier = {
 			factor = 0.1
 			NOT = { years_passed > 50 }
-		}	
+		}
 		modifier = {
 			factor = 10
 			any_neighbor_country = {
@@ -1334,14 +1332,14 @@ tech_starbase_4 = {
 			}
 		}
 	}
-	
-	prereqfor_desc = {	
+
+	prereqfor_desc = {
 		ship = {
 			title = "TECH_UNLOCK_STAR_FORTRESS_CONSTRUCTION_TITLE"
 			desc = "TECH_UNLOCK_STAR_FORTRESS_CONSTRUCTION_DESC"
 		}
 	}
-	
+
 	ai_weight = {
 		weight = 5 
 		factor = 25 #scaling factor
@@ -1365,10 +1363,7 @@ tech_starbase_4 = {
 			factor = 100
 			has_technology = tech_energy_torpedoes_2
 		}
-		modifier = {
-			factor = 20
-			has_ascension_perk = ap_arcology_project
-		}
+
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -1386,13 +1381,13 @@ tech_starbase_5 = {
 	tier = 4
 	prerequisites = { "tech_starbase_4" }
 	weight = @tier4weight2
-	
+
 	# unlocks Citadel
 	weight_modifier = {
 		modifier = {
 			factor = 0.1
 			NOT = { years_passed > 70 }
-		}	
+		}
 		modifier = {
 			factor = 10
 			any_neighbor_country = {
@@ -1430,21 +1425,16 @@ tech_starbase_5 = {
 			}
 		}
 	}
-	
-	prereqfor_desc = {	
+
+	prereqfor_desc = {
 		ship = {
 			title = "TECH_UNLOCK_CITADEL_CONSTRUCTION_TITLE"
 			desc = "TECH_UNLOCK_CITADEL_CONSTRUCTION_DESC"
 		}
 	}
-	
+
 	ai_weight = {
-		weight = 5
-		factor = 25 #scaling factor
-		modifier = {
-			factor = 300
-			has_ascension_perk = ap_arcology_project
-		}
+		factor = 100 #higher factor due to starbase upgrade
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -1454,7 +1444,6 @@ tech_starbase_5 = {
 		}
 	}
 }
-
 
 tech_habitat_1 = {
 	cost = @tier3cost2
@@ -1584,7 +1573,7 @@ tech_habitat_2 = {
 	}
 
 	ai_weight = {
-		factor = 10000
+		factor = 10
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -1641,7 +1630,7 @@ tech_habitat_3 = {
 	}
 
 	ai_weight = {
-		factor = 10000
+		factor = 1
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -1651,7 +1640,6 @@ tech_habitat_3 = {
 		}
 	}
 }
-
 
 # ##################
 # Starbases upgrades
@@ -1666,12 +1654,12 @@ tech_modular_engineering = {
 	prerequisites = { "tech_starbase_3" }
 	is_rare = yes
 	weight = @tier2weight3
-	
+
 	modifier = {
 		starbase_buildings_cost_mult = -0.25
 		starbase_modules_cost_mult = -0.25
 	}
-	
+
 	weight_modifier = {
 		factor = 0.5
 		modifier = {
@@ -1707,10 +1695,9 @@ tech_modular_engineering = {
 			}
 		}
 	}
-	
+
 	ai_weight = {
-		weight = 20 
-		factor = 5 #scaling factor
+		factor = 100 #higher factor due to starbase upgrade
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -1730,12 +1717,12 @@ tech_space_defense_station_improvement = {
 	prerequisites = { "tech_starbase_4" "tech_modular_engineering" }
 	is_rare = yes
 	weight = @tier3weight3
-		
+
 	modifier = {
 		starbase_upgrade_cost_mult = -0.15
 		starbase_upgrade_speed_mult = 0.25
 	}
-	
+
 	weight_modifier = {
 		factor = 0.5
 		modifier = {
@@ -1771,10 +1758,8 @@ tech_space_defense_station_improvement = {
 			}
 		}
 	}
-	
+
 	ai_weight = {
-		weight = 8
-		factor = 25 #scaling factor
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -1794,12 +1779,12 @@ tech_strike_craft_1 = {
 	area = engineering
 	tier = 1
 	ai_update_type = military
-	category = { voidcraft }	
+	category = { voidcraft }
 	prerequisites = { "tech_starbase_2" }
 	weight = @tier1weight3
-		
+
 	## unlock strike craft 1
-	
+
 	weight_modifier = {
 		modifier = {
 			factor = 1.25
@@ -1809,15 +1794,13 @@ tech_strike_craft_1 = {
 			}
 		}
 	}
-	
+
 	ai_weight = {
+		weight = 400		
+		factor = 5 #scaling factor
 		modifier = {
-			factor = 50
-			not = { has_technology = tech_energy_torpedoes_1 }
-		}
-		modifier = {
-			factor = 40000
-			has_technology = tech_cruisers
+			factor = 1.25
+			has_ethic = ethic_militarist
 		}
 		modifier = {
 			factor = 1.25
@@ -1834,12 +1817,12 @@ tech_strike_craft_2 = {
 	area = engineering
 	tier = 2
 	ai_update_type = military
-	category = { voidcraft }	
+	category = { voidcraft }
 	prerequisites = { "tech_strike_craft_1" }
 	weight = @tier2weight3
-		
+
 	## unlock strike craft 2
-	
+
 	weight_modifier = {
 		modifier = {
 			factor = 1.25
@@ -1849,16 +1832,17 @@ tech_strike_craft_2 = {
 			}
 		}
 	}
-	
+
 	ai_weight = {
-		weight = 0.1
+		weight = 400		
+		factor = 5 #scaling factor
 		modifier = {
-			factor = 10
-			not = { has_technology = tech_energy_torpedoes_1 }
+			factor = 0.01
+			has_technology = tech_mass_drivers_4
 		}
 		modifier = {
-			factor = 100000
-			has_technology = tech_cruisers
+			factor = 0.01
+			has_technology = tech_energy_torpedoes_1
 		}
 		modifier = {
 			factor = 1.25
@@ -1875,12 +1859,12 @@ tech_strike_craft_3 = {
 	area = engineering
 	tier = 3
 	ai_update_type = military
-	category = { voidcraft }	
+	category = { voidcraft }
 	prerequisites = { "tech_strike_craft_2" }
 	weight = @tier3weight3
-		
+
 	## unlock strike craft 3
-	
+
 	weight_modifier = {
 		modifier = {
 			factor = 1.25
@@ -1890,9 +1874,13 @@ tech_strike_craft_3 = {
 			}
 		}
 	}
-	
+
 	ai_weight = {
-		weight = 100000
+		weight = 0.1
+		modifier = {
+			factor = 50000
+			uses_carriers = yes
+		}
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -1937,9 +1925,10 @@ tech_ship_armor_2 = {
 	cost = @tier1cost2
 	tier = 1
 	category = { materials }
-	ai_update_type = all	
+	ai_update_type = all
 	prerequisites = { "tech_ship_armor_1" }
 	weight = @tier1weight2
+
 	gateway = infrastructure
 
 	weight_modifier = {
@@ -1952,7 +1941,7 @@ tech_ship_armor_2 = {
 			}
 		}
 	}
-	
+
 	ai_weight = {
 		weight = 1
 		modifier = {
@@ -1979,9 +1968,10 @@ tech_ship_armor_3 = {
 	cost = @tier2cost2
 	tier = 2
 	category = { materials }
-	ai_update_type = all	
+	ai_update_type = all
 	prerequisites = { "tech_ship_armor_2" }
 	weight = @tier2weight2
+
 	gateway = infrastructure
 
 	weight_modifier = {
@@ -1994,13 +1984,9 @@ tech_ship_armor_3 = {
 			}
 		}
 	}
-	
+
 	ai_weight = {
 		weight = 1
-		modifier = {
-			factor = 0
-			or = { has_technology = tech_crystal_armor_1 has_technology = tech_crystal_armor_2 not = {  no_resource_for_component = { RESOURCE = rare_crystals } } }
-		}
 		modifier = {
 			factor = 1000
 			has_technology= tech_cruisers
@@ -2026,9 +2012,10 @@ tech_ship_armor_4 = {
 	cost = @tier3cost2
 	tier = 3
 	category = { materials }
-	ai_update_type = all	
+	ai_update_type = all
 	prerequisites = { "tech_ship_armor_3" }
 	weight = @tier3weight2
+
 	gateway = infrastructure
 
 	weight_modifier = {
@@ -2041,12 +2028,8 @@ tech_ship_armor_4 = {
 			}
 		}
 	}
-	
+
 	ai_weight = {
-		modifier = {
-			factor = 0
-			or = { has_technology = tech_crystal_armor_1 has_technology = tech_crystal_armor_2 not = {  no_resource_for_component = { RESOURCE = rare_crystals } } }
-		}
 		modifier = {
 			factor = 100
 			has_technology= tech_cruisers }
@@ -2069,10 +2052,10 @@ tech_ship_armor_5 = {
 	cost = @tier4cost2
 	tier = 4
 	category = { materials }
-	ai_update_type = all	
+	ai_update_type = all
 	prerequisites = { "tech_ship_armor_4" }
 	weight = @tier4weight2
-	
+
 	weight_modifier = {
 		factor = 1.25
 		modifier = {
@@ -2083,12 +2066,8 @@ tech_ship_armor_5 = {
 			}
 		}
 	}
-	
+
 	ai_weight = {
-		modifier = {
-			factor = 0
-			or = { has_technology = tech_crystal_armor_1 has_technology = tech_crystal_armor_2 not = {  no_resource_for_component = { RESOURCE = rare_crystals } } }
-		}
 		modifier = {
 			factor = 100
 			has_technology= tech_cruisers
@@ -2118,7 +2097,7 @@ tech_crystal_armor_1 = {
 	cost = @tier2cost3
 	tier = 2
 	category = { materials }
-	ai_update_type = all	
+	ai_update_type = all
 	weight = 0
 	weight_modifier = {
 		modifier = {
@@ -2126,9 +2105,9 @@ tech_crystal_armor_1 = {
 			has_country_flag = crystal_armor_1_weight
 		}
 	}
-	
+
 	ai_weight = {
-		weight = 10000 #This armor is insane
+		weight = 4
 		factor = 5 #scaling factor
 		modifier = {
 			factor = 1.25
@@ -2147,11 +2126,11 @@ tech_crystal_armor_2 = {
 	tier = 4
 	is_rare = yes
 	category = { materials }
-	ai_update_type = all	
+	ai_update_type = all
 	weight = 0
-	
+
 	ai_weight = {
-		weight = 10000 #This armor is insane
+		weight = 70
 		factor = 125 #scaling factor
 		modifier = {
 			factor = 1.25
@@ -2175,7 +2154,7 @@ tech_thrusters_1 = {
 	tier = 0
 	category = { propulsion }
 	ai_update_type = all
-	
+
 	prereqfor_desc = {
 		hide_prereq_for_desc = component
 		custom = {
@@ -2191,10 +2170,10 @@ tech_thrusters_2 = {
 	cost = @tier2cost1
 	tier = 2
 	category = { propulsion }
-	ai_update_type = all	
+	ai_update_type = all
 	prerequisites = { "tech_thrusters_1" }
 	weight = @tier2weight1
-	
+
 	weight_modifier = {
 		factor = 1.25
 		modifier = {
@@ -2209,7 +2188,7 @@ tech_thrusters_2 = {
 			has_technology = tech_destroyers
 		}
 	}
-	
+
 	prereqfor_desc = {
 		hide_prereq_for_desc = component
 		custom = {
@@ -2217,7 +2196,7 @@ tech_thrusters_2 = {
 			desc = "TECH_UNLOCK_THRUSTER_2_DESC"
 		}
 	}
-	
+
 	ai_weight = {
 		weight = 15 
 		factor = 5 #scaling factor
@@ -2237,10 +2216,10 @@ tech_thrusters_3 = {
 	cost = @tier3cost1
 	tier = 3
 	category = { propulsion }
-	ai_update_type = all	
+	ai_update_type = all
 	prerequisites = { "tech_thrusters_2" }
 	weight = @tier3weight1
-	
+
 	weight_modifier = {
 		factor = 1.25
 		modifier = {
@@ -2255,7 +2234,7 @@ tech_thrusters_3 = {
 			has_technology = tech_cruisers
 		}
 	}
-	
+
 	prereqfor_desc = {
 		hide_prereq_for_desc = component
 		custom = {
@@ -2263,7 +2242,7 @@ tech_thrusters_3 = {
 			desc = "TECH_UNLOCK_THRUSTER_3_DESC"
 		}
 	}
-	
+
 	ai_weight = {
 		weight = 40
 		factor = 25 #scaling factor
@@ -2287,10 +2266,10 @@ tech_thrusters_4 = {
 	cost = @tier4cost1
 	tier = 4
 	category = { propulsion }
-	ai_update_type = all	
+	ai_update_type = all
 	prerequisites = { "tech_thrusters_3" }
 	weight = @tier4weight1
-	
+
 	weight_modifier = {
 		factor = 1.25
 		modifier = {
@@ -2305,7 +2284,7 @@ tech_thrusters_4 = {
 			has_technology = tech_battleships
 		}
 	}
-	
+
 	prereqfor_desc = {
 		hide_prereq_for_desc = component
 		custom = {
@@ -2313,7 +2292,7 @@ tech_thrusters_4 = {
 			desc = "TECH_UNLOCK_THRUSTER_4_DESC"
 		}
 	}
-	
+
 	ai_weight = {
 		weight = 20
 		factor = 125 #scaling factor
@@ -2341,7 +2320,7 @@ tech_space_defense_station_1 = {
 	tier = 0
 	area = engineering
 	start_tech = yes
-	category = { voidcraft }	
+	category = { voidcraft }
 	prerequisites = { "tech_starbase_1" }
 }
 
@@ -2349,17 +2328,17 @@ tech_defense_platform_hull_1 = {
 	cost = @tier2cost2
 	area = engineering
 	tier = 2
-	category = { voidcraft }		
+	category = { voidcraft }
 	prerequisites = { "tech_starbase_3" }
 	is_rare = yes
 	weight = @tier2weight2
-	
+
 	weight_modifier = {
 		factor = 0.50
 		modifier = {
 			factor = @ap_technological_ascendancy_rare_tech
 			has_ascension_perk = ap_technological_ascendancy
-		}		
+		}
 		modifier = {
 			factor = @federation_perk_factor
 			has_federation = yes
@@ -2374,12 +2353,12 @@ tech_defense_platform_hull_1 = {
 				area = engineering
 				has_trait = "leader_trait_expertise_voidcraft"
 			}
-		}	
+		}
 	}
-		
+
 	modifier = {
 		shipsize_military_station_small_hull_add = 500
-	}	
+	}
 }
 
 # ##################
@@ -2393,7 +2372,7 @@ tech_basic_industry = {
 	category = { industry }
 	tier = 0
 	icon = "t_space_construction"
-	
+
 	# unlocks basic buildings
 }
 
@@ -2404,7 +2383,7 @@ tech_mechanized_mining = {
 	category = { industry }
 	tier = 0
 	icon = "t_space_construction"
-	
+
 	# unlocks mining districts
 }
 
@@ -2413,36 +2392,36 @@ tech_powered_exoskeletons = {
 	cost = @tier1cost1
 	area = engineering
 	tier = 1
-	category = { industry }	
+	category = { industry }
 	prerequisites = { "tech_basic_industry" }
 	weight = @tier1weight1
-	
+
 	gateway = robotics
-	
+
 	modifier = {
 		army_damage_mult = 0.05
 		planet_jobs_minerals_produces_mult = 0.05
 	}
-	
+
 	weight_modifier = {
-		factor = 1.5		
+		factor = 1.5
 		modifier = {
 			factor = 1.25
 			research_leader = {
 				area = engineering
 				has_trait = "leader_trait_expertise_industry"
-			}			
+			}
 		}
 	}
-	
+
 	ai_weight = {
-		weight = 10000
+		weight = 100
 		modifier = {
 			factor = 10
 			has_technology = tech_lasers_2
 		}
 		modifier = {
-			factor = 100
+			factor = 1000
 			has_technology = tech_lasers_3
 		}
 		modifier = {
@@ -2459,24 +2438,24 @@ tech_space_mining_1 = {
 	cost = @tier1cost1
 	area = engineering
 	tier = 1
-	category = { industry }	
+	category = { industry }
 	prerequisites = { "tech_space_construction" }
 	weight = @tier1weight1
-	
+
 	modifier = {
 		station_gatherers_produces_mult = 0.10
 	}
-	
+
 	weight_modifier = {
 		modifier = {
 			factor = 1.25
 			research_leader = {
 				area = engineering
 				has_trait = "leader_trait_expertise_industry"
-			}			
+			}
 		}
 	}
-	
+
 	ai_weight = {
 		weight = 0.5
 		modifier = {
@@ -2493,24 +2472,24 @@ tech_space_mining_2 = {
 	cost = @tier1cost3
 	area = engineering
 	tier = 1
-	category = { industry }	
+	category = { industry }
 	prerequisites = { "tech_space_mining_1" }
 	weight = @tier1weight3
-	
+
 	modifier = {
 		station_gatherers_produces_mult = 0.10
 	}
-	
+
 	weight_modifier = {
 		modifier = {
 			factor = 1.25
 			research_leader = {
 				area = engineering
 				has_trait = "leader_trait_expertise_industry"
-			}			
+			}
 		}
 	}
-	
+
 	ai_weight = {
 		modifier = {
 			factor = 1.25
@@ -2526,24 +2505,24 @@ tech_space_mining_3 = {
 	cost = @tier2cost1
 	area = engineering
 	tier = 2
-	category = { industry }	
+	category = { industry }
 	prerequisites = { "tech_space_mining_2" }
 	weight = @tier2weight1
-	
+
 	modifier = {
 		station_gatherers_produces_mult = 0.15
 	}
-	
+
 	weight_modifier = {
 		modifier = {
 			factor = 1.25
 			research_leader = {
 				area = engineering
 				has_trait = "leader_trait_expertise_industry"
-			}			
+			}
 		}
 	}
-	
+
 	ai_weight = {
 		weight = 3
 		modifier = {
@@ -2560,24 +2539,24 @@ tech_space_mining_4 = {
 	cost = @tier2cost3
 	area = engineering
 	tier = 2
-	category = { industry }	
+	category = { industry }
 	prerequisites = { "tech_space_mining_3" }
 	weight = @tier2weight3
-	
+
 	modifier = {
 		station_gatherers_produces_mult = 0.15
 	}
-	
+
 	weight_modifier = {
 		modifier = {
 			factor = 1.25
 			research_leader = {
 				area = engineering
 				has_trait = "leader_trait_expertise_industry"
-			}			
+			}
 		}
 	}
-	
+
 	ai_weight = {
 		weight = 3
 		modifier = {
@@ -2594,24 +2573,24 @@ tech_space_mining_5 = {
 	cost = @tier3cost1
 	area = engineering
 	tier = 3
-	category = { industry }	
+	category = { industry }
 	prerequisites = { "tech_space_mining_4" }
 	weight = @tier3weight1
-	
+
 	modifier = {
 		station_gatherers_produces_mult = 0.30
 	}
-	
+
 	weight_modifier = {
 		modifier = {
 			factor = 1.25
 			research_leader = {
 				area = engineering
 				has_trait = "leader_trait_expertise_industry"
-			}			
+			}
 		}
 	}
-	
+
 	ai_weight = {
 		weight = 10
 		modifier = {
@@ -2629,25 +2608,25 @@ tech_mining_1 = {
 	cost = @tier1cost1
 	area = engineering
 	tier = 1
-	category = { industry }	
+	category = { industry }
 	prerequisites = { "tech_basic_industry" }
 	weight = @tier1weight1
-	
+
 	modifier = {
 		planet_miners_minerals_produces_mult = 0.20
 		starbase_constructions_minerals_produces_mult = 0.20
 	}
-	
+
 	weight_modifier = {
 		modifier = {
 			factor = 1.25
 			research_leader = {
 				area = engineering
 				has_trait = "leader_trait_expertise_industry"
-			}			
+			}
 		}
 	}
-	
+
 	ai_weight = {
 		weight = 50000
 		modifier = {
@@ -2672,22 +2651,22 @@ tech_mining_2 = {
 	category = { industry }
 	prerequisites = { "tech_mining_1" }
 	weight = @tier2weight1
-	
+
 	modifier = {
 		planet_miners_minerals_produces_mult = 0.20
 		starbase_constructions_minerals_produces_mult = 0.20
 	}
-	
+
 	weight_modifier = {
 		modifier = {
 			factor = 1.25
 			research_leader = {
 				area = engineering
 				has_trait = "leader_trait_expertise_industry"
-			}			
+			}
 		}
 	}
-	
+
 	ai_weight = {
 		weight = 50
 		modifier = {
@@ -2712,22 +2691,22 @@ tech_mining_3 = {
 	category = { industry }
 	prerequisites = { "tech_mining_2" }
 	weight = @tier3weight1
-	
+
 	modifier = {
 		planet_miners_minerals_produces_mult = 0.20
 		starbase_constructions_minerals_produces_mult = 0.20
 	}
-	
+
 	weight_modifier = {
 		modifier = {
 			factor = 1.25
 			research_leader = {
 				area = engineering
 				has_trait = "leader_trait_expertise_industry"
-			}			
+			}
 		}
 	}
-	
+
 	ai_weight = {
 		weight = 50
 		factor = 25 #scaling factor
@@ -2750,20 +2729,20 @@ tech_mineral_purification_1 = {
 	cost = @tier1cost3
 	area = engineering
 	tier = 1
-	category = { industry }	
+	category = { industry }
 	prerequisites = { "tech_mining_1" }
 	weight = @tier1weight3
-	
+
 	weight_modifier = {
 		modifier = {
 			factor = 1.25
 			research_leader = {
 				area = engineering
 				has_trait = "leader_trait_expertise_industry"
-			}			
+			}
 		}
 	}
-	
+
 	ai_weight = {
 		weight = 50000
 		modifier = {
@@ -2781,10 +2760,10 @@ tech_mineral_purification_2 = {
 	cost = @tier2cost3
 	area = engineering
 	tier = 2
-	category = { industry }	
+	category = { industry }
 	prerequisites = { "tech_mineral_purification_1" "tech_colonial_centralization" }
 	weight = @tier2weight3
-	
+
 	weight_modifier = {
 		factor = 2
 		modifier = {
@@ -2792,7 +2771,7 @@ tech_mineral_purification_2 = {
 			research_leader = {
 				area = engineering
 				has_trait = "leader_trait_expertise_industry"
-			}			
+			}
 		}
 		modifier = {
 			factor = 0
@@ -2803,7 +2782,7 @@ tech_mineral_purification_2 = {
 			}
 		}
 	}
-	
+
 	ai_weight = {
 		weight = 50
 		factor = 5 #scaling factor
@@ -2825,9 +2804,9 @@ tech_alloys_1 = {
 	category = { materials }
 	prerequisites = { "tech_basic_industry" }
 	weight = @tier1weight3
-	
+
 	# Unlock better alloy buildings
-	
+
 	weight_modifier = {
 		modifier = {
 			factor = 0
@@ -2842,10 +2821,10 @@ tech_alloys_1 = {
 			research_leader = {
 				area = engineering
 				has_trait = "leader_trait_expertise_materials"
-			}			
+			}
 		}
 	}
-	
+
 	ai_weight = {
 		weight = 40
 		modifier = {
@@ -2871,12 +2850,12 @@ tech_alloys_2 = {
 	cost = @tier3cost1
 	area = engineering
 	tier = 3
-	category = { materials }	
+	category = { materials }
 	prerequisites = { "tech_alloys_1" "tech_colonial_centralization" }
 	weight = @tier3weight1
-	
+
 	# Unlock better alloy buildings
-	
+
 	weight_modifier = {
 		factor = 2
 		modifier = {
@@ -2884,10 +2863,10 @@ tech_alloys_2 = {
 			research_leader = {
 				area = engineering
 				has_trait = "leader_trait_expertise_materials"
-			}			
+			}
 		}
 	}
-	
+
 	ai_weight = {
 		weight = 30
 		factor = 25 #scaling factor
@@ -2900,6 +2879,7 @@ tech_alloys_2 = {
 		}
 	}
 }
+
 tech_advanced_metallurgy_1 = {
 	cost = @tier2cost1
 	area = engineering
@@ -2971,24 +2951,25 @@ tech_advanced_metallurgy_2 = {
 		}
 	}
 }
+
 #Luxuries 1
 tech_luxuries_1 = {
 	cost = @tier1cost3
 	area = engineering
 	tier = 1
-	category = { materials }	
+	category = { materials }
 	prerequisites = { "tech_basic_industry" }
 	weight = @tier1weight3
-	
+
 	# Unlocks better consumer goods buildings
-	
+
 	potential = {
 		OR = {
 			is_gestalt = no
 			has_valid_civic = civic_machine_servitor
 		}
-	}	
-	
+	}
+
 	weight_modifier = {
 		modifier = {
 			factor = 0
@@ -3003,10 +2984,10 @@ tech_luxuries_1 = {
 			research_leader = {
 				area = engineering
 				has_trait = "leader_trait_expertise_materials"
-			}			
+			}
 		}
 	}
-	
+
 	ai_weight = {
 		weight = 20
 		modifier = {
@@ -3024,19 +3005,19 @@ tech_luxuries_2 = {
 	cost = @tier3cost1
 	area = engineering
 	tier = 3
-	category = { materials }	
+	category = { materials }
 	prerequisites = { "tech_luxuries_1" "tech_colonial_centralization" }
 	weight = @tier3weight1
-	
+
 	# Unlocks better luxury goods buildings
-	
+
 	potential = {
 		OR = {
 			is_gestalt = no
 			has_valid_civic = civic_machine_servitor
 		}
 	}
-	
+
 	weight_modifier = {
 		factor = 2
 		modifier = {
@@ -3044,10 +3025,10 @@ tech_luxuries_2 = {
 			research_leader = {
 				area = engineering
 				has_trait = "leader_trait_expertise_materials"
-			}			
+			}
 		}
 	}
-	
+
 	ai_weight = {
 		weight = 40
 		factor = 25 #scaling factor
@@ -3076,7 +3057,7 @@ tech_engineering_1 = {
 	modifier = {
 		planet_researchers_engineering_research_produces_mult = 0.2
 	}
-	
+
 	weight_modifier = {
 		modifier = {
 			factor = 5
@@ -3089,26 +3070,26 @@ tech_engineering_1 = {
 		modifier = {
 			factor = 2
 			years_passed > 10
-		}		
+		}
 		modifier = {
 			factor = 2
 			years_passed > 15
-		}		
+		}
 		modifier = {
 			factor = 2
 			years_passed > 20
-		}	
+		}
 		modifier = {
 			factor = 1.25
 			research_leader = {
 				area = engineering
 				has_trait = "leader_trait_expertise_industry"
-			}			
+			}
 		}
 	}
-	
+
 	ai_weight = {
-		weight = 30000
+		weight = 30
 		modifier = {
 			factor = 50
 			has_technology = tech_lasers_4
@@ -3128,14 +3109,14 @@ tech_engineering_2 = {
 	cost = @tier2cost3
 	area = engineering
 	tier = 2
-	category = { industry }	
+	category = { industry }
 	prerequisites = { "tech_engineering_1" }
 	weight = @tier2weight3
-	
+
 	modifier = {
 		planet_researchers_engineering_research_produces_mult = 0.2
 	}
-	
+
 	weight_modifier = {
 		modifier = {
 			factor = 2
@@ -3144,26 +3125,26 @@ tech_engineering_2 = {
 		modifier = {
 			factor = 2
 			years_passed > 30
-		}		
+		}
 		modifier = {
 			factor = 2
 			years_passed > 35
-		}		
+		}
 		modifier = {
 			factor = 2
 			years_passed > 40
-		}		
+		}
 		modifier = {
 			factor = 1.25
 			research_leader = {
 				area = engineering
 				has_trait = "leader_trait_expertise_industry"
-			}			
+			}
 		}
 	}
-	
+
 	ai_weight = {
-		weight = 50000
+		weight = 50
 		factor = 5 #scaling factor
 		modifier = {
 			factor = 20
@@ -3188,14 +3169,14 @@ tech_engineering_3 = {
 	cost = @tier4cost2
 	area = engineering
 	tier = 4
-	category = { industry }	
+	category = { industry }
 	prerequisites = { "tech_engineering_2" }
 	weight = @tier4weight2
-		
+
 	modifier = {
 		planet_researchers_engineering_research_produces_mult = 0.2
 	}
-	
+
 	weight_modifier = {
 		modifier = {
 			factor = 2
@@ -3204,11 +3185,11 @@ tech_engineering_3 = {
 		modifier = {
 			factor = 2
 			years_passed > 30
-		}		
+		}
 		modifier = {
 			factor = 2
 			years_passed > 35
-		}		
+		}
 		modifier = {
 			factor = 2
 			years_passed > 40
@@ -3218,12 +3199,12 @@ tech_engineering_3 = {
 			research_leader = {
 				area = engineering
 				has_trait = "leader_trait_expertise_industry"
-			}			
+			}
 		}
 	}
-	
+
 	ai_weight = {
-		weight = 5000
+		weight = 50
 		factor = 125 #scaling factor
 		modifier = {
 			factor = 1.25
@@ -3240,24 +3221,24 @@ tech_robotic_workers = {
 	cost = @tier1cost3
 	area = engineering
 	tier = 1
-	category = { industry }	
+	category = { industry }
 	prerequisites = { "tech_powered_exoskeletons" }
 	weight = @tier1weight3
-	
+
 	gateway = robotics
-		
+
 	feature_flags = { robots }
-	
+
 	potential = {
 		NOT = { has_ethic = "ethic_gestalt_consciousness" }
 	}
-	
+
 	weight_modifier = {
 		factor = 1.5
 		modifier = {
 			factor = 0
 			has_policy_flag = robots_outlawed
-		}		
+		}
 		modifier = {
 			factor = 0.5
 			OR = {
@@ -3280,11 +3261,11 @@ tech_robotic_workers = {
 			}
 		}
 	}
-	
+
 	ai_weight = {
-		weight = 100000
+		weight = 10000
 		modifier = {
-			factor = 5
+			factor = 50
 			has_technology = tech_energy_torpedoes_2
 		}
 		modifier = {
@@ -3323,20 +3304,20 @@ tech_droid_workers = {
 	category = { industry }
 	prerequisites = { "tech_robotic_workers" "tech_colonial_centralization" }
 	weight = @tier2weight3
-	
+
 	gateway = robotics
-	
+
 	feature_flags = { droids }
 
 	potential = {
 		NOT = { has_ethic = "ethic_gestalt_consciousness" }
-	}	
-	
+	}
+
 	weight_modifier = {
 		modifier = {
 			factor = 0
 			has_policy_flag = robots_outlawed
-		}	
+		}
 		modifier = {
 			factor = 0.5
 			OR = {
@@ -3364,7 +3345,7 @@ tech_droid_workers = {
 			}
 		}
 	}
-	
+
 	ai_weight = {
 		weight = 100
 		factor = 5 #scaling factor
@@ -3408,23 +3389,23 @@ tech_synthetic_workers = {
 	weight = @tier4weight2
 
 	feature_flags = { synths }
-	
+
 	gateway = robotics
-	
+
 	modifier = {
 		planet_jobs_robotic_produces_mult = 0.10
 	}
-	
+
 	potential = {
 		NOT = { has_ethic = "ethic_gestalt_consciousness" }
-	}	
-	
+	}
+
 	weight_modifier = {
 		factor = 0.5
 		modifier = {
 			factor = 0
 			has_policy_flag = robots_outlawed
-		}		
+		}
 		modifier = {
 			factor = 0.5
 			OR = {
@@ -3481,7 +3462,7 @@ tech_synthetic_workers = {
 			}
 		}
 	}
-	
+
 	ai_weight = {
 		weight = 600
 		factor = 125 #scaling factor
@@ -3521,20 +3502,20 @@ tech_synthetic_leaders = {
 	category = { industry }
 	prerequisites = { "tech_synthetic_workers" }
 	weight = @tier4weight3
-	
+
 	feature_flags = { robot_leaders }
-		
+
 	## unlocks robot-leaders
-	
+
 	potential = {
 		NOT = { has_ethic = "ethic_gestalt_consciousness" }
 	}
-	
+
 	weight_modifier = {
 		modifier = {
 			factor = 0
 			has_policy_flag = robots_outlawed
-		}	
+		}
 		modifier = {
 			factor = 0
 			has_policy_flag = ai_outlawed
@@ -3576,7 +3557,7 @@ tech_space_construction = {
 	tier = 0
 	category = { industry }
 	start_tech = yes
-	
+
 	prereqfor_desc = {
 		ship = {
 			title = "TECH_UNLOCK_CONSTRUCTION_SHIP_CONSTRUCTION_TITLE"
@@ -3593,7 +3574,7 @@ tech_space_construction = {
 			desc = "TECH_UNLOCK_RESEARCH_STATION_DESC"
 		}
 	}
-	
+
 	ai_weight = {
 		factor = 10 #very important tech
 		modifier = {
@@ -3604,7 +3585,7 @@ tech_space_construction = {
 			}
 		}
 	}
-	
+
 	## unlock construction ship, mining station, research station
 }
 
@@ -3618,10 +3599,10 @@ tech_afterburners_1 = {
 	cost = @tier1cost2
 	tier = 1
 	category = { propulsion }
-	ai_update_type = all	
+	ai_update_type = all
 	prerequisites = { "tech_thrusters_1" }
 	weight = @tier1weight2
-	
+
 	weight_modifier = {
 		factor = 1.25
 		modifier = {
@@ -3640,14 +3621,14 @@ tech_afterburners_1 = {
 			has_technology = tech_thrusters_3
 		}
 	}
-	
+
 	prereqfor_desc = {
 		component = {
 			title = "TECH_UNLOCK_AFTERBURNER_1_TITLE"
 			desc = "TECH_UNLOCK_AFTERBURNER_1_DESC"
 		}
 	}
-	
+
 	ai_weight = {
 		factor = 4 
 		modifier ={
@@ -3670,10 +3651,10 @@ tech_afterburners_2 = {
 	cost = @tier3cost2
 	tier = 3
 	category = { propulsion }
-	ai_update_type = all	
+	ai_update_type = all
 	prerequisites = { "tech_afterburners_1" "tech_thrusters_3" }
 	weight = @tier3weight2
-	
+
 	weight_modifier = {
 		factor = 1.25
 		modifier = {
@@ -3684,14 +3665,14 @@ tech_afterburners_2 = {
 			}
 		}
 	}
-	
+
 	prereqfor_desc = {
 		component = {
 			title = "TECH_UNLOCK_AFTERBURNER_2_TITLE"
 			desc = "TECH_UNLOCK_AFTERBURNER_2_DESC"
 		}
 	}
-	
+
 	ai_weight = {
 		factor = 35
 		factor = 25 #scaling factor
@@ -3713,14 +3694,14 @@ tech_assembly_pattern  = {
 	cost = @tier1cost3
 	area = engineering
 	tier = 1
-	category = { industry }		
+	category = { industry }
 	prerequisites = { "tech_engineering_1" }
 	weight = @tier1weight3
-	
+
 	modifier = {
 		planet_building_build_speed_mult = 0.25
 	}
-	
+
 	weight_modifier = {
 		modifier = {
 			factor = 1.25
@@ -3737,7 +3718,7 @@ tech_assembly_pattern  = {
 			}
 		}
 	}
-	
+
 	ai_weight = {
 		factor = 8
 		modifier = {
@@ -3755,15 +3736,15 @@ tech_construction_templates = {
 	area = engineering
 	tier = 3
 	is_rare = yes
-	category = { industry }		
+	category = { industry }
 	prerequisites = { "tech_assembly_pattern" }
 	weight = @tier3weight2
-	
+
 	modifier = {
 		planet_building_build_speed_mult = 0.50
 		empire_size_districts_mult = -0.10
 	}
-	
+
 	weight_modifier = {
 		factor = 0.5
 		modifier = {
@@ -3799,7 +3780,7 @@ tech_construction_templates = {
 			}
 		}
 	}
-	
+
 	ai_weight = {
 		factor = 20
 		factor = 25 #scaling factor
@@ -3823,11 +3804,11 @@ tech_housing_1 = {
 	tier = 2
 	category = { industry }
 	weight = @tier2weight2
-	
+
 	modifier = {
 		description = district_housing_tech_effect
 	}
-	
+
 	weight_modifier = {
 		factor = 1.5
 		modifier = {
@@ -3838,9 +3819,9 @@ tech_housing_1 = {
 			}
 		}
 	}
-	
+
 	ai_weight = {
-		factor = 3.5
+		factor = 3500
 		modifier = {
 			factor = 1000
 			has_technology = tech_lasers_4
@@ -3862,19 +3843,26 @@ tech_housing_2 = {
 	category = { industry }
 	prerequisites = { "tech_housing_1" }
 	weight = @tier3weight1
-	
+
 	modifier = {
 		description = district_housing_tech_effect
 	}
-	
+
 	weight_modifier = {
 		factor = 1.5
 		modifier = {
 			factor = 0
 			has_valid_civic = civic_agrarian_idyll
 		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_industry"
+			}
+		}
 	}
-	
+
 	ai_weight = {
 		factor = 20
 		factor = 125 #scaling factor
@@ -3887,7 +3875,3 @@ tech_housing_2 = {
 		}
 	}
 }
-
-# ##################
-# Megastructures
-# ##################

@@ -1,0 +1,83 @@
+##############
+### EDICTS ###
+##############
+
+
+
+nsc_flagship_repair = {
+    length = 0
+    icon = "GFX_edict_type_policy"
+
+    resources = {
+        category = campaigns
+        cost = {
+            alloys = @nsc_flagship_alloys_cost
+            influence = @nsc_flagship_influence_cost
+        }
+    }
+
+    effect = {
+		enable_special_project = {
+			name = NSC_FLAGSHIP_REBUILD_PROJECT
+			location = this.capital_scope #damn, this code doesn't support megastructure scope
+		}
+        hidden_effect = { remove_country_flag = nsc_flagship_repair_project_possible }
+    }
+
+    potential = {
+        has_country_flag = nsc_flagship_repair_project_possible
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+
+
+nsc_emergency_defenses = {
+    length = 360
+    icon = "GFX_edict_type_policy"
+
+    resources = {
+        category = campaigns
+        cost = {
+            energy = 500
+            influence = 500
+        }
+    }
+
+    modifier = {
+	    country_energy_produces_mult = -0.4
+	    shipsize_military_station_small_build_speed_mult = 3.0
+	    shipsize_military_station_medium_build_speed_mult = 3.0
+	    shipsize_military_station_large_build_speed_mult = 3.0
+	    starbase_module_build_speed_mult = 3.0
+	    starbase_building_build_speed_mult = 3.0
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+nsc_modmenu = {
+    length = 0
+	icon = "GFX_edict_type_policy"
+	resources = {
+		category = campaigns
+	}
+
+    effect = {
+		custom_tooltip = edict_nsc_modmenu_tooltip
+		hidden_effect = { country_event = { id = nsc_modmenu_events.1 } }
+	}
+
+	allow = {
+		is_ai = no
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}

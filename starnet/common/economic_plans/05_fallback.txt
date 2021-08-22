@@ -15,6 +15,10 @@ early_default_plan = {
 		society_research = 500
 		engineering_research = 500
 
+		esc_gravitic_anomaly = 1
+		esc_psionic_charge = 1
+		esc_enigmatic_energy = 1
+		esc_transdimensional_vortex = 1
 		exotic_gases = 1
 		volatile_motes = 1
 		rare_crystals = 1
@@ -24,6 +28,7 @@ early_default_plan = {
 		energy = 10
 		minerals = 30
 		alloys = 50
+		esc_living_crystal = 15
 	}
 
 	subplan = {
@@ -81,7 +86,7 @@ early_default_plan = {
 		not = { has_country_flag = str_reconsider_plans }
 	}
 	ai_weight = {
-		weight = 500
+		weight = 100
 	}
 }
 
@@ -99,6 +104,11 @@ middle_default_plan = {
 		society_research = 500
 		engineering_research = 500
 
+		nanites = 5
+		esc_gravitic_anomaly = 5
+		esc_psionic_charge = 5
+		esc_enigmatic_energy = 5
+		esc_transdimensional_vortex = 5
 		exotic_gases = 2
 		volatile_motes = 2
 		rare_crystals = 2
@@ -108,6 +118,7 @@ middle_default_plan = {
 		energy = 30
 		minerals = 150
 		alloys = 200
+		esc_living_crystal = 50
 	}
 
 	subplan = {
@@ -166,7 +177,7 @@ middle_default_plan = {
 	}
 
 	ai_weight = {
-		weight = 500
+		weight = 100
 	}
 }
 
@@ -184,6 +195,10 @@ end_default_plan = {
 		society_research = 1500
 		engineering_research = 1500
 
+		esc_gravitic_anomaly = 5
+		esc_psionic_charge = 5
+		esc_enigmatic_energy = 5
+		esc_transdimensional_vortex = 5
 		exotic_gases = 3
 		volatile_motes = 3
 		rare_crystals = 3
@@ -193,6 +208,7 @@ end_default_plan = {
 		energy = 50
 		minerals = 100
 		alloys = 400
+		esc_living_crystal = 50
 	}
 
 	subplan = {
@@ -251,7 +267,7 @@ end_default_plan = {
 	empire_size = 1
 
 	ai_weight = {
-		weight = 500
+		weight = 100
 	}
 }
 
@@ -270,6 +286,10 @@ ultimate_default_plan = {
 		society_research = 6000
 		engineering_research = 6000
 
+		esc_gravitic_anomaly = 5
+		esc_psionic_charge = 5
+		esc_enigmatic_energy = 5
+		esc_transdimensional_vortex = 5
 		exotic_gases = 3
 		volatile_motes = 3
 		rare_crystals = 3
@@ -281,7 +301,7 @@ ultimate_default_plan = {
 	focus = {
 		energy = 50
 		minerals = 300
-		alloys = 500
+		alloys = 500	esc_living_crystal = 50
 	}
 
 	subplan = {
@@ -340,6 +360,6 @@ ultimate_default_plan = {
 	empire_size = 1
 
 	ai_weight = {
-		weight = 400
+		weight = 50
 	}
 }

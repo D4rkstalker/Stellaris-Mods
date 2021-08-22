@@ -1,20 +1,28 @@
-#If AI ever reaches lategame it will scrap science facilities and spam strongholds and alloys
+#If AI ever reaches hyperlategame it will scrap science facilities and spam strongholds and alloys
 
 lategame = {
     or = {
     and = {    
         has_technology = tech_battleships 
-        has_technology = tech_zero_point_power 
         has_technology = tech_ascension_theory 
-        has_technology = tech_energy_torpedoes_2 
+        has_technology = nhsc_tech_energy_launcher_4 
         has_technology = tech_energy_lance_2 
-        has_technology = tech_kinetic_artillery_2 
-        has_technology = tech_mass_accelerator_2 
+        has_technology = tech_kinetic_artillery_4 
+        has_technology = nhsc_tech_mass_accelerator_4 
         has_technology = tech_arc_emitter_2 
+        or = {
+            not = { has_global_flag = has_nsc_active  }
+            has_technology = tech_dreadnought_1
+        }
+        has_technology = nhsc_tech_advanced_reactor_3 
         or = { has_technology = tech_matter_decompressor has_technology = tech_dyson_sphere nor = { host_has_dlc = "Utopia" host_has_dlc = "Megacorp" } }
     }
     and = {
         minilategame = yes
+        or = {
+            not = { has_global_flag = has_nsc_active  }
+            has_technology = tech_dreadnought_1
+        }
         has_ascension_perk = ap_become_the_crisis
         has_crisis_level = crisis_level_3
         }
@@ -24,7 +32,9 @@ lategame = {
 minilategame = {
     has_technology = tech_battleships 
     has_technology = tech_ascension_theory 
-    has_technology = tech_energy_torpedoes_2 
+    has_technology = nhsc_tech_energy_launcher_4	
+    has_technology = nhsc_tech_mass_accelerator_4 
+    has_technology = nhsc_tech_advanced_reactor_3 
 }
 
 #I value ascension theory very highly
@@ -32,8 +42,6 @@ minilategame = {
 # AI will try to "reroll" techs by picking cheap techs until it's offered
 
 reroll_society = {
-    or = {
-    and = {
     NOT = {
         has_tech_option = tech_ascension_theory 
     }
@@ -46,24 +54,6 @@ reroll_society = {
            has_tech_option = tech_repeatable_improved_leader_life_span 
            has_tech_option = tech_repeatable_naval_cap 
         }
-    }
-    and = {
-        not = { has_technology = tech_climate_restoration }
-        or = {
-            has_tech_option = tech_galactic_campaigns 
-            has_tech_option = tech_manifest_destiny
-            has_tech_option = tech_doctrine_navy_size_3
-            has_tech_option = tech_doctrine_navy_size_4
-            has_tech_option = tech_doctrine_fleet_size_3
-            has_tech_option = tech_doctrine_fleet_size_4
-            has_tech_option = tech_doctrine_fleet_size_5
-            has_tech_option = tech_galactic_markets
-            has_tech_option = tech_nutrient_replication
-            has_tech_option = tech_society_3
-            has_tech_option = tech_colonization_5
-            }
-        }
-    }
 }
 
 beta_arcology = {

@@ -83,8 +83,30 @@ fortify_the_border = {
 	potential = {
 		or = {
 			is_ai = no
-			has_edict = capacity_subsidies
-		}
+			and = {
+			years_passed < 60
+			years_passed >= @str_years_of_guaranteed_truce
+			or = {
+				and = {
+				has_edict = fortify_the_border
+				used_naval_capacity_percent > 0.5
+				}
+				and = {
+					years_passed < 40
+					used_naval_capacity_percent > 0.9
+					resource_stockpile_compare = {
+						resource = alloys
+						value > 4000
+					}
+				}
+			}
+			not = { has_ascension_perk = ap_grasp_the_void }
+			nand = {
+				has_tradition = tr_supremacy_adopt
+				has_technology = tech_galactic_ambitions
+			}
+			}
+		}	
 	}
 
 	ai_weight = {
@@ -92,14 +114,25 @@ fortify_the_border = {
 		modifier = {
 			factor = 0
 			or = {
-				not = {
-					has_edict = capacity_subsidies
-				}
+			num_starbases > 6
+			not = { has_edict = fortify_the_border }
+			}
+			years_passed > 50
+		}
+		modifier = {
+			factor = 0
+			or = {
+				and = { years_passed > 20 not = { has_edict = fortify_the_border } }
+				years_passed < 7
 				and = {
-					not = {
-						has_edict = mining_subsidies
-					}
-					has_technology = tech_mineral_purification_1
+					has_tradition = tr_supremacy_adopt
+					has_technology = tech_galactic_ambitions
+				}
+				has_ascension_perk = ap_grasp_the_void
+				and = {
+					years_passed > 50
+					nor = { has_edict = capacity_subsidies not = { has_technology = tech_power_hub_1 } }
+					not = { has_edict = mining_subsidies not = { has_technology = tech_mineral_purification_1 } }
 				}
 			}
 		}
@@ -222,7 +255,7 @@ expanded_breeding_program_servitor = {
 	}
 
 	modifier = {
-		pop_growth_speed = 0.20
+		pop_growth_speed = 0.10
 		biological_pop_happiness = 0.05
 		lithoid_pop_happiness = 0.05
 		empire_size_pops_mult = 0.10
@@ -363,9 +396,8 @@ bureau_of_espionage = {
 
 	modifier = {
 		envoys_add = 1
-		intel_decryption_add = 2
+		espionage_operation_difficulty_add = -2
 		add_base_country_intel = 10
-		spy_network_levels_add = 10
 	}
 
 	potential = {
@@ -413,9 +445,8 @@ observation_instinct = {
 
 	modifier = {
 		envoys_add = 1
-		intel_decryption_add = 2
+		espionage_operation_difficulty_add = -2
 		add_base_country_intel = 10
-		spy_network_levels_add = 10
 	}
 
 	potential = {
@@ -463,9 +494,8 @@ covert_analysis_algorithm = {
 
 	modifier = {
 		envoys_add = 1
-		intel_decryption_add = 2
+		espionage_operation_difficulty_add = -2
 		add_base_country_intel = 10
-		spy_network_levels_add = 10
 	}
 
 	potential = {
@@ -857,20 +887,7 @@ farming_subsidies = {
 
 	ai_weight = {
 		weight = @EdictMedPrio
-		modifier = {
-			factor = 0
-			or = {
-				not = {
-					has_edict = capacity_subsidies
-				}
-				not = {
-					has_edict = mining_subsidies
-				}
-				not = {
-					has_edict = fortify_the_border
-				}
-			}
-		}
+
 	}
 }
 
@@ -952,21 +969,7 @@ forge_subsidies = {
 	}
 
 	ai_weight = {
-		weight = @EdictLowPrio
-		modifier = {
-			factor = 0
-			or = {
-				not = {
-					has_edict = capacity_subsidies
-				}
-				not = {
-					has_edict = mining_subsidies
-				}
-				not = {
-					has_edict = fortify_the_border
-				}
-			}
-		}
+		weight = 0
 	}
 }
 
@@ -1062,13 +1065,6 @@ peace_festivals = {
 
 	potential = {
 		is_pacifist = yes
-		or = {
-			is_ai = no
-			and = {
-			has_ascension_perk = ap_executive_vigor
-			is_difficulty < 3
-			} 
-		}
 	}
 
 	ai_weight = {
@@ -1104,23 +1100,10 @@ information_quarantine = {
 
 	potential = {
 		is_authoritarian = yes
-		or = {
-			is_ai = no
-			and = {
-			has_ascension_perk = ap_executive_vigor
-			is_difficulty < 3
-			} 
-		}
 	}
 
 	ai_weight = {
 		weight = @EdictLowPrio
-		modifier = {
-			factor = 0
-			not = {
-				has_edict = capacity_subsidies
-			}
-		}
 	}
 }
 

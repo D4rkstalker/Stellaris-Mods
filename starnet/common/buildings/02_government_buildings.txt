@@ -88,7 +88,7 @@ building_bureaucratic_1 = {
 
 	potential = {
 		exists = owner
-		owner = { is_regular_empire = yes } 
+		owner = { is_regular_empire = yes }
 	}
 
 	allow = {

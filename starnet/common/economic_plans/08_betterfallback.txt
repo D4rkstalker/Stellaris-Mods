@@ -19,7 +19,7 @@ early_default_plan_4 = {
 		energy = 50
 		minerals = 50
 		alloys = 20
-	}
+	}	
 
 	subplan = {
 		potential = { always = yes }
@@ -30,8 +30,8 @@ early_default_plan_4 = {
 
 	subplan = {
 		potential = { always = yes }
-		income = { unity = 20000 }
-		focus = { unity = 10000 }
+		income = { unity = 500 }
+		focus = { unity = 200 }
 	}
 
 	subplan = {
@@ -130,7 +130,7 @@ early_default_plan_4 = {
     subplan = {
         potential = {
 		or = {
-        resource_income_compare = { resource = consumer_goods value > -5 }
+            resource_income_compare = { resource = consumer_goods value > -5 }
 	resource_stockpile_compare = { resource = consumer_goods value > 400 }
 		}
             resource_income_compare = { resource = energy value > -5 }
@@ -220,7 +220,7 @@ middle_default_plan_4 = {
 		energy = 50
 		minerals = 50
 		alloys = 30
-	}
+	}	
 
 	subplan = {
 		potential = { always = yes }
@@ -231,8 +231,8 @@ middle_default_plan_4 = {
 
 	subplan = {
 		potential = { always = yes }
-		income = { unity = 20000 }
-		focus = { unity = 10000 }
+		income = { unity = 500 }
+		focus = { unity = 200 }
 	}
 
 	subplan = {
@@ -330,7 +330,7 @@ middle_default_plan_4 = {
     subplan = {
         potential = {
 		or = {
-        resource_income_compare = { resource = consumer_goods value > -5 }
+            resource_income_compare = { resource = consumer_goods value > -5 }
 	resource_stockpile_compare = { resource = consumer_goods value > 400 }
 		}
             resource_income_compare = { resource = energy value > -5 }
@@ -422,7 +422,7 @@ end_default_plan_4 = {
 		energy = 100
 		minerals = 50
 		alloys = 30
-	}
+	}	
 
 	subplan = {
 		potential = { always = yes }
@@ -433,8 +433,8 @@ end_default_plan_4 = {
 
 	subplan = {
 		potential = { always = yes }
-		income = { unity = 20000 }
-		focus = { unity = 10000 }
+		income = { unity = 500 }
+		focus = { unity = 200 }
 	}
 
 	subplan = {
@@ -621,7 +621,7 @@ ultimate_default_plan_4 = {
 		energy = 100
 		minerals = 50
 		alloys = 0
-	}
+	}	
 
 	subplan = {
 		potential = { always = yes }
@@ -632,8 +632,8 @@ ultimate_default_plan_4 = {
 
 	subplan = {
 		potential = { always = yes }
-		income = { unity = 20000 }
-		focus = { unity = 10000 }
+		income = { unity = 500 }
+		focus = { unity = 200 }
 	}
 
 	subplan = {
@@ -731,7 +731,7 @@ ultimate_default_plan_4 = {
     subplan = {
         potential = {
 		or = {
-        resource_income_compare = { resource = consumer_goods value > -5 }
+            resource_income_compare = { resource = consumer_goods value > -5 }
 	resource_stockpile_compare = { resource = consumer_goods value > 500 }
 		}
             resource_income_compare = { resource = energy value > -5 }

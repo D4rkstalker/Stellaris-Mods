@@ -319,11 +319,11 @@ country_event = {
                 has_country_flag = str_normal_empire
                 }
             }
-        country_event = { id = str_doomstack.2 days = 2  }
-        country_event = { id = str_doomstack.2 days = 5  }
-        country_event = { id = str_doomstack.2 days = 8  }
-        country_event = { id = str_doomstack.2 days = 11  }
-    }
+                country_event = { id = str_doomstack.2 days = 2  }
+                country_event = { id = str_doomstack.2 days = 5  }
+                country_event = { id = str_doomstack.2 days = 8  }
+                country_event = { id = str_doomstack.2 days = 11  }
+        }
     }
 
 }
@@ -354,12 +354,12 @@ fleet_event = {
                 }
                 not = { is_same_value = event_target:strmerger }
             }
-        queue_actions = {
-            find_closest_fleet = {
-                found_fleet = {
-                    merge_fleet = {
-                        target = event_target:strmerger
-                        allow_ftl = no
+            queue_actions = {
+                find_closest_fleet = {
+                    found_fleet = {
+                        merge_fleet = {
+                            target = event_target:strmerger 
+                            allow_ftl = no
                         }
                     }
                 }

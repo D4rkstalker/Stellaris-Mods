@@ -1153,9 +1153,9 @@ ap_executive_vigor = {
 			is_pacifist = yes
 			is_authoritarian = yes
 			resource_stockpile_compare = {
-						resource = influence
+				resource = influence
 				value > 150
-					}
+				}
 			}
 		}
 	}
@@ -1550,7 +1550,7 @@ ap_machine_worlds = {
 	}
 
 	ai_weight = {
-		factor = 0
+			factor = 0
 	}
 }
 
@@ -1586,7 +1586,7 @@ ap_hive_worlds = {
 	}
 
 	ai_weight = {
-		factor = 0
+			factor = 0
 	}
 }
 

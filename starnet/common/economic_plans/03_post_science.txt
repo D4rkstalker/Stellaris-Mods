@@ -110,7 +110,7 @@ middle_imperial_plan = {
 		income = { energy = 500 }
 		focus = { energy = 250 }
 	}
-
+	
 	subplan = {
 		potential = { 
 			has_ascension_perk = ap_world_shaper
@@ -689,23 +689,23 @@ ultimate_imperial_plan = {
 
 	}
 	
-	subplan = {
-		potential = { str_food_crisis_0 = yes }
+subplan = {
+	potential = { str_food_crisis_0 = yes }
 	income = { food = 500 }
 	focus = { food = 200 }
-	}
-	
-	subplan = {
-		potential = { str_minerals_crisis_0 = yes }
+}
+
+subplan = {
+	potential = { str_minerals_crisis_0 = yes }
 	income = { minerals = 500 }
 	focus = { minerals = 200 }
-	}
-	
-	subplan = {
-		potential = { str_energy_crisis_0 = yes }
+}
+
+subplan = {
+	potential = { str_energy_crisis_0 = yes }
 	income = { energy = 500 }
 	focus = { energy = 200 }
-	}
+}
 	subplan = {
 		potential = { str_raw_ecocrisis_level_0 = no }
 		income = { alloys = 1000 }

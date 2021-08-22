@@ -1553,11 +1553,11 @@ first_contact_protocol = {
 				factor = 1.5
 				always = yes #Liu Cixin is right
 			}
-		modifier = {
-			factor = 10
-			years_passed > 40
+			modifier = {
+				factor = 10
+				years_passed > 40
+			}
 		}
-	}
 	}
 
 	option = {
@@ -1951,7 +1951,7 @@ trade_policy = {
 		AI_weight = {
 			factor = 300
 			modifier = {
-				factor = 0
+			factor = 0
 				is_ai = no
 			}
 			modifier = {
@@ -2020,7 +2020,7 @@ drone_policy = {
 					resource = minerals
 					value > 40
 				}
-			has_policy_flag = gestalt_economic_thinker
+				has_policy_flag = gestalt_economic_thinker
 				}
 			}
 		}

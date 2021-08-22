@@ -49,6 +49,7 @@ tr_supremacy_adopt = {
 		modifier = {
 			factor = 0
 			not = { has_tradition = tr_expansion_finish }
+			not = { has_tradition = tr_discovery_finish }
 			num_guaranteed_colonies = 2
 		}
 		modifier = {

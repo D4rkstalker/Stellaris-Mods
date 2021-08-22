@@ -94,11 +94,11 @@ fortify_the_border = {
 			or = {
 				not = {
 					has_edict = capacity_subsidies
-				}
+			}
 				and = {
 					not = {
 						has_edict = mining_subsidies
-					}
+				}
 					has_technology = tech_mineral_purification_1
 				}
 			}
@@ -1207,7 +1207,7 @@ land_of_opportunity = {
 	potential = {
 		is_xenophile = yes
 		has_comms_with_alien_empire = yes
-		is_ai = no
+			is_ai = no
 	}
 
 	ai_weight = {

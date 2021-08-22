@@ -2363,13 +2363,9 @@ foundry = {
 	weight = {
 		weight = @specialist_job_weight # Fairly important job
 		modifier = {
-			factor = 2
+			factor = 5
 			is_enslaved = yes
 			can_take_servant_job = no
-		}
-		modifier = {
-			factor = 5
-			has_trait = trait_necrophage
 		}
 		modifier = {
 			factor = 0.002
@@ -2467,13 +2463,9 @@ artisan = {
 	weight = {
 		weight = @specialist_job_weight
 		modifier = {
-			factor = 2
+			factor = 5
 			is_enslaved = yes
 			can_take_servant_job = no
-		}
-		modifier = {
-			factor = 5
-			has_trait = trait_necrophage
 		}
 		modifier = {
 			factor = 0.002

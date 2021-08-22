@@ -117,7 +117,7 @@ exotic_gases_expenditure_shipedicts = {
 		modifier = {
 			add = 1000
 			is_at_war = yes
-		}
+}
 	}
 }
 

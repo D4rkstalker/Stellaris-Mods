@@ -66,10 +66,11 @@ corvette = {
 
 	potential_country = {
 			nand = {
+				has_country_flag = str_disable_corvettes
 				is_ai = yes
 				is_at_war = no
-				years_passed < @str_years_of_guaranteed_truce
 				not = { has_country_flag = str_need_to_defend_against_rush }
+				scared_of_neighbour = no
 			}
 	}
 
@@ -122,15 +123,6 @@ destroyer = {
 			alloys = @destroyer_upkeep_alloys
 		}
 	}
-	potential_country = {
-		nand = {
-			is_ai = yes
-			is_at_war = no
-			years_passed < @str_years_of_guaranteed_truce
-			not = { has_country_flag = str_need_to_defend_against_rush }
-		}
-	}
-
 	min_upgrade_cost = {
 		alloys = 2
 	}

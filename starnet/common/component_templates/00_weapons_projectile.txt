@@ -235,7 +235,6 @@ weapon_component_template = {
 		}
 	}
 	ai_weight = {
-		factor = 10
 		modifier = {
 			factor = 2
 			has_technology = tech_cruisers
@@ -350,7 +349,7 @@ weapon_component_template = {
 	}
 
 	ai_weight = {
-		factor = 10
+		weight = 1
 		modifier = {
 			factor = 2
 			has_technology = tech_cruisers
@@ -484,7 +483,7 @@ weapon_component_template = {
 	}
 
 	ai_weight = {
-		factor = 10
+		weight = 1
 		modifier = {
 			factor = 2
 			has_technology = tech_cruisers

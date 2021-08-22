@@ -60,12 +60,7 @@ tr_expansion_adopt = {
 		factor = 10000
 		modifier = {
 			factor = 0
-			or = {
 			num_guaranteed_colonies < 2
-			has_origin = origin_necrophage
-			has_origin = origin_void_dwellers
-			has_tradition = tr_discovery_adopt	
-			}
 		}
 		modifier = {
 			factor = 5

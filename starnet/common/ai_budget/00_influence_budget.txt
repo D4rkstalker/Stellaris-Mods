@@ -126,11 +126,11 @@ influence_expenditure_edicts = {
 	category = edicts
 	
 	potential = {
-		resource_stockpile_compare = {
-			resource = influence
+			resource_stockpile_compare = {
+				resource = influence
 			value > 250
-		}
-	}
+				}
+			}
 	
 	fraction = {
 		weight = 0.9
@@ -147,8 +147,12 @@ influence_expenditure_stations = {
 	category = stations
 	
 	potential = {
-		str_is_allowed_to_build_outposts = yes
 		not = { has_country_flag = saving_influence_arcology }
+		or = {
+		prepare_for_war = no
+		years_passed > 30
+		used_naval_capacity_percent < 0.6
+		}
 		nand = {
 			is_allowed_to_make_claims = yes
 			has_country_flag = ferocious_rusher
@@ -222,10 +226,10 @@ influence_expenditure_stations_save_for_edicts = {
 				not = { has_ascension_perk = ap_executive_vigor }
 				}
 			}
-			resource_stockpile_compare = {
-				resource = influence
-				value > 200	
-				}
+		resource_stockpile_compare = {
+			resource = influence
+			value > 200	
+			}
 		}
 	}
 	
@@ -254,7 +258,40 @@ influence_expenditure_stations_wartime = {
 	}	
 }
 
-
+influence_expenditure_claims_early = {
+	resource = influence 
+	type = expenditure
+	category = claims
+	
+	potential = {
+		is_at_war = no
+		is_allowed_to_make_claims = yes
+		years_passed > 15
+		not = { has_country_flag = saving_influence_arcology }
+		years_passed < 40
+		NOT = {
+			OR = {
+  	 			has_ethic = ethic_fanatic_pacifist
+   				has_ethic = ethic_pacifist
+    		}	
+		}
+		or = {
+			has_edict = fortify_the_border
+			resource_stockpile_compare = {
+				resource = influence
+				value > 120
+			}
+		}
+	}
+	
+	fraction = {
+		weight = 0.75
+	}
+	static_min = {
+		base = 300
+		
+	}
+}
 
 influence_expenditure_claims_late = {
 	resource = influence 
@@ -265,7 +302,7 @@ influence_expenditure_claims_late = {
 		is_at_war = no
 		is_allowed_to_make_claims = yes
 		not = { has_country_flag = saving_influence_arcology }
-		years_passed > @str_ai_will_not_declare_war_until
+		years_passed > 40
 		NOT = {
 			OR = {
   	 			has_ethic = ethic_fanatic_pacifist
@@ -293,7 +330,6 @@ influence_expenditure_claims_while_preparing = {
 	category = claims
 	
 	potential = {
-		years_passed > @str_ai_will_not_declare_war_until
 		is_allowed_to_make_claims = yes
 		not = { has_country_flag = saving_influence_arcology }
 		or = {

@@ -1513,7 +1513,7 @@ col_habitat_research = {
 		modifier = {
 			add = 1.08
 			num_districts = { type = district_hab_science value >= 1 }
-			}
+		}
 		modifier = {
 			add = 1.08
 			num_districts = { type = district_hab_science value >= 2 }
@@ -1669,25 +1669,25 @@ col_habitat_foundry = {
 		modifier = { 		#Count 1 Mineral as 1.5 energy
 			factor = 1.5
 			always = yes
-	}
+		}
 		modifier = {
 			factor = 0
 			NOR = {
 				has_building = building_foundry_1
 				has_building = building_foundry_2
 				has_building = building_foundry_3
-		}
+			}	
 		}
 		modifier = {
 			factor = 0
 			OR = {
-			has_building = building_factory_1
+				has_building = building_factory_1
 				has_building = building_factory_2
-			has_building = building_factory_2
-		}
+				has_building = building_factory_2
+			}	
 		}
 	}
-	}
+}
 
 # Habitat Factory
 col_habitat_factory = {

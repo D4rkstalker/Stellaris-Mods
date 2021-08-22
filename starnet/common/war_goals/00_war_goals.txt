@@ -86,10 +86,6 @@ wg_end_threat = {
 	surrender_acceptance = -1000
 
 	potential = {
-		or =  {
-			is_ai = no
-			years_passed > @str_ai_will_not_declare_war_until
-		}
 		from = {
 			OR = {
 				has_valid_civic = civic_fanatic_purifiers
@@ -99,7 +95,6 @@ wg_end_threat = {
 	}
 	possible = {
 		always = yes
-		
 	}
 
 	ai_weight = {
@@ -122,10 +117,6 @@ wg_end_threat_swarm = {
 
 	potential = {
 		from = { has_valid_civic = civic_hive_devouring_swarm }
-		or =  {
-			is_ai = no
-			years_passed > @str_ai_will_not_declare_war_until
-		}
 	}
 	possible = {
 		always = yes
@@ -151,10 +142,6 @@ wg_end_threat_assimilators = {
 
 	potential = {
 		from = { has_valid_civic = civic_machine_assimilator }
-		or =  {
-			is_ai = no
-			years_passed > @str_ai_will_not_declare_war_until
-		}
 	}
 	possible = {
 		always = yes
@@ -183,10 +170,6 @@ wg_assimilation = {
 	surrender_acceptance = -1000
 
 	potential = {
-		or =  {
-			is_ai = no
-			years_passed > @str_ai_will_not_declare_war_until
-		}
 		from = { NOT = { is_country_type = fallen_empire } }
 		NAND = {
 			is_galactic_emperor = yes
@@ -234,10 +217,6 @@ wg_cleansing = {
 	surrender_acceptance = -1000
 
 	potential = {
-		or =  {
-			is_ai = no
-			years_passed > @str_ai_will_not_declare_war_until
-		}
 		from = { NOT = { is_country_type = fallen_empire } }
 		NAND = {
 			is_galactic_emperor = yes
@@ -285,10 +264,6 @@ wg_absorption = {
 	surrender_acceptance = -1000
 
 	potential = {
-		or =  {
-			is_ai = no
-			years_passed > @str_ai_will_not_declare_war_until
-		}
 		from = { NOT = { is_country_type = fallen_empire } }
 		NAND = {
 			is_galactic_emperor = yes
@@ -332,10 +307,6 @@ wg_assimilation_vs_fe = {
 	surrender_acceptance = -1000
 
 	potential = {
-		or =  {
-			is_ai = no
-			years_passed > @str_ai_will_not_declare_war_until
-		}
 		from = { is_country_type = fallen_empire }
 	}
 	possible = {
@@ -367,10 +338,6 @@ wg_cleansing_vs_fe = {
 	surrender_acceptance = -1000
 
 	potential = {
-		or =  {
-			is_ai = no
-			years_passed > @str_ai_will_not_declare_war_until
-		}
 		from = { is_country_type = fallen_empire }
 	}
 	possible = {
@@ -402,10 +369,6 @@ wg_absorption_vs_fe = {
 	surrender_acceptance = -1000
 
 	potential = {
-		or =  {
-			is_ai = no
-			years_passed > @str_ai_will_not_declare_war_until
-		}
 		from = { is_country_type = fallen_empire }
 	}
 	possible = {
@@ -444,10 +407,6 @@ wg_plunder = {
 	surrender_acceptance = -25
 
 	potential = {
-		or =  {
-			is_ai = no
-			years_passed > @str_ai_will_not_declare_war_until
-		}
 		has_total_war_cb = no
 		has_valid_civic = civic_barbaric_despoilers
 		NOT = { is_in_federation_with = from }
@@ -711,10 +670,6 @@ wg_colossus = {
 	surrender_acceptance = -1000
 
 	potential = {
-		or =  {
-			is_ai = no
-			years_passed > @str_ai_will_not_declare_war_until
-		}
 		NAND = {
 			is_galactic_emperor = yes
 			from = { is_galactic_community_member = yes }
@@ -761,10 +716,6 @@ wg_end_threat_colossus = {
 	surrender_acceptance = -1000
 
 	potential = {
-		or =  {
-			is_ai = no
-			years_passed > @str_ai_will_not_declare_war_until
-		}
 		NAND = {
 			is_galactic_emperor = yes
 			from = { is_galactic_community_member = yes }
@@ -809,10 +760,6 @@ wg_subjugation = {
 
 
 	potential = {
-		or =  {
-			is_ai = no
-			years_passed > @str_ai_will_not_declare_war_until
-		}
 		NOR = {
 			has_valid_civic = civic_inwards_perfection
 			has_authority = auth_corporate
@@ -927,10 +874,6 @@ wg_tribute = {
 	surrender_acceptance = -75
 
 	potential = {
-		or =  {
-			is_ai = no
-			years_passed > @str_ai_will_not_declare_war_until
-		}
 		NOT = { has_authority = auth_corporate }
 		has_total_war_cb = no
 		NAND = {
@@ -1152,10 +1095,6 @@ wg_force_ideology = {
 	war_exhaustion = 0.75
 
 	potential = {
-		or =  {
-			is_ai = no
-			years_passed > @str_years_of_twilight
-		}
 		has_policy_flag = liberation_wars
 		has_total_war_cb = no
 		from = { is_country_type = default }
@@ -1321,10 +1260,6 @@ wg_conquest = {
 	threat_multiplier = 0.75
 
 	potential = {
-		or =  {
-			is_ai = no
-			years_passed > @str_ai_will_not_declare_war_until
-		}
 		has_total_war_cb = no
 		NAND = {
 			is_galactic_emperor = yes
@@ -1479,10 +1414,6 @@ wg_take_galatron = {
 	surrender_acceptance = -40
 
 	potential = {
-		or =  {
-			is_ai = no
-			years_passed > @str_ai_will_not_declare_war_until
-		}
 		has_total_war_cb = no
 	}
 	possible = {
@@ -1571,10 +1502,6 @@ wg_expel_corp = {
 	surrender_acceptance = -50
 
 	potential = {
-		or =  {
-			is_ai = no
-			years_passed > @str_ai_will_not_declare_war_until
-		}
 		has_total_war_cb = no
 	}
 	possible = {
@@ -1652,10 +1579,6 @@ wg_hostile_takeover = {
 	surrender_acceptance = -75
 
 	potential = {
-		or =  {
-			is_ai = no
-			years_passed > @str_ai_will_not_declare_war_until
-		}
 		has_total_war_cb = no
 	}
 	possible = {
@@ -1732,10 +1655,6 @@ wg_steal_galatron = {
 	surrender_acceptance = -40
 
 	potential = {
-		or =  {
-			is_ai = no
-			years_passed > @str_ai_will_not_declare_war_until
-		}
 		has_total_war_cb = no
 	}
 	possible = {
@@ -1830,10 +1749,6 @@ wg_scion = {
 
 
 	potential = {
-		or =  {
-			is_ai = no
-			years_passed > @str_ai_will_not_declare_war_until
-		}
 		has_total_war_cb = no
 	}
 	possible = {
@@ -1943,10 +1858,6 @@ wg_hegemon = {
 	surrender_acceptance = -100
 
 	potential = {
-		or =  {
-			is_ai = no
-			years_passed > @str_ai_will_not_declare_war_until
-		}
 		has_total_war_cb = no
 	}
 	possible = {
@@ -2026,10 +1937,7 @@ wg_leave_hegemony = {
 	}
 
 	potential = {
-		or =  {
-			is_ai = no
-			years_passed > @str_ai_will_not_declare_war_until
-		}
+		always = yes
 	}
 	possible = {
 		always = yes
@@ -2161,10 +2069,6 @@ wg_counterattack = {
 	threat_multiplier = 0.67
 
 	potential = {
-		or =  {
-			is_ai = no
-			years_passed > @str_ai_will_not_declare_war_until
-		}
 		has_total_war_cb = no
 
 		is_galactic_community_member = yes
@@ -2197,10 +2101,7 @@ wg_renegade_containment = {
 	surrender_acceptance = -1000
 
 	potential = {
-		or =  {
-			is_ai = no
-			years_passed > @str_ai_will_not_declare_war_until
-		}
+		always = yes
 	}
 	possible = {
 		always = yes
@@ -2225,10 +2126,7 @@ wg_end_threat_renegade_containment = {
 	surrender_acceptance = -1000
 
 	potential = {
-		or =  {
-			is_ai = no
-			years_passed > @str_ai_will_not_declare_war_until
-		}
+		always = yes
 	}
 	possible = {
 		always = yes

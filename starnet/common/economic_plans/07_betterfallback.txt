@@ -19,7 +19,7 @@ early_default_plan_3 = {
 		energy = 50
 		minerals = 50
 		alloys = 20
-	}	
+	}
 
 	subplan = {
 		potential = { always = yes }
@@ -30,8 +30,8 @@ early_default_plan_3 = {
 
 	subplan = {
 		potential = { always = yes }
-		income = { unity = 500 }
-		focus = { unity = 200 }
+		income = { unity = 20000 }
+		focus = { unity = 10000 }
 	}
 
 	subplan = {
@@ -220,7 +220,7 @@ middle_default_plan_3 = {
 		energy = 50
 		minerals = 50
 		alloys = 30
-	}	
+	}
 
 	subplan = {
 		potential = { always = yes }
@@ -231,8 +231,8 @@ middle_default_plan_3 = {
 
 	subplan = {
 		potential = { always = yes }
-		income = { unity = 500 }
-		focus = { unity = 200 }
+		income = { unity = 20000 }
+		focus = { unity = 10000 }
 	}
 
 	subplan = {
@@ -422,7 +422,7 @@ end_default_plan_3 = {
 		energy = 100
 		minerals = 50
 		alloys = 30
-	}	
+	}
 
 	subplan = {
 		potential = { always = yes }
@@ -433,8 +433,8 @@ end_default_plan_3 = {
 
 	subplan = {
 		potential = { always = yes }
-		income = { unity = 500 }
-		focus = { unity = 200 }
+		income = { unity = 20000 }
+		focus = { unity = 10000 }
 	}
 
 	subplan = {
@@ -632,8 +632,8 @@ ultimate_default_plan_3 = {
 
 	subplan = {
 		potential = { always = yes }
-		income = { unity = 500 }
-		focus = { unity = 200 }
+		income = { unity = 20000 }
+		focus = { unity = 10000 }
 	}
 
 	subplan = {

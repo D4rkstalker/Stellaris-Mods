@@ -85,7 +85,7 @@ decision_negotiate_with_crime_lords = {
 		modifier = {
 			factor = 0
 			planet_crime < 70
-			}
+		}
 		modifier = {
 			factor = 0
 			num_buildings = {

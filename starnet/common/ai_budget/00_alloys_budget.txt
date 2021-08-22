@@ -131,7 +131,7 @@ alloys_expenditure_ships = {
 	}
 	
 	fraction = {
-		weight = 0.3
+		weight = 0.5
 	}	
 
 	static_min = {

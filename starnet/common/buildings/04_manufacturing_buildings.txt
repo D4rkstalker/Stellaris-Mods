@@ -941,31 +941,6 @@ building_refinery = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = {
-				is_ai = yes
-			}
-			owner = { str_force_gases = yes }
-			num_buildings = {
-				type = building_refinery
-				value = 0
-			}
-		}
-		modifier = {
-			job_starnet_spice_melange_farmer_add = 2
-			job_starnet_spice_melange_antifarmer_add = -2
-		}
-	}
-
-	on_queued = {
-		owner = { set_timed_country_flag = {
-			flag = str_is_bulding_gases
-			days = 720
-		} }
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
 			owner = { is_gestalt = no }
 		}
 		modifier = {
@@ -1045,31 +1020,6 @@ building_chemical_plant = {
 				value > 9
 			}
 		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_ai = yes
-			}
-			owner = { str_force_motes = yes }
-			num_buildings = {
-				type = building_chemical_planet
-				value = 0
-			}
-		}
-		modifier = {
-			job_starnet_spice_melange_farmer_add = 2
-			job_starnet_spice_melange_antifarmer_add = -2
-		}
-	}
-
-	on_queued = {
-		owner = { set_timed_country_flag = {
-			flag = str_is_bulding_motes
-			days = 720
-		} }
 	}
 
 	triggered_planet_modifier = {
@@ -1155,31 +1105,6 @@ building_crystal_plant = {
 				value > 9
 			}
 		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_ai = yes
-			}
-			owner = { str_force_crystals = yes }
-			num_buildings = {
-				type = building_crystal_plant
-				value = 0
-			}
-		}
-		modifier = {
-			job_starnet_spice_melange_farmer_add = 2
-			job_starnet_spice_melange_antifarmer_add = -2
-		}
-	}
-
-	on_queued = {
-		owner = { set_timed_country_flag = {
-			flag = str_is_bulding_crystals
-			days = 720
-		} }
 	}
 
 	triggered_planet_modifier = {

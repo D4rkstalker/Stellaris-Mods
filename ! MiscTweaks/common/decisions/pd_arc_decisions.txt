@@ -48,16 +48,17 @@ decision_ecoarcology_project = {
 	}
 	
 	allow = {
-		custom_tooltip = {
-			fail_text = decision_eco_arcology_project_requirements
-			num_districts = { type = district_city value >= 5 }
-			num_districts = { type = district_industrial value < 1 }
-			num_districts = { type = district_farming value < 1 }
-			num_districts = { type = district_mining value < 1 }
-			num_districts = { type = district_generator value < 1 }
+		OR = {
+			owner = { is_ai = yes }
+			custom_tooltip = {
+				#fail_text = decision_arcology_project_requirements
+				#free_district_slots < 1
+				num_districts = { type = district_farming value < 1 }
+				num_districts = { type = district_mining value < 1 }
+				num_districts = { type = district_generator value < 1 }
+			}
+			num_uncleared_blockers < 1
 		}
-		num_uncleared_blockers < 1
-		free_district_slots >= 5
 	}
 	
 	effect = {
@@ -204,14 +205,17 @@ decision_machinefactory_project = {
 	}
 	
 	allow = {
-		custom_tooltip = {
-			fail_text = decision_machine_factory_requirements
-			num_districts = { type = district_nexus value >= 5 }
-			num_districts = { type = district_farming_uncapped value < 1 }
-			num_districts = { type = district_mining_uncapped value < 1 }
-			num_districts = { type = district_generator_uncapped value < 1 }
+		OR = {
+			owner = { is_ai = yes }
+			custom_tooltip = {
+				#fail_text = decision_arcology_project_requirements
+				#free_district_slots < 1
+				num_districts = { type = district_farming value < 1 }
+				num_districts = { type = district_mining value < 1 }
+				num_districts = { type = district_generator value < 1 }
+			}
+			num_uncleared_blockers < 1
 		}
-		num_uncleared_blockers < 1
 	}
 	
 	effect = {
@@ -263,16 +267,17 @@ decision_machinecapital_project = {
 	}
 	
 	allow = {
-		custom_tooltip = {
-			fail_text = decision_machine_capital_requirements
-			num_districts = { type = district_nexus value >= 5 }
-			num_districts = { type = district_farming_uncapped value < 1 }
-			num_districts = { type = district_mining_uncapped value < 1 }
-			num_districts = { type = district_generator_uncapped value < 1 }
+		OR = {
+			owner = { is_ai = yes }
+			custom_tooltip = {
+				#fail_text = decision_arcology_project_requirements
+				#free_district_slots < 1
+				num_districts = { type = district_farming value < 1 }
+				num_districts = { type = district_mining value < 1 }
+				num_districts = { type = district_generator value < 1 }
+			}
+			num_uncleared_blockers < 1
 		}
-		num_uncleared_blockers < 1
-		free_district_slots >= 5
-		free_building_slots >= 1
 	}
 	
 	effect = {
@@ -322,16 +327,17 @@ decision_biocapital_project = {
 	}
 	
 	allow = {
-		custom_tooltip = {
-			fail_text = decision_bioforge_requirements
-			num_districts = { type = district_hive value >= 5 }
-			num_districts = { type = district_farming_uncapped value < 1 }
-			num_districts = { type = district_mining_uncapped value < 1 }
-			num_districts = { type = district_generator_uncapped value < 1 }
+		OR = {
+			owner = { is_ai = yes }
+			custom_tooltip = {
+				#fail_text = decision_arcology_project_requirements
+				#free_district_slots < 1
+				num_districts = { type = district_farming value < 1 }
+				num_districts = { type = district_mining value < 1 }
+				num_districts = { type = district_generator value < 1 }
+			}
+			num_uncleared_blockers < 1
 		}
-		num_uncleared_blockers < 1
-		free_district_slots >= 5
-		free_building_slots >= 1
 	}
 	
 	effect = {
@@ -383,14 +389,17 @@ decision_bioforge_project = {
 	}
 	
 	allow = {
-		custom_tooltip = {
-			fail_text = decision_bioforge_requirements
-			num_districts = { type = district_hive value >= 5 }
-			num_districts = { type = district_farming_uncapped value < 1 }
-			num_districts = { type = district_mining_uncapped value < 1 }
-			num_districts = { type = district_generator_uncapped value < 1 }
+		OR = {
+			owner = { is_ai = yes }
+			custom_tooltip = {
+				#fail_text = decision_arcology_project_requirements
+				#free_district_slots < 1
+				num_districts = { type = district_farming value < 1 }
+				num_districts = { type = district_mining value < 1 }
+				num_districts = { type = district_generator value < 1 }
+			}
+			num_uncleared_blockers < 1
 		}
-		num_uncleared_blockers < 1
 	}
 	
 	effect = {
@@ -565,14 +574,17 @@ decision_floraforge_project = {
 	}
 	
 	allow = {
-		custom_tooltip = {
-			fail_text = decision_floraforge_requirements
-			num_districts = { type = district_hive value >= 5 }
-			num_districts = { type = district_farming value < 1 }
-			num_districts = { type = district_mining value < 1 }
-			num_districts = { type = district_generator value < 1 }
+		OR = {
+			owner = { is_ai = yes }
+			custom_tooltip = {
+				#fail_text = decision_arcology_project_requirements
+				#free_district_slots < 1
+				num_districts = { type = district_farming value < 1 }
+				num_districts = { type = district_mining value < 1 }
+				num_districts = { type = district_generator value < 1 }
+			}
+			num_uncleared_blockers < 1
 		}
-		num_uncleared_blockers < 1
 	}
 	
 	effect = {
@@ -622,16 +634,17 @@ decision_floracapital_project = {
 	}
 	
 	allow = {
-		custom_tooltip = {
-			fail_text = decision_floraforge_requirements
-			num_districts = { type = district_hive value >= 5 }
-			num_districts = { type = district_farming value < 1 }
-			num_districts = { type = district_mining value < 1 }
-			num_districts = { type = district_generator value < 1 }
+		OR = {
+			owner = { is_ai = yes }
+			custom_tooltip = {
+				#fail_text = decision_arcology_project_requirements
+				#free_district_slots < 1
+				num_districts = { type = district_farming value < 1 }
+				num_districts = { type = district_mining value < 1 }
+				num_districts = { type = district_generator value < 1 }
+			}
+			num_uncleared_blockers < 1
 		}
-		num_uncleared_blockers < 1
-		free_district_slots >= 5
-		free_building_slots >= 1
 	}
 	
 	effect = {
@@ -684,14 +697,17 @@ decision_florafort_project = {
 	}
 	
 	allow = {
-		custom_tooltip = {
-			fail_text = decision_floraforge_requirements
-			num_districts = { type = district_hive value >= 5 }
-			num_districts = { type = district_farming_uncapped value < 1 }
-			num_districts = { type = district_mining_uncapped value < 1 }
-			num_districts = { type = district_generator_uncapped value < 1 }
+		OR = {
+			owner = { is_ai = yes }
+			custom_tooltip = {
+				#fail_text = decision_arcology_project_requirements
+				#free_district_slots < 1
+				num_districts = { type = district_farming value < 1 }
+				num_districts = { type = district_mining value < 1 }
+				num_districts = { type = district_generator value < 1 }
+			}
+			num_uncleared_blockers < 1
 		}
-		num_uncleared_blockers < 1
 	}
 	
 	effect = {
@@ -742,14 +758,17 @@ decision_biofort_project = {
 	}
 	
 	allow = {
-		custom_tooltip = {
-			fail_text = decision_bioforge_requirements
-			num_districts = { type = district_hive value >= 5 }
-			num_districts = { type = district_farming_uncapped value < 1 }
-			num_districts = { type = district_mining_uncapped value < 1 }
-			num_districts = { type = district_generator_uncapped value < 1 }
+		OR = {
+			owner = { is_ai = yes }
+			custom_tooltip = {
+				#fail_text = decision_arcology_project_requirements
+				#free_district_slots < 1
+				num_districts = { type = district_farming value < 1 }
+				num_districts = { type = district_mining value < 1 }
+				num_districts = { type = district_generator value < 1 }
+			}
+			num_uncleared_blockers < 1
 		}
-		num_uncleared_blockers < 1
 	}
 	
 	effect = {
@@ -800,14 +819,17 @@ decision_machine_fort_project = {
 	}
 	
 	allow = {
-		custom_tooltip = {
-			fail_text = decision_machine_fort_requirements
-			num_districts = { type = district_nexus value >= 5 }
-			num_districts = { type = district_farming_uncapped value < 1 }
-			num_districts = { type = district_mining_uncapped value < 1 }
-			num_districts = { type = district_generator_uncapped value < 1 }
+		OR = {
+			owner = { is_ai = yes }
+			custom_tooltip = {
+				#fail_text = decision_arcology_project_requirements
+				#free_district_slots < 1
+				num_districts = { type = district_farming value < 1 }
+				num_districts = { type = district_mining value < 1 }
+				num_districts = { type = district_generator value < 1 }
+			}
+			num_uncleared_blockers < 1
 		}
-		num_uncleared_blockers < 1
 	}
 	
 	effect = {
@@ -878,16 +900,17 @@ decision_milarcology_project = {
 	}
 	
 	allow = {
-		custom_tooltip = {
-			fail_text = decision_mil_arcology_project_requirements
-			num_districts = { type = district_city value >= 5 }
-			num_districts = { type = district_industrial value < 1 }
-			num_districts = { type = district_farming value < 1 }
-			num_districts = { type = district_mining value < 1 }
-			num_districts = { type = district_generator value < 1 }
+		OR = {
+			owner = { is_ai = yes }
+			custom_tooltip = {
+				#fail_text = decision_arcology_project_requirements
+				#free_district_slots < 1
+				num_districts = { type = district_farming value < 1 }
+				num_districts = { type = district_mining value < 1 }
+				num_districts = { type = district_generator value < 1 }
+			}
+			num_uncleared_blockers < 1
 		}
-		num_uncleared_blockers < 1
-		free_district_slots >= 5
 	}
 	
 	effect = {
@@ -1300,15 +1323,17 @@ decision_necropolis_reg_project = {
 	}
 	
 	allow = {
-		custom_tooltip = {
-			fail_text = decision_necropolis_reg_project_requirements
-			num_districts = { type = district_city value >= 5 }
-			num_districts = { type = district_industrial value < 1 }
-			num_districts = { type = district_farming value < 1 }
-			num_districts = { type = district_mining value < 1 }
-			num_districts = { type = district_generator value < 1 }
+		OR = {
+			owner = { is_ai = yes }
+			custom_tooltip = {
+				#fail_text = decision_arcology_project_requirements
+				#free_district_slots < 1
+				num_districts = { type = district_farming value < 1 }
+				num_districts = { type = district_mining value < 1 }
+				num_districts = { type = district_generator value < 1 }
+			}
+			num_uncleared_blockers < 1
 		}
-		num_uncleared_blockers < 1
 	}
 	
 	effect = {
@@ -1525,14 +1550,17 @@ decision_necropolis_hive_project = {
 	}
 	
 	allow = {
-		custom_tooltip = {
-			fail_text = decision_necropolis_hive_project_requirements
-			num_districts = { type = district_hive value >= 5 }
-			num_districts = { type = district_farming value < 1 }
-			num_districts = { type = district_mining value < 1 }
-			num_districts = { type = district_generator value < 1 }
+		OR = {
+			owner = { is_ai = yes }
+			custom_tooltip = {
+				#fail_text = decision_arcology_project_requirements
+				#free_district_slots < 1
+				num_districts = { type = district_farming value < 1 }
+				num_districts = { type = district_mining value < 1 }
+				num_districts = { type = district_generator value < 1 }
+			}
+			num_uncleared_blockers < 1
 		}
-		num_uncleared_blockers < 1
 	}
 	
 	effect = {
@@ -1598,14 +1626,17 @@ decision_necropolis_robo_project = {
 	}
 	
 	allow = {
-		custom_tooltip = {
-			fail_text = decision_necropolis_robo_project_requirements
-			num_districts = { type = district_nexus value >= 5 }
-			num_districts = { type = district_farming value < 1 }
-			num_districts = { type = district_mining value < 1 }
-			num_districts = { type = district_generator value < 1 }
+		OR = {
+			owner = { is_ai = yes }
+			custom_tooltip = {
+				#fail_text = decision_arcology_project_requirements
+				#free_district_slots < 1
+				num_districts = { type = district_farming value < 1 }
+				num_districts = { type = district_mining value < 1 }
+				num_districts = { type = district_generator value < 1 }
+			}
+			num_uncleared_blockers < 1
 		}
-		num_uncleared_blockers < 1
 	}
 	
 	effect = {
@@ -1696,17 +1727,17 @@ decision_palacearcology_project = {
 	}
 	
 	allow = {
-		custom_tooltip = {
-			fail_text = decision_palace_arcology_project_requirements
-			num_districts = { type = district_city value >= 5 }
-			num_districts = { type = district_industrial value < 1 }
-			num_districts = { type = district_farming value < 1 }
-			num_districts = { type = district_mining value < 1 }
-			num_districts = { type = district_generator value < 1 }
-			free_district_slots >= 5
-			free_building_slots >= 1
+		OR = {
+			owner = { is_ai = yes }
+			custom_tooltip = {
+				#fail_text = decision_arcology_project_requirements
+				#free_district_slots < 1
+				num_districts = { type = district_farming value < 1 }
+				num_districts = { type = district_mining value < 1 }
+				num_districts = { type = district_generator value < 1 }
+			}
+			num_uncleared_blockers < 1
 		}
-		num_uncleared_blockers < 1
 	}
 	
 	effect = {
@@ -2048,17 +2079,17 @@ decision_capitalarcology_project = {
 	}
 	
 	allow = {
-		custom_tooltip = {
-			fail_text = decision_capital_arcology_project_requirements
-			num_districts = { type = district_city value >= 5 }
-			num_districts = { type = district_industrial value < 1 }
-			num_districts = { type = district_farming value < 1 }
-			num_districts = { type = district_mining value < 1 }
-			num_districts = { type = district_generator value < 1 }
+		OR = {
+			owner = { is_ai = yes }
+			custom_tooltip = {
+				#fail_text = decision_arcology_project_requirements
+				#free_district_slots < 1
+				num_districts = { type = district_farming value < 1 }
+				num_districts = { type = district_mining value < 1 }
+				num_districts = { type = district_generator value < 1 }
+			}
+			num_uncleared_blockers < 1
 		}
-		num_uncleared_blockers < 1
-		free_district_slots >= 5
-		free_building_slots >= 1
 	}
 	
 	effect = {
@@ -2648,16 +2679,17 @@ decision_corpoarcology_project = {
 	}
 	
 	allow = {
-		custom_tooltip = {
-			fail_text = decision_eco_arcology_project_requirements
-			num_districts = { type = district_city value >= 5 }
-			num_districts = { type = district_industrial value < 1 }
-			num_districts = { type = district_farming value < 1 }
-			num_districts = { type = district_mining value < 1 }
-			num_districts = { type = district_generator value < 1 }
+		OR = {
+			owner = { is_ai = yes }
+			custom_tooltip = {
+				#fail_text = decision_arcology_project_requirements
+				#free_district_slots < 1
+				num_districts = { type = district_farming value < 1 }
+				num_districts = { type = district_mining value < 1 }
+				num_districts = { type = district_generator value < 1 }
+			}
+			num_uncleared_blockers < 1
 		}
-		num_uncleared_blockers < 1
-		free_district_slots >= 5
 	}
 	
 	effect = {

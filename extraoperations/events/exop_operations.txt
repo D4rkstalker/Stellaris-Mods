@@ -23,7 +23,64 @@ exop_operations.10 = {
     is_triggered_only = yes
 
 	immediate = {
-		
+		random_list = {
+			#Success 
+			5 = {
+				modifier = {
+					factor = 2
+					from.target = {
+						relative_encryption_decryption = {
+							target = from
+							value <= 0.5 #at > 1.0 the target is superior
+						}
+					}
+				}
+
+			}
+			
+			# Success, alerted
+			5 = {
+                    modifier = {
+                        factor = 2
+                        from.target = {
+                            relative_encryption_decryption = {
+                                target = from
+                                value <= 0.8 #at > 1.0 the target is superior
+                            }
+                        }
+                    }
+				
+			}
+			
+			#Failed, Alerted 
+			1 = {
+				modifier = {
+					factor = 2
+					from.target = {
+						relative_encryption_decryption = {
+							target = from
+							value >= 1.5 #at > 1.0 the target is superior
+						}
+					}
+				}
+				
+			}
+			
+			#Failed, silent
+			1 = {
+				modifier = {
+					factor = 2
+					from.target = {
+						relative_encryption_decryption = {
+							target = from
+							value >= 1 #at > 1.0 the target is superior
+						}
+					}
+				}
+				
+				
+			}
+		}
 	}
 
 }

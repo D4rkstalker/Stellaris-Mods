@@ -1,6 +1,6 @@
 namespace = AI_boost
 
-country_event = {
+event = {
 	id = AI_boost.0
 	hide_window = yes
 	is_triggered_only = yes

@@ -248,30 +248,30 @@ PO_experimentation = {
 	resources = {
 		category = planet_jobs
 		produces = {
-			physics_research = 40
-			engineering_research = 40
-			society_research = 40
+			physics_research = 50
+			engineering_research = 50
+			society_research = 50
 		}
 		produces = {
 			trigger = {
 				is_lithoid = yes
 			}
 			minerals = 10
-			physics_research = 10
+			physics_research = 25
 		}
 		produces = {
 			trigger = {
 				is_organic_species = yes
 			}
 			food = 10
-			society_research = 10
+			society_research = 25
 		}
 		produces = {
 			trigger = {
 				is_robotic_species = yes
 			}
 			alloys = 10
-			engineering_research = 10
+			engineering_research = 25
 		}
 		upkeep = {
 			trigger = {
@@ -330,18 +330,22 @@ PO_gladiator = {
 				is_lithoid = yes
 			}
 			minerals = 10
+			society_research = 10
 		}
 		produces = {
 			trigger = {
 				is_organic_species = yes
 			}
 			food = 10
+			society_research = 10
 		}
 		produces = {
 			trigger = {
 				is_robotic_species = yes
 			}
 			alloys = 10
+			physics_research = 8
+			engineering_research = 8
 		}
 	}
 

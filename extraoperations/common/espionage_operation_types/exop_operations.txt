@@ -10,7 +10,7 @@
 @diff_t10 = 15
 operation_synth_droning = {
 	target = none
-    categories = { op_cat_subterfuge op_cat_technology }
+    categories = { op_cat_sabotage op_cat_technology }
     picture = GFX_evt_open_revolt
     desc = operation_spark_rebellion_desc
     stages = 5

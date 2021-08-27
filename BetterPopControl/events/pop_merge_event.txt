@@ -222,7 +222,10 @@ country_event = {
 		random_owned_species = { 
 			limit = { 
 				is_robotic_species = yes 
-				NOT = { has_trait = trait_assimilation_target}
+				NOR = { 
+					has_trait = trait_assimilation_target
+					has_trait = trait_assimilate
+				}
 			} 
 			save_event_target_as = species_1 
 		}
@@ -231,6 +234,7 @@ country_event = {
 				is_robotic_species = yes 
 				NOR = { 
 					has_trait = trait_assimilation_target
+					has_trait = trait_assimilate
 					is_same_value = event_target:species_1 
 				} 
 			} 
@@ -241,6 +245,7 @@ country_event = {
 				is_robotic_species = yes 
 				NOR = { 
 					has_trait = trait_assimilation_target
+					has_trait = trait_assimilate
 					is_same_value = event_target:species_1 
 					is_same_value = event_target:species_2
 				} 
@@ -252,6 +257,7 @@ country_event = {
 				is_robotic_species = yes 
 				NOR = { 
 					has_trait = trait_assimilation_target
+					has_trait = trait_assimilate
 					is_same_value = event_target:species_1 
 					is_same_value = event_target:species_2 
 					is_same_value = event_target:species_3
@@ -264,6 +270,7 @@ country_event = {
 				is_robotic_species = yes 
 				NOR = { 
 					has_trait = trait_assimilation_target
+					has_trait = trait_assimilate
 					is_same_value = event_target:species_1 
 					is_same_value = event_target:species_2 
 					is_same_value = event_target:species_3 
@@ -378,7 +385,10 @@ country_event = {
 		random_owned_species = { 
 			limit = { 
 				is_robotic_species = yes 
-				NOT = { has_trait = trait_assimilate}
+				NOR = { 
+					has_trait = trait_assimilate
+					has_trait = trait_assimilation_target
+				}
 			} 
 			save_event_target_as = species_1 
 		}
@@ -387,6 +397,7 @@ country_event = {
 				is_robotic_species = yes 
 				NOR = { 
 					has_trait = trait_assimilate
+					has_trait = trait_assimilation_target
 					is_same_value = event_target:species_1 
 				} 
 			} 
@@ -397,6 +408,7 @@ country_event = {
 				is_robotic_species = yes 
 				NOR = { 
 					has_trait = trait_assimilate
+					has_trait = trait_assimilation_target
 					is_same_value = event_target:species_1 
 					is_same_value = event_target:species_2
 				} 
@@ -408,6 +420,7 @@ country_event = {
 				is_robotic_species = yes 
 				NOR = { 
 					has_trait = trait_assimilate
+					has_trait = trait_assimilation_target
 					is_same_value = event_target:species_1 
 					is_same_value = event_target:species_2 
 					is_same_value = event_target:species_3
@@ -420,6 +433,7 @@ country_event = {
 				is_robotic_species = yes 
 				NOR = { 
 					has_trait = trait_assimilate
+					has_trait = trait_assimilation_target
 					is_same_value = event_target:species_1 
 					is_same_value = event_target:species_2 
 					is_same_value = event_target:species_3 

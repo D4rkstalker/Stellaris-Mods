@@ -323,7 +323,7 @@ tech_trait_tech_1 = {
 	is_rare = yes
 	is_reverse_engineerable = no
 	category = { materials }
-	prerequisites = { "tech_engineering_1" "tech_physics_1" "tech_society_1"}
+	prerequisites = {"tech_robotic_workers"}
 	ai_update_type = military
 	weight = @tier5weight3
 		
@@ -344,7 +344,7 @@ tech_trait_tech_1 = {
 	}
 	
 	ai_weight = {
-		factor = 1.25
+		factor = 125
 		modifier = {
 			factor = 1.5
 			has_ethic = ethic_gestalt_consciousness

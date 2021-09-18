@@ -11,11 +11,35 @@ modifiers_ai = {
 	country_base_esc_living_crystal_produces_add = 10
 	country_base_esc_transdimensional_vortex_produces_add = 10
 	country_base_esc_enigmatic_energy_produces_add = 10
+	pop_growth_speed = 1.00
+	planet_pop_assembly_mult = 1.00
+}
+
+modifiers_ai_mid = {
+	pop_growth_speed = 1.00
+	planet_pop_assembly_mult = 1.00
+	
+}
+modifiers_ai_end = {
+	pop_growth_speed = 1.00
+	planet_pop_assembly_mult = 1.00
+	
 }
 
 modifiers_machine = {
 	planet_pop_assembly_add = 1
-	
+}
+modifiers_machine_mid = {
+	planet_pop_assembly_add = 2
+}
+modifiers_machine_end = {
+	planet_pop_assembly_add = 3
+}
+modifiers_bio_mid = {
+	pop_growth_speed = 1
+}
+modifiers_bio_end = {
+	pop_growth_speed = 1.5
 }
 
 modifiers_all = {

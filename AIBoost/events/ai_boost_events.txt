@@ -41,6 +41,68 @@ country_event = {
 	
 }
 event = {
+	id = AI_boost.3
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		every_country = {
+			if = {
+				limit = {
+					is_ai = yes
+					OR = {
+						has_authority = auth_machine_intelligence
+						has_country_flag = synthetic_empire
+						has_technology = "tech_synthetic_workers"
+					}
+				}
+				add_modifier = { modifier = modifiers_machine_mid days = -1 }
+			} 
+			else_if = {
+				limit = {
+					is_ai = yes
+					NOR = {
+						has_authority = auth_machine_intelligence
+						has_country_flag = synthetic_empire
+					}
+				}
+				add_modifier = { modifier = modifiers_bio_mid days = -1 }
+			} 
+		}
+	}
+	
+}
+event = {
+	id = AI_boost.4
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		every_country = {
+			if = {
+				limit = {
+					is_ai = yes
+					OR = {
+						has_authority = auth_machine_intelligence
+						has_country_flag = synthetic_empire
+						has_technology = "tech_synthetic_workers"
+					}
+				}
+				add_modifier = { modifier = modifiers_machine_end days = -1 }
+			} 
+			else_if = {
+				limit = {
+					is_ai = yes
+					NOR = {
+						has_authority = auth_machine_intelligence
+						has_country_flag = synthetic_empire
+					}
+				}
+				add_modifier = { modifier = modifiers_bio_end days = -1 }
+			} 
+		}
+	}
+	
+}
+event = {
 	id = AI_boost.100
 	hide_window = yes
 	is_triggered_only = yes

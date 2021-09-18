@@ -1,3 +1,4 @@
+
 namespace = no_negative_traits
 
 event = {

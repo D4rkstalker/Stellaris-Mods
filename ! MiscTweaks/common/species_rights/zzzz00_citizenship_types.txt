@@ -100,7 +100,7 @@ citizenship_full_machine = {
 		}
 	}
 	ai_will_do = {
-		factor = 30
+		factor = 3000
 	}
 }
 

@@ -1,0 +1,122 @@
+trait_synth_ascension_fix = {
+	cost = 0
+	initial = yes
+	randomized = no
+	modification = yes
+    ai_weight = { weight = 0 }
+	allowed_archetypes = { ROBOT MACHINE }
+	modifier = {
+	}
+
+}
+trait_no_leader_gen = {
+	cost = 0
+	initial = yes
+	randomized = no
+	modification = yes
+    ai_weight = { weight = 0 }
+	allowed_archetypes = { ROBOT MACHINE }
+	modifier = {
+	}
+
+}
+
+trait_no_assemble = {
+	cost = 0
+	initial = yes
+	randomized = no
+	modification = yes
+    ai_weight = { weight = 0 }
+	allowed_archetypes = { ROBOT MACHINE }
+	modifier = {
+	}
+
+}
+trait_assimilation_target = {
+	cost = 0
+	initial = yes
+	randomized = no
+	modification = yes
+    ai_weight = { weight = 0 }
+	allowed_archetypes = { ROBOT MACHINE }
+	modifier = {
+		#pop_environment_tolerance = 2.0
+	}
+
+}
+trait_assimilate = {
+	cost = 0
+	initial = yes
+	randomized = no
+	modification = yes
+    ai_weight = { weight = 0 }
+	allowed_archetypes = { ROBOT MACHINE }
+	modifier = {
+		#pop_environment_tolerance = 2.0
+	}
+
+}
+trait_priority_research = {
+	cost = 0
+	initial = yes
+	randomized = no
+	modification = yes
+    ai_weight = { weight = 0 }
+	allowed_archetypes = { BIOLOGICAL ROBOT MACHINE LITHOID}
+}
+trait_negative_priority_research = {
+	cost = 0
+	initial = yes
+	randomized = no
+	modification = yes
+    ai_weight = { weight = 0 }
+	allowed_archetypes = { BIOLOGICAL ROBOT MACHINE LITHOID}
+}
+trait_priority_unity = {
+	cost = 0
+	initial = yes
+	randomized = no
+	modification = yes
+    ai_weight = { weight = 0 }
+	allowed_archetypes = { BIOLOGICAL ROBOT MACHINE LITHOID}
+}
+trait_negative_priority_unity = {
+	cost = 0
+	initial = yes
+	randomized = no
+	modification = yes
+    ai_weight = { weight = 0 }
+	allowed_archetypes = { BIOLOGICAL ROBOT MACHINE LITHOID}
+}
+trait_priority_complex = {
+	cost = 0
+	initial = yes
+	randomized = no
+	modification = yes
+    ai_weight = { weight = 0 }
+	allowed_archetypes = { BIOLOGICAL ROBOT MACHINE LITHOID}
+}
+trait_negative_priority_complex = {
+	cost = 0
+	initial = yes
+	randomized = no
+	modification = yes
+    ai_weight = { weight = 0 }
+	allowed_archetypes = { BIOLOGICAL ROBOT MACHINE LITHOID}
+}
+trait_priority_simple = {
+	cost = 0
+	initial = yes
+	randomized = no
+	modification = yes
+    ai_weight = { weight = 0 }
+	allowed_archetypes = { BIOLOGICAL ROBOT MACHINE LITHOID}
+}
+trait_negative_priority_simple = {
+	cost = 0
+	initial = yes
+	randomized = no
+	modification = yes
+    ai_weight = { weight = 0 }
+	allowed_archetypes = { BIOLOGICAL ROBOT MACHINE LITHOID}
+}

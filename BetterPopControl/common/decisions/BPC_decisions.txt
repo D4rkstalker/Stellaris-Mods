@@ -1,0 +1,223 @@
+decision_remove_all_foci = {
+	owned_planets_only = yes
+	resources = {
+		category = decisions
+		cost = { influence = 50 energy = 1000}
+	}
+	potential = { 
+		OR = { 
+			has_modifier = BPC_simple_focus
+			has_modifier = BPC_complex_focus 
+			has_modifier = BPC_unity_focus 
+			has_modifier = BPC_research_focus
+		}
+	}
+	effect = {
+			
+		remove_modifier = BPC_simple_focus
+		remove_modifier = BPC_complex_focus 
+		remove_modifier = BPC_unity_focus 
+		remove_modifier = BPC_research_focus 
+	}
+	
+	ai_weight = { weight = 0 }
+
+}
+decision_remove_all_malus = {
+	owned_planets_only = yes
+	resources = {
+		category = decisions
+		cost = { influence = 50 energy = 1000}
+	}
+	potential = { 
+		OR = { 
+			has_modifier = BPC_simple_yeet
+			has_modifier = BPC_complex_yeet 
+			has_modifier = BPC_unity_yeet 
+			has_modifier = BPC_research_yeet
+		}
+	}
+	effect = {
+			
+		remove_modifier = BPC_simple_yeet
+		remove_modifier = BPC_complex_yeet 
+		remove_modifier = BPC_unity_yeet 
+		remove_modifier = BPC_research_yeet 
+	}
+	
+	ai_weight = { weight = 0 }
+
+}
+
+decision_simple_focus = {
+	owned_planets_only = yes
+	resources = {
+		category = decisions
+		cost = { influence = 50 energy = 1000}
+	}
+	potential = { 
+		NOT = { has_modifier = BPC_simple_focus }
+	}
+	effect = {
+	
+		add_modifier = { modifier = BPC_simple_focus days = -1 }
+		
+		remove_modifier = BPC_simple_yeet 
+	}
+	
+	ai_weight = { weight = 0 }
+}
+decision_simple_yeet = {
+	owned_planets_only = yes
+	resources = {
+		category = decisions
+		cost = { influence = 50 energy = 1000}
+	}
+	potential = { 
+		NOT = { has_modifier = BPC_simple_yeet}
+	}
+	effect = {
+		add_modifier = { modifier = BPC_simple_yeet days = -1 }
+		
+		remove_modifier = BPC_simple_focus 
+	}
+	
+	ai_weight = { weight = 0 }
+}
+decision_complex_focus = {
+	owned_planets_only = yes
+	resources = {
+		category = decisions
+		cost = { influence = 50 energy = 1000}
+	}
+	potential = { 
+		NOT = { has_modifier = BPC_complex_focus }
+	}
+	effect = {
+	
+		add_modifier = { modifier = BPC_complex_focus days = -1 }
+		
+		remove_modifier = BPC_complex_yeet 
+	}
+	
+	ai_weight = { weight = 0 }
+}
+decision_complex_yeet = {
+	owned_planets_only = yes
+	resources = {
+		category = decisions
+		cost = { influence = 50 energy = 1000}
+	}
+	potential = { 
+		NOT = { has_modifier = BPC_complex_yeet}
+	}
+	effect = {
+		add_modifier = { modifier = BPC_complex_yeet days = -1 }
+		
+		remove_modifier = BPC_complex_focus 
+	}
+	
+	ai_weight = { weight = 0 }
+}
+decision_unity_focus = {
+	owned_planets_only = yes
+	resources = {
+		category = decisions
+		cost = { influence = 50 energy = 1000}
+	}
+	potential = { 
+		NOT = { has_modifier = BPC_unity_focus }
+	}
+	effect = {
+	
+		add_modifier = { modifier = BPC_unity_focus days = -1 }
+		
+		remove_modifier = BPC_unity_yeet 
+	}
+	
+	ai_weight = { weight = 0 }
+}
+decision_unity_yeet = {
+	owned_planets_only = yes
+	resources = {
+		category = decisions
+		cost = { influence = 50 energy = 1000}
+	}
+	potential = { 
+		NOT = { has_modifier = BPC_unity_yeet}
+	}
+	effect = {
+		add_modifier = { modifier = BPC_unity_yeet days = -1 }
+		
+		remove_modifier = BPC_unity_focus 
+	}
+	
+	ai_weight = { weight = 0 }
+}
+decision_research_focus = {
+	owned_planets_only = yes
+	resources = {
+		category = decisions
+		cost = { influence = 50 energy = 1000}
+	}
+	potential = { 
+		NOT = { has_modifier = BPC_research_focus }
+	}
+	effect = {
+	
+		add_modifier = { modifier = BPC_research_focus days = -1 }
+		
+		remove_modifier = BPC_research_yeet 
+	}
+	
+	ai_weight = { weight = 0 }
+}
+decision_research_yeet = {
+	owned_planets_only = yes
+	resources = {
+		category = decisions
+		cost = { influence = 50 energy = 1000}
+	}
+	potential = { 
+		NOT = { has_modifier = BPC_research_yeet}
+	}
+	effect = {
+		add_modifier = { modifier = BPC_research_yeet days = -1 }
+		
+		remove_modifier = BPC_research_focus 
+	}
+	
+	ai_weight = { weight = 0 }
+}
+decision_evacuate_on = {
+	owned_planets_only = yes
+	enactment_time = 180
+	resources = {
+		category = decisions
+		cost = { influence = 50 energy = 1000}
+	}
+	potential = { 
+		NOT = { has_modifier = evacuate_planet }
+	}
+	effect = {
+	
+		add_modifier = { modifier = evacuate_planet days = -1 }
+	}
+	
+	ai_weight = { weight = 0 }
+}
+decision_evacuate_off = {
+	owned_planets_only = yes
+	resources = {
+		category = decisions
+		cost = { influence = 10 energy = 100}
+	}
+	potential = { 
+		has_modifier = evacuate_planet
+	}
+	effect = {
+		remove_modifier = evacuate_planet
+	}
+	
+	ai_weight = { weight = 1000 }
+}

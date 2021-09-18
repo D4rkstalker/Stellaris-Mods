@@ -80,9 +80,9 @@ machine_reprogramming_center = {
 	triggered_planet_modifier = {
 		potential = {
 			any_pop = { 
-				NOT = { 
-					has_trait = trait_machine_unit 
-				}
+
+				has_trait = trait_machine_unit 
+				
 			}
 		}
 		job_reprogramming_per_pop = 0.05
@@ -93,9 +93,7 @@ machine_reprogramming_center = {
 		potential = {
 			NOT = {
 				any_pop = { 
-					NOT = { 
-						has_trait = trait_machine_unit 
-					}
+					has_trait = trait_machine_unit 
 				}
 			}
 		}

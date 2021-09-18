@@ -331,7 +331,7 @@ decision_enact_robot_assembly_control = {
 	}
 
 	ai_weight = {
-		weight = 5
+		weight = 0
 		modifier = { # don't enable if you have free housing and no city districts left to build
 			factor = 0
 			OR = {

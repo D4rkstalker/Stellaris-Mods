@@ -1,0 +1,177 @@
+namespace = BPC_migration
+event = {
+	id = BPC_migration.1
+	hide_window = yes
+    is_triggered_only = yes
+	immediate = {
+		every_playable_country = {
+			limit = { 
+				is_ai = no
+				any_owned_planet = {
+					has_modifier = BPC_simple_focus
+				}
+			}
+			random_owned_planet = {
+				limit = {
+					has_modifier = BPC_simple_focus 
+				}
+				save_event_target_as = BPC_simple_focus_target
+			}
+			
+			while = {
+				count = 10
+				random_owned_planet = {
+					limit = {
+						NOT = { has_modifier = BPC_simple_focus }
+						any_owned_pop = {
+							is_unemployed = yes
+							has_trait = trait_priority_simple
+						}
+					}
+					random_owned_pop = {
+						limit = {
+							is_unemployed = yes
+							has_trait = trait_priority_simple						
+						}
+						resettle_pop = { pop = this planet = event_target:BPC_simple_focus_target }
+
+					}
+					owner = { add_resource = { energy = -50 } }
+					
+				}
+			}
+		}
+	}
+} 
+event = {
+	id = BPC_migration.100
+	hide_window = yes
+    is_triggered_only = yes
+	immediate = {
+		every_playable_country = {
+			limit = { 
+				is_ai = no
+				any_owned_planet = {
+					has_modifier = BPC_complex_focus
+				}
+			}
+			random_owned_planet = {
+				limit = {
+					has_modifier = BPC_complex_focus 
+				}
+				save_event_target_as = BPC_complex_focus_target
+			}
+			
+			while = {
+				count = 10
+				random_owned_planet = {
+					limit = {
+						NOT = { has_modifier = BPC_complex_focus }
+						any_owned_pop = {
+							is_unemployed = yes
+							has_trait = trait_priority_complex
+						}
+					}
+					random_owned_pop = {
+						limit = {
+							is_unemployed = yes
+							has_trait = trait_priority_complex						
+						}
+						resettle_pop = { pop = this planet = event_target:BPC_complex_focus_target }
+
+					}
+					owner = { add_resource = { energy = -50 } }
+					
+				}
+			}
+		}
+	}
+} 
+event = {
+	id = BPC_migration.200
+	hide_window = yes
+    is_triggered_only = yes
+	immediate = {
+		every_playable_country = {
+			limit = { 
+				is_ai = no
+				any_owned_planet = {
+					has_modifier = BPC_unity_focus
+				}
+			}
+			random_owned_planet = {
+				limit = {
+					has_modifier = BPC_unity_focus 
+				}
+				save_event_target_as = BPC_unity_focus_target
+			}
+			
+			while = {
+				count = 10
+				random_owned_planet = {
+					limit = {
+						NOT = { has_modifier = BPC_unity_focus }
+						any_owned_pop = {
+							is_unemployed = yes
+							has_trait = trait_priority_unity
+						}
+					}
+					random_owned_pop = {
+						limit = {
+							is_unemployed = yes
+							has_trait = trait_priority_unity						
+						}
+						resettle_pop = { pop = this planet = event_target:BPC_unity_focus_target }
+
+					}
+					owner = { add_resource = { energy = -50 } }
+					
+				}
+			}
+		}
+	}
+} 
+event = {
+	id = BPC_migration.300
+	hide_window = yes
+    is_triggered_only = yes
+	immediate = {
+		every_playable_country = {
+			limit = { 
+				is_ai = no
+				any_owned_planet = {
+					has_modifier = BPC_research_focus
+				}
+			}
+			random_owned_planet = {
+				limit = {
+					has_modifier = BPC_research_focus 
+				}
+				save_event_target_as = BPC_research_focus_target
+			}
+			
+			while = {
+				count = 10
+				random_owned_planet = {
+					limit = {
+						NOT = { has_modifier = BPC_research_focus }
+						any_owned_pop = {
+							is_unemployed = yes
+							has_trait = trait_priority_research
+						}
+					}
+					random_owned_pop = {
+						limit = {
+							is_unemployed = yes
+							has_trait = trait_priority_research						
+						}
+						resettle_pop = { pop = this planet = event_target:BPC_research_focus_target }
+
+					}
+					owner = { add_resource = { energy = -50 } }
+					
+				}
+			}
+		}
+	}
+} 

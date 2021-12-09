@@ -5,13 +5,13 @@ synthetic_assimilation = {
 
 	possible_pre_triggers = {
 		is_being_purged = no
-		is_being_assimilated = no
+		is_being_assimilated = yes
 	}
 
 	possible = {
 		NOT = { has_trait = trait_mechanical }
 		NOT = { has_trait = trait_machine_unit }
-		worker_job_check_trigger = yes
+		#worker_job_check_trigger = yes
 	}
 
 	resources = {
@@ -47,12 +47,12 @@ reprogramming = {
 
 	possible_pre_triggers = {
 		is_being_purged = no
-		is_being_assimilated = no
+		is_being_assimilated = yes
 	}
 
 	possible = {
 		has_trait = trait_machine_unit
-		worker_job_check_trigger = yes
+		#worker_job_check_trigger = yes
 	}
 
 	resources = {

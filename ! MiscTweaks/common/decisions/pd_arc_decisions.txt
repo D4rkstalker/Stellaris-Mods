@@ -39,7 +39,7 @@ decision_ecoarcology_project = {
 			has_modifier = resort_colony
 			has_modifier = penal_colony
 			has_modifier = slave_colony
-			has_modifier = pm_wenkwort_custodian
+			#has_modifier = pm_wenkwort_custodian
 			is_pd_unique = yes
 		}
 		is_artificial = no

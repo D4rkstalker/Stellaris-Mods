@@ -25,7 +25,7 @@ country_event = {
 			}
 			species = { save_event_target_as = living_metal_species }
 		}
-		change_dominant_species = { species = event_target:living_metal_species change_all = yes }
+		#change_dominant_species = { species = event_target:living_metal_species change_all = yes }
 		#observer_event = { id = observer.5 }
 		every_country = {
 			limit = {

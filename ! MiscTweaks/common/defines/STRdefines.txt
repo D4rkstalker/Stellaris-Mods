@@ -29,7 +29,7 @@
 		AI_UPGRADE_SCORE_MULT = 20
 		
 		AI_TECHNOLOGY_RARE_WEIGHT_MULT = 1.5						# AI will multiply AI weight of rare techs with this value
-		AI_TECHNOLOGY_INFINITELY_REPEATABLE_WEIGHT_MULT = 0.4	# AI will multiply AI weight of infinitely repeatable techs with this value
+		AI_TECHNOLOGY_INFINITELY_REPEATABLE_WEIGHT_MULT = 0.1	# AI will multiply AI weight of infinitely repeatable techs with this value
 
 
 		TERRAFORM_SAVE_CREDITS = 100				# AI wants to have at least this much energy over after starting a terraforming

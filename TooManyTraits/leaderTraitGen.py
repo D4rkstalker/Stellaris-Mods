@@ -17,6 +17,7 @@ country_event = {
     hide_window = yes
     is_triggered_only = yes
     immediate = {
+        every_country = {
 """
 
     event_template = ""
@@ -38,45 +39,52 @@ country_event = {
 
 
         event_template += """
-        every_country = {
-            if = {
-                every_owned_leader = {
-                    limit = {
-                        species = { has_trait = """+trait.replace("_" + _type, "")+""" }
-                        NOT = {has_trait = """+trait+"""}
-                    }
-                    if = {
-                        limit = { leader_class = """ + _type +""" }
-                        add_trait = """+trait+"""
-                    }
+        
+            every_owned_leader = {
+                limit = {
+                    species = { has_trait = """+trait.replace("_" + _type, "")+""" }
+                    NOT = {has_trait = """+trait+"""}
                 }
-                every_pool_leader = {
-                    limit = {
-                        species = { has_trait = """+trait.replace("_" + _type, "")+""" }
-                        NOT = {has_trait = """+trait+"""}
-                    }
-                    if = {
-                        limit = { leader_class = """ + _type +""" }
-                        add_trait = """+trait+"""
-                    }
+                if = {
+                    limit = { leader_class = """ + _type +""" }
+                    add_trait = """+trait+"""
                 }
             }
-            else_if = {
-                every_owned_leader = {
-                    limit = {
-                        AND = {
-                            has_trait = """+trait+"""
-                            NOT = {
-                                species = { has_trait = """+trait.replace("_" + _type, "")+""" }
-                            }
+            every_pool_leader = {
+                limit = {
+                    species = { has_trait = """+trait.replace("_" + _type, "")+""" }
+                    NOT = {has_trait = """+trait+"""}
+                }
+                if = {
+                    limit = { leader_class = """ + _type +""" }
+                    add_trait = """+trait+"""
+                }
+            }
+            every_owned_leader = {
+                limit = {
+                    AND = {
+                        has_trait = """+trait+"""
+                        NOT = {
+                            species = { has_trait = """+trait.replace("_" + _type, "")+""" }
                         }
                     }
-                    remove_trait = """+trait+"""
                 }
+                remove_trait = """+trait+"""
             }
-    	}"""
+            every_pool_leader = {
+                limit = {
+                    AND = {
+                        has_trait = """+trait+"""
+                        NOT = {
+                            species = { has_trait = """+trait.replace("_" + _type, "")+""" }
+                        }
+                    }
+                }
+                remove_trait = """+trait+"""
+            }
+"""
     
-    f.write(start + event_template)
+    f.write(start + event_template + "    	}")
     f.write("\n\t}\n}")
 
 def parse_dir():

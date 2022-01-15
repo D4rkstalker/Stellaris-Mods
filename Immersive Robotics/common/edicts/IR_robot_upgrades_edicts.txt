@@ -1,0 +1,30 @@
+IR_robot_upgrade = {
+	icon = "GFX_edict_type_time"
+	length = 0
+	potential = { 
+		has_country_flag = synthetic_empire
+		any_owned_species = {
+			is_species_class = ROBOT 
+		}
+	}
+	ai_weight = { weight = 0 }
+	effect = {
+		country_event = { id = immersive_robotics.100 }
+	}
+}
+IR_machine_upgrade = {
+	icon = "GFX_edict_type_time"
+	length = 0
+	potential = { 
+		has_authority = auth_machine_intelligence 
+		has_ascension_perk = ap_synthetic_age
+		any_owned_species = {
+			is_species_class = MACHINE 
+		}
+
+	}
+	ai_weight = { weight = 0 }
+	effect = {
+		country_event = { id = immersive_robotics.200 }
+	}
+}

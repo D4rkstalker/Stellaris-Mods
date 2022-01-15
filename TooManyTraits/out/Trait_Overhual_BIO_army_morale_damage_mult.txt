@@ -1,0 +1,11 @@
+trait_intimidating = {
+	cost = 1
+	initial =  yes
+	randomized =  yes
+	allowed_archetypes = { LITHOID BIOLOGICAL }
+
+	opposites = { }
+	modifier = {
+		army_morale_damage_mult = 0.33
+	}
+}

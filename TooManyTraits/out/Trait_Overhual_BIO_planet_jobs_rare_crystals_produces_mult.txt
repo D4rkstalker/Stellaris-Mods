@@ -1,0 +1,11 @@
+trait_natural_translucers = {
+	cost = 1
+	initial =  yes
+	randomized =  yes
+	allowed_archetypes = { LITHOID BIOLOGICAL }
+
+	opposites = { }
+	modifier = {
+		planet_jobs_rare_crystals_produces_mult = 0.25
+	}
+}

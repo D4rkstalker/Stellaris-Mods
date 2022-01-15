@@ -1,0 +1,62 @@
+trait_evo_elegant = {
+	icon =  "gfx/interface/icons/traits/trait_evo_elegant.dds"
+	cost = 2
+	initial = yes
+	randomized = yes
+	allowed_archetypes = { LITHOID BIOLOGICAL PRESAPIENT }
+
+	opposites = { }
+	modifier = {
+		country_trust_growth = 0.1
+		country_base_influence_produces_add = 1
+		planet_jobs_unity_produces_mult = 0.1
+	}
+}
+trait_evo_attractive = {
+	icon =  "gfx/interface/icons/traits/trait_evo_attractive.dds"
+	cost = 1
+	initial = yes
+	randomized = yes
+	allowed_archetypes = { LITHOID BIOLOGICAL PRESAPIENT }
+
+	opposites = { }
+	modifier = {
+		country_trust_growth = 0.05
+		country_base_influence_produces_add = 0.5
+		planet_jobs_unity_produces_mult = 0.05
+	}
+}
+trait_evo_gauche = {
+	icon =  "gfx/interface/icons/traits/trait_evo_gauche.dds"
+	cost = -1
+	initial = yes
+	randomized = yes
+	allowed_archetypes = { LITHOID BIOLOGICAL PRESAPIENT }
+
+	opposites = { }
+	modifier = {
+		country_trust_growth = -0.05
+		country_base_influence_produces_add = -0.5
+		planet_jobs_unity_produces_mult = -0.05
+	}
+	ai_weight = {
+weight = 0
+	}
+}
+trait_evo_repulsive = {
+	icon =  "gfx/interface/icons/traits/trait_evo_repulsive.dds"
+	cost = -2
+	initial = yes
+	randomized = yes
+	allowed_archetypes = { LITHOID BIOLOGICAL PRESAPIENT }
+
+	opposites = { }
+	modifier = {
+		country_trust_growth = -0.1
+		country_base_influence_produces_add = -1
+		planet_jobs_unity_produces_mult = -0.1
+	}
+	ai_weight = {
+weight = 0
+	}
+}

@@ -34,28 +34,19 @@ complex_drone = {
 		influence = 10
 	}
 
+	triggered_planet_modifier = {
+		potential = {
+			can_assemble_budding_pop = yes
+		}
+		planet_pop_assembly_organic_add = @plantoid_budding_rate
+	}
+
 	unemployment_resources = {
 		category = unemployment_resources
 	}
 
 	resources = {
 		category = pop_category_drones
-
-		upkeep = {
-			trigger = {
-				is_organic_species = yes
-				is_lithoid = no
-			}
-			food = @living_standard_food_normal
-		}
-
-		upkeep = {
-			trigger = {
-				is_organic_species = yes
-				is_lithoid = yes
-			}
-			minerals = @living_standard_food_normal
-		}
 		upkeep = {
 			trigger = {
 				has_trait = trait_overhual_tech_1
@@ -101,6 +92,37 @@ complex_drone = {
 				has_trait = trait_living_metal
 			}
 			sr_living_metal = 0.5
+		}
+
+		upkeep = {
+			trigger = {
+				has_phototrophic_energy_upkeep = yes
+			}
+			energy = @living_standard_phototrophic_normal
+		}
+
+		upkeep = {
+			trigger = {
+				is_organic_species = yes
+				is_phototrophic = no
+				is_lithoid = no
+			}
+			food = @living_standard_food_normal
+		}
+
+		upkeep = {
+			trigger = {
+				is_phototrophic = yes
+			}
+			food = @living_standard_phototrophic_normal
+		}
+
+		upkeep = {
+			trigger = {
+				is_organic_species = yes
+				is_lithoid = yes
+			}
+			minerals = @living_standard_food_normal
 		}
 
 		upkeep = {
@@ -177,6 +199,13 @@ simple_drone = {
 		influence = 10
 	}
 
+	triggered_planet_modifier = {
+		potential = {
+			can_assemble_budding_pop = yes
+		}
+		planet_pop_assembly_organic_add = @plantoid_budding_rate
+	}
+
 	unemployment_resources = {
 		category = unemployment_resources
 		produces = {
@@ -185,7 +214,7 @@ simple_drone = {
 					is_hive_empire = yes
 				}
 			}
-			minerals = 0.5
+			minerals = 1
 		}
 		produces = {
 			trigger = {
@@ -204,37 +233,6 @@ simple_drone = {
 
 	resources = {
 		category = pop_category_drones
-
-		upkeep = {
-			trigger = {
-				is_organic_species = yes
-				is_lithoid = no
-			}
-			food = @living_standard_food_normal
-		}
-
-		upkeep = {
-			trigger = {
-				is_organic_species = yes
-				is_lithoid = yes
-			}
-			minerals = @living_standard_food_normal
-		}
-
-		upkeep = {
-			trigger = {
-				is_robotic_species = yes
-				is_unemployed = no
-			}
-			energy = @living_standard_energy_normal
-		}
-		upkeep = {
-			trigger = {
-				is_robotic_species = yes
-				is_unemployed = yes
-			}
-			energy = @living_standard_energy_unemployed
-		}
 
 		upkeep = {
 			trigger = {
@@ -282,6 +280,52 @@ simple_drone = {
 			}
 			sr_living_metal = 0.5
 		}
+		upkeep = {
+			trigger = {
+				has_phototrophic_energy_upkeep = yes
+			}
+			energy = @living_standard_phototrophic_normal
+		}
+
+		upkeep = {
+			trigger = {
+				is_organic_species = yes
+				is_phototrophic = no
+				is_lithoid = no
+			}
+			food = @living_standard_food_normal
+		}
+
+		upkeep = {
+			trigger = {
+				is_phototrophic = yes
+			}
+			food = @living_standard_phototrophic_normal
+		}
+
+		upkeep = {
+			trigger = {
+				is_organic_species = yes
+				is_lithoid = yes
+			}
+			minerals = @living_standard_food_normal
+		}
+
+		upkeep = {
+			trigger = {
+				is_robotic_species = yes
+				is_unemployed = no
+			}
+			energy = @living_standard_energy_normal
+		}
+		upkeep = {
+			trigger = {
+				is_robotic_species = yes
+				is_unemployed = yes
+			}
+			energy = @living_standard_energy_unemployed
+		}
+
 		produces = {
 			trigger = {
 				is_lithoid = yes

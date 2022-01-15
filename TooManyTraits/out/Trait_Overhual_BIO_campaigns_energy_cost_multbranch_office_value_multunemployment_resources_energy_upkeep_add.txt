@@ -1,0 +1,17 @@
+trait_evo_prodigal = {
+	icon =  "gfx/interface/icons/traits/trait_evo_prodigal.dds"
+	cost = -2
+	initial = yes
+	randomized = yes
+	allowed_archetypes = { LITHOID BIOLOGICAL PRESAPIENT }
+
+	opposites = { }
+	modifier = {
+		campaigns_energy_cost_mult = 0.15
+		branch_office_value_mult = -0.15
+		unemployment_resources_energy_upkeep_add = 2
+	}
+	ai_weight = {
+weight = 0
+	}
+}

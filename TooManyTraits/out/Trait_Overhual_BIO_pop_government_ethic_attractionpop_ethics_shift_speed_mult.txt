@@ -1,0 +1,32 @@
+trait_evo_rebellious = {
+	icon =  "gfx/interface/icons/traits/trait_evo_rebellious.dds"
+	cost = -2
+	initial = yes
+	randomized = yes
+	allowed_archetypes = { LITHOID BIOLOGICAL PRESAPIENT }
+
+	opposites = { }
+	modifier = {
+		pop_government_ethic_attraction = -0.25
+		pop_ethics_shift_speed_mult = 0.15
+	}
+	ai_weight = {
+weight = 0
+	}
+}
+trait_evo_anarchic = {
+	icon =  "gfx/interface/icons/traits/trait_evo_anarchic.dds"
+	cost = -4
+	initial = yes
+	randomized = yes
+	allowed_archetypes = { LITHOID BIOLOGICAL PRESAPIENT }
+
+	opposites = { }
+	modifier = {
+		pop_government_ethic_attraction = -0.9
+		pop_ethics_shift_speed_mult = 0.35
+	}
+	ai_weight = {
+weight = 0
+	}
+}

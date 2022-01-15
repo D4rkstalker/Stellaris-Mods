@@ -1,0 +1,582 @@
+
+trait_genetic_memory = {
+	cost = 4
+	initial = yes
+	randomized = yes
+	advanced_trait = yes
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	potential_crossbreeding_chance = 0.5
+	opposites = { "trait_nerve_stapled" "trait_syncretic_proles" "trait_hive_mind" }
+	modifier = {
+		planet_jobs_unity_produces_mult = 0.25
+		species_empire_size_mult = 0.25
+		pop_government_ethic_attraction = -0.50
+	}
+}
+
+trait_stalwart = {
+	cost = 4
+	initial = yes
+	randomized = yes
+	advanced_trait = yes
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	potential_crossbreeding_chance = 0.5
+	opposites = { "trait_nerve_stapled" "trait_syncretic_proles" "trait_resilient" }
+	modifier = {
+		army_defense_damage_mult = 1.00
+		pop_decline_speed = -0.50		
+	}
+	slave_cost = {
+		energy = 100
+	}
+}
+
+trait_analytical = {
+	cost = 3
+	initial = yes
+	randomized = yes
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	potential_crossbreeding_chance = 1.0
+	opposites = { "trait_nerve_stapled" "trait_syncretic_proles" "trait_theoretical" "trait_practical" }
+	modifier = {
+		planet_jobs_physics_research_produces_mult = 0.45
+		planet_jobs_society_research_produces_mult = -0.15
+		planet_jobs_engineering_research_produces_mult = -0.15
+	}
+}
+
+trait_theoretical = {
+	cost = 3
+	initial = yes
+	randomized = yes
+	allowed_archetypes = { BIOLOGICAL LITHOID}
+	potential_crossbreeding_chance = 1.0
+	opposites = { "trait_nerve_stapled" "trait_syncretic_proles" "trait_analytical" "trait_practical" }
+	modifier = {
+		planet_jobs_physics_research_produces_mult = -0.15
+		planet_jobs_society_research_produces_mult = 0.45
+		planet_jobs_engineering_research_produces_mult = -0.15
+	}
+}
+
+trait_practical = {
+	cost = 3
+	initial = yes
+	randomized = yes
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	potential_crossbreeding_chance = 1.0
+	opposites = { "trait_nerve_stapled" "trait_syncretic_proles" "trait_analytical" "trait_theoretical" }
+	modifier = {
+		planet_jobs_physics_research_produces_mult = -0.15
+		planet_jobs_society_research_produces_mult = -0.15
+		planet_jobs_engineering_research_produces_mult = 0.45
+	}
+}
+
+trait_oligotrophs = {
+	cost = 3
+	initial = yes
+	randomized = yes
+	opposites = { "trait_nerve_stapled" "trait_syncretic_proles" "trait_gluttonous" }
+	allowed_archetypes = { BIOLOGICAL }
+	potential_crossbreeding_chance = 1.0
+	modifier = {
+		planet_pops_food_upkeep_mult = -0.20
+	}
+	slave_cost = {
+		energy = 150
+	}
+}
+
+trait_oligotrophs_lithoid = {
+	cost = 3
+	initial = yes
+	randomized = yes
+	opposites = { "trait_nerve_stapled" "trait_syncretic_proles" "trait_gluttonous_lithoid" }
+	allowed_archetypes = { LITHOID }
+	potential_crossbreeding_chance = 1.0
+	modifier = {
+		planet_pops_minerals_upkeep_mult = -0.20
+	}
+	slave_cost = {
+		energy = 150
+	}
+}
+
+trait_lawful = {
+	cost = 3
+	initial = yes
+	randomized = yes
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	opposites = { "trait_nerve_stapled" "trait_syncretic_proles" "trait_unruly" "trait_deviants" "trait_hive_mind" }
+	potential_crossbreeding_chance = 1.0
+	modifier = {
+		species_empire_size_mult = -0.05
+		pop_government_ethic_attraction = 0.15
+	}
+	slave_cost = {
+		energy = 50
+	}
+}
+
+trait_intrepid = {
+	cost = 2
+	initial = yes
+	randomized = yes
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	opposites = { "trait_nerve_stapled" "trait_syncretic_proles" "trait_hive_mind" }
+	potential_crossbreeding_chance = 1.0
+	modifier = {
+		army_morale = 0.50
+	}
+	slave_cost = {
+		energy = 100
+	}
+}
+
+trait_urban = {
+	cost = 2
+	initial = yes
+	randomized = yes
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	opposites = { "trait_nerve_stapled" "trait_syncretic_proles" "trait_communal" "trait_solitary" "trait_gigantic" "trait_agrarian" }
+	potential_crossbreeding_chance = 1.0
+	modifier = {
+		pop_housing_usage_mult = -0.15
+	}
+}
+
+trait_gifted_pilots = {
+	cost = 2
+	initial = yes
+	randomized = yes
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	opposites = { "trait_nerve_stapled" "trait_syncretic_proles" "trait_hive_mind" }
+	potential_crossbreeding_chance = 1.0
+	modifier = {
+		pop_growth_from_immigration = 0.30
+	}
+}
+
+trait_illustrious = {
+	cost = 2
+	initial = yes
+	randomized = yes
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	opposites = { "trait_nerve_stapled" "trait_syncretic_proles" "trait_nervous" "trait_humble" }
+	potential_crossbreeding_chance = 1.0
+	modifier = {
+		planet_jobs_ruler_produces_mult = 0.10
+	}
+}
+
+trait_humble = {
+	cost = 2
+	initial = yes
+	randomized = yes
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	opposites = { "trait_nerve_stapled" "trait_syncretic_proles" "trait_prideful" "trait_illustrious" "trait_weak" "trait_hive_mind" }
+	potential_crossbreeding_chance = 1.0
+	modifier = {
+		planet_jobs_worker_produces_mult = 0.05
+		pop_cat_worker_happiness = 0.05		
+	}
+	slave_cost = {
+		energy = 125
+	}
+}
+
+trait_crafty = {
+	cost = 2
+	initial = yes
+	randomized = yes
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	opposites = { "trait_nerve_stapled" "trait_syncretic_proles" }
+	potential_crossbreeding_chance = 1.0
+	modifier = {
+		planet_jobs_alloys_produces_mult = 0.15
+	}
+}
+
+trait_creative = {
+	cost = 2
+	initial = yes
+	randomized = yes
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	opposites = { "trait_nerve_stapled" "trait_syncretic_proles" "trait_hive_mind" }
+	potential_crossbreeding_chance = 1.0
+	modifier = {
+		planet_jobs_consumer_goods_produces_mult = 0.15
+	}
+}
+
+trait_megalomaniacs = {
+	cost = 1
+	initial = yes
+	randomized = yes
+	modification = no
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	opposites = { "trait_nerve_stapled" "trait_syncretic_proles" }
+	potential_crossbreeding_chance = 1.0
+}	
+
+trait_natural_translucers = {
+	cost = 1
+	initial = yes
+	randomized = yes
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	opposites = { "trait_nerve_stapled" "trait_syncretic_proles" "trait_inept" }
+	potential_crossbreeding_chance = 1.0
+	modifier = {
+		planet_jobs_rare_crystals_produces_mult = 0.25
+	}
+}	
+
+trait_natural_refiners = {
+	cost = 1
+	initial = yes
+	randomized = yes
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	opposites = { "trait_nerve_stapled" "trait_syncretic_proles" "trait_inept" }
+	potential_crossbreeding_chance = 1.0
+	modifier = {
+		planet_jobs_exotic_gases_produces_mult = 0.25		
+	}
+}	
+
+trait_natural_chemists = {
+	cost = 1
+	initial = yes
+	randomized = yes
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	opposites = { "trait_nerve_stapled" "trait_syncretic_proles" "trait_inept" }
+	potential_crossbreeding_chance = 1.0
+	modifier = {
+		planet_jobs_volatile_motes_produces_mult = 0.25	
+	}
+}	
+
+trait_flexible = {
+	cost = 1
+	initial = yes
+	randomized = yes
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	opposites = { "trait_nerve_stapled" "trait_syncretic_proles" "trait_simple" }
+	potential_crossbreeding_chance = 1.0
+	modifier = {
+		planet_jobs_specialist_produces_mult = 0.025
+	}
+}
+
+trait_inquisitive = {
+	cost = 1
+	initial = yes
+	randomized = yes
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	opposites = { "trait_nerve_stapled" "trait_syncretic_proles" "trait_simple" }
+	potential_crossbreeding_chance = 1.0
+	modifier = {
+		planet_researchers_upkeep_mult = -0.20
+	}
+}
+
+trait_austere = {
+	cost = 1
+	initial = yes
+	randomized = yes
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	opposites = { "trait_nerve_stapled" "trait_syncretic_proles" "trait_hedonistic" }
+	potential_crossbreeding_chance = 1.0
+	modifier = {
+		pop_amenities_usage_mult = -0.10	
+	}
+	slave_cost = {
+		energy = 25
+	}
+}	
+
+trait_sanguine = {
+	cost = 1
+	initial = yes
+	randomized = yes
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	opposites = { "trait_nerve_stapled" "trait_syncretic_proles" "trait_despondent" "trait_hive_mind" }
+	potential_crossbreeding_chance = 1.0
+	modifier = {
+		pop_happiness = 0.05
+		army_morale = 0.10
+	}
+	slave_cost = {
+		energy = 25
+	}
+}
+
+trait_intimidating = {
+	cost = 1
+	initial = yes
+	randomized = yes
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	opposites = { "trait_nerve_stapled" "trait_syncretic_proles" }
+	potential_crossbreeding_chance = 1.0
+	modifier = {
+		army_morale_damage_mult = 0.33
+	}
+}
+
+trait_avant_garde = {
+	cost = 1
+	initial = yes
+	randomized = yes
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	opposites = { "trait_nerve_stapled" "trait_syncretic_proles" "trait_obstinate" "trait_hive_mind"}
+	potential_crossbreeding_chance = 1.0
+	modifier = {
+		pop_ethics_shift_speed_mult = 1.00
+	}
+}
+	
+trait_disorderly = {
+	cost = -1
+	initial = yes
+	randomized = yes
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	opposites = { "trait_nerve_stapled" "trait_syncretic_proles" "trait_ingenious" }
+	potential_crossbreeding_chance = 1.0
+	modifier = {
+		planet_jobs_energy_produces_mult = -0.10
+	}
+	slave_cost = {
+		energy = -25
+	}
+}	
+
+trait_lazy = {
+	cost = -1
+	initial = yes
+	randomized = yes
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	opposites = { "trait_nerve_stapled" "trait_syncretic_proles" "trait_industrious" }
+	potential_crossbreeding_chance = 1.0
+	modifier = {
+		planet_jobs_minerals_produces_mult = -0.10
+	}
+	slave_cost = {
+		energy = -25
+	}
+}	
+
+trait_allergic = {
+	cost = -1
+	initial = yes
+	randomized = yes
+	improves_leaders = yes
+	allowed_archetypes = { BIOLOGICAL }
+	opposites = { "trait_nerve_stapled" "trait_syncretic_proles" "trait_agrarian" }
+	potential_crossbreeding_chance = 1.0
+	modifier = {
+		planet_jobs_food_produces_mult = -0.10
+	}
+	slave_cost = {
+		energy = -25
+	}
+}	
+
+trait_whimsical = {
+	cost = -1
+	initial = yes
+	randomized = yes
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	opposites = { "trait_nerve_stapled" "trait_syncretic_proles" "trait_hedonistic" }
+	potential_crossbreeding_chance = 1.0
+	modifier = {
+		pop_amenities_usage_mult = 0.10	
+	}
+	slave_cost = {
+		energy = -25
+	}
+}	
+
+trait_nervous = {
+	cost = -1
+	initial = yes
+	randomized = yes
+	opposites = { "trait_nerve_stapled" "trait_syncretic_proles" "trait_talented" }
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	potential_crossbreeding_chance = 1.0
+	modifier = {
+		leader_skill_levels = -1
+	}
+}
+
+trait_despondent = {
+	cost = -1
+	initial = yes
+	randomized = yes
+	opposites = { "trait_nerve_stapled" "trait_syncretic_proles" "trait_sanguine" "trait_hive_mind" }
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	potential_crossbreeding_chance = 1.0
+	modifier = {
+		pop_happiness = -0.05
+		army_morale = -0.10
+	}
+	slave_cost = {
+		energy = -25
+	}
+}
+
+trait_inept	= {
+	cost = -1
+	initial = yes
+	randomized = yes
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	opposites = { "trait_nerve_stapled" "trait_syncretic_proles" "trait_natural_chemists" "trait_natural_refiners" "trait_natural_translucers" }
+	potential_crossbreeding_chance = 1.0
+	modifier = {
+		planet_jobs_rare_crystals_produces_mult = -0.33
+		planet_jobs_exotic_gases_produces_mult = -0.33
+		planet_jobs_volatile_motes_produces_mult = -0.33	
+	}
+}	
+
+trait_greedy = {
+	cost = -2
+	initial = yes
+	randomized = yes
+	opposites = { "trait_nerve_stapled" "trait_syncretic_proles" }
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	potential_crossbreeding_chance = 1.0
+	modifier = {
+		leaders_cost_mult = 1.00
+		leaders_upkeep_mult = 1.00
+	}
+}
+
+trait_simple = {
+	cost = -2
+	initial = yes
+	randomized = yes
+	opposites = { "trait_nerve_stapled" "trait_syncretic_proles" "trait_intelligent" "trait_flexible" }
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	potential_crossbreeding_chance = 1.0
+	modifier = {
+		planet_jobs_specialist_produces_mult = -0.05
+		planet_jobs_physics_research_produces_mult = -0.05
+		planet_jobs_society_research_produces_mult = -0.05
+		planet_jobs_engineering_research_produces_mult = -0.05
+	}
+}
+
+trait_prideful = {
+	cost = -2
+	initial = yes
+	randomized = yes
+	opposites = { "trait_nerve_stapled" "trait_syncretic_proles" "trait_humble" "trait_hive_mind" }
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	potential_crossbreeding_chance = 1.0
+	modifier = {
+		pop_demotion_time_mult = 1.00
+	}
+}
+
+trait_obstinate	= {
+	cost = -2
+	initial = yes
+	randomized = yes
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	opposites = { "trait_nerve_stapled" "trait_syncretic_proles" "trait_avant_garde" "trait_hive_mind" }
+	potential_crossbreeding_chance = 1.0
+	modifier = {
+		pop_ethics_shift_speed_mult = -0.50
+	}
+}
+
+trait_sluggish = {
+	cost = -3
+	initial = yes
+	randomized = yes
+	opposites = { "trait_nerve_stapled" "trait_syncretic_proles" }
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	potential_crossbreeding_chance = 1.0
+	modifier = {
+		planet_jobs_produces_mult = -0.05
+	}
+	slave_cost = {
+		energy = -50
+	}
+}
+
+trait_gigantic = {
+	cost = -3
+	initial = yes
+	randomized = yes
+	opposites = { "trait_nerve_stapled" "trait_syncretic_proles" "trait_communal" "trait_urban" "trait_solitary" }
+	allowed_archetypes = { BIOLOGICAL }
+	potential_crossbreeding_chance = 1.0
+	modifier = {
+		pop_housing_usage_mult = 0.40
+	}
+}
+
+trait_gluttonous = {
+	cost = -3
+	initial = yes
+	randomized = yes
+	opposites = { "trait_nerve_stapled" "trait_syncretic_proles" "trait_oligotrophs" }
+	allowed_archetypes = { BIOLOGICAL }
+	potential_crossbreeding_chance = 1.0
+	modifier = {
+		planet_pops_food_upkeep_mult = 0.30
+	}
+	slave_cost = {
+		energy = -100
+	}
+}
+
+trait_gluttonous_lithoid = {
+	cost = -3
+	initial = yes
+	randomized = yes
+	opposites = { "trait_nerve_stapled" "trait_syncretic_proles" "trait_oligotrophs_lithoid" }
+	allowed_archetypes = { LITHOID }
+	potential_crossbreeding_chance = 1.0
+	modifier = {
+		planet_pops_minerals_upkeep_mult = 0.30
+	}
+	slave_cost = {
+		energy = -100
+	}
+}
+
+trait_hedonistic = {
+	cost = -4
+	initial = yes
+	randomized = no
+	advanced_trait = yes
+	opposites = { "trait_nerve_stapled" "trait_syncretic_proles" "trait_austere" "trait_hive_mind" }
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	potential_crossbreeding_chance = 1.0
+	modifier = {
+		pop_amenities_usage_mult = 0.25
+		planet_pops_consumer_goods_upkeep_mult = 0.25	
+	}
+	slave_cost = {
+		energy = -150
+	}
+}
+
+trait_polyploid = {
+	cost = -4
+	initial = yes
+	randomized = no
+	advanced_trait = yes
+	opposites = { "trait_nerve_stapled" "trait_syncretic_proles" "trait_rapid_breeders" "trait_rapid_breeders_lithoid" "trait_slow_breeders" "trait_slow_breeders_lithoid" }
+	allowed_archetypes = { BIOLOGICAL }
+	potential_crossbreeding_chance = 1.0
+	modifier = {
+		pop_growth_speed = -0.33
+	}
+	slave_cost = {
+		energy = -300
+	}
+}
+

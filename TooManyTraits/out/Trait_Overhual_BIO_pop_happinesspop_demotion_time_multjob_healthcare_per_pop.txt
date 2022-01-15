@@ -1,0 +1,14 @@
+trait_evo_helpful = {
+	icon =  "gfx/interface/icons/traits/trait_evo_helpful.dds"
+	cost = 1
+	initial = yes
+	randomized = yes
+	allowed_archetypes = { LITHOID BIOLOGICAL PRESAPIENT }
+
+	opposites = { }
+	modifier = {
+		pop_happiness = 0.05
+		pop_demotion_time_mult = -0.05
+		job_healthcare_per_pop = 0.04
+	}
+}

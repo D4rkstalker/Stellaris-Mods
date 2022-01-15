@@ -1,0 +1,14 @@
+trait_evo_viviparity = {
+	icon =  "gfx/interface/icons/traits/trait_evo_viviparity.dds"
+	cost = 1
+	initial = yes
+	randomized = yes
+	modification =  no
+	allowed_archetypes = { LITHOID BIOLOGICAL PRESAPIENT }
+
+	opposites = { }
+	modifier = {
+		pop_environment_tolerance = 0.05
+		planet_colony_development_speed_mult = 0.05
+	}
+}

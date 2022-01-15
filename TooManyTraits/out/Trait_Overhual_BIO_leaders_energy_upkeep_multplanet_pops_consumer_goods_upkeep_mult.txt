@@ -1,0 +1,29 @@
+trait_evo_generous = {
+	icon =  "gfx/interface/icons/traits/trait_evo_generous.dds"
+	cost = 1
+	initial = yes
+	randomized = yes
+	allowed_archetypes = { LITHOID BIOLOGICAL PRESAPIENT }
+
+	opposites = { }
+	modifier = {
+		leaders_energy_upkeep_mult = -0.1
+		planet_pops_consumer_goods_upkeep_mult = -0.05
+	}
+}
+trait_evo_greedy = {
+	icon =  "gfx/interface/icons/traits/trait_evo_greedy.dds"
+	cost = -1
+	initial = yes
+	randomized = yes
+	allowed_archetypes = { LITHOID BIOLOGICAL PRESAPIENT }
+
+	opposites = { }
+	modifier = {
+		leaders_energy_upkeep_mult = 0.1
+		planet_pops_consumer_goods_upkeep_mult = 0.05
+	}
+	ai_weight = {
+weight = 0
+	}
+}

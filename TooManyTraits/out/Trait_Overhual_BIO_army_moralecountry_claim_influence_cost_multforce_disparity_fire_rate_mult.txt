@@ -1,0 +1,45 @@
+trait_evo_adventurous = {
+	icon =  "gfx/interface/icons/traits/trait_evo_adventurous.dds"
+	cost = 2
+	initial = yes
+	randomized = yes
+	allowed_archetypes = { LITHOID BIOLOGICAL PRESAPIENT }
+
+	opposites = { }
+	modifier = {
+		army_morale = 0.3
+		country_claim_influence_cost_mult = -0.2
+		force_disparity_fire_rate_mult = 0.2
+	}
+}
+trait_evo_confident = {
+	icon =  "gfx/interface/icons/traits/trait_evo_confident.dds"
+	cost = 1
+	initial = yes
+	randomized = yes
+	allowed_archetypes = { LITHOID BIOLOGICAL PRESAPIENT }
+
+	opposites = { }
+	modifier = {
+		army_morale = 0.15
+		country_claim_influence_cost_mult = -0.1
+		force_disparity_fire_rate_mult = 0.1
+	}
+}
+trait_evo_shy = {
+	icon =  "gfx/interface/icons/traits/trait_evo_shy.dds"
+	cost = -1
+	initial = yes
+	randomized = yes
+	allowed_archetypes = { LITHOID BIOLOGICAL PRESAPIENT }
+
+	opposites = { }
+	modifier = {
+		army_morale = -0.15
+		country_claim_influence_cost_mult = 0.1
+		force_disparity_fire_rate_mult = -0.1
+	}
+	ai_weight = {
+weight = 0
+	}
+}

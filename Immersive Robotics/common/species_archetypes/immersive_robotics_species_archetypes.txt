@@ -1,0 +1,10 @@
+SYNTHETIC = {
+	species_trait_points = 15
+	species_max_traits = 99
+	robotic = yes
+}
+ADVANCED_MACHINE = {
+	species_trait_points = 15
+	species_max_traits = 99
+	robotic = yes
+}

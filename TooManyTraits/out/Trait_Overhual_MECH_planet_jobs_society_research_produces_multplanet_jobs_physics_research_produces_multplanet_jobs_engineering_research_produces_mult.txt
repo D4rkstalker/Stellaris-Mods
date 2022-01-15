@@ -1,0 +1,61 @@
+trait_robot_evo_self_evolving_logic = {
+	icon =  "gfx/interface/icons/traits/trait_robot_evo_self_evolving_logic.dds"
+	cost = 4
+	initial =  yes
+	randomized =  yes
+	allowed_archetypes = { MACHINE ROBOT }
+
+	opposites = { }
+	modifier = {
+		planet_jobs_society_research_produces_mult = 0.2
+		planet_jobs_physics_research_produces_mult = 0.2
+		planet_jobs_engineering_research_produces_mult = 0.2
+	}
+}
+trait_just-more-traits_robot_rapidrouting = {
+	cost = 1
+	initial = yes
+	randomized = yes
+	allowed_archetypes = { MACHINE ROBOT }
+
+	opposites = { }
+	modifier = {
+		planet_jobs_society_research_produces_mult = 0.05
+		planet_jobs_physics_research_produces_mult = 0.05
+		planet_jobs_engineering_research_produces_mult = 0.05
+	}
+}
+trait_robot_evo_limited_programming = {
+	icon =  "gfx/interface/icons/traits/trait_robot_evo_limited_programming.dds"
+	cost = -2
+	initial =  yes
+	randomized =  yes
+	allowed_archetypes = { MACHINE ROBOT }
+
+	opposites = { }
+	modifier = {
+		planet_jobs_society_research_produces_mult = -0.1
+		planet_jobs_physics_research_produces_mult = -0.1
+		planet_jobs_engineering_research_produces_mult = -0.1
+	}
+	ai_weight = {
+weight = 0
+	}
+}
+trait_robot_evo_flawed_logic = {
+	icon =  "gfx/interface/icons/traits/trait_robot_evo_flawed_logic.dds"
+	cost = -4
+	initial =  yes
+	randomized =  yes
+	allowed_archetypes = { MACHINE ROBOT }
+
+	opposites = { }
+	modifier = {
+		planet_jobs_society_research_produces_mult = -0.2
+		planet_jobs_physics_research_produces_mult = -0.2
+		planet_jobs_engineering_research_produces_mult = -0.2
+	}
+	ai_weight = {
+weight = 0
+	}
+}

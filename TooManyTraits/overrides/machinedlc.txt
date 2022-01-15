@@ -303,7 +303,7 @@ xvcv_mdlc_trait_org_body_copy_design = {
 
 	slave_cost = { energy = 200 }
 }
-xvcv_mdlc_traits_high_solidity_org = {
+xvcv_mdlc_trait_high_solidity_org = {
 	cost = 4
 	initial = no
 	randomized = no
@@ -323,7 +323,7 @@ xvcv_mdlc_traits_high_solidity_org = {
 
 	slave_cost = { energy = 200 }
 }
-xvcv_mdlc_traits_engineered_speciality = {
+xvcv_mdlc_trait_engineered_speciality = {
 	cost = 4
 	initial = no
 	randomized = no

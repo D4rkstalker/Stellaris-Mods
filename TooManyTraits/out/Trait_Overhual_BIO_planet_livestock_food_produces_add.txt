@@ -1,0 +1,110 @@
+trait_yanz_organic_livestock = {
+	icon =  "gfx/interface/icons/traits/bio_path/trait_yanz_organic_livestock.dds"
+	cost = 4
+	initial =  no
+	randomized =  no
+	modification =  yes
+	allowed_archetypes = { BIOLOGICAL }
+
+	opposites = { }
+	modifier = {
+		planet_livestock_food_produces_add = 5
+	}
+}
+trait_delicious = {
+	cost = 2
+	initial =  no
+	randomized =  no
+	allowed_archetypes = { BIOLOGICAL }
+
+	opposites = { }
+	modifier = {
+		planet_livestock_food_produces_add = 2
+	}
+}
+trait_additrait_presapient_tasty = {
+	cost = 1
+	initial =  no
+	randomized = yes
+	modification =  no
+	allowed_archetypes = { LITHOID BIOLOGICAL PRESAPIENT }
+
+	opposites = { }
+	modifier = {
+		planet_livestock_food_produces_add = 1
+	}
+}
+trait_evo_sweet = {
+	icon =  "gfx/interface/icons/traits/trait_evo_sweet.dds"
+	cost = 1
+	initial = yes
+	randomized =  no
+	modification =  yes
+	allowed_archetypes = { LITHOID BIOLOGICAL PRESAPIENT }
+
+	opposites = { }
+	modifier = {
+		planet_livestock_food_produces_add = 1
+	}
+}
+trait_td_bitter = {
+	cost = 0
+	initial = yes
+	randomized = yes
+	allowed_archetypes = { BIOLOGICAL PRESAPIENT }
+
+	opposites = { }
+	modifier = {
+		planet_livestock_food_produces_add = -2.00
+	}
+	ai_weight = {
+weight = 0
+	}
+}
+trait_additrait_presapient_bitter = {
+	cost = -1
+	initial =  no
+	randomized = yes
+	modification =  no
+	allowed_archetypes = { LITHOID BIOLOGICAL PRESAPIENT }
+
+	opposites = { }
+	modifier = {
+		planet_livestock_food_produces_add = -1
+	}
+	ai_weight = {
+weight = 0
+	}
+}
+trait_evo_bitter = {
+	icon =  "gfx/interface/icons/traits/trait_evo_bitter.dds"
+	cost = -1
+	initial = yes
+	randomized =  no
+	modification =  yes
+	allowed_archetypes = { LITHOID BIOLOGICAL PRESAPIENT }
+
+	opposites = { }
+	modifier = {
+		planet_livestock_food_produces_add = -2
+	}
+	ai_weight = {
+weight = 0
+	}
+}
+trait_evo_toxic = {
+	icon =  "gfx/interface/icons/traits/trait_evo_toxic.dds"
+	cost = -2
+	initial = yes
+	randomized =  no
+	modification =  yes
+	allowed_archetypes = { LITHOID BIOLOGICAL PRESAPIENT }
+
+	opposites = { }
+	modifier = {
+		planet_livestock_food_produces_add = -4
+	}
+	ai_weight = {
+weight = 0
+	}
+}

@@ -1,0 +1,29 @@
+trait_evo_redundant_organs = {
+	icon =  "gfx/interface/icons/traits/trait_evo_redundant_organs.dds"
+	cost = 1
+	initial = yes
+	randomized = yes
+	allowed_archetypes = { LITHOID BIOLOGICAL PRESAPIENT }
+
+	opposites = { }
+	modifier = {
+		army_health = 0.15
+		army_morale_damage_mult = 0.15
+	}
+}
+trait_evo_soft = {
+	icon =  "gfx/interface/icons/traits/trait_evo_soft.dds"
+	cost = -1
+	initial = yes
+	randomized = yes
+	allowed_archetypes = { LITHOID BIOLOGICAL PRESAPIENT }
+
+	opposites = { }
+	modifier = {
+		army_health = -0.2
+		army_morale_damage_mult = -0.2
+	}
+	ai_weight = {
+weight = 0
+	}
+}

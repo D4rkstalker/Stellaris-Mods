@@ -1,0 +1,16 @@
+trait_evo_invasive = {
+	icon =  "gfx/interface/icons/traits/trait_evo_invasive.dds"
+	cost = -4
+	initial = yes
+	randomized =  no
+	allowed_archetypes = { LITHOID BIOLOGICAL PRESAPIENT }
+
+	opposites = { }
+	modifier = {
+		planet_clear_blocker_time_mult = 0.15
+		deposit_blockers_cost_mult = 0.15
+	}
+	ai_weight = {
+weight = 0
+	}
+}

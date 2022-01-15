@@ -1,0 +1,15 @@
+trait_hedonistic = {
+	cost = -4
+	initial =  yes
+	randomized =  no
+	allowed_archetypes = { LITHOID BIOLOGICAL }
+
+	opposites = { }
+	modifier = {
+		pop_amenities_usage_mult = 0.25
+		planet_pops_consumer_goods_upkeep_mult = 0.25
+	}
+	ai_weight = {
+weight = 0
+	}
+}

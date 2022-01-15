@@ -1,0 +1,17 @@
+trait_robot_evo_stationary = {
+	icon =  "gfx/interface/icons/traits/trait_robot_evo_stationary.dds"
+	cost = -3
+	initial =  yes
+	randomized =  yes
+	allowed_archetypes = { MACHINE ROBOT }
+
+	opposites = { }
+	modifier = {
+		pop_resettlement_cost_mult = 1.0
+		empire_size_pops_mult = 0.2
+		army_defense_damage_mult = 0.1
+	}
+	ai_weight = {
+weight = 0
+	}
+}

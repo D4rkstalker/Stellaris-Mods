@@ -1,0 +1,12 @@
+trait_robot_evo_industrialists = {
+	icon =  "gfx/interface/icons/traits/trait_robot_evo_industrialists.dds"
+	cost = 3
+	initial =  yes
+	randomized =  yes
+	allowed_archetypes = { MACHINE ROBOT }
+
+	opposites = { }
+	modifier = {
+		planet_jobs_alloys_produces_mult = 0.15
+	}
+}

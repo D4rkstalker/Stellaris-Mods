@@ -1,0 +1,62 @@
+trait_evo_heroic = {
+	icon =  "gfx/interface/icons/traits/trait_evo_heroic.dds"
+	cost = 2
+	initial = yes
+	randomized = yes
+	allowed_archetypes = { LITHOID BIOLOGICAL PRESAPIENT }
+
+	opposites = { }
+	modifier = {
+		admiral_skill_levels = 2
+		max_rivalries = 2
+		army_morale = 0.2
+	}
+}
+trait_evo_courageous = {
+	icon =  "gfx/interface/icons/traits/trait_evo_courageous.dds"
+	cost = 1
+	initial = yes
+	randomized = yes
+	allowed_archetypes = { LITHOID BIOLOGICAL PRESAPIENT }
+
+	opposites = { }
+	modifier = {
+		admiral_skill_levels = 1
+		max_rivalries = 1
+		army_morale = 0.1
+	}
+}
+trait_evo_cautious = {
+	icon =  "gfx/interface/icons/traits/trait_evo_cautious.dds"
+	cost = -1
+	initial = yes
+	randomized = yes
+	allowed_archetypes = { LITHOID BIOLOGICAL PRESAPIENT }
+
+	opposites = { }
+	modifier = {
+		admiral_skill_levels = -1
+		max_rivalries = -1
+		army_morale = -0.1
+	}
+	ai_weight = {
+weight = 0
+	}
+}
+trait_evo_cowardly = {
+	icon =  "gfx/interface/icons/traits/trait_evo_cowardly.dds"
+	cost = -2
+	initial = yes
+	randomized = yes
+	allowed_archetypes = { LITHOID BIOLOGICAL PRESAPIENT }
+
+	opposites = { }
+	modifier = {
+		admiral_skill_levels = -2
+		max_rivalries = -2
+		army_morale = -0.2
+	}
+	ai_weight = {
+weight = 0
+	}
+}

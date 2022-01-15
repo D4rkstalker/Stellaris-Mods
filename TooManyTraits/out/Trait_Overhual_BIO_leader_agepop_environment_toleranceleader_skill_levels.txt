@@ -1,0 +1,15 @@
+trait_yanz_eternal = {
+	icon =  "gfx/interface/icons/traits/bio_path/trait_yanz_eternal.dds"
+	cost = 6
+	initial =  no
+	randomized =  no
+	modification =  yes
+	allowed_archetypes = { LITHOID BIOLOGICAL }
+
+	opposites = { }
+	modifier = {
+		leader_age = 160
+		pop_environment_tolerance = 0.10
+		leader_skill_levels = 2
+	}
+}

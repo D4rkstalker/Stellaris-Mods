@@ -1,0 +1,380 @@
+#######################
+# Cybertronian Traits #
+#######################
+
+trait_cybertronian = {
+	cost = 0
+	potential_crossbreeding_chance = 0.0
+	
+	sorting_priority = 20
+	
+	initial = yes
+	randomized = no
+	modification = no
+	forced_happiness = no
+	immortal_leaders = yes
+	
+	hide_age = no
+	
+	allowed_archetypes = { ROBOT MACHINE CYBERTRONIAN }
+	icon = "gfx/interface/icons/traits/trait_cybertronian.dds"
+
+	modifier = {
+		pop_housing_usage_mult = -0.15
+		planet_jobs_energon_produces_mult = 0.10
+		planet_jobs_robotic_produces_mult = 0.10
+		army_health = 0.40
+		army_damage_mult = 0.40
+		planet_pop_assemblers_upkeep_mult = 0.25
+		pop_assembly_speed = -0.25
+		leaders_cost_mult = 1.00
+	}
+	
+	slave_cost = {
+		energy = 500
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+	
+	
+}
+
+#trait_cybertronian_great_upgrade = {
+#	cost = 1
+#	sorting_priority = 20
+#	initial = no
+#	potential_crossbreeding_chance = 0.0
+#	randomized = no
+#	modification = no
+#	icon = "gfx/interface/icons/traits/trait_cybertronian.dds"
+#	allowed_archetypes = { ROBOT MACHINE CYBERTRONIAN }
+#	
+#	potential = {
+#		from = {
+#			has_trait = "trait_cybertronian"
+#		}
+#	}
+#	
+#	modifier = {
+#		planet_jobs_energon_produces_mult = 0.20
+#		leaders_cost_mult = -0.50
+#		pop_housing_usage_mult = -0.15
+#		planet_pop_assemblers_upkeep_mult = -0.20
+#		pop_assembly_speed = 0.20
+#		army_health = -0.20
+#		army_damage_mult = -0.20
+#	}
+#	
+#	ai_weight = {
+#		weight = -1
+#	}
+#}
+#FACTION TRAITS
+trait_robot_autobot = {
+	cost = 2
+	allowed_archetypes = { ROBOT MACHINE CYBERTRONIAN }
+	opposites = { "trait_robot_decepticon" }
+	
+	
+	modifier = {
+		planet_jobs_unity_produces_mult = 0.10
+		planet_researchers_produces_mult = 0.05
+		army_defense_damage_mult = 0.30
+		army_morale = 0.30
+	}
+	
+	icon = "gfx/interface/icons/traits/trait_robot_autobot.dds"
+	
+	randomized = no
+	modification = yes
+	
+	
+	ai_weight = {
+		weight = 0
+	}
+	
+}
+
+trait_robot_decepticon = {
+	cost = 2
+	allowed_archetypes = { ROBOT MACHINE CYBERTRONIAN }
+	opposites = { "trait_robot_autobot"  }
+	
+	
+	modifier = {
+		army_starting_experience_add = 100
+		army_experience_gain_mult = 0.15
+		army_attack_damage_mult = 0.15
+		army_morale_damage_mult = 0.10
+		
+		country_trust_growth = -0.10
+		species_leader_exp_gain = 0.10
+		leader_skill_levels = 1
+		planet_jobs_alloys_produces_mult = 0.15
+	}
+	
+	icon = "gfx/interface/icons/traits/trait_robot_decepticon.dds"
+	
+	randomized = no
+	modification = yes
+	
+	
+	ai_weight = {
+		weight = 0
+	}
+	
+}
+
+#CYBERTRONIAN SUB-TRAITS
+trait_robot_velocitronian = {
+	cost = 1
+	allowed_archetypes = { ROBOT MACHINE CYBERTRONIAN }
+	species_class = { cybertronian }
+	opposites = { trait_robot_aquatronian  }
+	initial = yes
+	
+	
+	modifier = {
+		leader_skill_levels = 1
+		modify_species_cost_mult = -0.25	
+		ship_speed_mult = 0.10
+		ship_evasion_mult = 0.05
+		army_disengage_chance_mult = 0.10
+		army_health = -0.10
+	}
+	
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_gale_speed.dds"
+	
+	randomized = no
+	modification = yes
+	
+	ai_weight = {
+		weight = 0
+	}
+	
+}
+
+trait_robot_aquatronian = {
+	cost = 1
+	allowed_archetypes = { ROBOT MACHINE CYBERTRONIAN }
+	species_class = { cybertronian sharkticon }
+	opposites = { trait_robot_velocitronian }
+	initial = yes
+	randomized = no
+	modification = yes
+	
+	triggered_pop_modifier = {
+		potential = {
+			exists = planet
+			planet = {
+				has_climate = wet
+			}
+		}
+		pop_housing_usage_mult = -0.05
+		planet_jobs_energon_produces_mult = 0.05
+		planet_jobs_minerals_produces_mult = 0.05
+		planet_jobs_energy_produces_mult = 0.05
+		army_damage_mult = 0.05
+	}
+	triggered_pop_modifier = {
+		potential = {
+			exists = planet
+			planet = {
+				NOT = { has_climate = wet }
+				is_ideal = no
+			}
+		}
+		pop_environment_tolerance = -1.5
+		pop_housing_usage_mult = 0.30
+	}
+	triggered_pop_modifier = {
+		potential = {
+			exists = planet
+			planet = {
+				has_climate = wet
+				exists = owner
+				owner = { has_ascension_perk = ap_hydrocentric }
+			}
+		}
+		pop_housing_usage_mult = -0.05
+		planet_jobs_energon_produces_mult = 0.05
+		planet_jobs_energy_produces_mult = 0.05
+		planet_jobs_minerals_produces_mult = 0.05
+		army_damage_mult = 0.05
+	}
+	
+	triggered_pop_modifier = {
+		potential = {
+			exists = planet
+			planet = {
+				NOT = { has_climate = wet }
+				is_ideal = no
+				exists = owner
+				owner = { has_ascension_perk = ap_hydrocentric }
+			}
+		}
+		pop_environment_tolerance = -1.0
+		pop_housing_usage_mult = 0.15
+	}
+	
+	icon = "gfx/interface/icons/traits/trait_aquatic.dds"
+	
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0
+			NOT = { has_trait = trait_pc_ocean_preference }
+		}
+	}
+	custom_tooltip_with_modifiers = trait_robot_aquatronian_tooltip
+}
+
+trait_robot_maximal = {
+	cost = 2
+	allowed_archetypes = { ROBOT MACHINE CYBERTRONIAN }
+	opposites = { "trait_robot_decepticon" "trait_robot_autobot" "trait_robot_predacon" "trait_energon_dependence" }
+	
+	modifier = {
+		pop_ethic_egalitarian_attraction_mult = 0.20
+		planet_jobs_society_research_produces_mult = 0.10
+		planet_jobs_physics_research_produces_mult = 0.10
+		planet_jobs_engineering_research_produces_mult = 0.10
+		planet_jobs_unity_produces_mult = 0.05
+		army_morale = 0.30
+		army_defense_damage_mult = 0.15
+		
+	}
+	
+	icon = "gfx/interface/icons/traits/trait_robot_maximal.dds"
+	
+	randomized = no
+	modification = yes
+	
+	
+	ai_weight = {
+		weight = 0
+	}
+	
+}
+
+
+
+
+trait_robot_predacon = {
+	cost = 2
+	allowed_archetypes = { ROBOT MACHINE CYBERTRONIAN }
+	opposites = { "trait_robot_autobot" "trait_robot_decepticon" "trait_robot_maximal" "trait_energon_dependence" }
+	
+	modifier = {
+		pop_ethic_militarist_attraction_mult = 0.20
+		army_attack_damage_mult = 0.10
+		army_morale_damage_mult = 0.10
+		army_collateral_damage_mult = 0.10
+		
+		pop_ethics_shift_speed_mult = 0.20
+		species_empire_size_mult = 0.10
+		planet_jobs_alloys_produces_mult = 0.1
+		planet_jobs_physics_research_produces_mult = 0.10
+		planet_jobs_engineering_research_produces_mult = 0.10
+		ship_speed_mult = 0.10
+		ship_evasion_mult = 0.05
+		ship_damage_mult = 0.05
+		
+		planet_pop_assemblers_upkeep_mult = 0.1
+		pop_amenities_usage_mult = 0.1
+		planet_jobs_unity_produces_mult = -0.05
+		planet_pops_upkeep_mult = 0.1
+	}
+	
+	icon = "gfx/interface/icons/traits/trait_predacon.dds"
+	
+	randomized = no
+	modification = yes
+
+	
+	ai_weight = {
+		weight = 0
+	}
+	
+}
+
+#LEADER TRAITS
+trait_ruler_matrix_of_leadership = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/trait_ruler_matrix_of_leadership.dds"
+	self_modifier = {
+		species_leader_exp_gain = 0.25
+	}
+	modifier = {
+		country_base_influence_produces_add = 1
+		pop_happiness = 0.05
+		army_morale = 0.25
+		edicts_cost_mult = -0.10
+		edict_length_mult = 0.20
+		
+	}
+	leader_potential_add = {
+		from = { has_civic = civic_machine_autobots }
+	}
+	opposites = { "leader_trait_rigid_programming" }
+	leader_trait = { ruler }
+	leader_class = { ruler }
+	initial = no
+	randomized = no
+}
+
+trait_ruler_decepticon_leadership = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/trait_robot_decepticon.dds"
+	self_modifier = {
+		species_leader_exp_gain = 0.25
+	}
+	modifier = {
+		country_base_influence_produces_add = 1
+		pop_government_ethic_attraction = 0.20
+		army_experience_gain_mult = 0.25
+		edicts_cost_mult = -0.10
+		edict_length_mult = 0.20
+	}
+	leader_potential_add = {
+		from = { has_civic = civic_machine_decepticons }
+	}
+	opposites = { "leader_trait_rigid_programming" }
+	leader_trait = { ruler }
+	leader_class = { ruler }
+	initial = no
+	randomized = no
+}
+
+#NEGATIVE CYBERTRONIAN TRAITS
+
+trait_energon_dependence = {
+	cost = -2
+	modification = no
+	randomized = no
+	
+	species_potential_add = {
+		exists = from
+		from = {
+			OR = { 
+				has_trait = trait_cybertronian
+				has_trait = trait_robot_insecticon
+			}
+		}
+	}
+	
+	icon = "gfx/interface/icons/traits/trait_energon_dependence.dds"
+	
+	allowed_archetypes = { ROBOT MACHINE BIOLOGICAL CYBERTRONIAN }
+	
+	modifier = {
+		planet_pops_food_upkeep_mult= -1.0
+		pop_amenities_usage_mult = 0.10
+		leaders_upkeep_mult = 0.50
+	}
+	custom_tooltip = TRAIT_ENERGON_DEPENDENCE_EFFECT
+}

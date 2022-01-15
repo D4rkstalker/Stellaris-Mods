@@ -1,0 +1,29 @@
+trait_robot_evo_efficient_protocols = {
+	icon =  "gfx/interface/icons/traits/trait_robot_evo_efficient_protocols.dds"
+	cost = 4
+	initial =  yes
+	randomized =  yes
+	allowed_archetypes = { MACHINE ROBOT }
+
+	opposites = { }
+	modifier = {
+		planet_jobs_produces_mult = 0.25
+		country_admin_cap_add = 25
+	}
+}
+trait_robot_evo_outdated_protocols = {
+	icon =  "gfx/interface/icons/traits/trait_robot_evo_outdated_protocols.dds"
+	cost = -4
+	initial =  yes
+	randomized =  yes
+	allowed_archetypes = { MACHINE ROBOT }
+
+	opposites = { }
+	modifier = {
+		planet_jobs_produces_mult = -0.05
+		country_admin_cap_add = -25
+	}
+	ai_weight = {
+weight = 0
+	}
+}

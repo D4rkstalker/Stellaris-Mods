@@ -1,0 +1,11 @@
+trait_natural_refiners = {
+	cost = 1
+	initial =  yes
+	randomized =  yes
+	allowed_archetypes = { LITHOID BIOLOGICAL }
+
+	opposites = { }
+	modifier = {
+		planet_jobs_exotic_gases_produces_mult = 0.25
+	}
+}

@@ -11,8 +11,8 @@ modifiers_ai = {
 	country_base_esc_living_crystal_produces_add = 10
 	country_base_esc_transdimensional_vortex_produces_add = 10
 	country_base_esc_enigmatic_energy_produces_add = 10
-	pop_growth_speed = 1.00
-	planet_pop_assembly_mult = 1.00
+	pop_growth_speed = 0.5
+	planet_pop_assembly_mult = 0.5
 }
 
 modifiers_ai_mid = {

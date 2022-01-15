@@ -1,13 +1,11 @@
 namespace = tmt_leader_traits_event
-event = {
+country_event = {
     id = tmt_leader_traits_event.1
     hide_window = yes
     is_triggered_only = yes
     immediate = {
         every_country = {
-			limit = {
-				has_technology = tech_trait_tech_1
-			}
+
         
             every_owned_leader = {
                 limit = {

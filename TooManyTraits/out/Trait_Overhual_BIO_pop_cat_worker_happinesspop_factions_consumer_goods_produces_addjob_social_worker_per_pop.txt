@@ -1,0 +1,14 @@
+trait_evo_empathic = {
+	icon =  "gfx/interface/icons/traits/trait_evo_empathic.dds"
+	cost = 2
+	initial = yes
+	randomized = yes
+	allowed_archetypes = { LITHOID BIOLOGICAL PRESAPIENT }
+
+	opposites = { }
+	modifier = {
+		pop_cat_worker_happiness = 0.05
+		pop_factions_consumer_goods_produces_add = 4
+		job_social_worker_per_pop = 0.05
+	}
+}

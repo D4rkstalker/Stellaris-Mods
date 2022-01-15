@@ -1,0 +1,72 @@
+trait_yanz_workaholic = {
+	icon =  "gfx/interface/icons/traits/trait_yanz_workaholic.dds"
+	cost = 5
+	initial = yes
+	randomized =  no
+	modification =  yes
+	allowed_archetypes = { LITHOID BIOLOGICAL }
+
+	opposites = { }
+	modifier = {
+		planet_jobs_produces_mult = 0.1
+	}
+}
+trait_yanz_living_metal_fluids = {
+	icon =  "gfx/interface/icons/traits/bio_path/trait_yanz_living_metal_fluids.dds"
+	cost = 5
+	initial =  no
+	randomized =  no
+	modification =  yes
+	allowed_archetypes = { LITHOID }
+	custom_tooltip =  TRAIT_YANZ_LIVING_METAL_FLUIDS
+
+	opposites = { }
+	modifier = {
+		planet_jobs_produces_mult = 0.05
+	}
+}
+trait_unfriendly_with_heat = {
+	cost = -1
+	initial = yes
+	randomized = yes
+	modification =  yes
+	allowed_archetypes = { BIOLOGICAL }
+
+	opposites = { }
+	modifier = {
+		planet_jobs_produces_mult = -0.02
+	}
+	ai_weight = {
+weight = 0
+	}
+}
+trait_sluggish = {
+	cost = -3
+	initial =  yes
+	randomized =  yes
+	allowed_archetypes = { LITHOID BIOLOGICAL }
+
+	opposites = { }
+	modifier = {
+		planet_jobs_produces_mult = -0.05
+	}
+	ai_weight = {
+weight = 0
+	}
+}
+trait_yanz_slow_metabolism = {
+	icon =  "gfx/interface/icons/traits/trait_yanz_slow_metabolism.dds"
+	cost = -6
+	initial = yes
+	randomized =  no
+	modification =  yes
+	allowed_archetypes = { LITHOID BIOLOGICAL }
+
+	opposites = { }
+	modifier = {
+		planet_jobs_produces_mult = -0.1
+	}
+	ai_weight = {
+weight = 0
+	}
+}

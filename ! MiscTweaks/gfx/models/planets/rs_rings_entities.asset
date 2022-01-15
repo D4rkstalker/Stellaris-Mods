@@ -1,8 +1,8 @@
 
 # Gas Giant Rings
 @rings_scale = 3.5
-@gas_rings_height = -22
-@rings_height = -13
+@gas_rings_height = -10
+@rings_height = -10
 
 @cull_radius_1 = 3000
 

@@ -7,13 +7,14 @@ on_game_start = { # Origin setups (global scope)
 
 on_bi_yearly_pulse = {
 	events = {
-		fleet_reinforcement.1
+		starbase_upgrade.1
 	}
 }
 
 on_five_year_pulse = {
 	events = {
 		fleet_reinforcement.10
+		fleet_reinforcement.1
 	}
 }
 

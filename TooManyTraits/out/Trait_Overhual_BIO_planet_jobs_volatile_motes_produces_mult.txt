@@ -1,0 +1,11 @@
+trait_natural_chemists = {
+	cost = 1
+	initial =  yes
+	randomized =  yes
+	allowed_archetypes = { LITHOID BIOLOGICAL }
+
+	opposites = { }
+	modifier = {
+		planet_jobs_volatile_motes_produces_mult = 0.25
+	}
+}

@@ -1,0 +1,28 @@
+trait_robot_evo_rocket_boosters = {
+	icon =  "gfx/interface/icons/traits/trait_robot_evo_rocket_boosters.dds"
+	cost = 4
+	initial =  yes
+	randomized =  yes
+	allowed_archetypes = { MACHINE ROBOT }
+
+	opposites = { }
+	modifier = {
+		pop_resettlement_cost_mult = -0.2
+		army_collateral_damage_mult = 0.2
+		ship_evasion_add = 10
+	}
+}
+trait_robot_evo_flying = {
+	icon =  "gfx/interface/icons/traits/trait_robot_evo_flying.dds"
+	cost = 2
+	initial =  yes
+	randomized =  yes
+	allowed_archetypes = { MACHINE ROBOT }
+
+	opposites = { }
+	modifier = {
+		pop_resettlement_cost_mult = -0.1
+		army_collateral_damage_mult = 0.1
+		ship_evasion_add = 5
+	}
+}

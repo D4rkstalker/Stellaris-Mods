@@ -1,0 +1,93 @@
+can_species_be_assembled = {
+	is_sapient = yes
+	NOT = { has_trait = trait_no_assemble}
+	NOR = {
+		AND = {
+			root = {
+				has_modifier = BPC_simple_yeet
+			}
+			has_trait = trait_priority_simple
+		}
+		AND = {
+			root = {
+				has_modifier = BPC_complex_yeet
+			}
+			has_trait = trait_priority_complex
+		}
+		AND = {
+			root = {
+				has_modifier = BPC_unity_yeet
+			}
+			has_trait = trait_priority_unity
+		}
+		AND = {
+			root = {
+				has_modifier = BPC_research_yeet
+			}
+			has_trait = trait_priority_research
+		}
+	}
+	OR = {
+		AND = {
+			is_robotic = yes
+			root = {
+				check_modifier_value = {
+					modifier = planet_pop_assembly_add
+					value > 0
+				}
+			}
+		}
+		AND = {
+			is_organic_species = yes
+			if = {
+				limit = {
+					root.owner = { is_hive_empire = yes }
+				}
+				AND = {
+					has_trait = trait_hive_mind
+					NOT = { has_trait = trait_hive_mind_overlord }
+				}
+			}
+			else_if = {
+				limit = { has_trait = trait_plantoid_budding }
+				root = {
+					any_owned_species = { is_exact_same_species = prevprev }
+				}
+			}
+			else_if = {
+				limit = {
+					OR = {
+						has_trait = trait_clone_soldier_infertile
+						has_trait = trait_clone_soldier_infertile_full_potential
+					}
+				}
+				root = {
+					# Event 'clones.3' should cover this, but extra safety check.
+					has_building = building_clone_army_clone_vat
+					NOT = {
+						check_variable = {
+							which = clone_pops_missing
+							value = 0
+						}
+					}
+				}
+			}
+			else = {
+				OR = {
+					root = { has_building = building_clone_vats }
+					root = { has_building = building_evolution_monastery }
+					root = { has_building = building_evolution_monastery_two }
+					root = { has_building = building_crystallization_facilities }
+				}
+			}
+		}
+	}
+	NAND = {
+		root = { owner = { has_valid_civic = civic_machine_replicators } }
+		has_trait = trait_machine_central
+	}
+	has_population_control = {
+		value = no
+		country = root.owner
+	}
+}

@@ -74,8 +74,8 @@ is_non_sapient_robot = { # The pop is a non-sapient robot
 is_robotic_species = {
 	species = {
 		OR = {
-			is_archetype = ROBOT
-			is_archetype = MACHINE
+			has_trait = trait_machine_unit
+			has_trait = trait_mechanical
 		}
 	}
 }

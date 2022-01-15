@@ -1,0 +1,14 @@
+trait_evo_obedient = {
+	icon =  "gfx/interface/icons/traits/trait_evo_obedient.dds"
+	cost = 2
+	initial = yes
+	randomized = yes
+	allowed_archetypes = { LITHOID BIOLOGICAL PRESAPIENT }
+
+	opposites = { }
+	modifier = {
+		pop_ethic_authoritarian_attraction_mult = 0.5
+		pop_government_ethic_attraction = 0.25
+		job_slave_overseer_per_pop = 0.05
+	}
+}

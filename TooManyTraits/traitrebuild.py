@@ -16,11 +16,13 @@ class Trait:
     def __eq__(self, other):
         return self.trait_name==other.trait_name
 
-    def __init__(self,trait_name,cost,initial,randomized,modification, opposites, archetypes, modifiers,icon,species_potential_add,custom_tooltip,prerequisites,leader_trait,leader_class,requires_traits,ai_weight, forced_happiness):
+    def __init__(self,trait_name,cost,initial,randomized,modification, opposites, archetypes, triggered_pop_modifier , modifiers,triggered_planet_growth_modifier,icon,species_potential_add,custom_tooltip,custom_tooltip_with_modifiers,prerequisites,leader_trait,leader_class,requires_traits,ai_weight, forced_happiness):
         self.trait_name = trait_name
         self.cost = cost
         self.opposites = opposites
         self.archetypes = archetypes
+        self.triggered_pop_modifier = triggered_pop_modifier
+        self.triggered_planet_growth_modifier = triggered_planet_growth_modifier
         self.modifiers = modifiers
         self.modifierCount = len(modifiers)
         self.initial = initial
@@ -29,6 +31,7 @@ class Trait:
         self.icon = icon
         self.potential = species_potential_add
         self.custom_tooltip = custom_tooltip
+        self.custom_tooltip_with_modifiers = custom_tooltip_with_modifiers
         self.prerequisites = prerequisites
         self.leader_trait = leader_trait
         self.leader_class = leader_class
@@ -53,6 +56,8 @@ class Trait:
         template +="\tallowed_archetypes = { """+ " ".join(self.archetypes)+" }\n"
         if len(self.custom_tooltip) > 0:
             template += "\tcustom_tooltip = " + self.custom_tooltip + "\n"
+        if len(self.custom_tooltip_with_modifiers) > 0:
+            template += "\tcustom_tooltip_with_modifiers = " + self.custom_tooltip_with_modifiers + "\n"
         # if len(self.potential) > 0:
         #     template += "\tspecies_potential_add = {\n" 
         #     template +='\n'.join(self.potential)
@@ -64,10 +69,23 @@ class Trait:
             template += "\n\tleader_class = { " + " ".join(self.leader_class) +"}\n"
         if len(self.requires_traits) > 0:
             template += "\n\trequires_traits = { " + " ".join(self.requires_traits) +"}\n"
+
         template += "\tmodifier = {\n"
         for key in self.modifiers:
             template += "\t\t" + key + " = " + self.modifiers[key] + "\n"
-        template += "\t}\n"     
+        template += "\t}\n" 
+        if len(self.triggered_pop_modifier) > 0:
+            template += "\ttriggered_pop_modifier = {\n"
+            for key in self.triggered_pop_modifier:
+                template += "\t\t" + key + " = " + self.triggered_pop_modifier[key] + "\n"
+            template += "\t}\n" 
+
+        if len(self.triggered_planet_growth_modifier) > 0:
+            template += "\ttriggered_planet_growth_modifier = {\n"
+            for key in self.triggered_planet_growth_modifier:
+                template += "\t\t" + key + " = " + self.triggered_planet_growth_modifier[key] + "\n"
+            template += "\t}\n" 
+
         if self.cost < 1:
             template +="\tai_weight = {\nweight = 0\n\t}\n"
         # if len(self.ai_weight) > 0:
@@ -95,21 +113,24 @@ def get_traits(files):
         
         for trait in traits:
             #print("\n----------")
+            # print(file)
+            
             #print(trait)
             trait = re.sub('{','{\n',trait)
             trait = re.sub('}','\n}',trait)
 
-            currentTrait = Trait("trait_name",0,"yes","yes",[], [], [], {},"",[],"",[],"",[],[],[],"")
+            currentTrait = Trait("trait_name",0,"yes","yes",[], [], [],{}, {},{},"",[],"","",[],"",[],[],[],"")
             lines = str(trait).split("\n")
             layer = 0
-            matched = {"species_potential_add" : False, "modifier" : False, "ai_weight" : False, "prerequisites" : False, "allowed_archetypes" : False, "leader_class" : False, "requires_traits": False}
+            matched = {"species_potential_add" : False,"triggered_pop_modifier" : False,"triggered_planet_growth_modifier" : False, "modifier" : False, "ai_weight" : False, "prerequisites" : False, "allowed_archetypes" : False, "leader_class" : False, "requires_traits": False}
             currentTrait.trait_name = (lines[0].split("=")[0]).replace("JMTCOMPAT", "just-more-traits")
-            #print(currentTrait.trait_name)
+            
+            # print(currentTrait.trait_name)
             # print("\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n")
             for i in range(len(lines)):
+                    
                 #try:
                     line = lines[i]
-                    
                     
                     if "#" in line:
                         line = line.split("#")[0]
@@ -127,6 +148,8 @@ def get_traits(files):
                         if layer == 1:
                             if len(re.findall(r"\bcost\b",line)) >0:
                                 currentTrait.cost = int(line.split("=")[-1])
+                            if len(re.findall(r"\btriggered_pop_modifier\b",line)) >0:
+                                currentTrait.triggered_pop_modifier = line.split("=")[-1]
                             if len(re.findall(r"\bmodification\b",line)) >0:
                                 currentTrait.modification = line.split("=")[-1]
                             if len(re.findall(r"\binitial\b",line)) >0:
@@ -147,7 +170,7 @@ def get_traits(files):
                             currentTrait.requires_traits = [string for string in temp.split(" ") if string != ""]
 
                         elif layer > 1:
-                            
+                            # print(line)
                             if matched["species_potential_add"]:
                                 currentTrait.potential.append(line)
                             if matched["prerequisites"]:
@@ -158,9 +181,26 @@ def get_traits(files):
                                 currentTrait.ai_weight.append(line)
                             if matched["leader_class"]:
                                 currentTrait.leader_class.append(line)
+                            if matched["triggered_pop_modifier"]:
+                                matched["modifier"] = False
+                                # print(trait)
+                                # print(line)
+                                
+                                if line.strip() == "}":
+                                    currentTrait.triggered_pop_modifier["}"] = ""
+                                else:
+                                    line = line.strip().split("=")
+                                    currentTrait.triggered_pop_modifier[line[0].strip()] = line[1].strip()
+                            if matched["triggered_planet_growth_modifier"]:
+                                matched["modifier"] = False
+                                if line.strip() == "}":
+                                    currentTrait.triggered_planet_growth_modifier["}"] = ""
+                                else:
+                                    line = line.strip().split("=")
+                                    currentTrait.triggered_planet_growth_modifier[line[0].strip()] = line[1].strip()
                             if matched["modifier"]:
-                                #print(trait)
-                                #print(line)
+                                # print(trait)
+                                
                                 line = line.strip().split("=")
                                 currentTrait.modifiers[line[0].strip()] = line[1].strip()
                         if  layer == 2:
@@ -177,12 +217,13 @@ def get_traits(files):
                 #     print("~~~~~")
                 #     print(file)
                 #     print("~~~~~")
-                #     print(trait)
-                #     print("~~~~~")
+                #     # print(trait)
+                #     # print("~~~~~")
                 #     print(lines[i])
                 #     print("~~~~~")
                 #     print("trait Errored:" + str(e))
                 #     print("----------\n")
+                #    break
             #print(currentTrait.modifiers.keys())
             #print(currentTrait.archetypes)
 

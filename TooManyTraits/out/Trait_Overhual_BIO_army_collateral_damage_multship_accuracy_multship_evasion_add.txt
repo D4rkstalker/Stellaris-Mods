@@ -1,0 +1,30 @@
+trait_evo_flying = {
+	icon =  "gfx/interface/icons/traits/trait_evo_flying.dds"
+	cost = 2
+	initial = yes
+	randomized =  no
+	modification =  no
+	allowed_archetypes = { LITHOID BIOLOGICAL }
+
+	opposites = { }
+	modifier = {
+		army_collateral_damage_mult = 0.2
+		ship_accuracy_mult = 0.2
+		ship_evasion_add = 10
+	}
+}
+trait_evo_gliding = {
+	icon =  "gfx/interface/icons/traits/trait_evo_gliding.dds"
+	cost = 1
+	initial = yes
+	randomized =  no
+	modification =  no
+	allowed_archetypes = { LITHOID BIOLOGICAL }
+
+	opposites = { }
+	modifier = {
+		army_collateral_damage_mult = 0.1
+		ship_accuracy_mult = 0.1
+		ship_evasion_add = 5
+	}
+}

@@ -1,0 +1,15 @@
+trait_evo_subterranean = {
+	icon =  "gfx/interface/icons/traits/trait_evo_subterranean.dds"
+	cost = 1
+	initial = yes
+	randomized = yes
+	modification =  no
+	allowed_archetypes = { LITHOID BIOLOGICAL PRESAPIENT }
+
+	opposites = { }
+	modifier = {
+		planet_orbital_bombardment_damage = -0.1
+		planet_structures_cost_mult = -0.1
+		job_miner_per_pop = 0.05
+	}
+}

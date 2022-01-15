@@ -1,0 +1,13 @@
+trait_robot_evo_terraformers = {
+	icon =  "gfx/interface/icons/traits/trait_robot_evo_terraformers.dds"
+	cost = 2
+	initial =  yes
+	randomized =  yes
+	allowed_archetypes = { MACHINE ROBOT }
+
+	opposites = { }
+	modifier = {
+		terraform_speed_mult = 0.2
+		terraforming_cost_mult = -0.2
+	}
+}

@@ -1,0 +1,18 @@
+trait_evo_carnivore = {
+	icon =  "gfx/interface/icons/traits/trait_evo_carnivore.dds"
+	cost = 0
+	initial = yes
+	randomized = yes
+	modification =  no
+	allowed_archetypes = { BIOLOGICAL PRESAPIENT }
+
+	opposites = { }
+	modifier = {
+		planet_pops_organics_food_upkeep_mult = -0.1
+		planet_jobs_food_produces_mult = -0.1
+		army_damage_mult = 0.25
+	}
+	ai_weight = {
+weight = 0
+	}
+}

@@ -1,0 +1,68 @@
+trait_yanz_universal_adaptability = {
+	icon =  "gfx/interface/icons/traits/bio_path/trait_yanz_universal_adaptability.dds"
+	cost = 6
+	initial =  no
+	randomized =  no
+	modification =  yes
+	allowed_archetypes = { LITHOID BIOLOGICAL }
+
+	opposites = { }
+	modifier = {
+		leader_age = 10
+		pop_environment_tolerance = 0.40
+	}
+}
+trait_evo_self_regenerative = {
+	icon =  "gfx/interface/icons/traits/trait_evo_self_regenerative.dds"
+	cost = 5
+	initial = yes
+	randomized =  no
+	allowed_archetypes = { LITHOID BIOLOGICAL PRESAPIENT }
+
+	opposites = { }
+	modifier = {
+		leader_age = 30
+		pop_environment_tolerance = 0.15
+	}
+}
+trait_additrait_immune = {
+	cost = 3
+	initial = yes
+	randomized = yes
+	allowed_archetypes = { BIOLOGICAL }
+
+	opposites = { }
+	modifier = {
+		leader_age = 40
+		pop_environment_tolerance = 0.10
+	}
+}
+trait_cold_blooded = {
+	cost = 2
+	initial = yes
+	randomized = yes
+	modification =  no
+	allowed_archetypes = { BIOLOGICAL }
+
+	opposites = { }
+	modifier = {
+		leader_age = 50
+		pop_environment_tolerance = -0.15
+	}
+}
+trait_cyberman = {
+	cost = 0
+	initial =  no
+	randomized =  no
+	modification =  no
+	allowed_archetypes = { BIOLOGICAL }
+
+	opposites = { }
+	modifier = {
+		leader_age = 40
+		pop_environment_tolerance = 0.2
+	}
+	ai_weight = {
+weight = 0
+	}
+}

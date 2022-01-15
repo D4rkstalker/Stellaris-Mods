@@ -25,8 +25,28 @@ NAI = {
 
 NCamera = {
 	GALAXY_SHOW_FLEETS_ZOOM = 1000
-}
+	SYSTEM_MIN_PITCH				= -89		# 10	# 20.0	# in degrees
+	SYSTEM_MAX_PITCH				= 89	# 80.0	# in degrees
+	GALAXY_MIN_PITCH				= 20	# 30.0	# in degrees
+	GALAXY_MAX_PITCH				= 89	# 85.0	# in degrees
+	FOCUSED_MIN_PITCH				= -89	# -80.0	# in degrees used when focused on planet/ship
+	FOCUSED_MAX_PITCH				= 89	# 80.0	# in degrees used when focused on planet/ship
+	ZOOM_STEPS_SYSTEM_PERCENTAGES	= {  0.001	0.002	0.004	0.0072	0.0146	0.0334	0.0833	0.2234	0.6398	1.9405 }	# System zoom steps in percent relative to the system size
+	FOCUSED_MIN_ZOOM_BASE			= 2.0	# 20.0	# base min zoom. The smaller the value is, the closer of the ENTITY the camera is at minimal zoom
+	FOCUSED_MIN_ZOOM_MULT			= 0.3	# 0.5	# The smaller the value is, the closer of the SHIP the camera is at minimal zoom # Minimal zoom = Base + Entity radius * FOCUSED_MIN_ZOOM_MULT
+	FOCUSED_PLANET_MIN_ZOOM_MULT	= 0.5	# 1.6	# The smaller the value is, the closer of the PLANET the camera is at minimal zoom
+	FOCUS_START_ZOOM_STEP			= 6 	# 4		# which zoom step will be used when focusing on a new object
 
+}
+NGraphics = {
+	DEFAULT_PLANET_PLANE			= -33
+	ASTEROID_PLANE					= -33 # -100.0
+	SHIP_RANDOM_HEIGHT_OFFSET		= 5.0		# 15.0
+}
+NShip = { 
+	FLEET_BASE_FORMATION_SCALE			= 0.01	# 2.0
+	FLEET_BASE_FORMATION_DIV = 10
+}
 NPop = {
 	REQUIRED_POP_GROWTH_SCALE = 0.1
 	REQUIRED_POP_ASSEMBLY_SCALE = 0.1

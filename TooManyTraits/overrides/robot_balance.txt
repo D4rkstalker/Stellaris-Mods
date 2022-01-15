@@ -3,7 +3,7 @@ trait_just-more-traits_robot_subspaceomnibus = {
 	opposites = { "trait_robot_efficient_processors" }
 	allowed_archetypes = { ROBOT MACHINE }
 	modifier = {
-		planet_jobs_produces_mult = 0.5
+		planet_jobs_produces_mult = 0.06
 	}
 }
 trait_robot_efficient_processors = {
@@ -12,7 +12,7 @@ trait_robot_efficient_processors = {
 	allowed_archetypes = { ROBOT MACHINE }
 
 	modifier = {
-		planet_jobs_produces_mult = 0.1
+		planet_jobs_produces_mult = 0.12
 	}
 }
 trait_td_rbot_heavy_bombers = {
@@ -544,5 +544,20 @@ trait_additrait_customized_servitors = {
 		pop_cat_robot_servant_happiness = 0.5
 		planet_jobs_produces_mult = 0.15
 
+	}
+}
+trait_robot_evo_efficient_protocols = {
+	cost = 4
+	icon = "gfx/interface/icons/traits/trait_robot_evo_efficient_protocols.dds"
+	opposites = { trait_robot_evo_outdated_protocols }
+
+	initial = yes
+	randomized = yes
+
+	allowed_archetypes = { ROBOT MACHINE }
+
+	modifier = {
+		planet_jobs_produces_mult = 0.25
+		country_admin_cap_add = 25
 	}
 }

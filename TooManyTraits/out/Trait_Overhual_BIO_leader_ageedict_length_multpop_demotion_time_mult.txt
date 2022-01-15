@@ -1,0 +1,31 @@
+trait_evo_patient = {
+	icon =  "gfx/interface/icons/traits/trait_evo_patient.dds"
+	cost = 1
+	initial = yes
+	randomized = yes
+	allowed_archetypes = { LITHOID BIOLOGICAL PRESAPIENT }
+
+	opposites = { }
+	modifier = {
+		leader_age = 10
+		edict_length_mult = 0.15
+		pop_demotion_time_mult = 0.05
+	}
+}
+trait_evo_impatient = {
+	icon =  "gfx/interface/icons/traits/trait_evo_impatient.dds"
+	cost = -1
+	initial = yes
+	randomized = yes
+	allowed_archetypes = { LITHOID BIOLOGICAL PRESAPIENT }
+
+	opposites = { }
+	modifier = {
+		leader_age = -10
+		edict_length_mult = -0.15
+		pop_demotion_time_mult = -0.05
+	}
+	ai_weight = {
+weight = 0
+	}
+}

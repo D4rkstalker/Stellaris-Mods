@@ -33,3 +33,13 @@ LITHOID = {
 OTHER = {
 	uses_modifiers = no
 }
+SYNTHETIC = {
+	species_trait_points = 15
+	species_max_traits = 10
+	robotic = yes
+}
+ADVANCED_MACHINE = {
+	species_trait_points = 15
+	species_max_traits = 10
+	robotic = yes
+}

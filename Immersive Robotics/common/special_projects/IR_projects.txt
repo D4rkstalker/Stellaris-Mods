@@ -21,8 +21,8 @@ special_project = {
 
 	on_success = {
 		# use event target so a capital-conquering country is not affected
-		event_target:flesh_weak_owner = {
-			country_event = { id = immersive_robotics.100 }
+		event_target:robot_upgrade_owner = {
+			country_event = { id = immersive_robotics.101 }
 		}
 	}
 
@@ -52,8 +52,8 @@ special_project = {
 
 	on_success = {
 		# use event target so a capital-conquering country is not affected
-		event_target:flesh_weak_owner = {
-			country_event = { id = immersive_robotics.200 }
+		event_target:machine_upgrade_owner = {
+			country_event = { id = immersive_robotics.201 }
 		}
 	}
 

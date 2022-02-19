@@ -86,8 +86,4 @@ can_species_be_assembled = {
 		root = { owner = { has_valid_civic = civic_machine_replicators } }
 		has_trait = trait_machine_central
 	}
-	has_population_control = {
-		value = no
-		country = root.owner
-	}
 }

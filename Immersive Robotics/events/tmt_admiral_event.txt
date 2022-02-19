@@ -5,9 +5,6 @@ event = {
     is_triggered_only = yes
     immediate = {
         every_country = {
-			limit = {
-				has_technology = tech_trait_tech_1
-			}
         
             every_owned_leader = {
                 limit = {

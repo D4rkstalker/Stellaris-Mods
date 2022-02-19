@@ -17,6 +17,7 @@ country_event = {
 
 	option = {
 		name = "immersive_robotics.100.a"
+		hidden_effect = { save_event_target_as = robot_upgrade_owner }
 		capital_scope = {
 			enable_special_project = {
 				name = "IR_SYNTHETIC_UPGRADE"
@@ -43,10 +44,8 @@ country_event = {
 			namelist = this
 			plural = this
 			class = "SYNTHETIC"
-			portrait = "default_robot"
-			traits = {
-				trait = "trait_mechanical"
-			}
+			portrait = this
+			traits = this
 		}
 		every_owned_pop = {
 			limit = {
@@ -76,6 +75,7 @@ country_event = {
 
 	option = {
 		name = "immersive_robotics.200.a"
+		hidden_effect = { save_event_target_as = machine_upgrade_owner }
 		capital_scope = {
 			enable_special_project = {
 				name = "IR_MACHINE_UPGRADE"
@@ -102,10 +102,8 @@ country_event = {
 			namelist = this
 			plural = this
 			class = "ADVANCED_MACHINE"
-			portrait = "default_robot"
-			traits = {
-				trait = "trait_machine_unit"
-			}
+			portrait = this
+			traits = this
 		}
 		every_owned_pop = {
 			limit = {
@@ -136,7 +134,7 @@ event = {
 	immediate = {
 		every_playable_country = {
 			limit = {
-				has_country_flag = synthetic_empire
+				has_technology = tech_robotic_workers
 			}
 			country_event = { id = immersive_robotics.11 } 
 		}

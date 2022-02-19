@@ -74,7 +74,7 @@ machine_reprogramming_center = {
 
 	potential = {
 		exists = owner
-		owner = { has_country_flag = synthetic_empire }
+		owner = { has_technology = tech_robotic_workers }
 	}
 
 	triggered_planet_modifier = {

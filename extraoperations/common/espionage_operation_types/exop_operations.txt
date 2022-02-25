@@ -218,10 +218,14 @@ operation_psionic_dissonance = {
 
 }
 
-operation_fleet_hijacking = {
+operation_fleet_sabotage = {
 
 }
 
 operation_machine_uprising = {
+
+}
+
+operation_assasinate = {
 
 }

@@ -168,8 +168,6 @@ PRE_FUN = {
 	playable = { always = no }
 	randomized = no
 
-	gender = no
-
 	portraits = {
 		"pre_fun9"
 		"pre_fun13"
@@ -240,7 +238,6 @@ ROBOT = {
 
 	playable = { has_global_flag = game_started }
 	randomized = no
-	robotic = yes
 	gender = no
 	use_climate_preference = no
 	portrait_modding = yes
@@ -264,7 +261,7 @@ ROBOT = {
 	}
 
 
-	graphical_culture = machine_01
+	graphical_culture = ai_01
 	move_pop_sound_effect = "robot_pops_move"
 
 	resources = {}
@@ -283,7 +280,6 @@ MACHINE = {
 	possible = { authority = { OR = { value = auth_machine_intelligence text = SPECIES_CLASS_MUST_USE_MACHINE_INTELLIGENCE } } }
 	possible_secondary = { always = no text = SECONDARY_SPECIES_CLASS_INVALID }
 
-	robotic = yes
 	gender = no
 	use_climate_preference = no
 	portrait_modding = yes
@@ -313,7 +309,7 @@ MACHINE = {
 	}
 
 
-	graphical_culture = machine_01
+	graphical_culture = mammalian_01
 	move_pop_sound_effect = "robot_pops_move"
 
 	resources = {}

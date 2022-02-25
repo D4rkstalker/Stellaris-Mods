@@ -1,0 +1,555 @@
+namespace = exop_operations
+
+#Synth Hacking - Intercepting OS Updates
+
+exop_operations.10 = { 
+
+    id = exop_operations.0
+    title = exop_operations.0.name
+    espionage_operation = yes
+	
+    picture = {
+        trigger = {
+            OR = {
+                has_espionage_operation_flag = steal_tech_conference
+                has_espionage_operation_flag = steal_tech_lecture
+                has_espionage_operation_flag = steal_tech_outreach
+            }
+        }
+        picture = GFX_evt_voting
+    }
+
+    show_sound = event_default
+    is_triggered_only = yes
+
+	immediate = {
+		random_list = {
+			#Success 
+			10 = {
+				modifier = {
+					factor = 2
+					from.target = {
+						relative_encryption_decryption = {
+							target = from
+							value <= 0.5 #at > 1.0 the target is superior
+						}
+					}
+				}
+				set_espionage_operation_flag = success
+			}
+			
+			# Success, alerted
+			10 = {
+                    modifier = {
+                        factor = 2
+                        from.target = {
+                            relative_encryption_decryption = {
+                                target = from
+                                value <= 0.8 #at > 1.0 the target is superior
+                            }
+                        }
+                    }
+				set_espionage_operation_flag = success_alerted
+			}
+			
+			#Failed, Alerted 
+			1 = {
+				modifier = {
+					factor = 2
+					from.target = {
+						relative_encryption_decryption = {
+							target = from
+							value >= 1.5 #at > 1.0 the target is superior
+						}
+					}
+				}
+				set_espionage_operation_flag = failed_alerted
+			}
+			
+			#Failed, silent
+			2 = {
+				modifier = {
+					factor = 2
+					from.target = {
+						relative_encryption_decryption = {
+							target = from
+							value >= 1 #at > 1.0 the target is superior
+						}
+					}
+				}
+				set_espionage_operation_flag = failed_silent
+			}
+		}
+	}
+	
+	option = {
+		name = exop_proceed
+	}
+	option = {
+		name = exop_cancel
+		hidden_effect = {
+			destroy_espionage_operation = this
+		}
+	}
+}
+
+#Synth Hacking - Reverse Engineering
+
+exop_operations.20 = { 
+    id = exop_operations.0
+    title = exop_operations.0.name
+    espionage_operation = yes
+	
+    picture = {
+        trigger = {
+            OR = {
+                has_espionage_operation_flag = steal_tech_conference
+                has_espionage_operation_flag = steal_tech_lecture
+                has_espionage_operation_flag = steal_tech_outreach
+            }
+        }
+        picture = GFX_evt_voting
+    }
+
+    show_sound = event_default
+    is_triggered_only = yes
+
+	immediate = {
+		random_list = {
+			#Success 
+			10 = {
+				modifier = {
+					factor = 2
+					from.target = {
+						relative_encryption_decryption = {
+							target = from
+							value <= 0.5 #at > 1.0 the target is superior
+						}
+					}
+				}
+				set_espionage_operation_flag = success
+			}
+			
+			# Success, alerted
+			10 = {
+                    modifier = {
+                        factor = 2
+                        from.target = {
+                            relative_encryption_decryption = {
+                                target = from
+                                value <= 0.8 #at > 1.0 the target is superior
+                            }
+                        }
+                    }
+				set_espionage_operation_flag = success_alerted
+			}
+			
+			#Failed, Alerted 
+			1 = {
+				modifier = {
+					factor = 2
+					from.target = {
+						relative_encryption_decryption = {
+							target = from
+							value >= 1.5 #at > 1.0 the target is superior
+						}
+					}
+				}
+				set_espionage_operation_flag = failed_alerted
+			}
+			
+			#Failed, silent
+			2 = {
+				modifier = {
+					factor = 2
+					from.target = {
+						relative_encryption_decryption = {
+							target = from
+							value >= 1 #at > 1.0 the target is superior
+						}
+					}
+				}
+				set_espionage_operation_flag = failed_silent
+			}
+		}
+	}
+	
+	option = {
+		name = exop_proceed
+	}
+	option = {
+		name = exop_cancel
+		hidden_effect = {
+			destroy_espionage_operation = this
+		}
+	}
+
+}
+#Synth Hacking - Setup Proxy Server
+
+exop_operations.30 = { 
+    id = exop_operations.0
+    title = exop_operations.0.name
+    espionage_operation = yes
+	
+    picture = {
+        trigger = {
+            OR = {
+                has_espionage_operation_flag = steal_tech_conference
+                has_espionage_operation_flag = steal_tech_lecture
+                has_espionage_operation_flag = steal_tech_outreach
+            }
+        }
+        picture = GFX_evt_voting
+    }
+
+    show_sound = event_default
+    is_triggered_only = yes
+
+	immediate = {
+		random_list = {
+			#Success 
+			10 = {
+				modifier = {
+					factor = 2
+					from.target = {
+						relative_encryption_decryption = {
+							target = from
+							value <= 0.5 #at > 1.0 the target is superior
+						}
+					}
+				}
+				set_espionage_operation_flag = success
+			}
+			
+			# Success, alerted
+			10 = {
+                    modifier = {
+                        factor = 2
+                        from.target = {
+                            relative_encryption_decryption = {
+                                target = from
+                                value <= 0.8 #at > 1.0 the target is superior
+                            }
+                        }
+                    }
+				set_espionage_operation_flag = success_alerted
+			}
+			
+			#Failed, Alerted 
+			1 = {
+				modifier = {
+					factor = 3
+					from.target = {
+						relative_encryption_decryption = {
+							target = from
+							value >= 1.5 #at > 1.0 the target is superior
+						}
+					}
+				}
+				set_espionage_operation_flag = failed_alerted
+			}
+			
+			#Failed, silent
+			2 = {
+				modifier = {
+					factor = 3
+					from.target = {
+						relative_encryption_decryption = {
+							target = from
+							value >= 1 #at > 1.0 the target is superior
+						}
+					}
+				}
+				set_espionage_operation_flag = failed_silent
+			}
+		}
+	}
+	
+	option = {
+		name = exop_proceed
+	}
+	option = {
+		name = exop_cancel
+		hidden_effect = {
+			destroy_espionage_operation = this
+		}
+	}
+
+}
+#Synth Hacking - Embed virus
+
+exop_operations.40 = { 
+    id = exop_operations.0
+    title = exop_operations.0.name
+    espionage_operation = yes
+	
+    picture = {
+        trigger = {
+            OR = {
+                has_espionage_operation_flag = steal_tech_conference
+                has_espionage_operation_flag = steal_tech_lecture
+                has_espionage_operation_flag = steal_tech_outreach
+            }
+        }
+        picture = GFX_evt_voting
+    }
+
+    show_sound = event_default
+    is_triggered_only = yes
+
+	immediate = {
+		random_list = {
+			#Success 
+			10 = {
+				modifier = {
+					factor = 2
+					from.target = {
+						relative_encryption_decryption = {
+							target = from
+							value <= 0.5 #at > 1.0 the target is superior
+						}
+					}
+				}
+				set_espionage_operation_flag = success
+			}
+			
+			# Success, alerted
+			10 = {
+                    modifier = {
+                        factor = 2
+                        from.target = {
+                            relative_encryption_decryption = {
+                                target = from
+                                value <= 0.8 #at > 1.0 the target is superior
+                            }
+                        }
+                    }
+				set_espionage_operation_flag = success_alerted
+			}
+			
+			#Failed, Alerted 
+			1 = {
+				modifier = {
+					factor = 3
+					from.target = {
+						relative_encryption_decryption = {
+							target = from
+							value >= 1.5 #at > 1.0 the target is superior
+						}
+					}
+				}
+				set_espionage_operation_flag = failed_alerted
+			}
+			
+			#Failed, silent
+			2 = {
+				modifier = {
+					factor = 3
+					from.target = {
+						relative_encryption_decryption = {
+							target = from
+							value >= 1 #at > 1.0 the target is superior
+						}
+					}
+				}
+				set_espionage_operation_flag = failed_silent
+			}
+		}
+	}
+	
+	option = {
+		name = exop_proceed
+	}
+	option = {
+		name = exop_cancel
+		hidden_effect = {
+			destroy_espionage_operation = this
+		}
+	}
+
+}
+#Synth Hacking - Trigger virus
+
+exop_operations.50 = { 
+    id = exop_operations.0
+    title = exop_operations.0.name
+    espionage_operation = yes
+	
+    picture = {
+        trigger = {
+            OR = {
+                has_espionage_operation_flag = steal_tech_conference
+                has_espionage_operation_flag = steal_tech_lecture
+                has_espionage_operation_flag = steal_tech_outreach
+            }
+        }
+        picture = GFX_evt_voting
+    }
+
+    show_sound = event_default
+    is_triggered_only = yes
+
+	immediate = {
+		random_list = {
+			#Success 
+			10 = {
+				modifier = {
+					factor = 2
+					from.target = {
+						relative_encryption_decryption = {
+							target = from
+							value <= 0.5 #at > 1.0 the target is superior
+						}
+					}
+				}
+				set_espionage_operation_flag = success
+			}
+			
+			# Success, alerted
+			10 = {
+                    modifier = {
+                        factor = 2
+                        from.target = {
+                            relative_encryption_decryption = {
+                                target = from
+                                value <= 0.8 #at > 1.0 the target is superior
+                            }
+                        }
+                    }
+				set_espionage_operation_flag = success_alerted
+			}
+			
+			#Failed, Alerted 
+			1 = {
+				modifier = {
+					factor = 4
+					from.target = {
+						relative_encryption_decryption = {
+							target = from
+							value >= 1.5 #at > 1.0 the target is superior
+						}
+					}
+				}
+				set_espionage_operation_flag = failed_alerted
+			}
+			
+			#Failed, silent
+			2 = {
+				modifier = {
+					factor = 4
+					from.target = {
+						relative_encryption_decryption = {
+							target = from
+							value >= 1 #at > 1.0 the target is superior
+						}
+					}
+				}
+				set_espionage_operation_flag = failed_silent
+			}
+		}
+	}
+	
+	option = {
+		name = exop_proceed
+	}
+	option = {
+		name = exop_cancel
+		hidden_effect = {
+			destroy_espionage_operation = this
+		}
+	}
+
+}
+#Synth Hacking - Results
+
+exop_operations.59 = { 
+    id = exop_operations.0
+    title = exop_operations.0.name
+    espionage_operation = yes
+	
+    picture = {
+        trigger = {
+            OR = {
+                has_espionage_operation_flag = steal_tech_conference
+                has_espionage_operation_flag = steal_tech_lecture
+                has_espionage_operation_flag = steal_tech_outreach
+            }
+        }
+        picture = GFX_evt_voting
+    }
+
+    show_sound = event_default
+    is_triggered_only = yes
+
+	immediate = {
+		random_list = {
+			#Success 
+			10 = {
+				modifier = {
+					factor = 2
+					from.target = {
+						relative_encryption_decryption = {
+							target = from
+							value <= 0.5 #at > 1.0 the target is superior
+						}
+					}
+				}
+				set_espionage_operation_flag = success
+			}
+			
+			# Success, alerted
+			10 = {
+                    modifier = {
+                        factor = 2
+                        from.target = {
+                            relative_encryption_decryption = {
+                                target = from
+                                value <= 0.8 #at > 1.0 the target is superior
+                            }
+                        }
+                    }
+				set_espionage_operation_flag = success_alerted
+			}
+			
+			#Failed, Alerted 
+			1 = {
+				modifier = {
+					factor = 4
+					from.target = {
+						relative_encryption_decryption = {
+							target = from
+							value >= 1.5 #at > 1.0 the target is superior
+						}
+					}
+				}
+				set_espionage_operation_flag = failed_alerted
+			}
+			
+			#Failed, silent
+			2 = {
+				modifier = {
+					factor = 4
+					from.target = {
+						relative_encryption_decryption = {
+							target = from
+							value >= 1 #at > 1.0 the target is superior
+						}
+					}
+				}
+				set_espionage_operation_flag = failed_silent
+			}
+		}
+	}
+	
+	option = {
+		name = exop_proceed
+	}
+	option = {
+		name = exop_cancel
+		hidden_effect = {
+			destroy_espionage_operation = this
+		}
+	}
+
+}

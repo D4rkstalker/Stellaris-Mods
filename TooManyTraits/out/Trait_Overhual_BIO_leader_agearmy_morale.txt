@@ -9,6 +9,14 @@ trait_additrait_steadfast = {
 		leader_age = 5
 		army_morale = 0.5
 	}
+		assembly_score = {
+		modifier = {
+			add = 0.5
+			from = {
+				has_fortress_designation = yes
+}
+}
+	}
 }
 trait_additrait_soft = {
 	cost = -1

@@ -10,19 +10,6 @@ trait_just-more-traits_migratory = {
 		pop_resettlement_cost_mult = -0.5
 	}
 }
-trait_nomadic_biorobot = {
-	icon =  gfx/interface/icons/traits/trait_nomadic.dds
-	cost = 1
-	initial =  no
-	randomized =  no
-	allowed_archetypes = {  }
-
-	opposites = { }
-	modifier = {
-		pop_growth_from_immigration = 0.15
-		pop_resettlement_cost_mult = -0.25
-	}
-}
 trait_nomadic = {
 	cost = 1
 	initial = yes

@@ -7,6 +7,19 @@ trait_robot_power_drills = {
 	modifier = {
 		planet_jobs_minerals_produces_mult = 0.15
 	}
+	slave_cost = {
+		energy = 750
+	}
+	assembly_score = {
+		modifier = {
+			add = 1.5
+			from = { has_mining_designation = yes }
+		}
+		modifier = {
+			add = 0.5
+			from = { has_rural_designation = yes }
+		}
+	}
 }
 
 trait_robot_harvesters = {
@@ -16,6 +29,19 @@ trait_robot_harvesters = {
 
 	modifier = {
 		planet_jobs_food_produces_mult = 0.15
+	}
+	slave_cost = {
+		energy = 750
+	}
+	assembly_score = {
+		modifier = {
+			add = 1.5
+			from = { has_farming_designation = yes }
+		}
+		modifier = {
+			add = 0.5
+			from = { has_rural_designation = yes }
+		}
 	}
 }
 
@@ -27,6 +53,19 @@ trait_robot_superconductive = {
 	modifier = {
 		planet_jobs_energy_produces_mult = 0.15
 	}
+	slave_cost = {
+		energy = 750
+	}
+	assembly_score = {
+		modifier = {
+			add = 1.5
+			from = { has_generator_designation = yes }
+		}
+		modifier = {
+			add = 0.5
+			from = { has_rural_designation = yes }
+		}
+	}
 }
 
 trait_robot_efficient_processors = {
@@ -37,6 +76,15 @@ trait_robot_efficient_processors = {
 	modifier = {
 		planet_jobs_produces_mult = 0.05
 	}
+	
+	slave_cost = {
+		energy = 500
+	}
+	assembly_score = {
+		modifier = {
+			add = 0.5 #always good
+		}
+	}
 }
 
 trait_robot_logic_engines = {
@@ -44,24 +92,31 @@ trait_robot_logic_engines = {
 
 	allowed_archetypes = { ROBOT MACHINE }
 
-	# Synth and Machine only
+	# Droids and Machines
 	species_potential_add = {
 		exists = from
 		from = {
 			OR = {
 				has_authority = auth_machine_intelligence
-				has_technology = tech_synthetic_workers
+				has_technology = tech_droid_workers
 			}			
 			NOT = { has_policy_flag = ai_outlawed }
 		}
 	}
-	
 	opposites = { trait_additrait_multithreading trait_additrait_slow_processors trait_additrait_erratic_processors }
-
 	modifier = {
 		planet_jobs_engineering_research_produces_mult = 0.10
 		planet_jobs_physics_research_produces_mult = 0.10
 		planet_jobs_society_research_produces_mult = 0.10
+	}
+	slave_cost = {
+		energy = 750
+	}
+	assembly_score = {
+		modifier = {
+			add = 1.5
+			from = { has_research_designation = yes }
+		}
 	}
 }
 
@@ -78,9 +133,11 @@ trait_robot_loyalty_circuits = {
 			NOT = { has_policy_flag = ai_outlawed }
 		}
 	}
-
 	modifier = {
 		pop_happiness = 0.1
+	}
+	slave_cost = {
+		energy = 500
 	}
 }
 
@@ -93,7 +150,7 @@ trait_robot_domestic_protocols = {
 
 	allowed_archetypes = { ROBOT }
 	
-	# Synth and Droid only
+	# Synth or Droid only
 	species_potential_add = {
 		exists = from
 		from = {
@@ -101,8 +158,14 @@ trait_robot_domestic_protocols = {
 			NOT = { has_policy_flag = ai_outlawed }
 		}
 	}
+	modifier = {
+		pop_job_amenities_mult = 0.20
+	}
+	slave_cost = {
+		energy = 750
+	}
 	
-	custom_tooltip = TRAIT_DOMESTIC_PROTOCOLS_EFFECT
+	custom_tooltip_with_modifiers = TRAIT_DOMESTIC_PROTOCOLS_EFFECT
 }
 
 trait_robot_double_jointed = {
@@ -113,6 +176,9 @@ trait_robot_double_jointed = {
 
 	modifier = {
 		pop_housing_usage_mult = -0.1
+	}
+	slave_cost = {
+		energy = 750
 	}
 }
 
@@ -128,6 +194,9 @@ trait_robot_bulky = {
 	ai_weight = {
 		factor = 0
 	}
+	slave_cost = {
+		energy = -150
+	}
 }
 
 trait_robot_enhanced_memory = {
@@ -135,7 +204,7 @@ trait_robot_enhanced_memory = {
 
 	allowed_archetypes = { ROBOT MACHINE }
 	
-	# Synth and Machine only
+	# Synth or Machine only
 	species_potential_add = {
 		exists = from
 		from = {
@@ -146,12 +215,15 @@ trait_robot_enhanced_memory = {
 			NOT = { has_policy_flag = ai_outlawed }
 		}
 	}
-
 	modifier = {
-		leader_skill_levels = 2
+		negative_leader_traits_species = -1
+		leaders_upkeep_mult = -0.25
 	}
 	ai_weight = {
 		factor = 0
+	}
+	slave_cost = {
+		energy = 750
 	}
 }
 
@@ -159,16 +231,26 @@ trait_robot_emotion_emulators = {
 	cost = 1
 	opposites = { "trait_robot_uncanny" }
 	allowed_archetypes = { MACHINE }
-	custom_tooltip = TRAIT_EMOTION_EMULATORS_EFFECT
+	modifier = {
+		pop_job_amenities_mult = 0.20
+	}
+	slave_cost = {
+		energy = 750
+	}
 }
 
 trait_robot_uncanny = {
 	cost = -1
 	opposites = { "trait_robot_emotion_emulators" }
 	allowed_archetypes = { MACHINE }
-	custom_tooltip = TRAIT_UNCANNY_EFFECT
+	modifier = {
+		pop_job_amenities_mult = -0.20
+	}
 	ai_weight = {
 		factor = 0
+	}
+	slave_cost = {
+		energy = -150
 	}
 }
 
@@ -180,6 +262,9 @@ trait_robot_durable = {
 
 	modifier = {
 		planet_pops_robotics_upkeep_mult = -0.10
+	}
+	slave_cost = {
+		energy = 750
 	}
 }
 
@@ -195,6 +280,9 @@ trait_robot_high_maintenance = {
 	ai_weight = {
 		factor = 0
 	}
+	slave_cost = {
+		energy = -150
+	}
 }
 
 trait_robot_learning_algorithms = {
@@ -203,7 +291,7 @@ trait_robot_learning_algorithms = {
 
 	allowed_archetypes = { ROBOT MACHINE }
 	
-	# Synth and Machine only
+	# Synth or Machine only
 	species_potential_add = {
 		exists = from
 		from = {
@@ -214,9 +302,11 @@ trait_robot_learning_algorithms = {
 			NOT = { has_policy_flag = ai_outlawed }
 		}
 	}
-
 	modifier = {
 		species_leader_exp_gain = 0.25
+	}
+	slave_cost = {
+		energy = 750
 	}
 }
 
@@ -226,7 +316,7 @@ trait_robot_repurposed_hardware = {
 
 	allowed_archetypes = { ROBOT MACHINE }
 
-	# Synth and Machine only
+	# Synth or Machine only
 	species_potential_add = {
 		exists = from
 		from = {
@@ -237,7 +327,6 @@ trait_robot_repurposed_hardware = {
 			NOT = { has_policy_flag = ai_outlawed }
 		}
 	}
-	
 	modifier = {
 		species_leader_exp_gain = -0.25
 	}
@@ -248,6 +337,9 @@ trait_robot_repurposed_hardware = {
 			years_passed > 5
 		}
 	}
+	slave_cost = {
+		energy = -150
+	}
 }
 
 trait_robot_mass_produced = {
@@ -257,7 +349,10 @@ trait_robot_mass_produced = {
 	allowed_archetypes = { ROBOT MACHINE }
 
 	modifier = {
-		pop_assembly_speed = 0.15
+		planet_pop_assembly_mult = 0.15
+	}
+	slave_cost = {
+		energy = 1500
 	}
 }
 
@@ -268,10 +363,13 @@ trait_robot_custom_made = {
 	allowed_archetypes = { ROBOT MACHINE }
 
 	modifier = {
-		pop_assembly_speed = -0.15
+		planet_pop_assembly_mult = -0.15
 	}
 	ai_weight = {
 		factor = 0
+	}
+	slave_cost = {
+		energy = -200
 	}
 }
 
@@ -284,6 +382,9 @@ trait_robot_recycled = {
 	#assembling_modifier, declining_modifier, growing_modifier are applied to planet when pop is the one assembling/declining/growing	
 	assembling_modifier = {
 		planet_pop_assemblers_upkeep_mult = -0.20
+	}
+	slave_cost = {
+		energy = 1500
 	}
 }
 
@@ -304,6 +405,9 @@ trait_robot_luxurious = {
 			years_passed > 5
 		}
 	}
+	slave_cost = {
+		energy = -200
+	}
 }
 
 trait_robot_propaganda_machines = {
@@ -311,7 +415,7 @@ trait_robot_propaganda_machines = {
 
 	allowed_archetypes = { ROBOT }
 	
-	# Synth and Droid only
+	# Synth or Droid only
 	species_potential_add = {
 		exists = from
 		from = {
@@ -322,6 +426,16 @@ trait_robot_propaganda_machines = {
 	
 	modifier = {
 		planet_jobs_unity_produces_mult = 0.15
+		planet_jobs_unity_upkeep_mult = -0.1
+	}
+	slave_cost = {
+		energy = 750
+	}
+	assembly_score = {
+		modifier = {
+			add = 1.5
+			from = { has_unity_designation = yes }
+		}
 	}
 }
 
@@ -332,6 +446,9 @@ trait_robot_streamlined_protocols = {
 	modifier = {
 		species_empire_size_mult = -0.10
 	}
+	slave_cost = {
+		energy = 750
+	}
 }
 
 trait_robot_high_bandwidth = {
@@ -340,5 +457,29 @@ trait_robot_high_bandwidth = {
 	allowed_archetypes = { ROBOT MACHINE }
 	modifier = {
 		species_empire_size_mult = 0.10
+	}
+	slave_cost = {
+		energy = -150
+	}
+}
+
+trait_robot_trading_algorithms = {
+	cost = 2
+	allowed_archetypes = { ROBOT }
+	opposites = {  }
+
+	# Synth or Droid only
+	species_potential_add = {
+		exists = from
+		from = {
+			has_technology = tech_droid_workers
+			NOT = { has_policy_flag = ai_outlawed }
+		}
+	}
+	modifier = {
+		pop_job_trade_mult = 0.25
+	}
+	slave_cost = {
+		energy = 500
 	}
 }

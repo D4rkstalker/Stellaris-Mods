@@ -1,4 +1,3 @@
-#MODIFIED
 ##################
 # Robotic Traits #
 ##################
@@ -14,6 +13,9 @@ trait_additrait_defective_scanners = {
 	modifier = {
 		planet_jobs_minerals_produces_mult = -0.15
 	}
+	slave_cost = {
+		energy = -150
+	}
 }
 
 trait_additrait_weedkillers = {
@@ -24,6 +26,9 @@ trait_additrait_weedkillers = {
 
 	modifier = {
 		planet_jobs_food_produces_mult = -0.15
+	}
+	slave_cost = {
+		energy = -150
 	}
 }
 
@@ -36,6 +41,9 @@ trait_additrait_energy_leaks = {
 	modifier = {
 		planet_jobs_energy_produces_mult = -0.15
 	}
+	slave_cost = {
+		energy = -150
+	}
 }
 
 trait_additrait_rusty_antiquities = {
@@ -47,6 +55,9 @@ trait_additrait_rusty_antiquities = {
 	modifier = {
 		planet_jobs_unity_produces_mult = -0.05
 	}
+	slave_cost = {
+		energy = -150
+	}
 }
 
 trait_additrait_insufficient_memory = {
@@ -57,6 +68,9 @@ trait_additrait_insufficient_memory = {
 
 	modifier = {
 		leader_skill_levels = -2
+	}
+	slave_cost = {
+		energy = -150
 	}
 }
 
@@ -72,6 +86,9 @@ trait_additrait_slow_processors = {
 		planet_jobs_physics_research_produces_mult = -0.04
 		planet_jobs_society_research_produces_mult = -0.04
 	}
+	slave_cost = {
+		energy = -150
+	}
 }
 
 trait_additrait_erratic_processors = {
@@ -85,6 +102,9 @@ trait_additrait_erratic_processors = {
 		planet_jobs_engineering_research_produces_mult = -0.08
 		planet_jobs_physics_research_produces_mult = -0.08
 		planet_jobs_society_research_produces_mult = -0.08
+	}
+	slave_cost = {
+		energy = -250
 	}
 }
 
@@ -101,6 +121,9 @@ trait_additrait_cumbersome_hulks = {
 	ai_weight = {
 		factor = 0
 	}
+	slave_cost = {
+		energy = -250
+	}
 }
 
 trait_additrait_hand_crafted = {
@@ -112,6 +135,9 @@ trait_additrait_hand_crafted = {
 	modifier = {
 		pop_assembly_speed = -0.30
 	}
+	slave_cost = {
+		energy = -250
+	}
 }
 
 trait_additrait_brittle = {
@@ -122,6 +148,9 @@ trait_additrait_brittle = {
 
 	modifier = {
 		planet_pops_robotics_upkeep_mult = 0.15
+	}
+	slave_cost = {
+		energy = -250
 	}
 }
 
@@ -169,6 +198,9 @@ trait_additrait_multithreading = {
 		planet_jobs_physics_research_produces_mult = 0.04
 		planet_jobs_society_research_produces_mult = 0.04
 	}
+	slave_cost = {
+		energy = 200
+	}
 }
 
 
@@ -198,6 +230,9 @@ trait_additrait_swarm = {
 		planet_jobs_engineering_research_produces_mult = -0.30
 		planet_jobs_physics_research_produces_mult = -0.30
 		planet_jobs_society_research_produces_mult = -0.30
+	}
+	slave_cost = {
+		energy = 450
 	}
 }
 
@@ -244,6 +279,9 @@ trait_additrait_standard_frame = {
 	modifier = {
 		pop_assembly_speed = 0.30
 	}
+	slave_cost = {
+		energy = 450
+	}
 }
 
 trait_additrait_rivalry_protocols = {
@@ -275,6 +313,9 @@ trait_additrait_malleable_frame = {
 	modifier = {
 		pop_housing_usage_mult = -0.15
 	}
+	slave_cost = {
+		energy = 350
+	}
 }
 
 trait_additrait_sturdy = {
@@ -285,6 +326,9 @@ trait_additrait_sturdy = {
 
 	modifier = {
 		planet_pops_robotics_upkeep_mult = -0.15
+	}
+	slave_cost = {
+		energy = 250
 	}
 }
 

@@ -3,7 +3,6 @@ trait_yanz_unique_thick_fur = {
 	cost = 4
 	initial = yes
 	randomized =  no
-	modification =  yes
 	allowed_archetypes = { BIOLOGICAL }
 	custom_tooltip =  TRAIT_YANZ_UNIQUE_THICK_FUR
 
@@ -34,16 +33,16 @@ trait_biological_society_1 = {
 		planet_jobs_society_research_produces_mult = 0.3
 	}
 }
-trait_natural_sociologists_biorobot = {
-	icon =  gfx/interface/icons/traits/trait_natural_sociologists.dds
+trait_td_emotionless = {
 	cost = 1
-	initial =  no
-	randomized =  no
-	allowed_archetypes = {  }
+	initial = yes
+	randomized = yes
+	forced_happiness =  yes
+	allowed_archetypes = { LITHOID BIOLOGICAL PRESAPIENT }
 
 	opposites = { }
 	modifier = {
-		planet_jobs_society_research_produces_mult = 0.15
+		planet_jobs_society_research_produces_mult = -0.025
 	}
 }
 trait_natural_sociologists = {
@@ -56,17 +55,19 @@ trait_natural_sociologists = {
 	modifier = {
 		planet_jobs_society_research_produces_mult = 0.15
 	}
+		assembly_score = {
+		modifier = {
+			add = 1
+			from = {
+ has_research_designation = yes 
 }
-trait_td_emotionless = {
-	cost = 1
-	initial = yes
-	randomized = yes
-	forced_happiness =  yes
-	allowed_archetypes = { LITHOID BIOLOGICAL PRESAPIENT }
-
-	opposites = { }
-	modifier = {
-		planet_jobs_society_research_produces_mult = -0.025
+}
+		modifier = {
+			add = 1
+			from = {
+ has_building = building_order_keep 
+}
+}
 	}
 }
 trait_cyborg_natural_sociologists = {
@@ -85,6 +86,35 @@ trait_additrait_unfit_sociologists = {
 	cost = -1
 	initial = yes
 	randomized = yes
+	allowed_archetypes = { LITHOID BIOLOGICAL }
+
+	opposites = { }
+	modifier = {
+		planet_jobs_society_research_produces_mult = -0.15
+	}
+	ai_weight = {
+weight = 0
+	}
+		assembly_score = {
+		modifier = {
+			subtract = 0.75
+			from = {
+ has_research_designation = yes 
+}
+}
+		modifier = {
+			subtract = 0.75
+			from = {
+ has_building = building_order_keep 
+}
+}
+	}
+}
+trait_yanz_incompetent_sociologists = {
+	icon =  "gfx/interface/icons/traits/trait_yanz_incompetent_sociologists.dds"
+	cost = -2
+	initial = yes
+	randomized =  yes
 	allowed_archetypes = { LITHOID BIOLOGICAL }
 
 	opposites = { }

@@ -29,7 +29,6 @@ trait_td_rbot_mechanical_organism = {
 	cost = -4
 	initial = yes
 	randomized = yes
-	modification =  no
 	allowed_archetypes = { MACHINE ROBOT }
 
 	opposites = { }

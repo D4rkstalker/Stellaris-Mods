@@ -44,11 +44,12 @@ trait_td_rbot_negative_attenuation = {
 		planet_jobs_energy_produces_mult = 0.20
 	}
 }
-trait_robot_superconductive = {
+trait_ingenious_biorobot = {
+	icon =  gfx/interface/icons/traits/trait_ingenious.dds
 	cost = 2
-	initial = yes
-	randomized = yes
-	allowed_archetypes = { MACHINE ROBOT }
+	initial =  no
+	randomized =  no
+	allowed_archetypes = { ROBOT MACHINE }
 
 	opposites = { }
 	modifier = {
@@ -64,6 +65,31 @@ trait_mech_energy_1 = {
 	opposites = { }
 	modifier = {
 		planet_jobs_energy_produces_mult = 0.2
+	}
+}
+trait_robot_superconductive = {
+	cost = 2
+	initial = yes
+	randomized = yes
+	allowed_archetypes = { MACHINE ROBOT }
+
+	opposites = { }
+	modifier = {
+		planet_jobs_energy_produces_mult = 0.15
+	}
+		assembly_score = {
+		modifier = {
+			add = 1.5
+			from = {
+ has_generator_designation = yes 
+}
+}
+		modifier = {
+			add = 0.5
+			from = {
+ has_rural_designation = yes 
+}
+}
 	}
 }
 trait_robot_sentient_powerplants = {
@@ -104,35 +130,19 @@ trait_additrait_energy_leaks = {
 	ai_weight = {
 weight = 0
 	}
+		assembly_score = {
+		modifier = {
+			subtract = 1
+			from = {
+ has_generator_designation = yes 
 }
-trait_robot_evo_battery_dependent = {
-	icon =  "gfx/interface/icons/traits/trait_robot_evo_battery_dependent.dds"
-	cost = -1
-	initial =  yes
-	randomized =  yes
-	allowed_archetypes = { MACHINE ROBOT }
-
-	opposites = { }
-	modifier = {
-		planet_jobs_energy_produces_mult = -0.075
-	}
-	ai_weight = {
-weight = 0
-	}
 }
-trait_robot_evo_solar_powered = {
-	icon =  "gfx/interface/icons/traits/trait_robot_evo_solar_powered.dds"
-	cost = -2
-	initial =  yes
-	randomized =  yes
-	allowed_archetypes = { MACHINE ROBOT }
-
-	opposites = { }
-	modifier = {
-		planet_jobs_energy_produces_mult = -0.15
-	}
-	ai_weight = {
-weight = 0
+		modifier = {
+			subtract = 0.5
+			from = {
+ has_rural_designation = yes 
+}
+}
 	}
 }
 trait_robot_unoptimized_reactors = {

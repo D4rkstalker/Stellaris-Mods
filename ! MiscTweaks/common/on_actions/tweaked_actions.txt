@@ -5,6 +5,6 @@ on_monthly_pulse_country = {
 }
 on_press_begin = {
 	events = {
-        less_habitable.1
+       #less_habitable.1
     }
 }

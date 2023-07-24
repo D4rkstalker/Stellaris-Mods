@@ -2,7 +2,6 @@ trait_td_parasite = {
 	cost = 3
 	initial = yes
 	randomized = yes
-	modification =  no
 	allowed_archetypes = { BIOLOGICAL PRESAPIENT }
 
 	opposites = { }
@@ -17,7 +16,6 @@ trait_td_lith_parasite = {
 	cost = 3
 	initial = yes
 	randomized = yes
-	modification =  no
 	allowed_archetypes = { LITHOID }
 
 	opposites = { }

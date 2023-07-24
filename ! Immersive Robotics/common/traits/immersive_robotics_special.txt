@@ -1,0 +1,43 @@
+
+trait_transform_synth = {
+	cost = 0
+	sorting_priority = 20
+	icon = "gfx/interface/icons/traits/trait_advanced_synthetic.dds"
+	
+	initial = no
+	randomized = no
+	forced_happiness = no
+	allowed_archetypes = { BIOLOGICAL MACHINE}
+	opposites = { "trait_android" "trait_synthetic" "trait_advanced_synthetic" }
+	species_potential_add = {
+		exists = from
+		from = {
+			is_synthetic_empire = yes
+		}
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+trait_transform_mech = {
+	cost = 0
+	sorting_priority = 20
+	icon = "gfx/interface/icons/traits/trait_advanced_synthetic.dds"
+	
+	initial = no
+	randomized = no
+	forced_happiness = no
+	allowed_archetypes = { BIOLOGICAL ROBOT}
+	opposites = { "trait_android" "trait_synthetic" "trait_advanced_synthetic" }
+	species_potential_add = {
+		exists = from
+		from = {
+			is_synthetic_empire = yes
+		}
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+

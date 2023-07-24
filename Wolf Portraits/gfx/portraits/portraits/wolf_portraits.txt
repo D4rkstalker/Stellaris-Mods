@@ -19,6 +19,41 @@ portraits = {
 	wolf17 = { texturefile = "gfx/models/portraits/wolf/wolf17.dds" }
 	wolf18 = { texturefile = "gfx/models/portraits/wolf/wolf18.dds" }
 	wolf19 = { texturefile = "gfx/models/portraits/wolf/wolf19.dds" }
+	wolf20 = { texturefile = "gfx/models/portraits/wolf/wolf20.dds" }
+	wolf21 = { texturefile = "gfx/models/portraits/wolf/wolf21.dds" }
+	wolf22 = { texturefile = "gfx/models/portraits/wolf/wolf22.dds" }
+	wolf23 = { texturefile = "gfx/models/portraits/wolf/wolf23.dds" }
+	wolf24 = { texturefile = "gfx/models/portraits/wolf/wolf24.dds" }
+	wolf25 = { texturefile = "gfx/models/portraits/wolf/wolf25.dds" }
+	wolf26 = { texturefile = "gfx/models/portraits/wolf/wolf26.dds" }
+	wolf27 = { texturefile = "gfx/models/portraits/wolf/wolf27.dds" }
+	wolf28 = { texturefile = "gfx/models/portraits/wolf/wolf28.dds" }
+	wolf29 = { texturefile = "gfx/models/portraits/wolf/wolf29.dds" }
+	wolf30 = { texturefile = "gfx/models/portraits/wolf/wolf30.dds" }
+	wolf31 = { texturefile = "gfx/models/portraits/wolf/wolf31.dds" }
+	wolf32 = { texturefile = "gfx/models/portraits/wolf/wolf32.dds" }
+	wolf33 = { texturefile = "gfx/models/portraits/wolf/wolf33.dds" }
+	wolf34 = { texturefile = "gfx/models/portraits/wolf/wolf34.dds" }
+	wolf35 = { texturefile = "gfx/models/portraits/wolf/wolf35.dds" }
+	wolf36 = { texturefile = "gfx/models/portraits/wolf/wolf36.dds" }
+	wolf37 = { texturefile = "gfx/models/portraits/wolf/wolf37.dds" }
+	wolf38 = { texturefile = "gfx/models/portraits/wolf/wolf38.dds" }
+	wolf39 = { texturefile = "gfx/models/portraits/wolf/wolf39.dds" }
+	wolf40 = { texturefile = "gfx/models/portraits/wolf/wolf40.dds" }
+	wolf41 = { texturefile = "gfx/models/portraits/wolf/wolf41.dds" }
+	wolf42 = { texturefile = "gfx/models/portraits/wolf/wolf42.dds" }
+	wolf43 = { texturefile = "gfx/models/portraits/wolf/wolf43.dds" }
+	wolf44 = { texturefile = "gfx/models/portraits/wolf/wolf44.dds" }
+	wolf45 = { texturefile = "gfx/models/portraits/wolf/wolf45.dds" }
+	wolf46 = { texturefile = "gfx/models/portraits/wolf/wolf46.dds" }
+	wolf47 = { texturefile = "gfx/models/portraits/wolf/wolf47.dds" }
+	wolf48 = { texturefile = "gfx/models/portraits/wolf/wolf48.dds" }
+	wolf49 = { texturefile = "gfx/models/portraits/wolf/wolf49.dds" }
+	wolf50 = { texturefile = "gfx/models/portraits/wolf/wolf50.dds" }
+	wolf51 = { texturefile = "gfx/models/portraits/wolf/wolf51.dds" }
+	wolf52 = { texturefile = "gfx/models/portraits/wolf/wolf52.dds" }
+	wolf53 = { texturefile = "gfx/models/portraits/wolf/wolf53.dds" }
+
 }
    
 portrait_groups = {
@@ -46,7 +81,40 @@ portrait_groups = {
 					wolf17
 					wolf18
 					wolf19
-					
+					wolf20
+					wolf21
+					wolf22
+					wolf23
+					wolf24
+					wolf25
+					wolf26
+					wolf27
+					wolf28
+					wolf29
+					wolf30
+					wolf31
+					wolf32
+					wolf33
+					wolf34
+					wolf35
+					wolf36
+					wolf37
+					wolf38
+					wolf39
+					wolf40
+					wolf41
+					wolf42
+					wolf43
+					wolf44
+					wolf45
+					wolf46
+					wolf47
+					wolf48
+					wolf49
+					wolf50
+					wolf51
+					wolf52
+					wolf53					
 				}
 			}
 		}
@@ -73,6 +141,40 @@ portrait_groups = {
 					wolf17
 					wolf18
 					wolf19
+					wolf20
+					wolf21
+					wolf22
+					wolf23
+					wolf24
+					wolf25
+					wolf26
+					wolf27
+					wolf28
+					wolf29
+					wolf30
+					wolf31
+					wolf32
+					wolf33
+					wolf34
+					wolf35
+					wolf36
+					wolf37
+					wolf38
+					wolf39
+					wolf40
+					wolf41
+					wolf42
+					wolf43
+					wolf44
+					wolf45
+					wolf46
+					wolf47
+					wolf48
+					wolf49
+					wolf50
+					wolf51
+					wolf52
+					wolf53					
 				}
 			}
 		}
@@ -99,6 +201,40 @@ portrait_groups = {
 					wolf17
 					wolf18
 					wolf19
+					wolf20
+					wolf21
+					wolf22
+					wolf23
+					wolf24
+					wolf25
+					wolf26
+					wolf27
+					wolf28
+					wolf29
+					wolf30
+					wolf31
+					wolf32
+					wolf33
+					wolf34
+					wolf35
+					wolf36
+					wolf37
+					wolf38
+					wolf39
+					wolf40
+					wolf41
+					wolf42
+					wolf43
+					wolf44
+					wolf45
+					wolf46
+					wolf47
+					wolf48
+					wolf49
+					wolf50
+					wolf51
+					wolf52
+					wolf53					
    				}
 			}
 		}
@@ -125,6 +261,40 @@ portrait_groups = {
 					wolf17
 					wolf18
 					wolf19
+					wolf20
+					wolf21
+					wolf22
+					wolf23
+					wolf24
+					wolf25
+					wolf26
+					wolf27
+					wolf28
+					wolf29
+					wolf30
+					wolf31
+					wolf32
+					wolf33
+					wolf34
+					wolf35
+					wolf36
+					wolf37
+					wolf38
+					wolf39
+					wolf40
+					wolf41
+					wolf42
+					wolf43
+					wolf44
+					wolf45
+					wolf46
+					wolf47
+					wolf48
+					wolf49
+					wolf50
+					wolf51
+					wolf52
+					wolf53					
 				}
 			}
 		}
@@ -151,6 +321,40 @@ portrait_groups = {
 					wolf18
 					wolf19
 					wolf12
+					wolf20
+					wolf21
+					wolf22
+					wolf23
+					wolf24
+					wolf25
+					wolf26
+					wolf27
+					wolf28
+					wolf29
+					wolf30
+					wolf31
+					wolf32
+					wolf33
+					wolf34
+					wolf35
+					wolf36
+					wolf37
+					wolf38
+					wolf39
+					wolf40
+					wolf41
+					wolf42
+					wolf43
+					wolf44
+					wolf45
+					wolf46
+					wolf47
+					wolf48
+					wolf49
+					wolf50
+					wolf51
+					wolf52
+					wolf53					
 				}
 			}
 		}

@@ -1,16 +1,3 @@
-trait_yanz_energy_drone = {
-	icon =  "gfx/interface/icons/traits/bio_path/trait_yanz_born_inventors.dds"
-	cost = 4
-	initial =  no
-	randomized =  no
-	modification =  yes
-	allowed_archetypes = { LITHOID BIOLOGICAL }
-
-	opposites = { }
-	modifier = {
-		planet_jobs_energy_produces_mult = 0.33
-	}
-}
 trait_biological_energy_2 = {
 	cost = 4
 	initial =  no
@@ -33,30 +20,6 @@ trait_biological_energy_1 = {
 		planet_jobs_energy_produces_mult = 0.25
 	}
 }
-trait_extremelyenergetic = {
-	icon =  "gfx/interface/icons/traits/trait_extremelyenergetic.dds"
-	cost = 2
-	initial = yes
-	randomized = yes
-	allowed_archetypes = { BIOLOGICAL }
-
-	opposites = { }
-	modifier = {
-		planet_jobs_energy_produces_mult = 0.25
-	}
-}
-trait_ingenious_biorobot = {
-	icon =  gfx/interface/icons/traits/trait_ingenious.dds
-	cost = 2
-	initial =  no
-	randomized =  no
-	allowed_archetypes = {  }
-
-	opposites = { }
-	modifier = {
-		planet_jobs_energy_produces_mult = 0.15
-	}
-}
 trait_ingenious = {
 	cost = 2
 	initial = yes
@@ -67,12 +30,38 @@ trait_ingenious = {
 	modifier = {
 		planet_jobs_energy_produces_mult = 0.15
 	}
+		assembly_score = {
+		modifier = {
+			add = 1.5
+			from = {
+ has_generator_designation = yes 
+}
+}
+		modifier = {
+			add = 0.5
+			from = {
+ has_rural_designation = yes 
+}
+}
+	}
 }
 trait_cyborg_thrifty = {
 	cost = 2
 	initial =  no
 	randomized =  no
 	modification =  yes
+	allowed_archetypes = { BIOLOGICAL }
+
+	opposites = { }
+	modifier = {
+		planet_jobs_energy_produces_mult = 0.25
+	}
+}
+trait_extremelyenergetic = {
+	icon =  "gfx/interface/icons/traits/trait_extremelyenergetic.dds"
+	cost = 2
+	initial = yes
+	randomized = yes
 	allowed_archetypes = { BIOLOGICAL }
 
 	opposites = { }
@@ -115,20 +104,6 @@ trait_energyefficient = {
 		planet_jobs_energy_produces_mult = 0.15
 	}
 }
-trait_disorderly = {
-	cost = -1
-	initial =  yes
-	randomized =  yes
-	allowed_archetypes = { LITHOID BIOLOGICAL }
-
-	opposites = { }
-	modifier = {
-		planet_jobs_energy_produces_mult = -0.10
-	}
-	ai_weight = {
-weight = 0
-	}
-}
 trait_energeticallychallenged = {
 	icon =  "gfx/interface/icons/traits/trait_energeticallychallenged.dds"
 	cost = -1
@@ -139,6 +114,20 @@ trait_energeticallychallenged = {
 	opposites = { }
 	modifier = {
 		planet_jobs_energy_produces_mult = -0.15
+	}
+	ai_weight = {
+weight = 0
+	}
+}
+trait_altruistic = {
+	cost = -1
+	initial =  yes
+	randomized =  yes
+	allowed_archetypes = { BIOLOGICAL }
+
+	opposites = { }
+	modifier = {
+		planet_jobs_energy_produces_mult = -0.10
 	}
 	ai_weight = {
 weight = 0
@@ -158,7 +147,8 @@ trait_just-more-traits_idle = {
 weight = 0
 	}
 }
-trait_just-more-traits_spendthrifts = {
+trait_powerhogs = {
+	icon =  "gfx/interface/icons/traits/trait_powerhogs.dds"
 	cost = -2
 	initial = yes
 	randomized = yes
@@ -166,7 +156,7 @@ trait_just-more-traits_spendthrifts = {
 
 	opposites = { }
 	modifier = {
-		planet_jobs_energy_produces_mult = -0.15
+		planet_jobs_energy_produces_mult = -0.25
 	}
 	ai_weight = {
 weight = 0
@@ -185,9 +175,22 @@ trait_additrait_prodigal = {
 	ai_weight = {
 weight = 0
 	}
+		assembly_score = {
+		modifier = {
+			subtract = 1
+			from = {
+ has_generator_designation = yes 
 }
-trait_powerhogs = {
-	icon =  "gfx/interface/icons/traits/trait_powerhogs.dds"
+}
+		modifier = {
+			subtract = 0.5
+			from = {
+ has_rural_designation = yes 
+}
+}
+	}
+}
+trait_just-more-traits_spendthrifts = {
 	cost = -2
 	initial = yes
 	randomized = yes
@@ -195,7 +198,7 @@ trait_powerhogs = {
 
 	opposites = { }
 	modifier = {
-		planet_jobs_energy_produces_mult = -0.25
+		planet_jobs_energy_produces_mult = -0.15
 	}
 	ai_weight = {
 weight = 0

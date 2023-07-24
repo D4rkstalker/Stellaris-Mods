@@ -12,4 +12,12 @@ trait_additrait_weak_willed = {
 	ai_weight = {
 weight = 0
 	}
+		assembly_score = {
+		modifier = {
+			subtract = 1.5
+			from = {
+				has_fortress_designation = yes
+}
+}
+	}
 }

@@ -1,0 +1,6 @@
+on_monthly_pulse = {
+	events = {
+		#assimilation 
+		IR_assimilation.1
+	}
+}

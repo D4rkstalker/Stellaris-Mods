@@ -1,0 +1,102 @@
+trait_overhual_shield_1 = {
+	cost = 1
+	initial = no
+	randomized = no
+	allowed_archetypes = { MACHINE ROBOT }
+	opposites = { "trait_overhual_shield_3 trait_overhual_shield_2" }
+	species_potential_add = {
+		exists = from
+		from = {
+			has_technology = tech_trait_tech_1
+			has_technology = tech_shields_2
+			
+		}
+		OR = { 
+			has_trait = trait_overhual_tech_1
+			has_trait = trait_overhual_tech_2
+			has_trait = trait_overhual_tech_3
+			has_trait = trait_overhual_tech_4
+		}
+	}
+	
+	modifier = { 
+		pop_category_drones_energy_upkeep_add = 1
+		pop_category_workers_energy_upkeep_add = 1
+		pop_category_specialists_energy_upkeep_add = 1
+		pop_category_rulers_energy_upkeep_add = 1
+		
+		pop_environment_tolerance = 0.2
+		army_disengage_chance_mult = 0.2
+		army_health = 0.2
+		planet_pops_upkeep_mult = -0.15
+
+	}
+
+}
+trait_overhual_shield_2 = {
+	cost = 1
+	initial = no
+	randomized = no
+	allowed_archetypes = { MACHINE ROBOT }
+	opposites = { "trait_overhual_shield_1 trait_overhual_shield_3" }
+	species_potential_add = {
+		exists = from
+		from = {
+			has_technology = tech_trait_tech_2
+			has_technology = tech_shields_3
+			
+		}
+		OR = { 
+			has_trait = trait_overhual_tech_2
+			has_trait = trait_overhual_tech_3
+			has_trait = trait_overhual_tech_4
+		}
+	}
+	
+	modifier = { 
+		pop_category_drones_energy_upkeep_add = 1.5
+		pop_category_workers_energy_upkeep_add = 1.5
+		pop_category_specialists_energy_upkeep_add = 1.5
+		pop_category_rulers_energy_upkeep_add = 1.5
+		
+		pop_environment_tolerance = 0.4
+		army_disengage_chance_mult = 0.4
+		army_health = 0.4
+		planet_pops_upkeep_mult = -0.3
+
+	}
+
+}
+trait_overhual_shield_3 = {
+	cost = 2
+	initial = no
+	randomized = no
+	allowed_archetypes = { MACHINE ROBOT }
+	opposites = { "trait_overhual_shield_1 trait_overhual_shield_2" }
+	species_potential_add = {
+		exists = from
+		from = {
+			has_technology = tech_trait_tech_3
+			has_technology = tech_shields_4
+			
+		}
+		OR = { 
+			has_trait = trait_overhual_tech_3
+			has_trait = trait_overhual_tech_4
+		}
+	}
+	
+	modifier = { 
+		pop_category_drones_energy_upkeep_add = 2
+		pop_category_workers_energy_upkeep_add = 2
+		pop_category_specialists_energy_upkeep_add = 2
+		pop_category_rulers_energy_upkeep_add = 2
+		
+		pop_environment_tolerance = 0.6
+		army_disengage_chance_mult = 0.6
+		army_health = 0.6
+		planet_pops_upkeep_mult = -0.45
+
+	}
+
+}

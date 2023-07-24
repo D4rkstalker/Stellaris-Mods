@@ -257,6 +257,7 @@ ROBOT = {
 			"synthetic_robot_01"
 			"dragon_robot"
 			"Exsynth"
+			"dragon_cyber2"
 		}
 	}
 
@@ -305,6 +306,7 @@ MACHINE = {
 			"synthetic_robot_01"
 			"dragon_robot"
 			"Exsynth"
+			"dragon_cyber2"
 		}
 	}
 

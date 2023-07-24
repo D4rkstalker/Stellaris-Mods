@@ -1,0 +1,10 @@
+SYNTHETIC = {
+	inherit_trait_points_from = ROBOT
+	inherit_traits_from = { ROBOT MACHINE } 
+	species_max_traits = 99
+}
+ADVANCED_MACHINE = {
+	inherit_trait_points_from = MACHINE
+	inherit_traits_from = { ROBOT MACHINE } 
+	species_max_traits = 99
+}

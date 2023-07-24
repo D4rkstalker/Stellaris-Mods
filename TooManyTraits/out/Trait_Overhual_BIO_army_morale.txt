@@ -1,14 +1,3 @@
-trait_intrepid = {
-	cost = 2
-	initial =  yes
-	randomized =  yes
-	allowed_archetypes = { LITHOID BIOLOGICAL }
-
-	opposites = { }
-	modifier = {
-		army_morale = 0.50
-	}
-}
 trait_td_keen_sense = {
 	cost = 1
 	initial = yes

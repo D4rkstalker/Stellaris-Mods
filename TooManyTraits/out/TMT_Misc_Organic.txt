@@ -1,66 +1,3 @@
-trait_yanz_genius = {
-	icon =  "gfx/interface/icons/traits/bio_path/trait_yanz_genius.dds"
-	cost = 10
-	initial =  no
-	randomized =  no
-	modification =  yes
-	allowed_archetypes = { LITHOID BIOLOGICAL }
-
-	opposites = { }
-	modifier = {
-		leader_skill_levels = 5
-		species_leader_exp_gain = 1
-		planet_jobs_engineering_research_produces_mult = 0.5
-		planet_jobs_physics_research_produces_mult = 0.5
-		planet_jobs_society_research_produces_mult = 0.5
-		planet_jobs_unity_produces_mult = 0.1
-		planet_jobs_energy_produces_mult = 0.1
-	}
-}
-trait_yanz_decentralized_mind = {
-	icon =  "gfx/interface/icons/traits/bio_path/trait_yanz_decentralized_mind.dds"
-	cost = 10
-	initial =  no
-	randomized =  no
-	modification =  yes
-	allowed_archetypes = { LITHOID BIOLOGICAL }
-	custom_tooltip =  TRAIT_YANZ_DECENTRALIZED_MIND
-
-	opposites = { }
-	modifier = {
-	}
-}
-trait_yanz_close_knit = {
-	icon =  "gfx/interface/icons/traits/bio_path/trait_yanz_close_knit.dds"
-	cost = 8
-	initial =  no
-	randomized =  no
-	modification =  yes
-	allowed_archetypes = { LITHOID BIOLOGICAL }
-
-	opposites = { }
-	modifier = {
-		army_morale = 1
-		army_defense_damage_mult = 1
-		planet_jobs_unity_produces_mult = 0.5
-		pop_government_ethic_attraction = 0.5
-		pop_housing_usage_mult = -0.25
-		pop_happiness = 0.10
-		pop_growth_speed = 0.1
-		species_empire_size_mult = -0.10
-	}
-}
-trait_evo_invisibility = {
-	icon =  "gfx/interface/icons/traits/trait_evo_invisibility.dds"
-	cost = 7
-	initial = yes
-	randomized =  no
-	allowed_archetypes = { LITHOID BIOLOGICAL PRESAPIENT }
-
-	opposites = { }
-	modifier = {
-	}
-}
 base_trait_necroid = {
 	cost = 6
 	initial =  yes
@@ -78,22 +15,6 @@ base_trait_necroid = {
 		pop_happiness = -0.25
 	}
 }
-trait_yanz_ascetic = {
-	icon =  "gfx/interface/icons/traits/bio_path/trait_yanz_ascetic.dds"
-	cost = 6
-	initial =  no
-	randomized =  no
-	modification =  yes
-	allowed_archetypes = { LITHOID BIOLOGICAL }
-
-	opposites = { }
-	modifier = {
-		planet_pops_consumer_goods_upkeep_mult = -0.25
-		planet_pops_food_upkeep_mult = -0.1
-		pop_housing_usage_mult = -0.1
-		planet_jobs_unity_produces_mult = 0.1
-	}
-}
 trait_td_paragon = {
 	cost = 6
 	initial =  yes
@@ -107,45 +28,10 @@ trait_td_paragon = {
 		planet_jobs_physics_research_produces_mult = 0.075
 		planet_jobs_society_research_produces_mult = 0.075
 		pop_environment_tolerance = 0.075
-		leader_skill_levels = 1
+		negative_leader_traits_species = -1
+		leaders_upkeep_mult = -0.1
 		leader_age = 10
 		army_damage_mult = 0.20
-	}
-}
-trait_battlesuits = {
-	icon =  "gfx/interface/icons/traits/trait_battlesuits.dds"
-	cost = 5
-	initial = yes
-	randomized = yes
-	allowed_archetypes = { BIOLOGICAL }
-
-	opposites = { }
-	modifier = {
-		army_upkeep_mult = 0.35
-		army_morale = 0.40
-		army_damage_mult = 0.50
-		army_morale_damage_mult = 0.50
-		army_defense_damage_mult = 0.35
-		army_defense_health_mult = 0.50
-		army_defense_morale_mult = 0.35
-	}
-}
-trait_td_gaia = {
-	cost = 5
-	initial = yes
-	randomized = yes
-	allowed_archetypes = { BIOLOGICAL PRESAPIENT }
-
-	opposites = { }
-	modifier = {
-		army_damage_mult = 0.60
-		army_health = 0.30
-		planet_jobs_worker_produces_mult = 0.075
-		planet_livestock_food_produces_add = 1.5
-		planet_pops_food_upkeep_mult = 0.15
-		planet_pops_consumer_goods_upkeep_mult = 0.075
-		pop_housing_usage_mult = 0.125
-		pop_resettlement_cost_mult = 0.20
 	}
 }
 trait_td_lith_gaia = {
@@ -167,6 +53,57 @@ trait_td_lith_gaia = {
 		pop_resettlement_cost_mult = 0.20
 	}
 }
+trait_td_gaia = {
+	cost = 5
+	initial = yes
+	randomized = yes
+	allowed_archetypes = { BIOLOGICAL PRESAPIENT }
+
+	opposites = { }
+	modifier = {
+		army_damage_mult = 0.60
+		army_health = 0.30
+		planet_jobs_worker_produces_mult = 0.075
+		planet_livestock_food_produces_add = 1.5
+		planet_pops_food_upkeep_mult = 0.15
+		planet_pops_consumer_goods_upkeep_mult = 0.075
+		pop_housing_usage_mult = 0.125
+		pop_resettlement_cost_mult = 0.20
+	}
+}
+trait_battlesuits = {
+	icon =  "gfx/interface/icons/traits/trait_battlesuits.dds"
+	cost = 5
+	initial = yes
+	randomized = yes
+	allowed_archetypes = { BIOLOGICAL }
+
+	opposites = { }
+	modifier = {
+		army_upkeep_mult = 0.35
+		army_morale = 0.40
+		army_damage_mult = 0.50
+		army_morale_damage_mult = 0.50
+		army_defense_damage_mult = 0.35
+		army_defense_health_mult = 0.50
+		army_defense_morale_mult = 0.35
+	}
+}
+trait_apex_predator = {
+	cost = 5
+	initial =  yes
+	randomized =  yes
+	allowed_archetypes = { BIOLOGICAL }
+
+	opposites = { }
+	modifier = {
+		pop_ethic_militarist_attraction_mult = 0.10
+		army_damage_mult = 0.50
+		pop_growth_from_immigration = 0.30
+		planet_pops_organics_food_upkeep_mult = 0.25
+		pop_growth_speed = -0.05
+	}
+}
 trait_td_genius = {
 	cost = 4
 	initial = yes
@@ -178,10 +115,11 @@ trait_td_genius = {
 		planet_jobs_engineering_research_produces_mult = 0.175
 		planet_jobs_physics_research_produces_mult = 0.175
 		planet_jobs_society_research_produces_mult = 0.175
-		leader_skill_levels = 1
+		negative_leader_traits_species = -1
+		leaders_upkeep_mult = -0.1
 	}
 }
-trait_td_gigantic = {
+trait_td_clones = {
 	cost = 4
 	initial = yes
 	randomized = yes
@@ -189,28 +127,11 @@ trait_td_gigantic = {
 
 	opposites = { }
 	modifier = {
-		army_damage_mult = 0.40
-		army_health = 0.20
-		planet_jobs_worker_produces_mult = 0.05
-		planet_livestock_food_produces_add = 1.0
-		planet_pops_food_upkeep_mult = 0.10
-		planet_pops_consumer_goods_upkeep_mult = 0.05
-		pop_housing_usage_mult = 0.10
-		pop_resettlement_cost_mult = 0.15
-	}
-}
-trait_psionic_research_output_3 = {
-	cost = 4
-	initial =  no
-	randomized =  no
-	allowed_archetypes = { BIOLOGICAL }
-
-	opposites = { }
-	modifier = {
-		planet_jobs_physics_research_produces_mult = 0.5
-		planet_jobs_society_research_produces_mult = 0.5
-		planet_jobs_engineering_research_produces_mult = 0.5
-		planet_pops_food_upkeep_mult = 1
+		pop_growth_speed = 0.15
+		planet_pop_assembly_organic_mult = 0.15
+		planet_jobs_engineering_research_produces_mult = -0.025
+		planet_jobs_physics_research_produces_mult = -0.025
+		planet_jobs_society_research_produces_mult = -0.025
 	}
 }
 trait_td_lith_gigantic = {
@@ -247,7 +168,21 @@ trait_hardcore = {
 		planet_jobs_worker_produces_mult = 0.35
 	}
 }
-trait_td_clones = {
+trait_psionic_research_output_3 = {
+	cost = 4
+	initial =  no
+	randomized =  no
+	allowed_archetypes = { BIOLOGICAL }
+
+	opposites = { }
+	modifier = {
+		planet_jobs_physics_research_produces_mult = 0.5
+		planet_jobs_society_research_produces_mult = 0.5
+		planet_jobs_engineering_research_produces_mult = 0.5
+		planet_pops_food_upkeep_mult = 1
+	}
+}
+trait_td_gigantic = {
 	cost = 4
 	initial = yes
 	randomized = yes
@@ -255,377 +190,28 @@ trait_td_clones = {
 
 	opposites = { }
 	modifier = {
-		pop_growth_speed = 0.15
-		planet_jobs_engineering_research_produces_mult = -0.025
-		planet_jobs_physics_research_produces_mult = -0.025
-		planet_jobs_society_research_produces_mult = -0.025
-	}
-}
-trait_plagued = {
-	cost = 3
-	initial = yes
-	randomized = yes
-	modification =  yes
-	allowed_archetypes = { BIOLOGICAL }
-
-	opposites = { }
-	modifier = {
-		pop_growth_speed = 0.50
-		planet_jobs_society_research_produces_mult = 0.15
-		pop_happiness = -0.20
-		country_trust_cap_add = -50
-		country_trust_growth = -0.50
-	}
-}
-trait_td_lith_meteor_strike = {
-	cost = 3
-	initial = yes
-	randomized = yes
-	allowed_archetypes = { LITHOID }
-
-	opposites = { }
-	modifier = {
-		army_collateral_damage_mult = 0.75
-		army_attack_damage_mult = 0.75
-		army_attack_morale_mult = -0.30
-		army_attack_health_mult = -0.30
-	}
-}
-trait_evo_gatherers = {
-	icon =  "gfx/interface/icons/traits/trait_evo_gatherers.dds"
-	cost = 3
-	initial = yes
-	randomized = yes
-	modification =  no
-	allowed_archetypes = { LITHOID BIOLOGICAL PRESAPIENT }
-
-	opposites = { }
-	modifier = {
-	}
-}
-trait_prototypewargear = {
-	icon =  "gfx/interface/icons/traits/trait_prototypewargear.dds"
-	cost = 3
-	initial = yes
-	randomized = yes
-	allowed_archetypes = { BIOLOGICAL }
-
-	opposites = { }
-	modifier = {
-		army_upkeep_mult = 0.20
-		army_morale = 0.25
-		army_damage_mult = 0.35
-		army_morale_damage_mult = 0.40
-		army_defense_damage_mult = 0.25
-		army_defense_health_mult = 0.45
-		army_defense_morale_mult = 0.25
-	}
-}
-trait_evo_hunter_gatherers = {
-	icon =  "gfx/interface/icons/traits/trait_evo_hunter_gatherers.dds"
-	cost = 3
-	initial = yes
-	randomized = yes
-	modification =  no
-	allowed_archetypes = { LITHOID BIOLOGICAL PRESAPIENT }
-
-	opposites = { }
-	modifier = {
-	}
-}
-trait_td_terrible_punishment = {
-	icon =  "gfx/interface/icons/traits/imported_icons/leader_trait_demoralizer.dds"
-	cost = 3
-	initial =  no
-	randomized =  no
-	allowed_archetypes = { BIOLOGICAL PRESAPIENT }
-
-	opposites = { }
-	modifier = {
-		pop_happiness = -10.00
-		planet_jobs_produces_mult = -0.95
-		planet_pops_food_upkeep_mult = -2.00
-		planet_pops_consumer_goods_upkeep_mult = -2.00
-		pop_amenities_usage_mult = -0.50
-		pop_housing_usage_mult = -0.50
-		species_leader_exp_gain = -2.00
-	}
-}
-trait_evo_scavengers = {
-	icon =  "gfx/interface/icons/traits/trait_evo_scavengers.dds"
-	cost = 3
-	initial = yes
-	randomized = yes
-	modification =  no
-	allowed_archetypes = { LITHOID BIOLOGICAL PRESAPIENT }
-
-	opposites = { }
-	modifier = {
-	}
-}
-trait_evo_hibernating = {
-	icon =  "gfx/interface/icons/traits/trait_evo_hibernating.dds"
-	cost = 3
-	initial = yes
-	randomized = yes
-	modification =  no
-	allowed_archetypes = { LITHOID BIOLOGICAL PRESAPIENT }
-	custom_tooltip =  TRAIT_HIBERNATING_EFFECT
-
-	opposites = { }
-	modifier = {
-		pc_arid_habitability = 0.7
-		pc_desert_habitability = 0.7
-		pc_savannah_habitability = 0.7
-		pc_badlands_habitability = 0.7
-		pc_prairie_habitability = 0.7
-		pc_steppe_habitability = 0.7
-		pc_veld_habitability = 0.7
-		pc_semiarid_habitability = 0.7
-		pc_hadesert_habitability = 0.7
-		pc_sandsea_habitability = 0.7
-		pc_mesa_habitability = 0.7
-		pc_outback_habitability = 0.7
-		pc_oasis_habitability = 0.7
-		pc_med_habitability = 0.7
-		pc_aquifer_habitability = 0.7
-		pc_supercon_habitability = 0.7
-		pc_coral_habitability = 0.7
-		pc_salt_habitability = 0.7
-		pc_primal_habitability = 0.7
-		pc_tidallylocked_habitability = 0.7
-		pc_graveyard_habitability = 0.7
-		pc_tundra_habitability = -0.7
-		pc_arctic_habitability = -0.7
-		pc_alpine_habitability = -0.7
-		pc_snowball_habitability = -0.7
-		pc_basalt_habitability = -0.7
-		pc_duneforest_habitability = -0.7
-		pc_aeolian_habitability = -0.7
-		pc_antarctic_habitability = -0.7
-		pc_snow_habitability = -0.7
-		pc_glacial_habitability = -0.7
-		pc_frozen_desert_habitability = -0.7
-		pc_boreal_habitability = -0.7
-		pc_highland_habitability = -0.7
-		pc_mud_habitability = -0.7
-		pc_swamp_habitability = -0.7
-		pc_mushroom_habitability = -0.7
-		pc_lichen_habitability = -0.7
-		pc_lanthanide_habitability = -0.7
-		pc_glacio_habitability = -0.7
-		pc_eyeball_habitability = -0.7
-		pc_rogue_habitability = -0.7
-		pc_storm_habitability = -0.7
-		pop_amenities_usage_mult = -0.15
-		planet_pops_organics_food_upkeep_mult = 0.10
-	}
-}
-trait_evo_pioneers = {
-	icon =  "gfx/interface/icons/traits/trait_evo_pioneers.dds"
-	cost = 3
-	initial = yes
-	randomized = yes
-	allowed_archetypes = { LITHOID BIOLOGICAL PRESAPIENT }
-
-	opposites = { }
-	modifier = {
-		colony_start_num_pops_add = 1
-		ship_colonizer_cost_mult = -0.5
-		planet_colony_development_speed_mult = 0.2
-		pop_growth_from_immigration = 0.1
-	}
-}
-trait_evo_photographic_memory = {
-	icon =  "gfx/interface/icons/traits/trait_evo_photographic_memory.dds"
-	cost = 3
-	initial = yes
-	randomized =  no
-	modification =  no
-	allowed_archetypes = { LITHOID BIOLOGICAL }
-
-	opposites = { }
-	modifier = {
-		planet_jobs_engineering_research_produces_mult = 0.15
-		planet_jobs_physics_research_produces_mult = 0.15
-		planet_jobs_society_research_produces_mult = 0.15
-		species_leader_exp_gain = 0.25
-	}
-}
-trait_td_lith_terrible_punishment = {
-	icon =  "gfx/interface/icons/traits/imported_icons/leader_trait_demoralizer.dds"
-	cost = 3
-	initial =  no
-	randomized =  no
-	allowed_archetypes = { LITHOID }
-
-	opposites = { }
-	modifier = {
-		pop_happiness = -10.00
-		planet_jobs_produces_mult = -0.95
-		planet_pops_minerals_upkeep_mult = -2.00
-		planet_pops_consumer_goods_upkeep_mult = -2.00
-		pop_amenities_usage_mult = -0.50
-		pop_housing_usage_mult = -0.50
-		species_leader_exp_gain = -2.00
-	}
-}
-trait_td_vampiric = {
-	cost = 3
-	initial = yes
-	randomized = yes
-	modification =  no
-	allowed_archetypes = { BIOLOGICAL PRESAPIENT }
-
-	opposites = { }
-	modifier = {
-		pop_amenities_usage_mult = 0.15
-		leader_age = 15
-		army_damage_mult = 0.225
-		army_morale = 0.225
-	}
-}
-trait_evo_predators = {
-	icon =  "gfx/interface/icons/traits/trait_evo_predators.dds"
-	cost = 3
-	initial = yes
-	randomized = yes
-	modification =  no
-	allowed_archetypes = { LITHOID BIOLOGICAL PRESAPIENT }
-
-	opposites = { }
-	modifier = {
-	}
-}
-trait_td_healing_factor = {
-	cost = 3
-	initial = yes
-	randomized = yes
-	allowed_archetypes = { BIOLOGICAL PRESAPIENT }
-
-	opposites = { }
-	modifier = {
-		army_health = 0.40
-		leader_age = 10
-		planet_livestock_food_produces_add = 0.5
-		planet_pops_food_upkeep_mult = 0.15
-	}
-}
-trait_evo_master_builders = {
-	icon =  "gfx/interface/icons/traits/trait_evo_master_builders.dds"
-	cost = 3
-	initial = yes
-	randomized = yes
-	allowed_archetypes = { LITHOID BIOLOGICAL PRESAPIENT }
-
-	opposites = { }
-	modifier = {
-		megastructure_build_speed_mult = 0.1
-		planet_building_build_speed_mult = 0.1
-		planet_structures_cost_mult = -0.1
-		planet_jobs_engineering_research_produces_mult = 0.05
-	}
-}
-trait_evo_environmental_engineers = {
-	icon =  "gfx/interface/icons/traits/trait_evo_environmental_engineers.dds"
-	cost = 3
-	initial = yes
-	randomized = yes
-	allowed_archetypes = { LITHOID BIOLOGICAL PRESAPIENT }
-
-	opposites = { }
-	modifier = {
-		planet_colony_development_speed_mult = 0.1
-		pop_environment_tolerance = 0.1
-		planet_clear_blocker_time_mult = -0.1
-		deposit_blockers_cost_mult = -0.1
-	}
-}
-trait_evo_aestivating = {
-	icon =  "gfx/interface/icons/traits/trait_evo_aestivating.dds"
-	cost = 3
-	initial = yes
-	randomized = yes
-	modification =  no
-	allowed_archetypes = { LITHOID BIOLOGICAL PRESAPIENT }
-	custom_tooltip =  TRAIT_AESTIVATING_EFFECT
-
-	opposites = { }
-	modifier = {
-		pc_arid_habitability = -0.7
-		pc_desert_habitability = -0.7
-		pc_savannah_habitability = -0.7
-		pc_badlands_habitability = -0.7
-		pc_prairie_habitability = -0.7
-		pc_steppe_habitability = -0.7
-		pc_veld_habitability = -0.7
-		pc_semiarid_habitability = -0.7
-		pc_hadesert_habitability = -0.7
-		pc_sandsea_habitability = -0.7
-		pc_mesa_habitability = -0.7
-		pc_outback_habitability = -0.7
-		pc_oasis_habitability = -0.7
-		pc_med_habitability = -0.7
-		pc_aquifer_habitability = -0.7
-		pc_supercon_habitability = -0.7
-		pc_coral_habitability = -0.7
-		pc_salt_habitability = -0.7
-		pc_primal_habitability = -0.7
-		pc_tidallylocked_habitability = -0.7
-		pc_graveyard_habitability = -0.7
-		pc_tundra_habitability = 0.7
-		pc_arctic_habitability = 0.7
-		pc_alpine_habitability = 0.7
-		pc_snowball_habitability = 0.7
-		pc_basalt_habitability = 0.7
-		pc_duneforest_habitability = 0.7
-		pc_aeolian_habitability = 0.7
-		pc_antarctic_habitability = 0.7
-		pc_snow_habitability = 0.7
-		pc_glacial_habitability = 0.7
-		pc_frozen_desert_habitability = 0.7
-		pc_boreal_habitability = 0.7
-		pc_highland_habitability = 0.7
-		pc_mud_habitability = 0.7
-		pc_swamp_habitability = 0.7
-		pc_mushroom_habitability = 0.7
-		pc_lichen_habitability = 0.7
-		pc_lanthanide_habitability = 0.7
-		pc_glacio_habitability = 0.7
-		pc_eyeball_habitability = 0.7
-		pc_rogue_habitability = 0.7
-		pc_storm_habitability = 0.7
-		pop_amenities_usage_mult = -0.15
-		planet_pops_organics_food_upkeep_mult = 0.10
-	}
-}
-trait_td_therianthropic = {
-	cost = 3
-	initial = yes
-	randomized = yes
-	modification =  no
-	allowed_archetypes = { BIOLOGICAL PRESAPIENT }
-
-	opposites = { }
-	modifier = {
-		pop_housing_usage_mult = 0.15
+		army_damage_mult = 0.40
+		army_health = 0.20
 		planet_jobs_worker_produces_mult = 0.05
-		army_damage_mult = 0.225
-		army_health = 0.225
+		planet_livestock_food_produces_add = 1.0
+		planet_pops_food_upkeep_mult = 0.10
+		planet_pops_consumer_goods_upkeep_mult = 0.05
+		pop_housing_usage_mult = 0.10
+		pop_resettlement_cost_mult = 0.15
 	}
 }
-trait_td_clairvoyance = {
+trait_thermophile = {
 	cost = 3
-	initial = yes
-	randomized = yes
-	allowed_archetypes = { LITHOID BIOLOGICAL PRESAPIENT }
+	initial =  yes
+	randomized =  yes
+	allowed_archetypes = { BIOLOGICAL }
 
 	opposites = { }
 	modifier = {
-		army_morale = 0.30
-		planet_jobs_engineering_research_produces_mult = 0.05
-		planet_jobs_physics_research_produces_mult = 0.05
-		planet_jobs_society_research_produces_mult = 0.05
+		planet_jobs_minerals_produces_mult = 0.25
+		planet_jobs_alloys_produces_mult = 0.25
+		pop_housing_usage_mult = 0.15
+		pop_environment_tolerance = -0.15
 	}
 }
 trait_td_lith_healing_factor = {
@@ -658,13 +244,355 @@ trait_changelings = {
 		diplomacy_upkeep_mult = 0.5
 	}
 }
-trait_evo_botanists = {
-	icon =  "gfx/interface/icons/traits/trait_evo_botanists.dds"
+trait_td_vampiric = {
 	cost = 3
 	initial = yes
 	randomized = yes
-	modification =  no
+	allowed_archetypes = { BIOLOGICAL PRESAPIENT }
+
+	opposites = { }
+	modifier = {
+		pop_amenities_usage_mult = 0.15
+		leader_age = 15
+		army_damage_mult = 0.225
+		army_morale = 0.225
+	}
+}
+trait_td_terrible_punishment = {
+	icon =  "gfx/interface/icons/traits/imported_icons/leader_trait_demoralizer.dds"
+	cost = 3
+	initial =  no
+	randomized =  no
+	allowed_archetypes = { BIOLOGICAL PRESAPIENT }
+
+	opposites = { }
+	modifier = {
+		pop_happiness = -10.00
+		planet_jobs_produces_mult = -0.95
+		planet_pops_food_upkeep_mult = -2.00
+		planet_pops_consumer_goods_upkeep_mult = -2.00
+		pop_amenities_usage_mult = -0.50
+		pop_housing_usage_mult = -0.50
+		species_leader_exp_gain = -2.00
+	}
+}
+trait_nerve_stapled = {
+	cost = 3
+	initial =  no
+	randomized =  no
+	forced_happiness =  yes
+	allowed_archetypes = { BIOLOGICAL }
+
+	opposites = { }
+	modifier = {
+		planet_jobs_minerals_produces_mult = 0.1
+		planet_jobs_food_produces_mult = 0.1
+		planet_jobs_unity_produces_mult = -0.5
+		planet_jobs_energy_produces_mult = -0.5
+		planet_jobs_engineering_research_produces_mult = -0.75
+		planet_jobs_physics_research_produces_mult = -0.75
+		planet_jobs_society_research_produces_mult = -0.75
+		leader_skill_levels = -2
+	}
+}
+trait_td_lith_meteor_strike = {
+	cost = 3
+	initial = yes
+	randomized = yes
+	allowed_archetypes = { LITHOID }
+
+	opposites = { }
+	modifier = {
+		army_collateral_damage_mult = 0.75
+		army_attack_damage_mult = 0.75
+		army_attack_morale_mult = -0.30
+		army_attack_health_mult = -0.30
+	}
+}
+trait_td_healing_factor = {
+	cost = 3
+	initial = yes
+	randomized = yes
+	allowed_archetypes = { BIOLOGICAL PRESAPIENT }
+
+	opposites = { }
+	modifier = {
+		army_health = 0.40
+		leader_age = 10
+		planet_livestock_food_produces_add = 0.5
+		planet_pops_food_upkeep_mult = 0.15
+	}
+}
+trait_td_clairvoyance = {
+	cost = 3
+	initial = yes
+	randomized = yes
 	allowed_archetypes = { LITHOID BIOLOGICAL PRESAPIENT }
+
+	opposites = { }
+	modifier = {
+		army_morale = 0.30
+		planet_jobs_engineering_research_produces_mult = 0.05
+		planet_jobs_physics_research_produces_mult = 0.05
+		planet_jobs_society_research_produces_mult = 0.05
+	}
+}
+trait_plagued = {
+	cost = 3
+	initial = yes
+	randomized = yes
+	modification =  yes
+	allowed_archetypes = { BIOLOGICAL }
+
+	opposites = { }
+	modifier = {
+		pop_growth_speed = 0.50
+		planet_jobs_society_research_produces_mult = 0.15
+		pop_happiness = -0.20
+		country_trust_cap_add = -50
+		country_trust_growth = -0.50
+	}
+}
+trait_prototypewargear = {
+	icon =  "gfx/interface/icons/traits/trait_prototypewargear.dds"
+	cost = 3
+	initial = yes
+	randomized = yes
+	allowed_archetypes = { BIOLOGICAL }
+
+	opposites = { }
+	modifier = {
+		army_upkeep_mult = 0.20
+		army_morale = 0.25
+		army_damage_mult = 0.35
+		army_morale_damage_mult = 0.40
+		army_defense_damage_mult = 0.25
+		army_defense_health_mult = 0.45
+		army_defense_morale_mult = 0.25
+	}
+}
+trait_td_lith_terrible_punishment = {
+	icon =  "gfx/interface/icons/traits/imported_icons/leader_trait_demoralizer.dds"
+	cost = 3
+	initial =  no
+	randomized =  no
+	allowed_archetypes = { LITHOID }
+
+	opposites = { }
+	modifier = {
+		pop_happiness = -10.00
+		planet_jobs_produces_mult = -0.95
+		planet_pops_minerals_upkeep_mult = -2.00
+		planet_pops_consumer_goods_upkeep_mult = -2.00
+		pop_amenities_usage_mult = -0.50
+		pop_housing_usage_mult = -0.50
+		species_leader_exp_gain = -2.00
+	}
+}
+trait_unbound = {
+	cost = 3
+	initial =  yes
+	randomized =  no
+	allowed_archetypes = { BIOLOGICAL }
+
+	opposites = { }
+	modifier = {
+		pop_ethic_egalitarian_attraction_mult = 0.25
+		planet_jobs_produces_mult = 0.05
+		planet_jobs_slave_produces_mult = -0.25
+		pop_cat_slave_happiness = -0.25
+	}
+}
+trait_td_therianthropic = {
+	cost = 3
+	initial = yes
+	randomized = yes
+	allowed_archetypes = { BIOLOGICAL PRESAPIENT }
+
+	opposites = { }
+	modifier = {
+		pop_housing_usage_mult = 0.15
+		planet_jobs_worker_produces_mult = 0.05
+		army_damage_mult = 0.225
+		army_health = 0.225
+	}
+}
+trait_td_pseudo_cybernetics = {
+	cost = 2
+	initial = yes
+	randomized = yes
+	allowed_archetypes = { LITHOID BIOLOGICAL PRESAPIENT }
+
+	opposites = { }
+	modifier = {
+		pop_happiness = -0.025
+		planet_jobs_society_research_produces_mult = 0.05
+		planet_jobs_unity_produces_mult = 0.075
+		pop_government_ethic_attraction = 0.10
+	}
+}
+trait_lithoid_radiotrophic = {
+	icon =  "gfx/interface/icons/traits/trait_plantoid_radiotrophic.dds"
+	cost = 2
+	initial = yes
+	randomized = yes
+	allowed_archetypes = { LITHOID }
+	custom_tooltip =  TRAIT_LITHOID_RADIOTROPHIC_EFFECT
+
+	opposites = { }
+	modifier = {
+	}
+}
+trait_plantoid_radiotrophic = {
+	cost = 2
+	initial = yes
+	randomized = yes
+	allowed_archetypes = { BIOLOGICAL }
+	custom_tooltip =  TRAIT_PLANTOID_RADIOTROPHIC_EFFECT
+
+	opposites = { }
+	modifier = {
+	}
+}
+trait_lithoid_volatile_excretions = {
+	cost = 2
+	initial = yes
+	randomized = yes
+	allowed_archetypes = { LITHOID }
+	custom_tooltip =  TRAIT_LITHOID_VOLATILE_EXCRETIONS_EFFECT
+
+	opposites = { }
+	modifier = {
+	}
+}
+trait_strategic = {
+	cost = 2
+	initial =  yes
+	randomized =  yes
+	allowed_archetypes = { BIOLOGICAL }
+
+	opposites = { }
+	modifier = {
+		pop_ethic_militarist_attraction_mult = 0.10
+		army_experience_gain_mult = 0.50
+		admiral_skill_levels = 2
+		general_skill_levels = 2
+	}
+}
+trait_enginnered_mind = {
+	cost = 2
+	initial = yes
+	randomized = yes
+	modification =  no
+	allowed_archetypes = { BIOLOGICAL }
+
+	opposites = { }
+	modifier = {
+		species_leader_exp_gain = 0.25
+		planet_researchers_engineering_research_produces_mult = 0.1
+		category_industry_research_speed_mult = 0.1
+		category_materials_research_speed_mult = 0.1
+	}
+}
+trait_areal = {
+	cost = 2
+	initial = yes
+	randomized = yes
+	modification =  no
+	allowed_archetypes = { BIOLOGICAL }
+
+	opposites = { }
+	modifier = {
+		planet_jobs_society_research_produces_mult = 0.10
+		planet_jobs_unity_produces_mult = 0.10
+		pop_government_ethic_attraction = 0.10
+		pop_resettlement_cost_mult = +0.20
+		pop_environment_tolerance = -0.10
+	}
+}
+trait_td_precocious = {
+	icon =  "gfx/interface/icons/traits/imported_icons/leader_trait_maniacal.dds"
+	cost = 2
+	initial = yes
+	randomized = yes
+	allowed_archetypes = { BIOLOGICAL PRESAPIENT }
+	custom_tooltip =  TRAIT_TD_PRECOCIOUS_EFFECT
+
+	opposites = { }
+	modifier = {
+	}
+}
+trait_td_extrasensory = {
+	cost = 2
+	initial = yes
+	randomized = yes
+	allowed_archetypes = { LITHOID BIOLOGICAL PRESAPIENT }
+
+	opposites = { }
+	modifier = {
+		army_morale = 0.20
+		planet_jobs_engineering_research_produces_mult = 0.025
+		planet_jobs_physics_research_produces_mult = 0.025
+		planet_jobs_society_research_produces_mult = 0.025
+		planet_jobs_energy_produces_mult = 0.05
+	}
+}
+trait_resolute = {
+	icon =  "gfx/interface/icons/traits/trait_resolute.dds"
+	cost = 2
+	initial = yes
+	randomized = yes
+	allowed_archetypes = { BIOLOGICAL }
+
+	opposites = { }
+	modifier = {
+		leader_age = 10
+		army_morale = 0.2
+		army_damage_mult = 0.20
+		planet_jobs_worker_produces_mult = 0.1
+	}
+}
+trait_td_aerobatics = {
+	cost = 2
+	initial = yes
+	randomized = yes
+	allowed_archetypes = { BIOLOGICAL PRESAPIENT }
+
+	opposites = { }
+	modifier = {
+		pop_amenities_usage_mult = -0.05
+		pop_housing_usage_mult = -0.05
+		pop_environment_tolerance = 0.05
+		army_morale = 0.10
+	}
+}
+trait_plantoid_budding = {
+	cost = 2
+	initial = yes
+	randomized = yes
+	allowed_archetypes = { BIOLOGICAL }
+	custom_tooltip =  TRAIT_PLANTOID_BUDDING_EFFECT
+
+	opposites = { }
+	modifier = {
+	}
+}
+trait_lithoid_gaseous_byproducts = {
+	cost = 2
+	initial = yes
+	randomized = yes
+	allowed_archetypes = { LITHOID }
+	custom_tooltip =  TRAIT_LITHOID_GASEOUS_BYPRODUCTS_EFFECT
+
+	opposites = { }
+	modifier = {
+	}
+}
+trait_additrait_extremely_aggressive = {
+	cost = 2
+	initial = yes
+	randomized = yes
+	allowed_archetypes = { LITHOID BIOLOGICAL }
 
 	opposites = { }
 	modifier = {
@@ -686,56 +614,50 @@ trait_fixture = {
 		army_attack_morale_mult = -0.5
 	}
 }
-trait_enginnered_mind = {
+trait_harvested_radiotrophic = {
+	icon =  "gfx/interface/icons/traits/trait_plantoid_radiotrophic.dds"
+	cost = 2
+	initial =  no
+	randomized =  no
+	allowed_archetypes = { BIOLOGICAL }
+	custom_tooltip =  TRAIT_PLANTOID_RADIOTROPHIC_EFFECT
+
+	opposites = { }
+	modifier = {
+	}
+}
+trait_lithoid_scintillating = {
 	cost = 2
 	initial = yes
 	randomized = yes
-	modification =  no
+	allowed_archetypes = { LITHOID }
+	custom_tooltip =  TRAIT_LITHOID_SCINTILLATING_EFFECT
+
+	opposites = { }
+	modifier = {
+	}
+}
+trait_oligotroph = {
+	cost = 2
+	initial =  yes
+	randomized =  yes
 	allowed_archetypes = { BIOLOGICAL }
 
 	opposites = { }
 	modifier = {
-		species_leader_exp_gain = 0.25
-		planet_researchers_engineering_research_produces_mult = 0.1
-		category_industry_research_speed_mult = 0.1
-		category_materials_research_speed_mult = 0.1
+		pop_housing_usage_mult = -0.25
+		planet_pops_consumer_goods_upkeep_mult = -0.25
+		planet_jobs_energy_produces_mult = -0.10
+		planet_jobs_minerals_produces_mult = -0.10
+		planet_jobs_alloys_produces_mult = -0.10
 	}
 }
-trait_parasitic = {
+trait_lithoid_budding = {
 	cost = 2
 	initial = yes
 	randomized = yes
-	modification =  no
-	allowed_archetypes = { BIOLOGICAL }
-
-	opposites = { }
-	modifier = {
-		planet_jobs_consumer_goods_produces_mult = 0.10
-		planet_jobs_food_produces_mult = 0.10
-		planet_livestock_food_produces_add = 1.0
-		country_trust_growth = -0.50
-	}
-}
-trait_evo_spike_protrusion = {
-	icon =  "gfx/interface/icons/traits/trait_evo_spike_protrusion.dds"
-	cost = 2
-	initial = yes
-	randomized = yes
-	allowed_archetypes = { LITHOID BIOLOGICAL PRESAPIENT }
-
-	opposites = { }
-	modifier = {
-		weapon_type_kinetic_weapon_damage_mult = 0.1
-		army_damage_mult = 0.15
-		army_health = 0.15
-		army_collateral_damage_mult = 0.5
-	}
-}
-trait_additrait_extremely_aggressive = {
-	cost = 2
-	initial = yes
-	randomized = yes
-	allowed_archetypes = { LITHOID BIOLOGICAL }
+	allowed_archetypes = { LITHOID }
+	custom_tooltip =  TRAIT_LITHOID_BUDDING_EFFECT
 
 	opposites = { }
 	modifier = {
@@ -756,211 +678,6 @@ trait_tentacle = {
 		country_trust_growth = -0.25
 	}
 }
-trait_plantoid_budding = {
-	cost = 2
-	initial = yes
-	randomized = yes
-	allowed_archetypes = { BIOLOGICAL }
-	custom_tooltip =  TRAIT_PLANTOID_BUDDING_EFFECT
-
-	opposites = { }
-	modifier = {
-	}
-}
-trait_evo_rationalists = {
-	icon =  "gfx/interface/icons/traits/trait_evo_rationalists.dds"
-	cost = 2
-	initial = yes
-	randomized = yes
-	allowed_archetypes = { LITHOID BIOLOGICAL PRESAPIENT }
-
-	opposites = { }
-	modifier = {
-		pop_ethic_materialist_attraction_mult = 0.5
-		science_ship_survey_speed = 0.2
-		scientist_skill_levels = 2
-		job_researcher_per_pop = 0.05
-	}
-}
-trait_additrait_belligerent = {
-	cost = 2
-	initial = yes
-	randomized = yes
-	allowed_archetypes = { LITHOID BIOLOGICAL }
-
-	opposites = { }
-	modifier = {
-	}
-}
-trait_td_precocious = {
-	icon =  "gfx/interface/icons/traits/imported_icons/leader_trait_maniacal.dds"
-	cost = 2
-	initial = yes
-	randomized = yes
-	allowed_archetypes = { BIOLOGICAL PRESAPIENT }
-	custom_tooltip =  TRAIT_TD_PRECOCIOUS_EFFECT
-
-	opposites = { }
-	modifier = {
-	}
-}
-trait_td_pseudo_cybernetics = {
-	cost = 2
-	initial = yes
-	randomized = yes
-	allowed_archetypes = { LITHOID BIOLOGICAL PRESAPIENT }
-
-	opposites = { }
-	modifier = {
-		pop_happiness = -0.025
-		planet_jobs_society_research_produces_mult = 0.05
-		planet_jobs_unity_produces_mult = 0.075
-		pop_government_ethic_attraction = 0.10
-	}
-}
-trait_td_extrasensory = {
-	cost = 2
-	initial = yes
-	randomized = yes
-	allowed_archetypes = { LITHOID BIOLOGICAL PRESAPIENT }
-
-	opposites = { }
-	modifier = {
-		army_morale = 0.20
-		planet_jobs_engineering_research_produces_mult = 0.025
-		planet_jobs_physics_research_produces_mult = 0.025
-		planet_jobs_society_research_produces_mult = 0.025
-		planet_jobs_energy_produces_mult = 0.05
-	}
-}
-trait_shelled = {
-	cost = 2
-	initial = yes
-	randomized = yes
-	modification =  no
-	allowed_archetypes = { BIOLOGICAL }
-
-	opposites = { }
-	modifier = {
-		pop_housing_usage_mult = -0.20
-		army_health = 0.50
-		army_defense_morale_mult = -0.20
-		starbase_buildings_cost_mult = 0.10
-		starbase_modules_cost_mult = 0.10
-	}
-}
-trait_resolute = {
-	icon =  "gfx/interface/icons/traits/trait_resolute.dds"
-	cost = 2
-	initial = yes
-	randomized = yes
-	allowed_archetypes = { BIOLOGICAL }
-
-	opposites = { }
-	modifier = {
-		leader_age = 10
-		army_morale = 0.2
-		army_damage_mult = 0.20
-		planet_jobs_worker_produces_mult = 0.1
-	}
-}
-trait_evo_magicians = {
-	icon =  "gfx/interface/icons/traits/trait_evo_magicians.dds"
-	cost = 2
-	initial = yes
-	randomized =  yes
-	allowed_archetypes = { LITHOID BIOLOGICAL PRESAPIENT }
-
-	opposites = { }
-	modifier = {
-	}
-}
-trait_evo_miasma_emission = {
-	icon =  "gfx/interface/icons/traits/trait_evo_miasma_emission.dds"
-	cost = 2
-	initial = yes
-	randomized = yes
-	allowed_archetypes = { LITHOID BIOLOGICAL PRESAPIENT }
-
-	opposites = { }
-	modifier = {
-		planet_jobs_exotic_gases_produces_mult = 0.1
-		army_damage_mult = 0.1
-		army_morale = 0.1
-		army_morale_damage_mult = 0.3
-		army_disengage_chance_mult = 0.3
-	}
-}
-trait_td_multidimensional = {
-	cost = 2
-	initial = yes
-	randomized = yes
-	allowed_archetypes = { LITHOID BIOLOGICAL PRESAPIENT }
-
-	opposites = { }
-	modifier = {
-		planet_jobs_engineering_research_produces_mult = 0.05
-		planet_jobs_physics_research_produces_mult = 0.05
-		planet_jobs_society_research_produces_mult = 0.05
-		pop_housing_usage_mult = -0.10
-	}
-}
-trait_charismatic = {
-	cost = 2
-	initial = yes
-	randomized = yes
-	allowed_archetypes = { LITHOID BIOLOGICAL }
-	custom_tooltip =  TRAIT_CHARISMATIC_EFFECT
-
-	opposites = { }
-	modifier = {
-	}
-}
-trait_evo_believers = {
-	icon =  "gfx/interface/icons/traits/trait_evo_believers.dds"
-	cost = 2
-	initial = yes
-	randomized = yes
-	allowed_archetypes = { LITHOID BIOLOGICAL PRESAPIENT }
-
-	opposites = { }
-	modifier = {
-		pop_ethic_spiritualist_attraction_mult = 0.5
-		pop_government_ethic_attraction = 0.25
-		planet_stability_add = 15
-		job_priest_per_pop = 0.05
-	}
-}
-trait_evo_tiny = {
-	icon =  "gfx/interface/icons/traits/trait_evo_tiny.dds"
-	cost = 2
-	initial = yes
-	randomized = yes
-	allowed_archetypes = { LITHOID BIOLOGICAL PRESAPIENT }
-
-	opposites = { }
-	modifier = {
-		planet_pops_organics_food_upkeep_mult = -0.2
-		pop_housing_usage_mult = -0.2
-		army_damage_mult = -0.5
-		army_health = -0.5
-		army_disengage_chance_mult = 0.2
-	}
-}
-trait_td_aerobatics = {
-	cost = 2
-	initial = yes
-	randomized = yes
-	allowed_archetypes = { BIOLOGICAL PRESAPIENT }
-
-	opposites = { }
-	modifier = {
-		pop_amenities_usage_mult = -0.05
-		pop_housing_usage_mult = -0.05
-		pop_environment_tolerance = 0.05
-		army_morale = 0.10
-	}
-}
 trait_additrait_influential = {
 	cost = 2
 	initial = yes
@@ -971,64 +688,11 @@ trait_additrait_influential = {
 	modifier = {
 	}
 }
-trait_lithoid_scintillating = {
-	cost = 2
-	initial = yes
-	randomized = yes
-	allowed_archetypes = { LITHOID }
-	custom_tooltip =  TRAIT_LITHOID_SCINTILLATING_EFFECT
-
-	opposites = { }
-	modifier = {
-	}
-}
-trait_areal = {
-	cost = 2
-	initial = yes
-	randomized = yes
-	modification =  no
-	allowed_archetypes = { BIOLOGICAL }
-
-	opposites = { }
-	modifier = {
-		planet_jobs_society_research_produces_mult = 0.10
-		planet_jobs_unity_produces_mult = 0.10
-		pop_government_ethic_attraction = 0.10
-		pop_resettlement_cost_mult = +0.20
-		pop_environment_tolerance = -0.10
-	}
-}
-trait_evo_territorial = {
-	icon =  "gfx/interface/icons/traits/trait_evo_territorial.dds"
-	cost = 2
-	initial = yes
-	randomized = yes
-	allowed_archetypes = { LITHOID BIOLOGICAL PRESAPIENT }
-
-	opposites = { }
-	modifier = {
-		country_border_friction_mult = 0.4
-		ship_home_territory_fire_rate_mult = 0.15
-		country_war_exhaustion_mult = -0.1
-		max_rivalries = 1
-	}
-}
 trait_additrait_planetary_designers = {
 	cost = 2
 	initial = yes
 	randomized = yes
 	allowed_archetypes = { LITHOID BIOLOGICAL }
-
-	opposites = { }
-	modifier = {
-	}
-}
-trait_lithoid_gaseous_byproducts = {
-	cost = 2
-	initial = yes
-	randomized = yes
-	allowed_archetypes = { LITHOID }
-	custom_tooltip =  TRAIT_LITHOID_GASEOUS_BYPRODUCTS_EFFECT
 
 	opposites = { }
 	modifier = {
@@ -1049,50 +713,33 @@ trait_td_hypervision = {
 		army_damage_mult = 0.10
 	}
 }
-trait_evo_amphibious = {
-	icon =  "gfx/interface/icons/traits/trait_evo_amphibious.dds"
+trait_shelled = {
 	cost = 2
 	initial = yes
-	randomized =  no
+	randomized = yes
 	modification =  no
-	allowed_archetypes = { LITHOID BIOLOGICAL }
-	custom_tooltip =  TRAIT_AMPHIBIOUS_EFFECT
+	allowed_archetypes = { BIOLOGICAL }
 
 	opposites = { }
 	modifier = {
-		pc_tropical_habitability = 0.7
-		pc_continental_habitability = 0.7
-		pc_ocean_habitability = 0.7
-		pc_cenote_habitability = 0.7
-		pc_tepid_habitability = 0.7
-		pc_subarctic_habitability = 0.7
-		pc_cascadian_habitability = 0.7
-		pc_mangrove_habitability = 0.7
-		pc_wetswamp_habitability = 0.7
-		pc_desertislands_habitability = 0.7
-		pc_hajungle_habitability = 0.7
-		pc_retinal_habitability = 0.7
-		pc_forest_habitability = 0.7
-		pc_lake_habitability = 0.7
-		pc_megafloraforge_habitability = 0.7
-		pc_megafloratol_habitability = 0.7
-		pc_megaflora_habitability = 0.7
-		pc_megaflorahive_habitability = 0.7
-		pc_megaflorafort_habitability = 0.7
-		pc_megafloracapital_habitability = 0.7
-		pc_karst_habitability = 0.7
-		pc_superhabitable_habitability = 0.7
-		pc_geothermal_habitability = 0.7
-		pc_biolumen_habitability = 0.7
-		pc_crystal_habitability = 0.7
-		pc_floating_habitability = 0.7
-		pc_technoorganic_habitability = 0.7
-		planet_colony_development_speed_mult = 0.1
-		deposit_blockers_cost_mult = -0.1
+		pop_housing_usage_mult = -0.20
+		army_health = 0.50
+		army_defense_morale_mult = -0.20
+		starbase_buildings_cost_mult = 0.10
+		starbase_modules_cost_mult = 0.10
 	}
 }
-trait_evo_idealistic = {
-	icon =  "gfx/interface/icons/traits/trait_evo_idealistic.dds"
+trait_additrait_belligerent = {
+	cost = 2
+	initial = yes
+	randomized = yes
+	allowed_archetypes = { LITHOID BIOLOGICAL }
+
+	opposites = { }
+	modifier = {
+	}
+}
+trait_td_multidimensional = {
 	cost = 2
 	initial = yes
 	randomized = yes
@@ -1100,87 +747,28 @@ trait_evo_idealistic = {
 
 	opposites = { }
 	modifier = {
-		pop_government_ethic_attraction = 0.2
-		pop_ethics_shift_speed_mult = -0.2
-		pop_factions_produces_mult = 0.2
-		pop_political_power = -0.2
+		planet_jobs_engineering_research_produces_mult = 0.05
+		planet_jobs_physics_research_produces_mult = 0.05
+		planet_jobs_society_research_produces_mult = 0.05
+		pop_housing_usage_mult = -0.10
 	}
 }
-trait_thrifty = {
+trait_parasitic = {
 	cost = 2
-	initial = yes
-	randomized = yes
-	allowed_archetypes = { LITHOID BIOLOGICAL }
-	custom_tooltip =  TRAIT_THRIFTY_EFFECT
-
-	opposites = { }
-	modifier = {
-	}
-}
-trait_lithoid_volatile_excretions = {
-	cost = 2
-	initial = yes
-	randomized = yes
-	allowed_archetypes = { LITHOID }
-	custom_tooltip =  TRAIT_LITHOID_VOLATILE_EXCRETIONS_EFFECT
-
-	opposites = { }
-	modifier = {
-	}
-}
-trait_additrait_competitive = {
-	cost = 1
-	initial = yes
-	randomized = yes
-	allowed_archetypes = { LITHOID BIOLOGICAL }
-
-	opposites = { }
-	modifier = {
-	}
-}
-trait_predators = {
-	cost = 1
-	initial = yes
-	randomized = yes
-	modification =  yes
-	allowed_archetypes = { BIOLOGICAL }
-
-	opposites = { }
-	modifier = {
-		country_pop_enslaved_mult = 0.30
-		planet_jobs_slave_produces_mult = -0.02
-		pop_citizen_happiness = 0.05
-		planet_pops_organics_food_upkeep_mult = 0.10
-		planet_jobs_worker_produces_mult = -0.02
-	}
-}
-trait_additrait_living_ships = {
-	cost = 1
-	initial = yes
-	randomized = yes
-	allowed_archetypes = { BIOLOGICAL }
-
-	opposites = { }
-	modifier = {
-	}
-}
-trait_stable_structure = {
-	cost = 1
 	initial = yes
 	randomized = yes
 	modification =  no
-	allowed_archetypes = { LITHOID }
+	allowed_archetypes = { BIOLOGICAL }
 
 	opposites = { }
 	modifier = {
-		army_health = 0.50
-		pop_environment_tolerance = 0.20
-		planet_stability_add = 5
-		planet_jobs_engineering_research_produces_mult = 0.10
-		planet_jobs_produces_mult = -0.05
+		planet_jobs_consumer_goods_produces_mult = 0.10
+		planet_jobs_food_produces_mult = 0.10
+		planet_livestock_food_produces_add = 1.0
+		country_trust_growth = -0.50
 	}
 }
-trait_additrait_mob_mentality = {
+trait_additrait_aggressive = {
 	cost = 1
 	initial = yes
 	randomized = yes
@@ -1190,20 +778,35 @@ trait_additrait_mob_mentality = {
 	modifier = {
 	}
 }
-trait_td_big = {
+trait_symbiotic = {
+	cost = 1
+	initial =  yes
+	randomized =  yes
+	allowed_archetypes = { BIOLOGICAL }
+
+	opposites = { }
+	modifier = {
+		pop_ethic_xenophile_attraction_mult = 0.10
+		pop_happiness = 0.05
+		planet_jobs_worker_produces_mult = 0.03
+		planet_pops_upkeep_mult = 0.03
+		planet_jobs_enforcers_produces_mult = 1
+	}
+}
+trait_td_lith_big = {
 	icon =  "gfx/interface/icons/traits/imported_icons/leader_trait_environmental_engineer.dds"
 	cost = 1
 	initial = yes
 	randomized = yes
-	allowed_archetypes = { BIOLOGICAL PRESAPIENT }
+	allowed_archetypes = { LITHOID }
 
 	opposites = { }
 	modifier = {
 		army_damage_mult = 0.20
 		army_health = 0.10
 		planet_jobs_worker_produces_mult = 0.025
-		planet_livestock_food_produces_add = 0.5
-		planet_pops_food_upkeep_mult = 0.05
+		planet_livestock_minerals_produces_add = 0.25
+		planet_pops_minerals_upkeep_mult = 0.05
 		planet_pops_consumer_goods_upkeep_mult = 0.025
 		pop_housing_usage_mult = 0.05
 		pop_resettlement_cost_mult = 0.10
@@ -1236,6 +839,30 @@ trait_additrait_keen_vision = {
 	modifier = {
 	}
 }
+trait_td_futurespawns = {
+	cost = 1
+	initial = yes
+	randomized = yes
+	allowed_archetypes = { LITHOID BIOLOGICAL }
+
+	opposites = { }
+	modifier = {
+		pop_happiness = -0.15
+		planet_jobs_engineering_research_produces_mult = 0.125
+		planet_jobs_physics_research_produces_mult = 0.125
+		planet_jobs_society_research_produces_mult = 0.125
+	}
+}
+trait_additrait_sky_born = {
+	cost = 1
+	initial = yes
+	randomized = yes
+	allowed_archetypes = { LITHOID BIOLOGICAL }
+
+	opposites = { }
+	modifier = {
+	}
+}
 trait_additrait_elusive = {
 	cost = 1
 	initial = yes
@@ -1246,35 +873,85 @@ trait_additrait_elusive = {
 	modifier = {
 	}
 }
-trait_evo_creative = {
-	icon =  "gfx/interface/icons/traits/trait_evo_creative.dds"
-	cost = 1
-	initial = yes
-	randomized = yes
-	allowed_archetypes = { LITHOID BIOLOGICAL PRESAPIENT }
-
-	opposites = { }
-	modifier = {
-		planet_jobs_engineering_research_produces_mult = 0.025
-		planet_jobs_physics_research_produces_mult = 0.025
-		planet_jobs_society_research_produces_mult = 0.025
-		pop_cat_specialist_political_power = 0.1
-		job_culture_worker_per_pop = 0.04
-	}
-}
-trait_td_futurespawns = {
+trait_spores = {
 	cost = 1
 	initial = yes
 	randomized = yes
 	modification =  no
+	allowed_archetypes = { BIOLOGICAL }
+
+	opposites = { }
+	modifier = {
+		pop_growth_speed = 0.10
+		army_damage_mult = 0.10
+		country_trust_growth = -0.20
+		planet_jobs_worker_produces_mult = -0.02
+	}
+}
+trait_additrait_competitive = {
+	cost = 1
+	initial = yes
+	randomized = yes
 	allowed_archetypes = { LITHOID BIOLOGICAL }
 
 	opposites = { }
 	modifier = {
-		pop_happiness = -0.15
-		planet_jobs_engineering_research_produces_mult = 0.125
-		planet_jobs_physics_research_produces_mult = 0.125
-		planet_jobs_society_research_produces_mult = 0.125
+	}
+}
+trait_stable_structure = {
+	cost = 1
+	initial = yes
+	randomized = yes
+	modification =  no
+	allowed_archetypes = { LITHOID }
+
+	opposites = { }
+	modifier = {
+		army_health = 0.50
+		pop_environment_tolerance = 0.20
+		planet_stability_add = 5
+		planet_jobs_engineering_research_produces_mult = 0.10
+		planet_jobs_produces_mult = -0.05
+	}
+}
+trait_td_big = {
+	icon =  "gfx/interface/icons/traits/imported_icons/leader_trait_environmental_engineer.dds"
+	cost = 1
+	initial = yes
+	randomized = yes
+	allowed_archetypes = { BIOLOGICAL PRESAPIENT }
+
+	opposites = { }
+	modifier = {
+		army_damage_mult = 0.20
+		army_health = 0.10
+		planet_jobs_worker_produces_mult = 0.025
+		planet_livestock_food_produces_add = 0.5
+		planet_pops_food_upkeep_mult = 0.05
+		planet_pops_consumer_goods_upkeep_mult = 0.025
+		pop_housing_usage_mult = 0.05
+		pop_resettlement_cost_mult = 0.10
+	}
+}
+trait_additrait_fast_analysers = {
+	cost = 1
+	initial = yes
+	randomized = yes
+	allowed_archetypes = { LITHOID BIOLOGICAL }
+
+	opposites = { }
+	modifier = {
+	}
+}
+trait_plantoid_phototrophic = {
+	cost = 1
+	initial = yes
+	randomized = yes
+	allowed_archetypes = { BIOLOGICAL }
+	custom_tooltip =  TRAIT_PLANTOID_PHOTOTROPHIC_EFFECT
+
+	opposites = { }
+	modifier = {
 	}
 }
 trait_additrait_lateral_thinkers = {
@@ -1312,181 +989,40 @@ trait_additrait_pioneers = {
 	modifier = {
 	}
 }
-trait_soundwave_communication = {
+trait_additrait_living_ships = {
 	cost = 1
 	initial = yes
 	randomized = yes
-	modification =  no
-	allowed_archetypes = { LITHOID }
-
-	opposites = { }
-	modifier = {
-		planet_crime_mult = -0.10
-		planet_stability_add = 5
-		planet_jobs_upkeep_mult = 0.10
-		diplomacy_upkeep_mult = 0.05
-	}
-}
-trait_additrait_presapient_natural_inventors = {
-	icon =  "gfx/interface/icons/traits/trait_primitive.dds"
-	cost = 1
-	initial =  no
-	randomized = yes
-	modification =  no
-	allowed_archetypes = { LITHOID BIOLOGICAL PRESAPIENT }
-
-	opposites = { }
-	modifier = {
-		planet_jobs_unity_produces_mult = 0.05
-		planet_jobs_engineering_research_produces_mult = 0.20
-		planet_jobs_physics_research_produces_mult = 0.05
-		planet_jobs_society_research_produces_mult = 0.05
-		planet_jobs_minerals_produces_mult = -0.1
-	}
-}
-trait_additrait_presapient_natural_savants = {
-	icon =  "gfx/interface/icons/traits/trait_primitive.dds"
-	cost = 1
-	initial =  no
-	randomized = yes
-	modification =  no
-	allowed_archetypes = { LITHOID BIOLOGICAL PRESAPIENT }
-
-	opposites = { }
-	modifier = {
-		planet_jobs_unity_produces_mult = 0.05
-		planet_jobs_engineering_research_produces_mult = 0.05
-		planet_jobs_physics_research_produces_mult = 0.20
-		planet_jobs_society_research_produces_mult = 0.05
-		planet_jobs_minerals_produces_mult = -0.1
-	}
-}
-trait_talented_biorobot = {
-	icon =   gfx/interface/icons/traits/trait_talented.dds
-	cost = 1
-	initial =   no
-	randomized =   no
-	allowed_archetypes = {  }
-
-	opposites = { }
-	modifier = {
-	}
-}
-trait_megalomaniacs = {
-	cost = 1
-	initial =  yes
-	randomized =  yes
-	modification =  no
-	allowed_archetypes = { LITHOID BIOLOGICAL }
-
-	opposites = { }
-	modifier = {
-	}
-}
-trait_evo_conservative = {
-	icon =  "gfx/interface/icons/traits/trait_evo_conservative.dds"
-	cost = 1
-	initial = yes
-	randomized = yes
-	allowed_archetypes = { LITHOID BIOLOGICAL PRESAPIENT }
-
-	opposites = { }
-	modifier = {
-		pop_government_ethic_attraction = 0.1
-		pop_ethics_shift_speed_mult = -0.1
-		pop_factions_produces_mult = 0.1
-		pop_political_power = -0.1
-	}
-}
-trait_evo_gigantic = {
-	icon =  "gfx/interface/icons/traits/trait_evo_gigantic.dds"
-	cost = 1
-	initial = yes
-	randomized = yes
-	allowed_archetypes = { LITHOID BIOLOGICAL PRESAPIENT }
-
-	opposites = { }
-	modifier = {
-		planet_pops_organics_food_upkeep_mult = 0.2
-		pop_housing_usage_mult = 0.2
-		army_damage_mult = 0.75
-		army_health = 0.75
-		army_disengage_chance_mult = -0.2
-	}
-}
-trait_additrait_sky_born = {
-	cost = 1
-	initial = yes
-	randomized = yes
-	allowed_archetypes = { LITHOID BIOLOGICAL }
-
-	opposites = { }
-	modifier = {
-	}
-}
-trait_additrait_fast_analysers = {
-	cost = 1
-	initial = yes
-	randomized = yes
-	allowed_archetypes = { LITHOID BIOLOGICAL }
-
-	opposites = { }
-	modifier = {
-	}
-}
-trait_additrait_aggressive = {
-	cost = 1
-	initial = yes
-	randomized = yes
-	allowed_archetypes = { LITHOID BIOLOGICAL }
-
-	opposites = { }
-	modifier = {
-	}
-}
-trait_td_lith_big = {
-	icon =  "gfx/interface/icons/traits/imported_icons/leader_trait_environmental_engineer.dds"
-	cost = 1
-	initial = yes
-	randomized = yes
-	allowed_archetypes = { LITHOID }
-
-	opposites = { }
-	modifier = {
-		army_damage_mult = 0.20
-		army_health = 0.10
-		planet_jobs_worker_produces_mult = 0.025
-		planet_livestock_minerals_produces_add = 0.25
-		planet_pops_minerals_upkeep_mult = 0.05
-		planet_pops_consumer_goods_upkeep_mult = 0.025
-		pop_housing_usage_mult = 0.05
-		pop_resettlement_cost_mult = 0.10
-	}
-}
-trait_spores = {
-	cost = 1
-	initial = yes
-	randomized = yes
-	modification =  no
 	allowed_archetypes = { BIOLOGICAL }
 
 	opposites = { }
 	modifier = {
-		pop_growth_speed = 0.10
-		army_damage_mult = 0.10
-		country_trust_growth = -0.20
+	}
+}
+trait_additrait_mob_mentality = {
+	cost = 1
+	initial = yes
+	randomized = yes
+	allowed_archetypes = { LITHOID BIOLOGICAL }
+
+	opposites = { }
+	modifier = {
+	}
+}
+trait_predators = {
+	cost = 1
+	initial = yes
+	randomized = yes
+	modification =  yes
+	allowed_archetypes = { BIOLOGICAL }
+
+	opposites = { }
+	modifier = {
+		country_pop_enslaved_mult = 0.30
+		planet_jobs_slave_produces_mult = -0.02
+		pop_citizen_happiness = 0.05
+		planet_pops_organics_food_upkeep_mult = 0.10
 		planet_jobs_worker_produces_mult = -0.02
-	}
-}
-trait_plantoid_phototrophic = {
-	cost = 1
-	initial = yes
-	randomized = yes
-	allowed_archetypes = { BIOLOGICAL }
-	custom_tooltip =  TRAIT_PLANTOID_PHOTOTROPHIC_EFFECT
-
-	opposites = { }
-	modifier = {
 	}
 }
 trait_premiumequipment = {
@@ -1507,14 +1043,287 @@ trait_premiumequipment = {
 		army_defense_morale_mult = 0.10
 	}
 }
-opposites = {
-	cost = 0
+trait_soundwave_communication = {
+	cost = 1
 	initial = yes
 	randomized = yes
-	allowed_archetypes = {  }
+	modification =  no
+	allowed_archetypes = { LITHOID }
 
 	opposites = { }
 	modifier = {
+		planet_crime_mult = -0.10
+		planet_stability_add = 5
+		planet_jobs_upkeep_mult = 0.10
+		diplomacy_upkeep_mult = 0.05
+	}
+}
+trait_psionic = {
+	icon =  "gfx/interface/icons/traits/trait_psionic_species.dds"
+	cost = 0
+	initial =  no
+	randomized =  no
+	allowed_archetypes = { LITHOID BIOLOGICAL }
+
+	opposites = { }
+	modifier = {
+		planet_jobs_physics_research_produces_mult = 0.10
+		planet_jobs_society_research_produces_mult = 0.10
+		planet_jobs_engineering_research_produces_mult = 0.10
+		planet_jobs_unity_produces_mult = 0.10
+		pop_happiness = 0.05
+	}
+	ai_weight = {
+weight = 0
+	}
+		assembly_score = {
+		base = 0.5
+		modifier = {
+			add = 0.5
+			from = {
+ has_research_designation = yes 
+}
+}
+		modifier = {
+			add = 0.5
+			from = {
+ has_unity_designation = yes 
+}
+}
+		modifier = {
+			add = 0.5
+			from = {
+ has_building = building_order_keep 
+}
+}
+		modifier = {
+			subtract = 1.5
+			from.owner = {
+ has_ascension_perk = ap_the_flesh_is_weak 
+}
+}
+	}
+}
+trait_uplifted = {
+	cost = 0
+	initial =  no
+	randomized =  no
+	allowed_archetypes = { LITHOID BIOLOGICAL }
+
+	opposites = { }
+	modifier = {
+	}
+	ai_weight = {
+weight = 0
+	}
+}
+trait_additrait_presapient_natural_inventors = {
+	icon =  "gfx/interface/icons/traits/trait_primitive.dds"
+	cost = 0
+	initial =  no
+	randomized = yes
+	allowed_archetypes = { LITHOID BIOLOGICAL PRESAPIENT }
+
+	opposites = { }
+	modifier = {
+		planet_jobs_unity_produces_mult = 0.05
+		planet_jobs_engineering_research_produces_mult = 0.20
+		planet_jobs_physics_research_produces_mult = 0.05
+		planet_jobs_society_research_produces_mult = 0.05
+		planet_jobs_minerals_produces_mult = -0.1
+	}
+	ai_weight = {
+weight = 0
+	}
+}
+trait_yanz_small = {
+	icon =  "gfx/interface/icons/traits/trait_yanz_small.dds"
+	cost = 0
+	initial = yes
+	randomized =  yes
+	allowed_archetypes = { LITHOID BIOLOGICAL }
+
+	opposites = { }
+	modifier = {
+		army_damage_mult = -0.5
+		pop_housing_usage_mult = -0.10
+		planet_pops_food_upkeep_mult = -0.10
+		planet_jobs_worker_produces_mult = -0.10
+		planet_pops_consumer_goods_upkeep_mult = -0.1
+	}
+	ai_weight = {
+weight = 0
+	}
+}
+trait_yanz_big = {
+	icon =  "gfx/interface/icons/traits/trait_yanz_big.dds"
+	cost = 0
+	initial = yes
+	randomized =  yes
+	allowed_archetypes = { LITHOID BIOLOGICAL }
+
+	opposites = { }
+	modifier = {
+		army_damage_mult = 0.5
+		pop_housing_usage_mult = 0.10
+		planet_pops_food_upkeep_mult = 0.10
+		planet_jobs_worker_produces_mult = 0.10
+		planet_pops_consumer_goods_upkeep_mult = 0.1
+	}
+	ai_weight = {
+weight = 0
+	}
+}
+trait_enigmatic_intelligence = {
+	cost = 0
+	initial =  no
+	randomized =  no
+	allowed_archetypes = { LITHOID BIOLOGICAL }
+
+	opposites = { }
+	modifier = {
+		planet_jobs_physics_research_produces_mult = 0.10
+		planet_jobs_society_research_produces_mult = 0.10
+		planet_jobs_engineering_research_produces_mult = 0.10
+		species_leader_exp_gain = 0.25
+	}
+	ai_weight = {
+weight = 0
+	}
+		assembly_score = {
+		modifier = {
+			add = 1.5
+			from = {
+ has_research_designation = yes 
+}
+}
+		modifier = {
+			add = 1.5
+			from = {
+ has_building = building_order_keep 
+}
+}
+	}
+}
+trait_latent_psionic = {
+	icon =  "gfx/interface/icons/traits/trait_latent_psionic_species.dds"
+	cost = 0
+	initial =  no
+	randomized =  no
+	allowed_archetypes = { LITHOID BIOLOGICAL }
+
+	opposites = { }
+	modifier = {
+		planet_jobs_physics_research_produces_mult = 0.10
+		planet_jobs_society_research_produces_mult = 0.10
+		planet_jobs_engineering_research_produces_mult = 0.10
+		planet_jobs_unity_produces_mult = 0.05
+	}
+	ai_weight = {
+weight = 0
+	}
+		assembly_score = {
+		modifier = {
+			add = 0.5
+			from = {
+ has_research_designation = yes 
+}
+}
+		modifier = {
+			add = 0.5
+			from = {
+ has_unity_designation = yes 
+}
+}
+		modifier = {
+			add = 0.5
+			from = {
+ has_building = building_order_keep 
+}
+}
+	}
+}
+trait_td_multi_hiveminded = {
+	cost = 0
+	initial = yes
+	randomized = yes
+	forced_happiness =  yes
+	allowed_archetypes = { LITHOID BIOLOGICAL }
+
+	opposites = { }
+	modifier = {
+		planet_jobs_worker_produces_mult = 0.075
+		planet_jobs_unity_produces_mult = 0.125
+		negative_leader_traits_species = 1
+		leaders_upkeep_mult = 0.1
+	}
+	ai_weight = {
+weight = 0
+	}
+}
+trait_self_modified = {
+	icon =  "gfx/interface/icons/traits/trait_cybernetic.dds"
+	cost = 0
+	initial =  no
+	randomized =  no
+	allowed_archetypes = { LITHOID BIOLOGICAL }
+
+	opposites = { }
+	modifier = {
+	}
+	ai_weight = {
+weight = 0
+	}
+}
+trait_td_vestigial_psionic = {
+	cost = 0
+	initial = yes
+	randomized = yes
+	allowed_archetypes = { BIOLOGICAL PRESAPIENT }
+
+	opposites = { }
+	modifier = {
+		planet_jobs_engineering_research_produces_mult = 0.025
+		planet_jobs_physics_research_produces_mult = 0.025
+		planet_jobs_society_research_produces_mult = 0.025
+		planet_jobs_energy_produces_mult = 0.025
+		pop_happiness = 0.025
+		planet_pops_food_upkeep_mult = 0.15
+	}
+	ai_weight = {
+weight = 0
+	}
+}
+trait_td_third_eye = {
+	icon =  "gfx/interface/icons/traits/imported_icons/trait_ruler_eye_for_talent.dds"
+	cost = 0
+	initial = yes
+	randomized = yes
+	allowed_archetypes = { LITHOID BIOLOGICAL PRESAPIENT }
+
+	opposites = { }
+	modifier = {
+		pop_amenities_usage_mult = 0.10
+		army_damage_mult = -0.10
+		army_morale = 0.10
+		species_leader_exp_gain = 0.25
+	}
+	ai_weight = {
+weight = 0
+	}
+}
+trait_td_flesh_and_spirit = {
+	cost = 0
+	initial = yes
+	randomized = yes
+	allowed_archetypes = { LITHOID BIOLOGICAL PRESAPIENT }
+
+	opposites = { }
+	modifier = {
+		planet_jobs_unity_produces_mult = 0.025
+		planet_jobs_energy_produces_mult = 0.025
+		pop_happiness = 0.025
+		pop_housing_usage_mult = 0.15
 	}
 	ai_weight = {
 weight = 0
@@ -1540,289 +1349,20 @@ trait_td_lith_vestigial_psionic = {
 weight = 0
 	}
 }
-trait_yanz_genorig_precursor_gift = {
-	icon =  "gfx/interface/icons/traits/trait_yanz_genorig_precursor_gift.dds"
+trait_additrait_presapient_natural_savants = {
+	icon =  "gfx/interface/icons/traits/trait_primitive.dds"
 	cost = 0
 	initial =  no
-	randomized =  no
-	modification =  no
-	allowed_archetypes = { LITHOID BIOLOGICAL }
-
-	opposites = { }
-	modifier = {
-		planet_jobs_produces_mult = 0.1
-		pop_environment_tolerance = 0.1
-		pop_growth_speed = 0.1
-		leader_age = 20
-	}
-	ai_weight = {
-weight = 0
-	}
-}
-allowed_archetypes = {
-	cost = 0
-	initial = yes
-	randomized = yes
-	allowed_archetypes = { LITHOID BIOLOGICAL }
-
-	opposites = { }
-	modifier = {
-	}
-	ai_weight = {
-weight = 0
-	}
-}
-trait_evo_matriarchal = {
-	icon =  "gfx/interface/icons/traits/trait_evo_matriarchal.dds"
-	cost = 0
-	initial = yes
-	randomized =  no
-	modification =  yes
-	allowed_archetypes = { LITHOID BIOLOGICAL PRESAPIENT }
-
-	opposites = { }
-	modifier = {
-	}
-	ai_weight = {
-weight = 0
-	}
-}
-trait_evo_lithovore = {
-	icon =  "gfx/interface/icons/traits/trait_evo_lithovore.dds"
-	cost = 0
-	initial = yes
-	randomized =  no
-	modification =  no
-	allowed_archetypes = { BIOLOGICAL PRESAPIENT }
-	custom_tooltip =  TRAIT_LITHOVORE_EFFECT
-
-	opposites = { }
-	modifier = {
-	}
-	ai_weight = {
-weight = 0
-	}
-}
-trait_yanz_small = {
-	icon =  "gfx/interface/icons/traits/trait_yanz_small.dds"
-	cost = 0
-	initial = yes
-	randomized =  yes
-	modification =  yes
-	allowed_archetypes = { LITHOID BIOLOGICAL }
-
-	opposites = { }
-	modifier = {
-		army_damage_mult = -0.5
-		pop_housing_usage_mult = -0.10
-		planet_pops_food_upkeep_mult = -0.10
-		planet_jobs_worker_produces_mult = -0.10
-		planet_pops_consumer_goods_upkeep_mult = -0.1
-	}
-	ai_weight = {
-weight = 0
-	}
-}
-trait_psionic = {
-	icon =  "gfx/interface/icons/traits/trait_psionic_species.dds"
-	cost = 0
-	initial =  no
-	randomized =  no
-	modification =  no
-	allowed_archetypes = { LITHOID BIOLOGICAL }
-
-	opposites = { }
-	modifier = {
-		planet_jobs_engineering_research_produces_mult = 0.10
-		planet_jobs_physics_research_produces_mult = 0.10
-		planet_jobs_society_research_produces_mult = 0.10
-		planet_jobs_energy_produces_mult = 0.10
-		pop_happiness = 0.05
-	}
-	ai_weight = {
-weight = 0
-	}
-}
-trait_td_flesh_and_spirit = {
-	cost = 0
-	initial = yes
 	randomized = yes
 	allowed_archetypes = { LITHOID BIOLOGICAL PRESAPIENT }
 
 	opposites = { }
 	modifier = {
-		planet_jobs_unity_produces_mult = 0.025
-		planet_jobs_energy_produces_mult = 0.025
-		pop_happiness = 0.025
-		pop_housing_usage_mult = 0.15
-	}
-	ai_weight = {
-weight = 0
-	}
-}
-trait_self_modified = {
-	icon =  "gfx/interface/icons/traits/trait_cybernetic.dds"
-	cost = 0
-	initial =  no
-	randomized =  no
-	modification =  no
-	allowed_archetypes = { LITHOID BIOLOGICAL }
-
-	opposites = { }
-	modifier = {
-	}
-	ai_weight = {
-weight = 0
-	}
-}
-trait_td_third_eye = {
-	icon =  "gfx/interface/icons/traits/imported_icons/trait_ruler_eye_for_talent.dds"
-	cost = 0
-	initial = yes
-	randomized = yes
-	allowed_archetypes = { LITHOID BIOLOGICAL PRESAPIENT }
-
-	opposites = { }
-	modifier = {
-		pop_amenities_usage_mult = 0.10
-		army_damage_mult = -0.10
-		army_morale = 0.10
-		species_leader_exp_gain = 0.25
-	}
-	ai_weight = {
-weight = 0
-	}
-}
-trait_uplifted = {
-	cost = 0
-	initial =  no
-	randomized =  no
-	modification =  no
-	allowed_archetypes = { LITHOID BIOLOGICAL }
-
-	opposites = { }
-	modifier = {
-	}
-	ai_weight = {
-weight = 0
-	}
-}
-trait_evo_devouring_swarm = {
-	icon =  "gfx/interface/icons/traits/leader_traits/leader_trait_ruler_hive_mind.dds"
-	cost = 0
-	initial =  no
-	randomized =  no
-	modification =  no
-	forced_happiness =  yes
-	allowed_archetypes = { LITHOID BIOLOGICAL }
-
-	opposites = { }
-	modifier = {
-	}
-	ai_weight = {
-weight = 0
-	}
-}
-trait_yanz_big = {
-	icon =  "gfx/interface/icons/traits/trait_yanz_big.dds"
-	cost = 0
-	initial = yes
-	randomized =  yes
-	modification =  yes
-	allowed_archetypes = { LITHOID BIOLOGICAL }
-
-	opposites = { }
-	modifier = {
-		army_damage_mult = 0.5
-		pop_housing_usage_mult = 0.10
-		planet_pops_food_upkeep_mult = 0.10
-		planet_jobs_worker_produces_mult = 0.10
-		planet_pops_consumer_goods_upkeep_mult = 0.1
-	}
-	ai_weight = {
-weight = 0
-	}
-}
-trait_latent_psionic = {
-	icon =  "gfx/interface/icons/traits/trait_psionic_species.dds"
-	cost = 0
-	initial =  no
-	randomized =  no
-	modification =  no
-	allowed_archetypes = { LITHOID BIOLOGICAL }
-
-	opposites = { }
-	modifier = {
+		planet_jobs_unity_produces_mult = 0.05
 		planet_jobs_engineering_research_produces_mult = 0.05
-		planet_jobs_physics_research_produces_mult = 0.05
+		planet_jobs_physics_research_produces_mult = 0.20
 		planet_jobs_society_research_produces_mult = 0.05
-		planet_jobs_energy_produces_mult = 0.05
-	}
-	ai_weight = {
-weight = 0
-	}
-}
-trait_td_vestigial_psionic = {
-	cost = 0
-	initial = yes
-	randomized = yes
-	allowed_archetypes = { BIOLOGICAL PRESAPIENT }
-
-	opposites = { }
-	modifier = {
-		planet_jobs_engineering_research_produces_mult = 0.025
-		planet_jobs_physics_research_produces_mult = 0.025
-		planet_jobs_society_research_produces_mult = 0.025
-		planet_jobs_energy_produces_mult = 0.025
-		pop_happiness = 0.025
-		planet_pops_food_upkeep_mult = 0.15
-	}
-	ai_weight = {
-weight = 0
-	}
-}
-trait_evo_patriarchal = {
-	icon =  "gfx/interface/icons/traits/trait_evo_patriarchal.dds"
-	cost = 0
-	initial = yes
-	randomized =  no
-	modification =  yes
-	allowed_archetypes = { LITHOID BIOLOGICAL PRESAPIENT }
-
-	opposites = { }
-	modifier = {
-	}
-	ai_weight = {
-weight = 0
-	}
-}
-trait_td_witness = {
-	icon =  "gfx/interface/icons/traits/imported_icons/leader_trait_paranoid.dds"
-	cost = -1
-	initial = yes
-	randomized = yes
-	allowed_archetypes = { LITHOID BIOLOGICAL }
-
-	opposites = { }
-	modifier = {
-		pop_happiness = -0.075
-		planet_jobs_unity_produces_mult = -0.025
-		planet_jobs_engineering_research_produces_mult = 0.05
-		planet_jobs_physics_research_produces_mult = 0.05
-		planet_jobs_society_research_produces_mult = 0.05
-	}
-	ai_weight = {
-weight = 0
-	}
-}
-trait_additrait_rooted = {
-	cost = -1
-	initial = yes
-	randomized = yes
-	allowed_archetypes = { LITHOID BIOLOGICAL }
-
-	opposites = { }
-	modifier = {
+		planet_jobs_minerals_produces_mult = -0.1
 	}
 	ai_weight = {
 weight = 0
@@ -1866,24 +1406,6 @@ trait_td_small = {
 weight = 0
 	}
 }
-trait_earthbound = {
-	cost = -1
-	initial = yes
-	randomized = yes
-	modification =  yes
-	allowed_archetypes = { LITHOID }
-
-	opposites = { }
-	modifier = {
-		planet_miners_minerals_produces_mult = 0.10
-		pop_growth_from_immigration = -0.15
-		pop_resettlement_cost_mult = 0.25
-		planet_colony_development_speed_mult = -0.25
-	}
-	ai_weight = {
-weight = 0
-	}
-}
 trait_basicequipment = {
 	icon =  "gfx/interface/icons/traits/trait_basicequipment.dds"
 	cost = -1
@@ -1900,24 +1422,6 @@ trait_basicequipment = {
 		army_defense_damage_mult = -0.10
 		army_defense_health_mult = -0.20
 		army_defense_morale_mult = -0.10
-	}
-	ai_weight = {
-weight = 0
-	}
-}
-trait_evo_pragmatic = {
-	icon =  "gfx/interface/icons/traits/trait_evo_pragmatic.dds"
-	cost = -1
-	initial = yes
-	randomized = yes
-	allowed_archetypes = { LITHOID BIOLOGICAL PRESAPIENT }
-
-	opposites = { }
-	modifier = {
-		pop_government_ethic_attraction = -0.1
-		pop_ethics_shift_speed_mult = 0.1
-		pop_factions_produces_mult = -0.1
-		pop_political_power = 0.1
 	}
 	ai_weight = {
 weight = 0
@@ -1945,26 +1449,29 @@ trait_td_lith_small = {
 weight = 0
 	}
 }
-trait_yanz_incompetent_engineers = {
-	cost = -2
+trait_earthbound = {
+	cost = -1
 	initial = yes
-	randomized =  yes
+	randomized = yes
 	modification =  yes
-	allowed_archetypes = { LITHOID BIOLOGICAL }
+	allowed_archetypes = { LITHOID }
 
 	opposites = { }
 	modifier = {
+		planet_miners_minerals_produces_mult = 0.10
+		pop_growth_from_immigration = -0.15
+		pop_resettlement_cost_mult = 0.25
+		planet_colony_development_speed_mult = -0.25
 	}
 	ai_weight = {
 weight = 0
 	}
 }
-trait_repugnant = {
-	cost = -2
+trait_additrait_rooted = {
+	cost = -1
 	initial = yes
 	randomized = yes
 	allowed_archetypes = { LITHOID BIOLOGICAL }
-	custom_tooltip =  TRAIT_REPUGNANT_EFFECT
 
 	opposites = { }
 	modifier = {
@@ -1973,65 +1480,20 @@ trait_repugnant = {
 weight = 0
 	}
 }
-trait_evo_brutal = {
-	icon =  "gfx/interface/icons/traits/trait_evo_brutal.dds"
-	cost = -2
+trait_td_witness = {
+	icon =  "gfx/interface/icons/traits/imported_icons/leader_trait_paranoid.dds"
+	cost = -1
 	initial = yes
 	randomized = yes
-	allowed_archetypes = { LITHOID BIOLOGICAL PRESAPIENT }
-
-	opposites = { }
-	modifier = {
-		army_attack_damage_mult = 0.25
-		country_war_exhaustion_mult = -0.05
-		planet_crime_add = 15
-		country_trust_growth = -0.25
-	}
-	ai_weight = {
-weight = 0
-	}
-}
-trait_yanz_incompetent_sociologists = {
-	cost = -2
-	initial = yes
-	randomized =  yes
-	modification =  yes
 	allowed_archetypes = { LITHOID BIOLOGICAL }
 
 	opposites = { }
 	modifier = {
-	}
-	ai_weight = {
-weight = 0
-	}
-}
-trait_yanz_incompetent_physicists = {
-	cost = -2
-	initial = yes
-	randomized =  yes
-	modification =  yes
-	allowed_archetypes = { LITHOID BIOLOGICAL }
-
-	opposites = { }
-	modifier = {
-	}
-	ai_weight = {
-weight = 0
-	}
-}
-trait_evo_reformistic = {
-	icon =  "gfx/interface/icons/traits/trait_evo_reformistic.dds"
-	cost = -2
-	initial = yes
-	randomized = yes
-	allowed_archetypes = { LITHOID BIOLOGICAL PRESAPIENT }
-
-	opposites = { }
-	modifier = {
-		pop_government_ethic_attraction = -0.2
-		pop_ethics_shift_speed_mult = 0.2
-		pop_factions_produces_mult = -0.2
-		pop_political_power = 0.2
+		pop_happiness = -0.075
+		planet_jobs_unity_produces_mult = -0.025
+		planet_jobs_engineering_research_produces_mult = 0.05
+		planet_jobs_physics_research_produces_mult = 0.05
+		planet_jobs_society_research_produces_mult = 0.05
 	}
 	ai_weight = {
 weight = 0
@@ -2045,6 +1507,7 @@ trait_td_simplified_gene = {
 
 	opposites = { }
 	modifier = {
+		planet_pop_assembly_organic_mult = 0.10
 		pop_environment_tolerance = -0.05
 		planet_jobs_engineering_research_produces_mult = -0.05
 		planet_jobs_physics_research_produces_mult = -0.05
@@ -2054,18 +1517,36 @@ trait_td_simplified_gene = {
 weight = 0
 	}
 }
-trait_simple = {
+trait_anxious = {
 	cost = -2
 	initial =  yes
 	randomized =  yes
-	allowed_archetypes = { LITHOID BIOLOGICAL }
+	allowed_archetypes = { BIOLOGICAL }
 
 	opposites = { }
 	modifier = {
-		planet_jobs_specialist_produces_mult = -0.05
-		planet_jobs_physics_research_produces_mult = -0.05
-		planet_jobs_society_research_produces_mult = -0.05
-		planet_jobs_engineering_research_produces_mult = -0.05
+		planet_jobs_ruler_produces_mult = -0.15
+		pop_cat_ruler_happiness = -0.15
+		pop_cat_specialist_happiness = -0.10
+		pop_cat_worker_happiness = -0.05
+	}
+	ai_weight = {
+weight = 0
+	}
+}
+trait_td_evolving = {
+	cost = -2
+	initial = yes
+	randomized = yes
+	allowed_archetypes = { LITHOID BIOLOGICAL PRESAPIENT }
+
+	opposites = { }
+	modifier = {
+		pop_environment_tolerance = 0.075
+		planet_pop_assembly_organic_mult = -0.10
+		planet_jobs_produces_mult = -0.05
+		planet_jobs_unity_produces_mult = -0.10
+		planet_pops_consumer_goods_upkeep_mult = 0.15
 	}
 	ai_weight = {
 weight = 0
@@ -2075,7 +1556,6 @@ trait_td_exiles_of_the_end = {
 	cost = -2
 	initial = yes
 	randomized = yes
-	modification =  no
 	allowed_archetypes = { LITHOID BIOLOGICAL PRESAPIENT }
 
 	opposites = { }
@@ -2091,18 +1571,18 @@ trait_td_exiles_of_the_end = {
 weight = 0
 	}
 }
-trait_td_evolving = {
+trait_simple = {
 	cost = -2
-	initial = yes
-	randomized = yes
-	allowed_archetypes = { LITHOID BIOLOGICAL PRESAPIENT }
+	initial =  yes
+	randomized =  yes
+	allowed_archetypes = { BIOLOGICAL }
 
 	opposites = { }
 	modifier = {
-		pop_environment_tolerance = 0.075
-		planet_jobs_produces_mult = -0.05
-		planet_jobs_unity_produces_mult = -0.125
-		planet_pops_consumer_goods_upkeep_mult = 0.15
+		leader_skill_levels = -1
+		planet_jobs_physics_research_produces_mult = -0.10
+		planet_jobs_society_research_produces_mult = -0.10
+		planet_jobs_engineering_research_produces_mult = -0.10
 	}
 	ai_weight = {
 weight = 0
@@ -2120,6 +1600,27 @@ trait_td_delayed_sense = {
 		pop_amenities_usage_mult = 0.125
 		planet_jobs_engineering_research_produces_mult = -0.10
 		planet_jobs_physics_research_produces_mult = -0.15
+	}
+	ai_weight = {
+weight = 0
+	}
+}
+trait_td_tiny = {
+	cost = -3
+	initial = yes
+	randomized = yes
+	allowed_archetypes = { BIOLOGICAL PRESAPIENT }
+
+	opposites = { }
+	modifier = {
+		army_damage_mult = -0.30
+		army_health = -0.10
+		planet_jobs_worker_produces_mult = -0.075
+		planet_livestock_food_produces_add = -1.0
+		planet_pops_food_upkeep_mult = -0.05
+		planet_pops_consumer_goods_upkeep_mult = -0.05
+		pop_housing_usage_mult = -0.125
+		pop_resettlement_cost_mult = -0.15
 	}
 	ai_weight = {
 weight = 0
@@ -2147,19 +1648,35 @@ trait_td_lith_tiny = {
 weight = 0
 	}
 }
-trait_extensive_biomaterial_usage = {
+trait_td_lust_for_power = {
 	cost = -3
 	initial = yes
 	randomized = yes
-	modification =  yes
-	allowed_archetypes = { BIOLOGICAL }
+	allowed_archetypes = { LITHOID BIOLOGICAL }
 
 	opposites = { }
 	modifier = {
-		planet_structures_cost_mult = 0.10
-		planet_buildings_upkeep_mult = 0.05
-		planet_districts_upkeep_mult = 0.05
-		planet_pops_organics_food_upkeep_mult = 0.20
+		pop_cat_ruler_happiness = 0.075
+		pop_cat_specialist_happiness = -0.075
+		pop_cat_worker_happiness = -0.225
+		pop_cat_slave_happiness = -0.225
+	}
+	ai_weight = {
+weight = 0
+	}
+}
+trait_td_devourers = {
+	cost = -3
+	initial = yes
+	randomized = yes
+	allowed_archetypes = { BIOLOGICAL PRESAPIENT }
+
+	opposites = { }
+	modifier = {
+		planet_pops_food_upkeep_mult = 0.225
+		planet_jobs_food_produces_mult = -0.10
+		army_collateral_damage_mult = 0.20
+		army_attack_damage_mult = 0.20
 	}
 	ai_weight = {
 weight = 0
@@ -2186,214 +1703,19 @@ trait_crudeequipment = {
 weight = 0
 	}
 }
-trait_evo_aquatic = {
-	icon =  "gfx/interface/icons/traits/trait_evo_aquatic.dds"
-	cost = -3
-	initial = yes
-	randomized =  no
-	modification =  no
-	allowed_archetypes = { LITHOID BIOLOGICAL }
-	custom_tooltip =  TRAIT_AQUATIC_EFFECT
-
-	opposites = { }
-	modifier = {
-		pc_ocean_habitability = 1.0
-		pc_aquatic_habitability = 1.0
-		pc_aquatichot_habitability = 1.0
-		pc_aquaticcold_habitability = 1.0
-		pc_aquaticcity_habitability = 1.0
-		pc_tropical_habitability = -2.0
-		pc_continental_habitability = -2.0
-		pc_cenote_habitability = -2.0
-		pc_tepid_habitability = -2.0
-		pc_subarctic_habitability = -2.0
-		pc_cascadian_habitability = -2.0
-		pc_mangrove_habitability = -2.0
-		pc_wetswamp_habitability = -2.0
-		pc_desertislands_habitability = -2.0
-		pc_hajungle_habitability = -2.0
-		pc_retinal_habitability = -2.0
-		pc_forest_habitability = -2.0
-		pc_lake_habitability = -2.0
-		pc_megafloraforge_habitability = -2.0
-		pc_megafloratol_habitability = -2.0
-		pc_megaflora_habitability = -2.0
-		pc_megaflorahive_habitability = -2.0
-		pc_megaflorafort_habitability = -2.0
-		pc_megafloracapital_habitability = -2.0
-		pc_karst_habitability = -2.0
-		pc_superhabitable_habitability = -2.0
-		pc_geothermal_habitability = -2.0
-		pc_biolumen_habitability = -2.0
-		pc_crystal_habitability = -2.0
-		pc_floating_habitability = -2.0
-		pc_technoorganic_habitability = -2.0
-		pc_arid_habitability = -2.0
-		pc_desert_habitability = -2.0
-		pc_savannah_habitability = -2.0
-		pc_badlands_habitability = -2.0
-		pc_prairie_habitability = -2.0
-		pc_steppe_habitability = -2.0
-		pc_veld_habitability = -2.0
-		pc_semiarid_habitability = -2.0
-		pc_hadesert_habitability = -2.0
-		pc_sandsea_habitability = -2.0
-		pc_mesa_habitability = -2.0
-		pc_outback_habitability = -2.0
-		pc_oasis_habitability = -2.0
-		pc_med_habitability = -2.0
-		pc_aquifer_habitability = -2.0
-		pc_supercon_habitability = -2.0
-		pc_coral_habitability = -2.0
-		pc_salt_habitability = -2.0
-		pc_primal_habitability = -2.0
-		pc_tidallylocked_habitability = -2.0
-		pc_graveyard_habitability = -2.0
-		pc_tundra_habitability = -2.0
-		pc_arctic_habitability = -2.0
-		pc_alpine_habitability = -2.0
-		pc_snowball_habitability = -2.0
-		pc_basalt_habitability = -2.0
-		pc_duneforest_habitability = -2.0
-		pc_aeolian_habitability = -2.0
-		pc_antarctic_habitability = -2.0
-		pc_snow_habitability = -2.0
-		pc_glacial_habitability = -2.0
-		pc_frozen_desert_habitability = -2.0
-		pc_boreal_habitability = -2.0
-		pc_highland_habitability = -2.0
-		pc_mud_habitability = -2.0
-		pc_swamp_habitability = -2.0
-		pc_mushroom_habitability = -2.0
-		pc_lichen_habitability = -2.0
-		pc_lanthanide_habitability = -2.0
-		pc_glacio_habitability = -2.0
-		pc_eyeball_habitability = -2.0
-		pc_rogue_habitability = -2.0
-		pc_storm_habitability = -2.0
-		pc_acid_habitability = -2.0
-		pc_methane_habitability = -2.0
-		pc_ammonia_habitability = -2.0
-		pc_sulfur_habitability = -2.0
-		pc_ash_habitability = -2.0
-		pc_irradiated_habitability = -2.0
-		pc_ammoniacity_habitability = -2.0
-		pc_sulfurcity_habitability = -2.0
-		pc_ammoniaring_habitability = -2.0
-		pc_sulfurring_habitability = -2.0
-		pc_methanecity_habitability = -2.0
-		pc_methanering_habitability = -2.0
-		pc_ashcity_habitability = -2.0
-		pc_ashring_habitability = -2.0
-		pc_pdshroud_habitability = -2.0
-		planet_jobs_food_produces_mult = 0.1
-		planet_structures_cost_mult = 0.1
-	}
-	ai_weight = {
-weight = 0
-	}
-}
-trait_evo_criminal = {
-	icon =  "gfx/interface/icons/traits/trait_evo_criminal.dds"
+trait_extensive_biomaterial_usage = {
 	cost = -3
 	initial = yes
 	randomized = yes
-	allowed_archetypes = { LITHOID BIOLOGICAL PRESAPIENT }
-
-	opposites = { }
-	modifier = {
-		local_trade_protection_add = -20
-		planet_crime_add = 20
-		max_trade_piracy_add = -5
-		job_criminal_per_pop = 0.05
-	}
-	ai_weight = {
-weight = 0
-	}
-}
-trait_td_devourers = {
-	cost = -3
-	initial = yes
-	randomized = yes
-	allowed_archetypes = { BIOLOGICAL PRESAPIENT }
-
-	opposites = { }
-	modifier = {
-		planet_pops_food_upkeep_mult = 0.225
-		planet_jobs_food_produces_mult = -0.10
-		army_collateral_damage_mult = 0.20
-		army_attack_damage_mult = 0.20
-	}
-	ai_weight = {
-weight = 0
-	}
-}
-trait_td_tiny = {
-	cost = -3
-	initial = yes
-	randomized = yes
-	allowed_archetypes = { BIOLOGICAL PRESAPIENT }
-
-	opposites = { }
-	modifier = {
-		army_damage_mult = -0.30
-		army_health = -0.10
-		planet_jobs_worker_produces_mult = -0.075
-		planet_livestock_food_produces_add = -1.0
-		planet_pops_food_upkeep_mult = -0.05
-		planet_pops_consumer_goods_upkeep_mult = -0.05
-		pop_housing_usage_mult = -0.125
-		pop_resettlement_cost_mult = -0.15
-	}
-	ai_weight = {
-weight = 0
-	}
-}
-trait_evo_short_term_memory = {
-	icon =  "gfx/interface/icons/traits/trait_evo_short_term_memory.dds"
-	cost = -3
-	initial = yes
-	randomized =  no
-	modification =  no
-	allowed_archetypes = { LITHOID BIOLOGICAL }
-
-	opposites = { }
-	modifier = {
-		planet_jobs_engineering_research_produces_mult = -0.15
-		planet_jobs_physics_research_produces_mult = -0.15
-		planet_jobs_society_research_produces_mult = -0.15
-		species_leader_exp_gain = -0.25
-	}
-	ai_weight = {
-weight = 0
-	}
-}
-trait_yanz_poor_intelligence = {
-	cost = -3
-	initial = yes
-	randomized =  yes
 	modification =  yes
-	allowed_archetypes = { LITHOID BIOLOGICAL }
+	allowed_archetypes = { BIOLOGICAL }
 
 	opposites = { }
 	modifier = {
-	}
-	ai_weight = {
-weight = 0
-	}
-}
-trait_td_lust_for_power = {
-	cost = -3
-	initial = yes
-	randomized = yes
-	allowed_archetypes = { LITHOID BIOLOGICAL }
-
-	opposites = { }
-	modifier = {
-		pop_cat_ruler_happiness = 0.075
-		pop_cat_specialist_happiness = -0.075
-		pop_cat_worker_happiness = -0.225
-		pop_cat_slave_happiness = -0.225
+		planet_structures_cost_mult = 0.10
+		planet_buildings_upkeep_mult = 0.05
+		planet_districts_upkeep_mult = 0.05
+		planet_pops_organics_food_upkeep_mult = 0.20
 	}
 	ai_weight = {
 weight = 0
@@ -2420,28 +1742,6 @@ trait_td_nanoorganisms = {
 weight = 0
 	}
 }
-trait_td_lith_nanoorganisms = {
-	icon =  "gfx/interface/icons/traits/trait_td_nanoorganisms.dds"
-	cost = -4
-	initial = yes
-	randomized = yes
-	allowed_archetypes = { LITHOID }
-
-	opposites = { }
-	modifier = {
-		army_damage_mult = -0.40
-		army_health = -0.30
-		planet_jobs_worker_produces_mult = -0.10
-		planet_livestock_minerals_produces_add = -0.75
-		planet_pops_minerals_upkeep_mult = -0.075
-		planet_pops_consumer_goods_upkeep_mult = -0.075
-		pop_housing_usage_mult = -0.15
-		pop_resettlement_cost_mult = -0.20
-	}
-	ai_weight = {
-weight = 0
-	}
-}
 trait_td_rite_of_succession = {
 	cost = -4
 	initial = yes
@@ -2455,6 +1755,23 @@ trait_td_rite_of_succession = {
 		pop_cat_worker_happiness = -0.275
 		pop_cat_slave_happiness = -0.275
 		pop_demotion_time_mult = -0.25
+	}
+	ai_weight = {
+weight = 0
+	}
+}
+trait_moronic = {
+	cost = -4
+	initial =  yes
+	randomized =  yes
+	allowed_archetypes = { BIOLOGICAL }
+
+	opposites = { }
+	modifier = {
+		leader_skill_levels = -3
+		planet_jobs_physics_research_produces_mult = -0.25
+		planet_jobs_society_research_produces_mult = -0.25
+		planet_jobs_engineering_research_produces_mult = -0.25
 	}
 	ai_weight = {
 weight = 0
@@ -2477,20 +1794,23 @@ trait_td_nostalgia = {
 weight = 0
 	}
 }
-trait_yanz_biological_perfection = {
-	icon =  "gfx/interface/icons/traits/bio_path/trait_yanz_biological_perfection.dds"
-	cost = -20
-	initial =  no
-	randomized =  no
-	modification =  yes
-	allowed_archetypes = { LITHOID BIOLOGICAL }
+trait_td_lith_nanoorganisms = {
+	icon =  "gfx/interface/icons/traits/trait_td_nanoorganisms.dds"
+	cost = -4
+	initial = yes
+	randomized = yes
+	allowed_archetypes = { LITHOID }
 
 	opposites = { }
 	modifier = {
-		planet_jobs_produces_mult = 0.2
-		pop_environment_tolerance = 0.2
-		pop_growth_speed = 0.2
-		leader_age = 40
+		army_damage_mult = -0.40
+		army_health = -0.30
+		planet_jobs_worker_produces_mult = -0.10
+		planet_livestock_minerals_produces_add = -0.75
+		planet_pops_minerals_upkeep_mult = -0.075
+		planet_pops_consumer_goods_upkeep_mult = -0.075
+		pop_housing_usage_mult = -0.15
+		pop_resettlement_cost_mult = -0.20
 	}
 	ai_weight = {
 weight = 0

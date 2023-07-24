@@ -104,7 +104,7 @@ trait_td_rbot_flying = {
 	}
 	opposites = { }
 	modifier = {
-		planet_jobs_produces_mult = 0.15
+		planet_jobs_produces_mult = 0.1
 		planet_pops_robotics_upkeep_mult = 0.25
 		pop_amenities_usage_mult = 0.05
 		pop_housing_usage_mult = -0.01
@@ -330,13 +330,13 @@ trait_central_intelligence = {
 }
 
 trait_robot_deep_learning = {
-	cost = 3
+	cost = 5
 	allowed_archetypes = { ROBOT MACHINE }
 
 	opposites = { }
 	modifier = {
 		leader_skill_levels = 10
-		species_leader_exp_gain = 1.50
+		species_leader_exp_gain = 0.75
 	}
 }
 
@@ -381,13 +381,11 @@ trait_td_rbot_quantitative_advance = {
 	allowed_archetypes = { ROBOT MACHINE }
 
 	modifier = {
-		pop_assembly_speed = 0.20
-		planet_jobs_produces_mult = -0.25
-		planet_pops_robotics_upkeep_mult = 0.1
-	}
-	assembling_modifier = {
-		planet_pop_assemblers_upkeep_mult = -0.225
-	}
+		planet_pop_assembly_mult = 0.20
+		planet_jobs_produces_mult = -0.1
+		planet_pops_robotics_upkeep_mult = -0.1
+		planet_pop_assemblers_upkeep_mult = -0.5
+
 }
 
 
@@ -407,12 +405,10 @@ trait_td_rbot_quality_control = {
 	allowed_archetypes = { ROBOT MACHINE }
 
 	modifier = {
-		pop_assembly_speed = -0.20
-		planet_jobs_produces_mult = 0.25
-		planet_pops_robotics_upkeep_mult = -0.1
-	}
-	assembling_modifier = {
-		planet_pop_assemblers_upkeep_mult = 0.225
+		planet_pop_assembly_mult = -0.20
+		planet_jobs_produces_mult = 0.2
+		planet_pops_robotics_upkeep_mult = 0.1
+		planet_pop_assemblers_upkeep_mult = 0.5
 	}
 }
 
@@ -445,30 +441,6 @@ trait_additrait_erratic_processors = {
 		planet_jobs_engineering_research_produces_mult = -0.1
 		planet_jobs_physics_research_produces_mult = -0.1
 		planet_jobs_society_research_produces_mult = -0.1
-	}
-}
-trait_cheap_controller = {
-	cost = -4
-	initial = yes
-	randomized = yes
-	modification = yes
-	allowed_archetypes = { ROBOT MACHINE }
-	opposites = { }
-	modifier = {
-		planet_jobs_simple_drone_produces_mult = -0.15
-		planet_jobs_worker_produces_mult = -0.15
-		planet_pop_assemblers_upkeep_mult = -0.05
-	}
-}
-trait_simple_circuit = {
-	cost = -4
-	initial = yes
-	randomized = yes
-	modification = yes
-	allowed_archetypes = { ROBOT MACHINE }
-	opposites = { }
-	modifier = {
-		planet_researchers_produces_mult = -0.5
 	}
 }
 trait_robot_repurposed_hardware = {
@@ -510,20 +482,6 @@ trait_robot_specialists = {
 }
 
 
-trait_machinedlc_machine_vulnerable = {
-	icon =  gfx/interface/icons/traits/trait_machine_vulnerable.dds
-	cost = 0
-	randomized =  no
-	modification =  no
-	allowed_archetypes = { BIOLOGICAL ROBOT MACHINE LITHOID }
-
-	opposites = { }
-	modifier = {
-		pop_environment_tolerance = -0.5
-		pc_machine_habitability = 1.0
-	}
-}
-
 trait_additrait_customized_servitors = {
 	cost = 2
 	
@@ -546,18 +504,110 @@ trait_additrait_customized_servitors = {
 
 	}
 }
-trait_robot_evo_efficient_protocols = {
+trait_robot_efficient_processors = {
 	cost = 4
-	icon = "gfx/interface/icons/traits/trait_robot_evo_efficient_protocols.dds"
-	opposites = { trait_robot_evo_outdated_protocols }
-
 	initial = yes
 	randomized = yes
+	allowed_archetypes = { MACHINE ROBOT }
 
-	allowed_archetypes = { ROBOT MACHINE }
-
+	opposites = { }
 	modifier = {
-		planet_jobs_produces_mult = 0.25
-		country_admin_cap_add = 25
+		planet_jobs_produces_mult = 0.3
+	}
+}
+trait_just-more-traits_robot_subspaceomnibus = {
+	cost = 2
+	initial = yes
+	randomized = yes
+	allowed_archetypes = { MACHINE ROBOT }
+
+	opposites = { }
+	modifier = {
+		planet_jobs_produces_mult = 0.1
+	}
+}
+trait_robot_maximal = {
+	icon =  "gfx/interface/icons/traits/trait_robot_maximal.dds"
+	cost = 3
+	initial = yes
+	randomized =  no
+	modification =  yes
+	allowed_archetypes = { MACHINE ROBOT }
+
+	opposites = { }
+	modifier = {
+		pop_ethic_egalitarian_attraction_mult = 0.20
+		planet_jobs_society_research_produces_mult = 0.10
+		planet_jobs_physics_research_produces_mult = 0.10
+		planet_jobs_engineering_research_produces_mult = 0.10
+		planet_jobs_unity_produces_mult = 0.05
+		army_morale = 0.30
+		army_defense_damage_mult = 0.15
+	}
+}
+trait_robot_predacon = {
+	#icon =  "gfx/interface/icons/traits/trait_predacon.dds"
+	cost = 4
+	initial = yes
+	randomized =  no
+	modification =  yes
+	allowed_archetypes = { MACHINE ROBOT }
+
+	opposites = { }
+	modifier = {
+		pop_ethic_militarist_attraction_mult = 0.20
+		army_attack_damage_mult = 0.10
+		army_morale_damage_mult = 0.10
+		army_collateral_damage_mult = 0.10
+		pop_ethics_shift_speed_mult = 0.20
+		species_empire_size_mult = 0.10
+		planet_jobs_alloys_produces_mult = 0.1
+		planet_jobs_physics_research_produces_mult = 0.10
+		planet_jobs_engineering_research_produces_mult = 0.10
+		ship_speed_mult = 0.10
+		ship_evasion_mult = 0.05
+		ship_damage_mult = 0.05
+		pop_amenities_usage_mult = 0.1
+		planet_jobs_unity_produces_mult = -0.05
+		planet_pops_upkeep_mult = 0.1
+		species_leader_exp_gain = 0.10
+		leader_skill_levels = 1
+	}
+}
+trait_robot_autobot = {
+	icon =  "gfx/interface/icons/traits/trait_robot_autobot.dds"
+	cost = 2
+	initial = yes
+	randomized =  no
+	modification =  yes
+	allowed_archetypes = { MACHINE ROBOT }
+
+	opposites = { }
+	modifier = {
+		planet_jobs_unity_produces_mult = 0.10
+		planet_researchers_produces_mult = 0.05
+		country_trust_growth = 0.10
+		army_defense_damage_mult = 0.30
+		army_morale = 0.30
+	}
+}
+trait_robot_decepticon = {
+	icon =  "gfx/interface/icons/traits/trait_robot_decepticon.dds"
+	cost = 2
+	initial = yes
+	randomized =  no
+	modification =  yes
+	allowed_archetypes = { MACHINE ROBOT }
+
+	opposites = { }
+	modifier = {
+		army_starting_experience_add = 100
+		army_experience_gain_mult = 0.15
+		army_attack_damage_mult = 0.15
+		army_morale_damage_mult = 0.10
+		country_trust_growth = -0.10
+		species_leader_exp_gain = 0.10
+		leader_skill_levels = 1
+		planet_jobs_alloys_produces_mult = 0.15
 	}
 }

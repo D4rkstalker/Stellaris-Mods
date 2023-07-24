@@ -1,16 +1,3 @@
-trait_yanz_lithoid_livestock = {
-	icon =  "gfx/interface/icons/traits/bio_path/trait_yanz_organic_livestock.dds"
-	cost = 4
-	initial =  no
-	randomized =  no
-	modification =  yes
-	allowed_archetypes = { LITHOID }
-
-	opposites = { }
-	modifier = {
-		planet_livestock_minerals_produces_add = 3
-	}
-}
 trait_td_lith_abundant = {
 	cost = 2
 	initial =  no

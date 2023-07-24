@@ -9,22 +9,10 @@ trait_mech_unity_2 = {
 		planet_jobs_unity_produces_mult = 0.4
 	}
 }
-trait_td_rbot_unity_functions = {
+trait_mech_unity_1 = {
 	cost = 2
-	initial = yes
-	randomized = yes
-	allowed_archetypes = { ROBOT MACHINE }
-
-	opposites = { }
-	modifier = {
-		planet_jobs_unity_produces_mult = 0.25
-	}
-}
-trait_td_rbot_deus_ex_machina = {
-	cost = 2
-	initial = yes
-	randomized = yes
-	modification =  no
+	initial =  no
+	randomized =  no
 	allowed_archetypes = { MACHINE ROBOT }
 
 	opposites = { }
@@ -43,10 +31,10 @@ trait_just-more-traits_robot_subliminalcoding = {
 		planet_jobs_unity_produces_mult = 0.30
 	}
 }
-trait_mech_unity_1 = {
+trait_td_rbot_deus_ex_machina = {
 	cost = 2
-	initial =  no
-	randomized =  no
+	initial = yes
+	randomized = yes
 	allowed_archetypes = { MACHINE ROBOT }
 
 	opposites = { }
@@ -54,10 +42,22 @@ trait_mech_unity_1 = {
 		planet_jobs_unity_produces_mult = 0.25
 	}
 }
-trait_robot_propaganda_machines = {
-	cost = 1
+trait_td_rbot_unity_functions = {
+	cost = 2
 	initial = yes
 	randomized = yes
+	allowed_archetypes = { ROBOT MACHINE }
+
+	opposites = { }
+	modifier = {
+		planet_jobs_unity_produces_mult = 0.25
+	}
+}
+trait_traditional_biorobot = {
+	icon =  gfx/interface/icons/traits/trait_traditional.dds
+	cost = 1
+	initial =  no
+	randomized =  no
 	allowed_archetypes = { ROBOT MACHINE }
 
 	opposites = { }
@@ -99,6 +99,11 @@ trait_additrait_rusty_antiquities = {
 	}
 	ai_weight = {
 weight = 0
+	}
+		assembly_score = {
+		modifier = {
+			subtract = 0.5
+}
 	}
 }
 trait_robot_neural_lock = {

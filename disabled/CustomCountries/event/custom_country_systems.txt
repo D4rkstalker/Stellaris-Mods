@@ -1,0 +1,39 @@
+namespace = custom_empire_systems_test
+
+country_event = {
+	id = custom_empire_systems_test.1
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	immediate = {
+		no_scope = {
+			random_system = {
+				limit = { has_star_flag = custom_empire_test }
+				spawn_system = {
+					min_distance >= 50
+					max_distance <= 80
+					min_orientation_angle = 0
+					max_orientation_angle = 360
+					initializer = SYNDRAGON_RELIC
+				}
+				spawn_system = {
+					min_distance >= 50
+					max_distance <= 80
+					min_orientation_angle = 0
+					max_orientation_angle = 360
+					initializer = SERGAL_GAIA
+				}
+				spawn_system = {
+					min_distance >= 50
+					max_distance <= 80
+					min_orientation_angle = 0
+					max_orientation_angle = 360
+					initializer = AVALI_MACHINE
+				}
+			}
+		}
+
+	}
+}

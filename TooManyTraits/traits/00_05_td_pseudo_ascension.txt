@@ -19,7 +19,8 @@ trait_td_ghosts = {
 	potential_crossbreeding_chance = 0
 	sorting_priority = 9
 
-	modification = no
+	species_potential_add = { always = no }
+	species_possible_remove = { always = no }
 
 	opposites = {
 		"trait_td_shifting_souls"
@@ -127,7 +128,8 @@ trait_td_shifting_souls = {
 	potential_crossbreeding_chance = 0
 	sorting_priority = 9
 
-	modification = no
+	species_potential_add = { always = no }
+	species_possible_remove = { always = no }
 
 	opposites = {
 		"trait_td_artificial_spirits"
@@ -149,7 +151,8 @@ trait_td_artificial_spirits = {
 	potential_crossbreeding_chance = 0
 	sorting_priority = 9
 
-	modification = no
+	species_potential_add = { always = no }
+	species_possible_remove = { always = no }
 
 	opposites = {
 		"trait_td_exiles_of_the_end"
@@ -313,7 +316,8 @@ trait_td_exiles_of_the_end = {
 	potential_crossbreeding_chance = 0
 	sorting_priority = 9
 
-	modification = no
+	species_potential_add = { always = no }
+	species_possible_remove = { always = no }
 
 	opposites = {
 		"trait_td_semimechanized"
@@ -468,7 +472,8 @@ trait_td_semimechanized = {
 	potential_crossbreeding_chance = 0
 	sorting_priority = 9
 
-	modification = no
+	species_potential_add = { always = no }
+	species_possible_remove = { always = no }
 
 	opposites = {
 		"trait_hive_mind"

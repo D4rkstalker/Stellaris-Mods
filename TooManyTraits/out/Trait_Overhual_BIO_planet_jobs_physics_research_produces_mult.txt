@@ -20,16 +20,29 @@ trait_biological_physics_1 = {
 		planet_jobs_physics_research_produces_mult = 0.3
 	}
 }
-trait_natural_physicists_biorobot = {
-	icon =  gfx/interface/icons/traits/trait_natural_physicists.dds
+trait_natural_physicists = {
 	cost = 1
-	initial =  no
-	randomized =  no
-	allowed_archetypes = {  }
+	initial = yes
+	randomized = yes
+	allowed_archetypes = { LITHOID BIOLOGICAL }
 
 	opposites = { }
 	modifier = {
 		planet_jobs_physics_research_produces_mult = 0.15
+	}
+		assembly_score = {
+		modifier = {
+			add = 1
+			from = {
+ has_research_designation = yes 
+}
+}
+		modifier = {
+			add = 1
+			from = {
+ has_building = building_order_keep 
+}
+}
 	}
 }
 trait_cyborg_natural_physicists = {
@@ -44,21 +57,39 @@ trait_cyborg_natural_physicists = {
 		planet_jobs_physics_research_produces_mult = 0.25
 	}
 }
-trait_natural_physicists = {
-	cost = 1
+trait_additrait_unfit_physicists = {
+	cost = -1
 	initial = yes
 	randomized = yes
 	allowed_archetypes = { LITHOID BIOLOGICAL }
 
 	opposites = { }
 	modifier = {
-		planet_jobs_physics_research_produces_mult = 0.15
+		planet_jobs_physics_research_produces_mult = -0.15
+	}
+	ai_weight = {
+weight = 0
+	}
+		assembly_score = {
+		modifier = {
+			subtract = 0.75
+			from = {
+ has_research_designation = yes 
+}
+}
+		modifier = {
+			subtract = 0.75
+			from = {
+ has_building = building_order_keep 
+}
+}
 	}
 }
-trait_additrait_unfit_physicists = {
-	cost = -1
+trait_yanz_incompetent_physicists = {
+	icon =  "gfx/interface/icons/traits/trait_yanz_incompetent_physicists.dds"
+	cost = -2
 	initial = yes
-	randomized = yes
+	randomized =  yes
 	allowed_archetypes = { LITHOID BIOLOGICAL }
 
 	opposites = { }

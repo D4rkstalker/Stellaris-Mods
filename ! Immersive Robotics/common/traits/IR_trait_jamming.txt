@@ -1,0 +1,100 @@
+trait_overhual_jamming_1 = {
+	cost = 1
+	initial = no
+	randomized = no
+	allowed_archetypes = { MACHINE ROBOT }
+	opposites = { "trait_overhual_jamming_4""trait_overhual_jamming_2" "trait_overhual_jamming_3" }
+	species_potential_add = {
+		exists = from
+		from = {
+			has_technology = tech_trait_tech_1
+			has_technology = tech_ftl_inhibitor
+			
+		}
+		OR = {
+			has_trait = trait_overhual_tech_1
+			has_trait = trait_overhual_tech_2
+			has_trait = trait_overhual_tech_3
+			has_trait = trait_overhual_tech_4
+		}
+	}
+	
+	modifier = { 
+		army_disengage_chance_mult = 0.1
+		army_health = 0.1
+	}
+
+}
+trait_overhual_jamming_2 = {
+	cost = 1
+	initial = no
+	randomized = no
+	allowed_archetypes = { MACHINE ROBOT }
+	opposites = { "trait_overhual_jamming_1""trait_overhual_jamming_4" "trait_overhual_jamming_3" }
+	species_potential_add = {
+		exists = from
+		from = {
+			has_technology = tech_trait_tech_1
+			has_technology = tech_ftl_inhibitor
+			
+		}
+		OR = {
+			has_trait = trait_overhual_tech_2
+			has_trait = trait_overhual_tech_3
+			has_trait = trait_overhual_tech_4
+		}
+	}
+	
+	modifier = { 
+		army_disengage_chance_mult = 0.2
+		army_health = 0.2
+	}
+
+}
+trait_overhual_jamming_3 = {
+	cost =2
+	initial = no
+	randomized = no
+	allowed_archetypes = { MACHINE ROBOT }
+	opposites = { "trait_overhual_jamming_1""trait_overhual_jamming_2" "trait_overhual_jamming_4" }
+	species_potential_add = {
+		exists = from
+		from = {
+			has_technology = tech_trait_tech_3
+			has_technology = tech_ftl_inhibitor
+			
+		}
+		OR = {
+			has_trait = trait_overhual_tech_3
+			has_trait = trait_overhual_tech_4
+		}
+	}
+	
+	modifier = { 
+		army_disengage_chance_mult = 0.3
+		army_health = 0.3
+	}
+
+}
+trait_overhual_jamming_4 = {
+	cost =2
+	initial = no
+	randomized = no
+	allowed_archetypes = { MACHINE ROBOT }
+	opposites = { "trait_overhual_jamming_1""trait_overhual_jamming_2" "trait_overhual_jamming_3" }
+	species_potential_add = {
+		exists = from
+		from = {
+			has_technology = tech_trait_tech_4
+			has_technology = tech_ftl_inhibitor
+			
+		}
+		has_trait = trait_overhual_tech_4
+	}
+	
+	modifier = { 
+		army_disengage_chance_mult = 0.4
+		army_health = 0.4
+	}
+
+}

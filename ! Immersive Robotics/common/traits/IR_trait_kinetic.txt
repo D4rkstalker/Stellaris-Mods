@@ -1,0 +1,55 @@
+trait_overhual_kinetic_2 = {
+	cost = 1
+	initial = no
+	randomized = no
+	allowed_archetypes = { MACHINE ROBOT }
+	opposites = { "trait_overhual_kinetic_4" }
+	species_potential_add = {
+		exists = from
+		from = {
+			has_technology = tech_trait_tech_2
+			has_technology = tech_mass_drivers_2
+		
+			
+		}
+		OR = {
+			has_trait = trait_overhual_tech_2
+			has_trait = trait_overhual_tech_3
+			has_trait = trait_overhual_tech_4
+		}
+	}
+	
+	modifier = { 				
+		army_damage_mult = 0.1
+		army_morale_damage_mult = 0.1
+		army_collateral_damage_mult = 0.1
+
+	}
+
+}
+trait_overhual_kinetic_4 = {
+	cost = 2
+	initial = no
+	randomized = no
+	allowed_archetypes = { MACHINE ROBOT }
+	opposites = { "trait_overhual_kinetic_2" }
+	species_potential_add = {
+		exists = from
+		from = {
+			has_technology = tech_trait_tech_4
+			has_technology = tech_mass_drivers_4
+		
+			
+		}
+		has_trait = trait_overhual_tech_4
+	}
+	
+	modifier = { 
+				
+		army_damage_mult = 0.2
+		army_morale_damage_mult = 0.2
+		army_collateral_damage_mult = 0.2
+
+	}
+
+}

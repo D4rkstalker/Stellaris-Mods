@@ -1,0 +1,22 @@
+robot_tf_trigger = {
+	length =1
+	icon = "GFX_edict_type_time"
+	potential = {
+		any_owned_species = {
+			OR = {
+				has_trait = "trait_transform_synth"
+				has_trait = "trait_transform_mech"
+			}
+		}
+		OR = {
+			has_technology = tech_robomodding_m
+			has_technology = tech_robomodding
+		}
+	}
+	effect = {
+		country_event = { id = robot_tf.1 days = 0 }
+	}
+	ai_weight = {
+		weight = 0
+	}
+}

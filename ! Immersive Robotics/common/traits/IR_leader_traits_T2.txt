@@ -1,0 +1,327 @@
+IR_leader_trait_overhual_combat_2 = {
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = GFX_leader_trait_overhual_combat_2
+		RARITY = common
+		COUNCIL = triggered
+		TIER = none
+	}
+	initial = no
+	randomized = no
+	triggered_modifier = {
+		potential = {
+			is_ruler = no
+			leader_class = admiral
+		}
+		leaders_cost_mult = 0.5
+		leaders_upkeep_mult = 0.5
+		ship_fire_rate_mult = 0.2
+		ship_weapon_range_mult = 0.2
+		ship_weapon_damage = 0.2
+	}
+	triggered_modifier = {
+		potential = {
+			is_ruler = no
+			leader_class = general
+		}
+		leaders_cost_mult = 0.5
+		leaders_upkeep_mult = 0.5
+		army_collateral_damage_mult = 0.5
+		army_damage_mult = 0.5
+		army_morale_damage_mult = 0.5
+	}
+	leader_class = { admiral general }
+}
+
+IR_leader_trait_overhual_shield_2 = {
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = GFX_leader_trait_overhual_shield_2
+		RARITY = common
+		COUNCIL = triggered
+		TIER = none
+	}
+	initial = no
+	randomized = no
+	triggered_modifier = {
+		potential = {
+			is_ruler = no
+			leader_class = admiral
+		}
+		leaders_cost_mult = 0.5
+		leaders_upkeep_mult = 0.5
+		ship_shield_regen_add_perc = 0.2
+		ship_shield_mult = 0.2
+		ship_shield_add = 200
+		ship_shield_hardening_add = 0.2
+	}
+	triggered_modifier = {
+		potential = {
+			is_ruler = no
+			leader_class = general
+		}
+		army_health = 0.4
+	}
+	leader_class = { admiral general }
+}
+
+IR_leader_trait_overhual_kinetic_2	 = {
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = GFX_leader_trait_overhual_kinetic_2
+		RARITY = common
+		COUNCIL = triggered
+		TIER = none
+	}
+	initial = no
+	randomized = no
+	triggered_modifier = {
+		potential = {
+			is_ruler = no
+			leader_class = admiral
+		}
+		leaders_cost_mult = 0.5
+		leaders_upkeep_mult = 0.5
+		weapon_type_kinetic_weapon_damage_mult = 0.15
+		weapon_type_kinetic_weapon_fire_rate_mult = 0.15
+	}
+	leader_class = { admiral }
+}
+
+IR_leader_trait_overhual_laser_2 = {
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = GFX_leader_trait_overhual_laser_2
+		RARITY = common
+		COUNCIL = triggered
+		TIER = none
+	}
+	initial = no
+	randomized = no
+	triggered_modifier = {
+		potential = {
+			is_ruler = no
+			leader_class = admiral
+		}
+		leaders_cost_mult = 0.5
+		leaders_upkeep_mult = 0.5
+		weapon_type_energy_weapon_damage_mult = 0.15
+		weapon_type_energy_weapon_fire_rate_mult = 0.15
+	}
+	leader_class = { admiral }
+}
+
+IR_leader_trait_overhual_radar_2 = {
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = GFX_leader_trait_overhual_radar_2
+		RARITY = common
+		COUNCIL = triggered
+		TIER = none
+	}
+	initial = no
+	randomized = no
+	triggered_modifier = {
+		potential = {
+			is_ruler = no
+			leader_class = admiral
+		}
+		leaders_cost_mult = 0.5
+		leaders_upkeep_mult = 0.5
+		ship_sensor_range_add = 2
+		ship_weapon_range_mult = 0.2
+		ship_accuracy_mult = 0.2
+		ship_weapon_range_mult = 0.2
+	}
+	triggered_modifier = {
+		potential = {
+			is_ruler = no
+			leader_class = scientist
+		}
+		leaders_cost_mult = 0.5
+		leaders_upkeep_mult = 0.5
+		ship_anomaly_generation_chance_mult = 0.3
+		science_ship_survey_speed = 0.3
+		ship_archaeological_site_excavation_speed_mult = 0.3
+		ship_archeaological_site_clues_add = 2
+	}
+	leader_class = { admiral scientist }
+}
+
+IR_leader_trait_overhual_coordination_2 = {
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = GFX_leader_trait_overhual_coordination_2
+		RARITY = common
+		COUNCIL = triggered
+		TIER = none
+	}
+	initial = no
+	randomized = no
+	triggered_modifier = {
+		potential = {
+			is_ruler = no
+			leader_class = admiral
+		}
+		leaders_cost_mult = 1
+		leaders_upkeep_mult = 1
+		ships_upkeep_mult = -0.3
+		ship_speed_mult = 0.3
+		ship_evasion_mult = 0.3
+		command_limit_add = 30
+	}
+	triggered_modifier = {
+		potential = {
+			is_ruler = no
+			leader_class = governor
+		}
+		leaders_cost_mult = 1
+		leaders_upkeep_mult = 1
+		planet_bureaucrats_produces_mult = 0.3
+		planet_coordinators_produces_mult = 0.3
+		planet_stability_add = 3
+		pop_happiness = 0.3
+		planet_jobs_produces_mult = 0.3
+		planet_pops_upkeep_mult = -0.3
+		planet_structures_upkeep_mult = -0.3
+		planet_amenities_mult = 0.3
+		planet_amenities_no_happiness_mult = 0.3
+		planet_decision_enact_speed_mult = 0.3
+	}
+	triggered_modifier = {
+		potential = {
+			is_ruler = yes
+		}
+		leaders_cost_mult = 0.5
+		leaders_upkeep_mult = 0.5
+		empire_size_districts_mult = -0.2
+		empire_size_pops_mult = -0.2
+		empire_size_colonies_mult = -0.2
+		country_unity_produces_mult = 0.2
+		country_command_limit_mult = 0.3
+		empire_size_penalty_mult = -0.2
+		country_edict_fund_add = 50
+	}
+	leader_class = { admiral governor }
+}
+
+IR_leader_trait_overhual_fabrication_2 = {
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = GFX_leader_trait_overhual_fabrication_2
+		RARITY = common
+		COUNCIL = triggered
+		TIER = none
+	}
+	initial = no
+	randomized = no
+	triggered_modifier = {
+		potential = {
+			is_ruler = no
+			leader_class = governor
+		}
+		leaders_cost_mult = 0.5
+		leaders_upkeep_mult = 0.5
+		planet_buildings_cost_mult = -0.2
+		planet_districts_cost_mult = -0.2
+		planet_districts_build_speed_mult = 0.2
+		planet_building_build_speed_mult = 0.2
+		deposit_blockers_cost_mult = -0.2
+		planet_clear_blocker_time_mult = -0.2
+		planet_pop_assembly_mult = 0.2
+	}
+	triggered_modifier = {
+		potential = {
+			is_ruler = yes
+		}
+
+		leaders_cost_mult = 0.5
+		leaders_upkeep_mult = 0.5
+		megastructure_build_speed_mult = 0.2
+		megastructure_build_cost_mult = -0.2
+		starbase_upgrade_cost_mult = -0.2
+		starbase_upgrade_speed_mult = 0.2
+		country_ship_upgrade_cost_mult = -0.2
+		starbase_shipyard_build_cost_mult = -0.2
+		starbase_shipyard_build_speed_mult = 0.2
+	}
+	leader_class = { governor }
+}
+
+IR_leader_trait_overhual_gateway_2 = {
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = GFX_leader_trait_overhual_gateway_2
+		RARITY = common
+		COUNCIL = triggered
+		TIER = none
+	}
+	initial = no
+	randomized = no
+	triggered_modifier = {
+		potential = {
+			is_ruler = no
+			leader_class = admiral
+		}
+		leaders_cost_mult = 0.5
+		leaders_upkeep_mult = 0.5
+		ship_emergency_ftl_mult = -0.2
+		ship_disengage_chance_mult = 0.2
+		ship_jumpdrive_cooldown_mult = -0.2
+		ship_ftl_jumpdrive_range_mult = 0.2
+		fleet_mia_time_mult = -0.2
+
+	}
+	triggered_modifier = {
+		potential = {
+			is_ruler = no
+			leader_class = scientist
+		}
+		leaders_cost_mult = 0.5
+		leaders_upkeep_mult = 0.5
+		ship_emergency_ftl_mult = -0.2
+		ship_disengage_chance_mult = 0.2
+		ship_jumpdrive_cooldown_mult = -0.2
+		ship_ftl_jumpdrive_range_mult = 0.2
+		fleet_mia_time_mult = -0.2
+
+	}
+	leader_class = { admiral scientist }
+}
+
+IR_leader_trait_overhual_jamming_2 = {
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = GFX_leader_trait_overhual_jamming_2
+		RARITY = common
+		COUNCIL = triggered
+		TIER = none
+	}
+	initial = no
+	randomized = no
+	triggered_modifier = {
+		potential = {
+			is_ruler = no
+			leader_class = admiral
+		}
+		leaders_cost_mult = 0.5
+		leaders_upkeep_mult = 0.5
+		ship_evasion_mult = 0.2
+		ship_accuracy_mult = 0.2
+		ship_tracking_mult = 0.2
+		weapon_type_point_defense_weapon_damage_mult = 0.5
+		weapon_type_point_defense_weapon_fire_rate_mult = 0.5
+		ship_cloaking_strength_add = 2
+
+	}
+	leader_class = { admiral }
+}

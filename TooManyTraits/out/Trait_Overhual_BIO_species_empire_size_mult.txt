@@ -28,7 +28,6 @@ trait_yanz_wild = {
 	cost = -4
 	initial = yes
 	randomized =  yes
-	modification =  yes
 	allowed_archetypes = { LITHOID BIOLOGICAL }
 
 	opposites = { }

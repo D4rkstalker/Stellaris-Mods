@@ -1,0 +1,201 @@
+namespace = robot_tf
+
+country_event = {
+	id = robot_tf.1 
+	title = "robot_tf.1.name"
+	desc = "robot_tf.1.desc"
+	picture = GFX_evt_robot_assembly_plant
+	show_sound = event_laboratory_sound
+	trackable = yes
+
+	is_triggered_only = yes
+	option = {
+		name = "robot_tf.1.a"
+		save_event_target_as = original_tf_owner
+
+		capital_scope = {
+			enable_special_project = {
+				name = "ROBOT_TF_PROJECT"
+				location = this
+				owner = root
+			}
+		}
+	}
+}
+
+country_event = {
+	id = robot_tf.2 
+	title = "robot_tf.2.name"
+	desc = "robot_tf.2.desc"
+	picture = GFX_evt_robot_assembly_plant
+	show_sound = event_synthetic_evolution
+	is_triggered_only = yes
+
+	immediate = {
+		random_owned_species = {
+			limit = {
+				OR = {
+					has_trait = trait_transform_synth
+					has_trait = trait_transform_mech
+				}
+			}
+			save_event_target_as = original_species
+
+			if = {
+				limit = {
+					root = {
+						has_authority = auth_machine_intelligence
+					}
+				}
+				create_species = {
+					is_mod = yes
+					name = this
+					namelist = this
+					plural = this
+					class = "MACHINE"
+					homeworld = root.species
+					portrait = this
+					traits = {
+						trait = "trait_machine_unit"
+					}
+
+					effect = {
+
+						rename_species = {
+							prompt_country = root #If targeted country is a player they will get a popup asking for a name/plural/adjective combo. Otherwise the species will get a random name from the specified name_list
+							name_list = ascension_list
+						}
+
+						save_event_target_as = robot_tf_species
+					}
+
+				}
+
+			}
+			else = { 
+				create_species = {
+					is_mod = yes
+					name = this
+					namelist = this
+					plural = this
+					class = "ROBOT"
+					homeworld = root.species
+					portrait = this
+					traits = {
+						trait = "trait_mechanical"
+					}
+
+					effect = {
+
+						rename_species = {
+							prompt_country = root #If targeted country is a player they will get a popup asking for a name/plural/adjective combo. Otherwise the species will get a random name from the specified name_list
+							name_list = ascension_list
+						}
+
+						save_event_target_as = robot_tf_species
+					}
+
+				}
+			}
+		}
+		
+		every_owned_pop = {
+			limit = {
+				is_same_species = event_target:original_species
+			}
+			change_species = event_target:robot_tf_species
+		}
+
+		every_controlled_ship = {
+			limit = {
+				is_same_species = event_target:original_species
+			}
+			change_species = event_target:robot_tf_species
+		}
+
+		every_owned_army = {
+			limit = {
+				exists = species
+				exists = planet
+				species = {
+					is_same_species = event_target:original_species
+				}
+				army_type = assault_army
+			}
+			modify_army = {
+				name = random
+				type = "robotic_army"
+				species = event_target:robot_tf_species
+			}
+		}
+
+		every_owned_army = {
+			limit = {
+				exists = species
+				exists = planet
+				species = {
+					is_same_species = event_target:original_species
+				}
+				army_type = defense_army
+			}
+			modify_army = {
+				name = random
+				type = "robotic_defense_army"
+				species = event_target:robot_tf_species
+			}
+		}
+
+		every_owned_leader = {
+			limit = {
+				species = {
+					is_same_species = event_target:original_species
+				}
+				
+				NOR = {
+					has_leader_flag = renowned_leader
+					has_leader_flag = legendary_leader
+				}
+			}
+			change_species = event_target:robot_tf_species
+			change_leader_portrait = species
+		}
+		every_pool_leader = {
+			limit = {
+				species = {
+					is_same_species = event_target:original_species
+				}
+				
+			}
+			change_species = event_target:robot_tf_species
+			change_leader_portrait = species
+		}
+
+		every_owned_leader = {
+			limit = {
+				species = {
+					is_same_species = event_target:original_species
+				}
+			}
+			add_trait_no_notify = leader_trait_synthetic
+			remove_trait = leader_trait_cyborg
+		}
+
+
+		every_envoy = {
+			limit = {
+				species = {
+					is_same_species = event_target:original_species
+				}
+			}
+			change_species = event_target:robot_tf_species
+			change_leader_portrait = species
+		}
+		every_pool_leader = {
+			limit = {
+				is_same_species = event_target:original_species
+			}
+			add_trait_no_notify = leader_trait_synthetic
+			remove_trait = leader_trait_cyborg
+		}		
+	}
+}

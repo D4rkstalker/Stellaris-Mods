@@ -25,6 +25,7 @@ xvcv_mdlc_trait_warbot = {
 
 	modifier = {
 		army_damage_mult = 0.2
+		planet_pops_upkeep_mult = -0.05
 	}
 
 	slave_cost = { energy = 150 }
@@ -41,11 +42,24 @@ xvcv_mdlc_trait_enhanced_cooling = {
 
 	slave_cost = { energy = 150 }
 }
+xvcv_mdlc_trait_self_replicating_microbot = {
+	cost = 3
+	initial = yes
+	allowed_archetypes = { MACHINE ROBOT XVCV_MDLC_BIO_ROBOT }
+
+	triggered_planet_growth_habitability_modifier = {
+		planet_pop_assembly_mult = 0.01
+		mult = planet.value:xvcv_mdlc_count_pops_with_trait_self_replicating_microbot
+	}
+	custom_tooltip = xvcv_mdlc_trait_self_replicating_microbot_tooltip
+
+	slave_cost = { energy = 500 }
+}
 #machine only
 xvcv_mdlc_trait_traditional = {
 	cost = 1
 	initial = yes
-	allowed_archetypes = { MACHINE XVCV_MDLC_BIO_ROBOT }
+	allowed_archetypes = { MACHINE }
 
 	species_potential_add = {
 		exists = from
@@ -54,18 +68,6 @@ xvcv_mdlc_trait_traditional = {
 
 	modifier = {
 		planet_jobs_unity_produces_mult = 0.15
-	}
-
-	slave_cost = { energy = 150 }
-}
-#robot only
-xvcv_mdlc_trait_charismatic = {
-	cost = 1
-	initial = yes
-	allowed_archetypes = { ROBOT }
-
-	modifier = {
-		pop_amenities_usage_mult = -0.15
 	}
 
 	slave_cost = { energy = 150 }
@@ -107,137 +109,6 @@ xvcv_mdlc_trait_low_cost_processor = {
 	}
 
 	slave_cost = { energy = 200 }
-}
-### Special Traits ###
-#for 'xvcv_mdlc_modify_species_change_traits_for_lithoid_effect' and 'xvcv_mdlc_empire_init_adjustments_effect' scripted effects
-xvcv_mdlc_trait_rock_body = {
-	cost = 0
-	allowed_archetypes = { MACHINE ROBOT }
-    sorting_priority = 20
-	initial = no
-	randomized = no
-	custom_tooltip = xvcv_mdlc_trait_rock_body_tooltip
-
-	# Scopes are this = species, from = country performing the modification.
-	species_potential_add = { from = { has_valid_civic = xvcv_mdlc_civic_rock_body } }
-	species_possible_remove = { from = { has_valid_civic = xvcv_mdlc_civic_rock_body } }
-
-	modifier = {
-		pop_category_drones_energy_upkeep_add = -1
-		pop_category_workers_energy_upkeep_add = -1
-		pop_category_specialists_energy_upkeep_add = -1
-		pop_category_rulers_energy_upkeep_add = -1
-
-		pop_category_drones_minerals_upkeep_add = 1
-		pop_category_workers_minerals_upkeep_add = 1
-		pop_category_specialists_minerals_upkeep_add = 1
-		pop_category_rulers_minerals_upkeep_add = 1
-
-		planet_pops_upkeep_mult = -0.05
-		pop_amenities_usage_mult = -0.1
-	}
-}
-#for 'xvcv_mdlc_civic_synth_skin' civic
-xvcv_mdlc_trait_synth_skin = {
-	cost = 0
-	allowed_archetypes = { MACHINE ROBOT }
-    sorting_priority = 20
-	initial = no
-	randomized = no
-	custom_tooltip = xvcv_mdlc_trait_synth_skin_tooltip
-
-	species_potential_add = { from = { has_valid_civic = xvcv_mdlc_civic_synth_skin } }
-	species_possible_remove = { from = { has_valid_civic = xvcv_mdlc_civic_synth_skin } }
-
-	modifier = {
-		pop_category_drones_energy_upkeep_add = -1
-		pop_category_workers_energy_upkeep_add = -1
-		pop_category_specialists_energy_upkeep_add = -1
-		pop_category_rulers_energy_upkeep_add = -1
-		
-		pop_category_drones_food_upkeep_add = 1
-		pop_category_workers_food_upkeep_add = 1
-		pop_category_specialists_food_upkeep_add = 1
-		pop_category_rulers_food_upkeep_add = 1
-
-		planet_pops_upkeep_mult = -0.15
-	}
-}
-#for 'xvcv_mdlc_civic_rock_body' civic
-xvcv_mdlc_trait_lithoid_scintillating = {
-	cost = 2
-	initial = no
-	opposites = { "xvcv_mdlc_trait_lithoid_volatile_excretions" "xvcv_mdlc_trait_lithoid_gaseous_byproducts" }
-	allowed_archetypes = { MACHINE ROBOT XVCV_MDLC_BIO_ROBOT }
-	custom_tooltip = xvcv_mdlc_trait_lithoid_scintillating_tooltip
-
-	species_potential_add = {
-		exists = from
-		from = {
-			has_authority = auth_machine_intelligence 
-			has_valid_civic = xvcv_mdlc_civic_rock_body
-		}
-		host_has_dlc = "Lithoids Species Pack"
-	}
-
-	modifier = {
-		pop_category_drones_rare_crystals_produces_add = 0.05
-		pop_category_workers_rare_crystals_produces_add = 0.05
-		pop_category_specialists_rare_crystals_produces_add = 0.05
-		pop_category_rulers_rare_crystals_produces_add = 0.05
-	}
-
-	slave_cost = { energy = 500 }
-}
-xvcv_mdlc_trait_lithoid_gaseous_byproducts = {
-	cost = 2
-	initial = no
-	opposites = { "xvcv_mdlc_trait_lithoid_volatile_excretions" "xvcv_mdlc_trait_lithoid_scintillating" }
-	allowed_archetypes = { MACHINE ROBOT XVCV_MDLC_BIO_ROBOT }
-	custom_tooltip = xvcv_mdlc_trait_lithoid_gaseous_byproducts_tooltip
-
-	species_potential_add = {
-		exists = from
-		from = {
-			has_authority = auth_machine_intelligence 
-			has_valid_civic = xvcv_mdlc_civic_rock_body
-		}
-		host_has_dlc = "Lithoids Species Pack"
-	}
-
-	modifier = {
-		pop_category_drones_exotic_gases_produces_add = 0.05
-		pop_category_workers_exotic_gases_produces_add = 0.05
-		pop_category_specialists_exotic_gases_produces_add = 0.05
-		pop_category_rulers_exotic_gases_produces_add = 0.05
-	}
-
-	slave_cost = { energy = 500 }
-}
-xvcv_mdlc_trait_lithoid_volatile_excretions = {
-	cost = 2
-	initial = no
-	opposites = { "xvcv_mdlc_trait_lithoid_gaseous_byproducts" "xvcv_mdlc_trait_lithoid_scintillating" }
-	allowed_archetypes = { MACHINE ROBOT XVCV_MDLC_BIO_ROBOT }
-	custom_tooltip = xvcv_mdlc_trait_lithoid_volatile_excretions_tooltip
-
-	species_potential_add = {
-		exists = from
-		from = {
-			has_authority = auth_machine_intelligence 
-			has_valid_civic = xvcv_mdlc_civic_rock_body
-		}
-		host_has_dlc = "Lithoids Species Pack"
-	}
-
-	modifier = {
-		pop_category_drones_volatile_motes_produces_add = 0.05
-		pop_category_workers_volatile_motes_produces_add = 0.05
-		pop_category_specialists_volatile_motes_produces_add = 0.05
-		pop_category_rulers_volatile_motes_produces_add = 0.05
-	}
-
-	slave_cost = { energy = 500 }
 }
 #for 'xvcv_mdlc_ap_base_code_recompositions' ascension perk
 xvcv_mdlc_trait_engineered_organics = {
@@ -281,8 +152,11 @@ xvcv_mdlc_trait_adv_logic_algorithm = {
 	}
 
 	modifier = {
-		planet_researchers_produces_mult = 0.20
-        leader_skill_levels = 1
+		planet_jobs_physics_research_produces_mult = 0.2
+		planet_jobs_society_research_produces_mult = 0.2
+		planet_jobs_engineering_research_produces_mult = 0.2
+		negative_leader_traits_species = -1
+		leaders_upkeep_mult = -0.1
 	}
 
 	slave_cost = { energy = 200 }
@@ -291,7 +165,7 @@ xvcv_mdlc_trait_org_body_copy_design = {
 	cost = 4
 	initial = no
 	randomized = no
-	allowed_archetypes = { MACHINE ROBOT }
+	allowed_archetypes = { MACHINE ROBOT XVCV_MDLC_BIO_ROBOT }
 	icon = "gfx/interface/icons/traits/trait_fertile.dds"
 
 	species_potential_add = {
@@ -300,26 +174,7 @@ xvcv_mdlc_trait_org_body_copy_design = {
 	}
 
 	modifier = {
-		pop_assembly_speed = 0.3
-		pop_housing_usage_mult = -0.1
-	}
-
-	slave_cost = { energy = 200 }
-}
-xvcv_mdlc_bio_robot_trait_org_body_copy_design = {
-	cost = 4
-	initial = no
-	randomized = no
-	allowed_archetypes = { XVCV_MDLC_BIO_ROBOT }
-	icon = "gfx/interface/icons/traits/trait_fertile.dds"
-
-	species_potential_add = {
-		exists = from
-		from = { has_technology = xvcv_mdlc_tech_bio_unique_case_analysis }
-	}
-	
-	custom_tooltip = xvcv_mdlc_bio_robot_trait_org_body_copy_design_effect #xvcv_mdlc_bio_robot_trait_rapid_breeders_effect
-	modifier = {
+		planet_pop_assembly_mult = 0.3
 		pop_housing_usage_mult = -0.1
 	}
 
@@ -358,7 +213,7 @@ xvcv_mdlc_trait_engineered_speciality = {
 	}
 
 	modifier = {
-		planet_miners_minerals_produces_add = 2
+		planet_technician_energy_produces_add = 2
 	}
 
 	slave_cost = { energy = 200 }
@@ -378,8 +233,7 @@ xvcv_mdlc_trait_abyss_psi_emulator = {
 	}
 
 	modifier = {
-		planet_jobs_produces_mult = 0.1
-		planet_researchers_produces_mult = 0.1
+		planet_jobs_produces_mult = 0.15
 	}
 
 	slave_cost = { energy = 500 }

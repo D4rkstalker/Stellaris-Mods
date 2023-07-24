@@ -27,7 +27,8 @@ trait_td_heroism = {
 	allowed_archetypes = { BIOLOGICAL PRESAPIENT LITHOID }
 
 	modifier = {
-		leader_skill_levels = 3
+		negative_leader_traits_species = -3
+		leaders_upkeep_mult = -0.25
 		species_leader_exp_gain = 0.05
 	}
 }
@@ -46,7 +47,8 @@ trait_td_born_to_rule = {
 	allowed_archetypes = { BIOLOGICAL PRESAPIENT LITHOID }
 
 	modifier = {
-		leader_skill_levels = 2
+		negative_leader_traits_species = -2
+		leaders_upkeep_mult = -0.20
 		species_leader_exp_gain = 0.20
 	}
 }
@@ -65,7 +67,8 @@ trait_td_arrested_learning = {
 	ai_weight = { weight = 0 }
 
 	modifier = {
-		leader_skill_levels = -1
+		negative_leader_traits_species = 1
+		leaders_upkeep_mult = 0.1
 		species_leader_exp_gain = -0.15
 	}
 }
@@ -82,7 +85,8 @@ trait_td_eternal_youth = {
 	potential_crossbreeding_chance = 0
 	sorting_priority = 9
 
-	modification = no
+	species_potential_add = { always = no }
+	species_possible_remove = { always = no }
 
 	opposites = {
 		"trait_robust"

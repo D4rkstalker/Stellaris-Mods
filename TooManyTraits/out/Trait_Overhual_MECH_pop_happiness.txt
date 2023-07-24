@@ -10,6 +10,17 @@ trait_td_rbot_obedience_code = {
 		pop_happiness = 0.125
 	}
 }
+xvcv_mdlc_ap_robotic_age_trait_happiness_circuit = {
+	cost = 2
+	initial =  no
+	randomized =  no
+	allowed_archetypes = { ROBOT MACHINE }
+
+	opposites = { }
+	modifier = {
+		pop_happiness = 0.2
+	}
+}
 trait_robot_loyalty_circuits = {
 	cost = 2
 	initial = yes

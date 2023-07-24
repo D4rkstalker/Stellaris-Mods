@@ -1,0 +1,123 @@
+trait_overhual_combat_1 = { 
+	cost = 1
+	initial = no
+	randomized = no
+	allowed_archetypes = { MACHINE ROBOT }
+	opposites = { "trait_overhual_combat_2" "trait_overhual_combat_3" "trait_overhual_combat_4" }
+	species_potential_add = {
+		exists = from
+		from = {
+			has_technology = tech_trait_tech_1			
+			has_technology = tech_combat_computers_1
+			
+		}
+		OR = {
+			has_trait = trait_overhual_tech_1
+			has_trait = trait_overhual_tech_2
+			has_trait = trait_overhual_tech_3
+			has_trait = trait_overhual_tech_4
+		}
+	}
+	
+	modifier = { 
+		pop_environment_tolerance = 0.1
+		army_damage_mult = 0.1
+		army_morale_damage_mult = 0.1
+		army_collateral_damage_mult = 0.1
+		army_disengage_chance_mult = 0.1
+		army_health = 0.1
+
+	}
+
+}
+trait_overhual_combat_2 = { 
+	cost = 1
+	initial = no
+	randomized = no
+	allowed_archetypes = { MACHINE ROBOT }
+	opposites = { "trait_overhual_combat_1" "trait_overhual_combat_3" "trait_overhual_combat_4" }
+	species_potential_add = {
+		exists = from
+		from = {
+			has_technology = tech_trait_tech_2			
+			has_technology = tech_combat_computers_2
+			
+		}
+		OR = {
+			has_trait = trait_overhual_tech_2
+			has_trait = trait_overhual_tech_3
+			has_trait = trait_overhual_tech_4
+		}
+	}
+	
+	modifier = { 
+		pop_environment_tolerance = 0.2
+		army_damage_mult = 0.2
+		army_morale_damage_mult = 0.2
+		army_collateral_damage_mult = 0.2
+		army_disengage_chance_mult = 0.2
+		army_health = 0.2
+
+	}
+
+}
+trait_overhual_combat_3 = { 
+	cost = 2
+	initial = no
+	randomized = no
+	allowed_archetypes = { MACHINE ROBOT }
+	opposites = { "trait_overhual_combat_1" "trait_overhual_combat_2" "trait_overhual_combat_4" }
+	species_potential_add = {
+		exists = from
+		from = {
+			has_technology = tech_trait_tech_3			
+			has_technology = tech_combat_computers_3
+			
+		}
+		OR = {
+			has_trait = trait_overhual_tech_3
+			has_trait = trait_overhual_tech_4
+		}
+	}
+	
+	modifier = { 
+		pop_environment_tolerance = 0.3
+		
+		army_damage_mult = 0.3
+		army_morale_damage_mult = 0.3
+		army_collateral_damage_mult = 0.3
+		army_disengage_chance_mult = 0.3
+		army_health = 0.3
+
+	}
+
+}
+trait_overhual_combat_4 = { 
+	cost = 2
+	initial = no
+	randomized = no
+	allowed_archetypes = { MACHINE ROBOT }
+	opposites = { "trait_overhual_combat_1" "trait_overhual_combat_2" "trait_overhual_combat_3" }
+	species_potential_add = {
+		exists = from
+		from = {
+			has_technology = tech_trait_tech_4			
+			has_technology = tech_combat_computers_3
+			
+		}
+		has_trait = trait_overhual_tech_4
+	}
+	
+	modifier = { 		
+		pop_environment_tolerance = 0.4
+		
+		army_damage_mult = 0.4
+		army_morale_damage_mult = 0.4
+		army_collateral_damage_mult = 0.4
+		army_disengage_chance_mult = 0.4
+		army_health = 0.4
+
+	}
+
+}
+

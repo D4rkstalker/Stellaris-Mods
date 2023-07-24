@@ -3,7 +3,6 @@ trait_void_dweller_1 = {
 	cost = 0
 	initial =  no
 	randomized =  no
-	modification =  no
 	allowed_archetypes = { LITHOID BIOLOGICAL }
 
 	opposites = { }
@@ -22,5 +21,21 @@ trait_void_dweller_1 = {
 	}
 	ai_weight = {
 weight = 0
+	}
+		assembly_score = {
+		modifier = {
+			add = 1.5
+			from = {
+ uses_district_set = habitat 
+}
+}
+		modifier = {
+			subtract = 1.5
+			from = {
+				NOT = {
+ uses_district_set = habitat 
+}
+}
+}
 	}
 }

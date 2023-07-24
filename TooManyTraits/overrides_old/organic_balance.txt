@@ -1,0 +1,27 @@
+trait_livingtanks = {
+	icon =  "gfx/interface/icons/traits/trait_livingtanks.dds"
+	cost = 5
+	initial = yes
+	randomized = yes
+	modification = yes
+	allowed_archetypes = { BIOLOGICAL }
+
+	opposites = { }
+	modifier = {
+		army_health = 1.5
+		pop_environment_tolerance = 0.4
+	}
+}
+trait_td_dragon_scales = {
+	cost = 3
+	initial = yes
+	randomized = yes
+	modification = yes
+	allowed_archetypes = { BIOLOGICAL PRESAPIENT }
+
+	opposites = { }
+	modifier = {
+		army_health = 0.40
+		pop_environment_tolerance = 0.2
+	}
+}

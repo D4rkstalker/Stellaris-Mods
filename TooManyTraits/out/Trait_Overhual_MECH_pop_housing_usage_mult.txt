@@ -1,16 +1,3 @@
-xvcv_mdlc_bio_robot_trait_org_body_copy_design = {
-	icon =  "gfx/interface/icons/traits/trait_fertile.dds"
-	cost = 4
-	initial =  no
-	randomized =  no
-	allowed_archetypes = { ROBOT MACHINE }
-	custom_tooltip =  xvcv_mdlc_bio_robot_trait_org_body_copy_design_effect
-
-	opposites = { }
-	modifier = {
-		pop_housing_usage_mult = -0.1
-	}
-}
 trait_robot_compressible = {
 	icon =  "gfx/interface/icons/traits/trait_highlycompact.dds"
 	cost = 4
@@ -24,17 +11,6 @@ trait_robot_compressible = {
 		pop_housing_usage_mult = -0.5
 	}
 }
-trait_additrait_malleable_frame = {
-	cost = 2
-	initial = yes
-	randomized = yes
-	allowed_archetypes = { MACHINE ROBOT }
-
-	opposites = { }
-	modifier = {
-		pop_housing_usage_mult = -0.15
-	}
-}
 trait_just-more-traits_robot_nanoplasticforms = {
 	cost = 2
 	initial = yes
@@ -46,11 +22,34 @@ trait_just-more-traits_robot_nanoplasticforms = {
 		pop_housing_usage_mult = -0.2
 	}
 }
+trait_additrait_malleable_frame = {
+	cost = 2
+	initial = yes
+	randomized = yes
+	allowed_archetypes = { MACHINE ROBOT }
+
+	opposites = { }
+	modifier = {
+		pop_housing_usage_mult = -0.15
+	}
+}
 trait_robot_double_jointed = {
 	cost = 1
 	initial = yes
 	randomized = yes
 	allowed_archetypes = { MACHINE ROBOT }
+
+	opposites = { }
+	modifier = {
+		pop_housing_usage_mult = -0.1
+	}
+}
+trait_communal_biorobot = {
+	icon =  gfx/interface/icons/traits/trait_communal.dds
+	cost = 1
+	initial =  no
+	randomized =  no
+	allowed_archetypes = { ROBOT MACHINE }
 
 	opposites = { }
 	modifier = {

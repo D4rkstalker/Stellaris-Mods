@@ -34,7 +34,7 @@ ROBOT = {
 			"dragon_cyber2"
 			"dragon_glowing"
 			"dragon_glowingsmall"
-			"protogen"
+			#"protogen"
 		}
 	}
 
@@ -93,7 +93,7 @@ MACHINE = {
 			"dragon_cyber2"
 			"dragon_glowing"
 			"dragon_glowingsmall"
-			"protogen"
+			#"protogen"
 		}
 	}
 

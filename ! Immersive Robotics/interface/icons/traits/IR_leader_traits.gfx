@@ -1,0 +1,146 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_leader_trait_overhual_combat_1"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/trait_overhual_combat.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_overhual_combat_2"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/trait_overhual_combat.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_overhual_combat_3"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/trait_overhual_combat.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_overhual_combat_4"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/trait_overhual_combat.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_overhual_shield_1"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/trait_overhual_shield.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_overhual_shield_2"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/trait_overhual_shield.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_overhual_shield_3"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/trait_overhual_shield.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_overhual_missile_1"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/trait_overhual_missile.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_overhual_missile_3"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/trait_overhual_missile.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_overhual_kinetic_2     "
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/trait_overhual_kinetic.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_overhual_kinetic_4"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/trait_overhual_kinetic.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_overhual_laser_2"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/trait_overhual_laser.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_overhual_laser_4"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/trait_overhual_laser.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_overhual_bombardment_4"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/trait_overhual_bombardment.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_overhual_disruptor_4"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/trait_overhual_disruptor.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_overhual_speed_4"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/trait_overhual_speed.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_overhual_strikecraft_1"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/trait_overhual_strikecraft.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_overhual_strikecraft_3"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/trait_overhual_strikecraft.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_overhual_radar_1"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/trait_overhual_radar.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_overhual_radar_2"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/trait_overhual_radar.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_overhual_radar_3"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/trait_overhual_radar.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_overhual_radar_4"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/trait_overhual_radar.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_overhual_coordination_1"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/trait_overhual_coordination.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_overhual_coordination_2"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/trait_overhual_coordination.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_overhual_fabrication_1"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/trait_overhual_fabrication.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_overhual_fabrication_2"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/trait_overhual_fabrication.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_overhual_fabrication_3"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/trait_overhual_fabrication.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_overhual_fabrication_4"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/trait_overhual_fabrication.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_overhual_gateway_1"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/trait_overhual_gateway.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_overhual_gateway_2"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/trait_overhual_gateway.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_overhual_gateway_3"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/trait_overhual_gateway.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_overhual_gateway_4"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/trait_overhual_gateway.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_overhual_jamming_1"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/trait_overhual_jamming.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_overhual_jamming_2"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/trait_overhual_jamming.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_overhual_jamming_3"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/trait_overhual_jamming.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_overhual_jamming_4"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/trait_overhual_jamming.dds"
+	}
+}

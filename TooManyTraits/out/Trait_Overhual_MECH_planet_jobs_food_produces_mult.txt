@@ -1,3 +1,14 @@
+trait_just-more-traits_robot_agribots = {
+	cost = 4
+	initial = yes
+	randomized = yes
+	allowed_archetypes = { ROBOT MACHINE }
+
+	opposites = { }
+	modifier = {
+		planet_jobs_food_produces_mult = 0.3
+	}
+}
 trait_robot_farming_bots = {
 	icon =  "gfx/interface/icons/traits/trait_robot_farming_bots.dds"
 	cost = 4
@@ -9,17 +20,6 @@ trait_robot_farming_bots = {
 	opposites = { }
 	modifier = {
 		planet_jobs_food_produces_mult = 0.4
-	}
-}
-trait_just-more-traits_robot_agribots = {
-	cost = 4
-	initial = yes
-	randomized = yes
-	allowed_archetypes = { ROBOT MACHINE }
-
-	opposites = { }
-	modifier = {
-		planet_jobs_food_produces_mult = 0.3
 	}
 }
 trait_td_rbot_pollinator_drones = {
@@ -44,6 +44,18 @@ trait_mech_food_2 = {
 		planet_jobs_food_produces_mult = 0.3
 	}
 }
+trait_agrarian_biorobot = {
+	icon =  gfx/interface/icons/traits/trait_agrarian.dds
+	cost = 2
+	initial =  no
+	randomized =  no
+	allowed_archetypes = { ROBOT MACHINE }
+
+	opposites = { }
+	modifier = {
+		planet_jobs_food_produces_mult = 0.15
+	}
+}
 trait_robot_harvesters = {
 	cost = 2
 	initial = yes
@@ -53,6 +65,20 @@ trait_robot_harvesters = {
 	opposites = { }
 	modifier = {
 		planet_jobs_food_produces_mult = 0.15
+	}
+		assembly_score = {
+		modifier = {
+			add = 1.5
+			from = {
+ has_farming_designation = yes 
+}
+}
+		modifier = {
+			add = 0.5
+			from = {
+ has_rural_designation = yes 
+}
+}
 	}
 }
 trait_mech_food_1 = {
@@ -89,6 +115,20 @@ trait_additrait_weedkillers = {
 	}
 	ai_weight = {
 weight = 0
+	}
+		assembly_score = {
+		modifier = {
+			subtract = 1
+			from = {
+ has_farming_designation = yes 
+}
+}
+		modifier = {
+			subtract = 0.5
+			from = {
+ has_rural_designation = yes 
+}
+}
 	}
 }
 trait_robot_unoptimized_farmers = {

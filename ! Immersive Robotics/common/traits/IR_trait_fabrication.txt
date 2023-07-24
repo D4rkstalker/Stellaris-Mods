@@ -1,0 +1,119 @@
+trait_overhual_fabrication_1 = {
+	cost = 1
+	initial = no
+	randomized = no
+	allowed_archetypes = { MACHINE ROBOT }
+	opposites = { "trait_overhual_fabrication_2" "trait_overhual_fabrication_3" "trait_overhual_fabrication_4" }
+	species_potential_add = {
+		exists = from
+		from = {
+			has_technology = tech_trait_tech_1
+			OR = {
+				has_technology = tech_binary_motivators
+				has_technology = tech_robomodding_points_1
+			}
+		}
+		OR = {
+			has_trait = trait_overhual_tech_1
+			has_trait = trait_overhual_tech_2
+			has_trait = trait_overhual_tech_3
+			has_trait = trait_overhual_tech_4
+		}
+	}
+	
+	modifier = { 
+		planet_pop_assemblers_upkeep_mult = 0.15
+
+		planet_pop_assembly_mult = 0.15
+		
+
+	}
+
+}
+trait_overhual_fabrication_2 = {
+	cost = 2
+	initial = no
+	randomized = no
+	allowed_archetypes = { MACHINE ROBOT }
+	opposites = { "trait_overhual_fabrication_1" "trait_overhual_fabrication_3" "trait_overhual_fabrication_4" }
+	species_potential_add = {
+		exists = from
+		from = {
+			has_technology = tech_trait_tech_2
+			OR = {
+				has_technology = tech_nanite_assemblers
+				has_technology = tech_robomodding_points_2
+			}
+		}
+		OR = {
+			has_trait = trait_overhual_tech_2
+			has_trait = trait_overhual_tech_3
+			has_trait = trait_overhual_tech_4
+		}
+	}
+	
+	modifier = { 
+		planet_pop_assemblers_upkeep_mult = 0.3
+
+		planet_pop_assembly_mult = 0.3
+		
+
+	}
+
+}
+trait_overhual_fabrication_3 = {
+	cost = 3
+	initial = no
+	randomized = no
+	allowed_archetypes = { MACHINE ROBOT }
+	opposites = { "trait_overhual_fabrication_2" "trait_overhual_fabrication_1" "trait_overhual_fabrication_4" }
+	species_potential_add = {
+		exists = from
+		from = {
+			has_technology = tech_trait_tech_3
+			OR = {
+				has_technology = tech_mega_assembly
+				has_country_flag = synthetic_empire
+			}
+		}
+		OR = {
+			has_trait = trait_overhual_tech_3
+			has_trait = trait_overhual_tech_4
+		}
+	}
+	
+	modifier = { 
+		planet_pop_assemblers_upkeep_mult = 0.45
+
+		planet_pop_assembly_mult = 0.45
+		
+
+	}
+
+}
+trait_overhual_fabrication_4 = {
+	cost = 4
+	initial = no
+	randomized = no
+	allowed_archetypes = { MACHINE ROBOT }
+	opposites = { "trait_overhual_fabrication_2" "trait_overhual_fabrication_3" "trait_overhual_fabrication_1" }
+	species_potential_add = {
+		exists = from
+		from = {
+			has_technology = tech_trait_tech_4
+			OR = {
+				has_technology = tech_mega_assembly
+				has_country_flag = synthetic_empire
+			}
+		}
+		has_trait = trait_overhual_tech_4
+	}
+	
+	modifier = { 
+		planet_pop_assemblers_upkeep_mult = 0.6
+		planet_pop_assembly_mult = 0.6
+		
+
+	}
+
+}

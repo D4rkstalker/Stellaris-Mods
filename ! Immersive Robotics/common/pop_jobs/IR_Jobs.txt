@@ -1,0 +1,80 @@
+synthetic_assimilation = {
+	category = assimilation
+	clothes_texture_index = 2
+	icon = synthetic_assimilation
+
+	possible_pre_triggers = {
+		is_being_purged = no
+		is_being_assimilated = yes
+	}
+
+	possible = {
+		NOT = { has_trait = trait_mechanical }
+	}
+
+	resources = {
+		category = planet_jobs
+		upkeep = {
+			trigger = {
+				is_organic_species = yes
+				is_lithoid = no
+			}
+			food = @living_standard_food_normal
+		}
+		upkeep = {
+			trigger = {
+				is_lithoid = yes
+			}
+			minerals = @living_standard_food_normal
+		}
+		upkeep = {
+			energy = @living_standard_energy_normal
+			alloys = 5
+		}
+	}
+
+	weight = {
+		weight = 9999
+
+	}
+}
+machine_assimilation = {
+	category = assimilation
+	clothes_texture_index = 2
+	icon = synthetic_assimilation
+
+	possible_pre_triggers = {
+		is_being_purged = no
+		is_being_assimilated = yes
+	}
+
+	possible = {
+		NOT = { has_trait = trait_machine_unit }
+	}
+
+	resources = {
+		category = planet_jobs
+		upkeep = {
+			trigger = {
+				is_organic_species = yes
+				is_lithoid = no
+			}
+			food = @living_standard_food_normal
+		}
+		upkeep = {
+			trigger = {
+				is_lithoid = yes
+			}
+			minerals = @living_standard_food_normal
+		}
+		upkeep = {
+			energy = @living_standard_energy_normal
+			alloys = 5
+		}
+	}
+
+	weight = {
+		weight = 9999
+
+	}
+}

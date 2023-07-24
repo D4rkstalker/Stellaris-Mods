@@ -1,0 +1,48 @@
+trait_overhual_strikecraft_1 = {
+	cost = 1
+	initial = no
+	randomized = no
+	allowed_archetypes = { MACHINE ROBOT }
+	opposites = { "trait_overhual_strikecraft_3" }
+	species_potential_add = {
+		exists = from
+		from = {
+			has_technology = tech_trait_tech_1
+			has_technology = tech_strike_craft_1
+			
+		}
+		OR = { 
+			has_trait = trait_overhual_tech_1
+			has_trait = trait_overhual_tech_2
+			has_trait = trait_overhual_tech_3
+			has_trait = trait_overhual_tech_4
+		}
+	}
+	
+	modifier = { 
+	}
+
+}
+trait_overhual_strikecraft_3 = {
+	cost = 2
+	initial = no
+	randomized = no
+	allowed_archetypes = { MACHINE ROBOT }
+	opposites = { "trait_overhual_strikecraft_1" }
+	species_potential_add = {
+		exists = from
+		from = {
+			has_technology = tech_trait_tech_3
+			has_technology = tech_strike_craft_3
+			
+		}
+		OR = { 
+			has_trait = trait_overhual_tech_3
+			has_trait = trait_overhual_tech_4
+		}
+	}
+	
+	modifier = { 
+	}
+
+}	

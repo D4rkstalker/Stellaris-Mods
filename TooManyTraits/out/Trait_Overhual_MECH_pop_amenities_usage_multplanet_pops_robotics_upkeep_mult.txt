@@ -3,7 +3,6 @@ trait_td_rbot_automatons = {
 	cost = 0
 	initial = yes
 	randomized = yes
-	modification =  no
 	allowed_archetypes = { MACHINE ROBOT }
 
 	opposites = { }

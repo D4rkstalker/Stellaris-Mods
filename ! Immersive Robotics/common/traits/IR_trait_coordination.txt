@@ -1,0 +1,65 @@
+trait_overhual_coordination_1 = {
+	cost = 1
+	initial = no
+	randomized = no
+	allowed_archetypes = { MACHINE ROBOT }
+	opposites = { "trait_overhual_coordination_2" }
+	species_potential_add = {
+		exists = from
+		from = {
+			has_technology = tech_trait_tech_1
+			has_technology = tech_planetary_unification
+			
+		}
+		OR = {
+			has_trait = trait_overhual_tech_1
+			has_trait = trait_overhual_tech_2
+			has_trait = trait_overhual_tech_3
+			has_trait = trait_overhual_tech_4
+		}
+	}
+	
+	modifier = { 
+		species_empire_size_mult = -0.1
+		pop_amenities_usage_mult = -0.1
+		planet_jobs_unity_produces_mult = 0.15
+
+		pop_category_drones_energy_upkeep_add = 0.1
+		pop_category_workers_energy_upkeep_add = 0.1
+		pop_category_specialists_energy_upkeep_add = 0.1
+		pop_category_rulers_energy_upkeep_add = 0.1
+	}
+
+}
+trait_overhual_coordination_2 = {
+	cost = 1
+	initial = no
+	randomized = no
+	allowed_archetypes = { MACHINE ROBOT }
+	opposites = { "trait_overhual_coordination_1" }
+	species_potential_add = {
+		exists = from
+		from = {
+			has_technology = tech_trait_tech_2
+			has_technology = tech_adaptive_bureaucracy
+			
+		}
+		OR = {
+			has_trait = trait_overhual_tech_2
+			has_trait = trait_overhual_tech_3
+			has_trait = trait_overhual_tech_4
+		}
+	}
+	
+	modifier = { 
+		species_empire_size_mult = -0.2
+		pop_amenities_usage_mult = -0.2
+		planet_jobs_unity_produces_mult = 0.3
+
+		pop_category_drones_energy_upkeep_add = 0.1
+		pop_category_workers_energy_upkeep_add = 0.1
+		pop_category_specialists_energy_upkeep_add = 0.1
+		pop_category_rulers_energy_upkeep_add = 0.1
+	}
+
+}

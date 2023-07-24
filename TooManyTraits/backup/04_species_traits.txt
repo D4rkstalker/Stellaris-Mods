@@ -7,7 +7,7 @@ trait_agrarian = {
 		planet_jobs_food_produces_mult = 0.15
 	}
 	slave_cost = {
-		energy = 50
+		energy = 500
 	}
 }
 
@@ -19,7 +19,7 @@ trait_ingenious = {
 		planet_jobs_energy_produces_mult = 0.15
 	}
 	slave_cost = {
-		energy = 50
+		energy = 500
 	}
 }
 
@@ -31,7 +31,7 @@ trait_industrious = {
 		planet_jobs_minerals_produces_mult = 0.15
 	}
 	slave_cost = {
-		energy = 50
+		energy = 500
 	}
 }
 
@@ -45,13 +45,21 @@ trait_intelligent = {
 		planet_jobs_physics_research_produces_mult = 0.1
 		planet_jobs_society_research_produces_mult = 0.1
 	}
+	slave_cost = {
+		energy = 500
+	}
 }
 
 trait_thrifty = {
 	cost = 2
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	opposites = { "trait_hive_mind" }
-	custom_tooltip = TRAIT_THRIFTY_EFFECT
+	modifier = {
+		pop_job_trade_mult = 0.25
+	}
+	slave_cost = {
+		energy = 500
+	}
 }
 
 trait_natural_engineers = {
@@ -61,6 +69,9 @@ trait_natural_engineers = {
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	modifier = {
 		planet_jobs_engineering_research_produces_mult = 0.15
+	}
+	slave_cost = {
+		energy = 500
 	}
 }
 
@@ -72,6 +83,9 @@ trait_natural_physicists = {
 	modifier = {
 		planet_jobs_physics_research_produces_mult = 0.15
 	}
+	slave_cost = {
+		energy = 500
+	}
 }
 
 trait_natural_sociologists = {
@@ -81,6 +95,9 @@ trait_natural_sociologists = {
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	modifier = {
 		planet_jobs_society_research_produces_mult = 0.15
+	}
+	slave_cost = {
+		energy = 500
 	}
 }
 
@@ -93,7 +110,7 @@ trait_extremely_adaptive = {
 		pop_environment_tolerance = 0.20
 	}
 	slave_cost = {
-		energy = 100
+		energy = 1000
 	}
 }
 
@@ -106,7 +123,7 @@ trait_adaptive = {
 		pop_environment_tolerance = 0.10
 	}
 	slave_cost = {
-		energy = 50
+		energy = 500
 	}
 }
 
@@ -123,7 +140,7 @@ trait_adaptive_lithoid = {
 		pop_environment_tolerance = 0.10
 	}
 	slave_cost = {
-		energy = 100
+		energy = 1000
 	}
 }
 
@@ -136,7 +153,7 @@ trait_nonadaptive = {
 		pop_environment_tolerance = -0.10
 	}
 	slave_cost = {
-		energy = -50
+		energy = -200
 	}
 	ai_weight = {
 		weight = 0
@@ -152,7 +169,7 @@ trait_rapid_breeders = {
 		pop_growth_speed = 0.10
 	}
 	slave_cost = {
-		energy = 100
+		energy = 1000
 	}
 }
 
@@ -169,7 +186,7 @@ trait_rapid_breeders_lithoid = {
 		pop_growth_speed = 0.10
 	}
 	slave_cost = {
-		energy = 200
+		energy = 2000
 	}
 }
 
@@ -182,7 +199,7 @@ trait_slow_breeders = {
 		pop_growth_speed = -0.10
 	}
 	slave_cost = {
-		energy = -100
+		energy = -1000
 	}
 	ai_weight = {
 		factor = 0
@@ -197,6 +214,9 @@ trait_talented = {
 	modifier = {
 		leader_skill_levels = 1
 	}
+	slave_cost = {
+		energy = 500
+	}
 }
 
 trait_quick_learners = {
@@ -206,6 +226,9 @@ trait_quick_learners = {
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	modifier = {
 		species_leader_exp_gain = 0.25
+	}
+	slave_cost = {
+		energy = 500
 	}
 }
 
@@ -220,6 +243,9 @@ trait_slow_learners = {
 	ai_weight = {
 		weight = 0
 	}
+	slave_cost = {
+		energy = -200
+	}
 }
 
 trait_traditional = {
@@ -229,6 +255,9 @@ trait_traditional = {
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	modifier = {
 		planet_jobs_unity_produces_mult = 0.1
+	}
+	slave_cost = {
+		energy = 500
 	}
 }
 
@@ -247,6 +276,9 @@ trait_quarrelsome = {
 			years_passed > 5
 		}
 	}
+	slave_cost = {
+		energy = -200
+	}
 }
 
 trait_docile = {
@@ -257,6 +289,9 @@ trait_docile = {
 	modifier = {
 		species_empire_size_mult = -0.10
 	}
+	slave_cost = {
+		energy = 500
+	}
 }
 
 trait_unruly = {
@@ -266,6 +301,9 @@ trait_unruly = {
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	modifier = {
 		species_empire_size_mult = 0.10
+	}
+	slave_cost = {
+		energy = -200
 	}
 }
 
@@ -279,7 +317,7 @@ trait_very_strong = {
 		planet_jobs_worker_produces_mult = 0.05
 	}
 	slave_cost = {
-		energy = 150
+		energy = 2000
 	}
 }
 
@@ -293,7 +331,7 @@ trait_strong = {
 		planet_jobs_worker_produces_mult = 0.025
 	}
 	slave_cost = {
-		energy = 50
+		energy = 1000
 	}
 }
 
@@ -307,7 +345,7 @@ trait_weak = {
 		planet_jobs_worker_produces_mult = -0.025
 	}
 	slave_cost = {
-		energy = -50
+		energy = -1000
 	}
 	ai_weight = {
 		weight = 0
@@ -323,6 +361,9 @@ trait_nomadic = {
 		pop_growth_from_immigration = 0.15
 		pop_resettlement_cost_mult = -0.25
 	}
+	slave_cost = {
+		energy = 500
+	}
 }
 
 trait_sedentary = {
@@ -337,6 +378,9 @@ trait_sedentary = {
 	ai_weight = {
 		weight = 0
 	}
+	slave_cost = {
+		energy = -200
+	}
 }
 
 trait_communal = {
@@ -348,6 +392,9 @@ trait_communal = {
 
 	modifier = {
 		pop_housing_usage_mult = -0.1
+	}
+	slave_cost = {
+		energy = 500
 	}
 }
 
@@ -365,6 +412,9 @@ trait_solitary = {
 	ai_weight = {
 		weight = 0
 	}
+	slave_cost = {
+		energy = -200
+	}
 }
 
 trait_charismatic = {
@@ -373,7 +423,12 @@ trait_charismatic = {
 
 	opposites = { "trait_repugnant" }
 	allowed_archetypes = { BIOLOGICAL LITHOID }
-	custom_tooltip = TRAIT_CHARISMATIC_EFFECT
+	modifier = {
+		pop_job_amenities_mult = 0.20
+	}
+	slave_cost = {
+		energy = 500
+	}
 }
 
 trait_repugnant = {
@@ -382,10 +437,15 @@ trait_repugnant = {
 
 	opposites = { "trait_charismatic" }
 	allowed_archetypes = { BIOLOGICAL LITHOID }
-	custom_tooltip = TRAIT_REPUGNANT_EFFECT
+	modifier = {
+		pop_job_amenities_mult = -0.20
+	}
 
 	ai_weight = {
 		weight = 0
+	}
+	slave_cost = {
+		energy = -200
 	}
 }
 
@@ -393,7 +453,15 @@ trait_uplifted = {
 	cost = 0
 
 	initial = no
-	modification = no
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
 	randomized = no
 
 	allowed_archetypes = { BIOLOGICAL LITHOID }
@@ -414,6 +482,9 @@ trait_conformists = {
 	ai_weight = {
 		weight = 0
 	}
+	slave_cost = {
+		energy = 500
+	}
 }
 
 trait_deviants = {
@@ -427,6 +498,9 @@ trait_deviants = {
 	ai_weight = {
 		weight = 0
 	}
+	slave_cost = {
+		energy = -200
+	}
 }
 
 trait_venerable = {
@@ -435,6 +509,9 @@ trait_venerable = {
 	modifier = { leader_age = 80 }
 	opposites = { "trait_enduring" "trait_fleeting" "trait_fleeting_lithoid" }
 	allowed_archetypes = { BIOLOGICAL LITHOID }
+	slave_cost = {
+		energy = 1000
+	}
 }
 
 trait_enduring = {
@@ -443,6 +520,9 @@ trait_enduring = {
 	modifier = { leader_age = 20 }
 	opposites = { "trait_venerable" "trait_fleeting" "trait_fleeting_lithoid" }
 	allowed_archetypes = { BIOLOGICAL LITHOID }
+	slave_cost = {
+		energy = 500
+	}
 }
 
 trait_fleeting = {
@@ -453,6 +533,9 @@ trait_fleeting = {
 	allowed_archetypes = { BIOLOGICAL }
 	ai_weight = {
 		weight = 0
+	}
+	slave_cost = {
+		energy = -200
 	}
 }
 
@@ -466,6 +549,9 @@ trait_fleeting_lithoid = {
 	allowed_archetypes = { LITHOID }
 	ai_weight = {
 		weight = 0
+	}
+	slave_cost = {
+		energy = -200
 	}
 }
 
@@ -484,6 +570,9 @@ trait_decadent = {
 	ai_weight = {
 		weight = 0
 	}
+	slave_cost = {
+		energy = -200
+	}
 }
 
 trait_resilient = {
@@ -492,6 +581,9 @@ trait_resilient = {
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	modifier = {
 		army_defense_damage_mult = 0.5
+	}
+	slave_cost = {
+		energy = 500
 	}
 }
 
@@ -502,6 +594,9 @@ trait_conservational = {
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	modifier = {
 		planet_pops_consumer_goods_upkeep_mult = -0.10
+	}
+	slave_cost = {
+		energy = 500
 	}
 }
 
@@ -516,6 +611,9 @@ trait_wasteful = {
 	ai_weight = {
 		weight = 0
 	}
+	slave_cost = {
+		energy = -200
+	}
 }
 
 
@@ -527,14 +625,24 @@ trait_cybernetic = {
 	improves_leaders = yes
 	initial = no
 	randomized = no
-	modification = no
-
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 
 	modifier = {
 		pop_environment_tolerance = 0.20
 		army_damage_mult = 0.1
 		leader_age = 40
+	}
+	slave_cost = {
+		energy = 1500
 	}
 }
 
@@ -548,8 +656,15 @@ trait_latent_psionic = {
 
 	initial = no
 	randomized = no
-	modification = no
-
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 
 	modifier = {
@@ -557,6 +672,9 @@ trait_latent_psionic = {
 		planet_jobs_physics_research_produces_mult = 0.05
 		planet_jobs_society_research_produces_mult = 0.05
 		planet_jobs_energy_produces_mult = 0.05
+	}
+	slave_cost = {
+		energy = 1500
 	}
 }
 
@@ -570,7 +688,15 @@ trait_psionic = {
 	improves_leaders = yes
 	initial = no
 	randomized = no
-	modification = no
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
 
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 
@@ -581,6 +707,9 @@ trait_psionic = {
 		planet_jobs_energy_produces_mult = 0.10
 		pop_happiness = 0.05
 	}
+	slave_cost = {
+		energy = 1500
+	}
 }
 
 trait_self_modified = {
@@ -589,7 +718,16 @@ trait_self_modified = {
 
 	initial = no
 	randomized = no
-	modification = no
+
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
 
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 
@@ -610,14 +748,14 @@ trait_delicious = {
 		planet_livestock_food_produces_add = 2
 	}
 	slave_cost = {
-		energy = 100
+		energy = 1000
 	}
 }
 
 trait_nerve_stapled = {
 	cost = 3
 	potential_crossbreeding_chance = 0.5
-	opposites = { "trait_intelligent" "trait_erudite" "trait_natural_engineers" "trait_natural_physicists" "trait_natural_sociologists" "trait_communal" "trait_solitary" "trait_talented" }
+	opposites = { "trait_intelligent" "trait_erudite" "trait_natural_engineers" "trait_natural_physicists" "trait_natural_sociologists" "trait_communal" "trait_solitary" "trait_talented" "trait_zombie" }
 	initial = no
 	randomized = no
 	advanced_trait = yes
@@ -629,7 +767,7 @@ trait_nerve_stapled = {
 	}
 	custom_tooltip = TRAIT_NERVE_STAPLED_EFFECT
 	slave_cost = {
-		energy = 150
+		energy = 1500
 	}
 }
 
@@ -646,7 +784,7 @@ trait_fertile = {
 		pop_housing_usage_mult = -0.1
 	}
 	slave_cost = {
-		energy = 200
+		energy = 2000
 	}
 }
 
@@ -664,7 +802,7 @@ trait_robust = {
 		leader_age = 50
 	}
 	slave_cost = {
-		energy = 200
+		energy = 2000
 	}
 }
 
@@ -681,6 +819,9 @@ trait_erudite = {
 		planet_researchers_produces_mult = 0.2
 		leader_skill_levels = 1
 	}
+	slave_cost = {
+		energy = 2000
+	}
 }
 
 trait_survivor = {
@@ -688,14 +829,16 @@ trait_survivor = {
 	potential_crossbreeding_chance = 0.33
 	initial = no
 	randomized = no
-	modification = no
+	species_potential_add = {
+		always = no
+	}
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	modifier = {
 		pc_nuked_habitability = 0.7
 		leader_age = 10
 	}
 	slave_cost = {
-		energy = 50
+		energy = 500
 	}
 }
 
@@ -703,7 +846,9 @@ trait_enigmatic_intelligence = {
 	cost = 0
 	initial = no
 	randomized = no
-	modification = no
+	species_potential_add = {
+		always = no
+	}
 	improves_leaders = yes
 	advanced_trait = yes
 	opposites = { "trait_nerve_stapled" "trait_erudite" "trait_slow_learners" }
@@ -712,13 +857,18 @@ trait_enigmatic_intelligence = {
 		planet_researchers_produces_mult = 0.1
 		species_leader_exp_gain = 0.25
 	}
+	slave_cost = {
+		energy = 750
+	}
 }
 
 trait_enigmatic_intelligence_poor = {
 	cost = 0
 	initial = no
 	randomized = no
-	modification = no
+	species_potential_add = {
+		always = no
+	}
 	improves_leaders = yes
 	advanced_trait = yes
 	opposites = { "trait_intelligent"}
@@ -728,13 +878,18 @@ trait_enigmatic_intelligence_poor = {
 		planet_jobs_physics_research_produces_mult = 0.1
 		planet_jobs_society_research_produces_mult = 0.1
 	}
+	slave_cost = {
+		energy = 500
+	}
 }
 
 trait_enigmatic_intelligence_failed = {
 	cost = 0
 	initial = no
 	randomized = no
-	modification = no
+	species_potential_add = {
+		always = no
+	}
 	improves_leaders = yes
 	advanced_trait = yes
 	opposites = { "trait_intelligent"}
@@ -744,6 +899,9 @@ trait_enigmatic_intelligence_failed = {
 		planet_jobs_physics_research_produces_mult = -0.6
 		planet_jobs_society_research_produces_mult = -0.6
 	}
+	slave_cost = {
+		energy = -150
+	}
 }
 
 trait_bioadaptability = { #green
@@ -751,7 +909,9 @@ trait_bioadaptability = { #green
 	potential_crossbreeding_chance = 0.33
 
 	initial = no
-	modification = no
+	species_potential_add = {
+		always = no
+	}
 	randomized = no
 
 	allowed_archetypes = { BIOLOGICAL LITHOID }
@@ -766,6 +926,9 @@ trait_bioadaptability = { #green
 	ai_weight = {
 		weight = 0
 	}
+	slave_cost = {
+		energy = 500
+	}
 }
 
 trait_social_pheromones = { #red
@@ -773,7 +936,9 @@ trait_social_pheromones = { #red
 	potential_crossbreeding_chance = 0.33
 
 	initial = no
-	modification = no
+	species_potential_add = {
+		always = no
+	}
 	randomized = no
 
 	allowed_archetypes = { BIOLOGICAL LITHOID }
@@ -782,7 +947,7 @@ trait_social_pheromones = { #red
 		pop_housing_usage_mult = -0.05
 	}
 	slave_cost = {
-		energy = 25
+		energy = 250
 	}
 
 	ai_weight = {
@@ -795,7 +960,9 @@ trait_limited_regeneration = { #blue
 	potential_crossbreeding_chance = 0.33
 
 	initial = no
-	modification = no
+	species_potential_add = {
+		always = no
+	}
 	randomized = no
 
 	allowed_archetypes = { BIOLOGICAL LITHOID }
@@ -805,7 +972,7 @@ trait_limited_regeneration = { #blue
 		leader_age = 10
 	}
 	slave_cost = {
-		energy = 25
+		energy = 250
 	}
 
 	ai_weight = {
@@ -823,7 +990,7 @@ trait_lithoid_scintillating = {
 	custom_tooltip = TRAIT_LITHOID_SCINTILLATING_EFFECT
 
 	slave_cost = {
-		energy = 100
+		energy = 1000
 	}
 }
 
@@ -836,7 +1003,7 @@ trait_lithoid_gaseous_byproducts = {
 	custom_tooltip = TRAIT_LITHOID_GASEOUS_BYPRODUCTS_EFFECT
 
 	slave_cost = {
-		energy = 100
+		energy = 1000
 	}
 }
 
@@ -849,14 +1016,36 @@ trait_lithoid_volatile_excretions = {
 	custom_tooltip = TRAIT_LITHOID_VOLATILE_EXCRETIONS_EFFECT
 
 	slave_cost = {
-		energy = 100
+		energy = 1000
 	}
 }
 
 trait_void_dweller_1 = {
 	icon = "gfx/interface/icons/traits/trait_void_dweller_positive.dds"
 	initial = no
-	modification = no
+	species_potential_add = {
+		exists = from
+		from = {
+			OR = {
+				has_origin = origin_void_dwellers
+				has_ascension_perk = ap_evolutionary_mastery
+			}
+		}
+	}
+	species_possible_add = {
+		has_trait = trait_pc_habitat_preference
+	}
+	species_possible_remove = {
+		if = {
+			limit = {
+				exists = from
+			}
+			custom_tooltip = {
+				fail_text = trait_aquatic_remove_evolutionary_mastery
+				from = { has_ascension_perk = ap_evolutionary_mastery }
+			}
+		}
+	}
 	randomized = no
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	sorting_priority = 30
@@ -877,6 +1066,9 @@ trait_void_dweller_1 = {
 	}
 	ai_weight = {
 		weight = 0
+	}
+	slave_cost = {
+		energy = 500
 	}
 }
 
@@ -901,14 +1093,14 @@ trait_plantoid_phototrophic = {
 	host_has_dlc = "Plantoids Species Pack"
 	cost = 1
 	potential_crossbreeding_chance = 1.0
-	opposites = { "trait_plantoid_radiotrophic" }
+	opposites = { "trait_plantoid_radiotrophic" "trait_cave_dweller" }
 	allowed_archetypes = { BIOLOGICAL }
 	species_class = { PLANT FUN }
 	sorting_priority = 30
 	custom_tooltip = TRAIT_PLANTOID_PHOTOTROPHIC_EFFECT
 
 	slave_cost = {
-		energy = 100
+		energy = 1000
 	}
 }
 
@@ -922,20 +1114,20 @@ trait_plantoid_radiotrophic = {
 	custom_tooltip = TRAIT_PLANTOID_RADIOTROPHIC_EFFECT
 	modifier = {
 		pc_nuked_habitability = 0.1
-		pc_irradiated_habitability = 0.1
+    	pc_irradiated_habitability = 0.1
 	}
-	triggered_planet_growth_modifier = {
+	triggered_planet_growth_habitability_modifier = {
 		potential = {
 			exists = planet
 			OR = {
-				planet = { is_planet_class = pc_nuked }
-				planet = { is_planet_class = pc_irradiated }
+			planet = { is_planet_class = pc_nuked }
+			planet = { is_planet_class = pc_irradiated }
 			}
 		}
 		pop_growth_speed = 0.10
 	}
 	slave_cost = {
-		energy = 150
+		energy = 1500
 	}
 }
 
@@ -949,7 +1141,7 @@ trait_plantoid_budding = {
 	custom_tooltip = TRAIT_PLANTOID_BUDDING_EFFECT
 	# Organic Pop Assembly set by plantoid_budding_rate in \pop_categories\ and 00_scripted_variables
 	slave_cost = {
-		energy = 250
+		energy = 2000
 	}
 }
 
@@ -963,19 +1155,19 @@ trait_harvested_radiotrophic = {
 	opposites = { "trait_plantoid_phototrophic" "trait_plantoid_radiotrophic" }
 	allowed_archetypes = { BIOLOGICAL }
 	species_class = { HUM MAM REP AVI ART MOL NECROID AQUATIC }
-	
+
 	species_potential_add = {
 		exists = from
 		from = {
 			has_country_flag = harvested_radiotrophic_dna
 		}
 	}
-	
+
 	custom_tooltip = TRAIT_PLANTOID_RADIOTROPHIC_EFFECT
 	modifier = {
 		pc_nuked_habitability = 0.1
 	}
-	triggered_planet_growth_modifier = {
+	triggered_planet_growth_habitability_modifier = {
 		potential = {
 			exists = planet
 			planet = { is_planet_class = pc_nuked }
@@ -983,6 +1175,37 @@ trait_harvested_radiotrophic = {
 		pop_growth_speed = 0.10
 	}
 	slave_cost = {
-		energy = 150
+		energy = 1500
+	}
+}
+
+trait_zombie = {
+	cost = 0
+	potential_crossbreeding_chance = 0
+	opposites = { "trait_nerve_stapled" }
+	initial = no
+	randomized = no
+	advanced_trait = no
+	forced_happiness = yes
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+	infertile = yes
+
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	modifier = {
+		planet_jobs_produces_mult = -0.25
+		planet_pops_upkeep_mult = -1
+	}
+	icon = "gfx/interface/icons/traits/trait_zombie.dds"
+	custom_tooltip = TRAIT_ZOMBIE_EFFECT
+	slave_cost = {
+		energy = 500
 	}
 }

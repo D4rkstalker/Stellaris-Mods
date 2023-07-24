@@ -3,7 +3,6 @@ trait_yanz_efficient_metabolism = {
 	cost = 3
 	initial = yes
 	randomized =  yes
-	modification =  yes
 	allowed_archetypes = { LITHOID BIOLOGICAL }
 
 	opposites = { }

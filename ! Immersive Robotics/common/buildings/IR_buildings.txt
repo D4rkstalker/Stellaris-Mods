@@ -1,0 +1,153 @@
+synthetic_conversion_facility = {
+	icon = synthetic_conversion_facility
+	base_buildtime = @b1_time
+	can_demolish = yes
+	base_cap_amount = 1
+	category = pop_assembly
+
+	potential = {
+		exists = owner
+		owner = { is_synthetic_empire = yes }
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_authority = auth_machine_intelligence }
+			any_owned_species = {
+				has_trait = trait_mechanical		
+			}
+		}
+		job_machine_assimilation_add = 1
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_country_flag = synthetic_empire }
+			any_owned_species = {
+				NOT = {
+					has_trait = trait_mechanical
+				}
+			}
+		}
+		job_synthetic_assimilation_add = 1
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_authority = auth_machine_intelligence }
+		}
+		job_replicator_add = 1
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_country_flag = synthetic_empire }
+		}
+		job_roboticist_add = 1
+	}
+
+	upgrades = {
+		synthetic_conversion_complex
+	}
+
+
+	destroy_trigger = { # destroys and/or triggers conversion if true
+		exists = owner
+		owner = {
+			is_synthetic_empire = no
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b2_minerals
+		}
+		upkeep = {
+			energy = @b2_upkeep
+		}
+	}
+
+	is_essential = yes
+	ai_estimate_without_unemployment = yes
+}
+synthetic_conversion_complex = {
+	icon = synthetic_conversion_complex
+	base_buildtime = 270
+	can_build = no
+	base_cap_amount = 1
+	category = pop_assembly
+
+	potential = {
+		exists = owner
+		owner = { 
+			is_synthetic_empire = yes
+
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_authority = auth_machine_intelligence }
+			any_owned_species = {
+				has_trait = trait_mechanical		
+			}
+		}
+		job_machine_assimilation_add = 2
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_country_flag = synthetic_empire }
+			any_owned_species = {
+				NOT = {
+					has_trait = trait_mechanical
+				}
+			}
+		}
+		job_synthetic_assimilation_add = 2
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_authority = auth_machine_intelligence }
+		}
+		job_replicator_add = 2
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_country_flag = synthetic_empire }
+		}
+		job_roboticist_add = 2
+	}
+
+	destroy_trigger = { # destroys and/or triggers conversion if true
+		exists = owner
+		owner = {
+			is_synthetic_empire = no
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b3_minerals
+			rare_crystals = @b3_rare_cost
+		}
+		upkeep = {
+			energy = @b3_upkeep
+			rare_crystals = @b3_rare_upkeep
+		}
+	}
+
+	is_essential = yes
+	ai_estimate_without_unemployment = yes
+}

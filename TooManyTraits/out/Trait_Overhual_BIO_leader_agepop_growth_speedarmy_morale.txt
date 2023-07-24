@@ -3,7 +3,6 @@ trait_td_lith_virus = {
 	cost = 3
 	initial = yes
 	randomized = yes
-	modification =  no
 	allowed_archetypes = { LITHOID }
 
 	opposites = { }
@@ -17,7 +16,6 @@ trait_td_virus = {
 	cost = 3
 	initial = yes
 	randomized = yes
-	modification =  no
 	allowed_archetypes = { BIOLOGICAL PRESAPIENT }
 
 	opposites = { }

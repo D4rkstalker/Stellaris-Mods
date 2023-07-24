@@ -1,0 +1,279 @@
+trait_overhual_resource_basic_1 = {
+	cost = 2
+	initial = no
+	randomized = no
+	forced_happiness = yes
+	allowed_archetypes = { MACHINE ROBOT }
+	opposites = { "trait_overhual_resource_basic_3" "trait_overhual_resource_basic_2" "trait_overhual_resource_basic_4" }
+	species_potential_add = {
+		exists = from
+		from = {
+			has_technology = tech_trait_tech_1
+			has_technology = tech_power_hub_1
+			has_technology = tech_mineral_purification_1
+			
+		}
+		OR = { 
+			has_trait = trait_overhual_tech_1
+			has_trait = trait_overhual_tech_2
+			has_trait = trait_overhual_tech_3
+			has_trait = trait_overhual_tech_4
+		}
+		has_trait = trait_advanced_synthetic
+		
+	}
+	
+	modifier = { 
+		planet_pop_assemblers_upkeep_mult = 0.1
+		planet_pops_robotics_upkeep_mult = 0.1
+		
+		planet_jobs_worker_produces_mult = 0.2
+		planet_jobs_simple_drone_produces_mult = 0.2
+		planet_researchers_produces_mult = -0.5
+
+	}
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0
+			is_same_species = owner_main_species
+		}
+	}
+
+}
+trait_overhual_resource_basic_2 = {
+	cost = 2
+	initial = no
+	randomized = no
+	forced_happiness = yes
+	allowed_archetypes = { MACHINE ROBOT }
+	opposites = { "trait_overhual_resource_basic_1" "trait_overhual_resource_basic_3" "trait_overhual_resource_basic_4" }
+	species_potential_add = {
+		exists = from
+		from = {
+			has_technology = tech_trait_tech_2
+			has_technology = tech_power_hub_2
+			has_technology = tech_mineral_purification_2
+			
+		}
+		OR = { 
+			has_trait = trait_overhual_tech_2
+			has_trait = trait_overhual_tech_3
+			has_trait = trait_overhual_tech_4
+		}
+		has_trait = trait_advanced_synthetic
+	}
+	
+	modifier = { 
+		planet_pop_assemblers_upkeep_mult = 0.2
+		planet_pops_robotics_upkeep_mult = 0.2
+		
+		planet_jobs_worker_produces_mult = 0.4
+		planet_jobs_simple_drone_produces_mult = 0.4
+		planet_researchers_produces_mult = -0.5
+
+	}
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0
+			is_same_species = owner_main_species
+		}
+	}
+
+}
+trait_overhual_resource_basic_3 = {
+	cost = 3
+	initial = no
+	randomized = no
+	forced_happiness = yes
+	allowed_archetypes = { MACHINE ROBOT }
+	opposites = { "trait_overhual_resource_basic_1" "trait_overhual_resource_basic_2" "trait_overhual_resource_basic_4" }
+	species_potential_add = {
+		exists = from
+		from = {
+			has_technology = tech_trait_tech_3
+			has_technology = tech_power_hub_2
+			has_technology = tech_mineral_purification_2
+			
+		}
+		OR = { 
+			has_trait = trait_overhual_tech_3
+			has_trait = trait_overhual_tech_4
+		}
+		has_trait = trait_advanced_synthetic
+	}
+	
+	modifier = { 
+		planet_pop_assemblers_upkeep_mult = 0.3
+		planet_pops_robotics_upkeep_mult = 0.3
+		
+		planet_jobs_worker_produces_mult = 0.6
+		planet_jobs_simple_drone_produces_mult = 0.6
+		planet_researchers_produces_mult = -0.5
+
+	}
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0
+			is_same_species = owner_main_species
+		}
+	}
+
+}
+trait_overhual_resource_basic_4 = {
+	cost = 4
+	initial = no
+	randomized = no
+	forced_happiness = yes
+	allowed_archetypes = { MACHINE ROBOT }
+	opposites = { "trait_overhual_resource_basic_1" "trait_overhual_resource_basic_2" "trait_overhual_resource_basic_3" }
+	species_potential_add = {
+		exists = from
+		from = {
+			has_technology = tech_trait_tech_4
+			has_technology = tech_power_hub_2
+			has_technology = tech_mineral_purification_2
+			
+		}
+		has_trait = trait_overhual_tech_4
+		has_trait = trait_advanced_synthetic
+	}
+	
+	modifier = { 
+		planet_pop_assemblers_upkeep_mult = 0.4
+		planet_pops_robotics_upkeep_mult = 0.4
+		
+		planet_jobs_worker_produces_mult = 0.8
+		planet_jobs_simple_drone_produces_mult = 0.8
+		planet_researchers_produces_mult = -0.5
+
+	}
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0
+			is_same_species = owner_main_species
+		}
+	}
+
+}
+trait_overhual_resource_advanced_2 = {
+	cost = 2
+	initial = no
+	randomized = no
+	forced_happiness = yes
+	allowed_archetypes = { MACHINE ROBOT }
+	opposites = { "trait_overhual_resource_advanced_4" "trait_overhual_resource_advanced_3"}
+	species_potential_add = {
+		exists = from
+		from = {
+			has_technology = tech_trait_tech_2
+			has_technology = tech_power_hub_2
+			has_technology = tech_mineral_purification_2
+			
+		}
+		OR = { 
+			has_trait = trait_overhual_tech_2
+			has_trait = trait_overhual_tech_3
+			has_trait = trait_overhual_tech_4
+		}
+		has_trait = trait_advanced_synthetic
+	}
+	
+	modifier = { 
+		planet_pop_assemblers_upkeep_mult = 0.2
+		planet_pops_robotics_upkeep_mult = 0.2
+		
+		planet_jobs_specialist_produces_mult = 0.15
+		planet_jobs_complex_drone_machine_produces_add = 0.15
+		planet_researchers_produces_mult = -0.5
+
+	}
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0
+			is_same_species = owner_main_species
+		}
+	}
+
+}
+trait_overhual_resource_advanced_3 = {
+	cost = 3
+	initial = no
+	randomized = no
+	forced_happiness = yes
+	allowed_archetypes = { MACHINE ROBOT }
+	opposites = { "trait_overhual_resource_advanced_2" "trait_overhual_resource_advanced_4"}
+	species_potential_add = {
+		exists = from
+		from = {
+			has_technology = tech_trait_tech_3
+			has_technology = tech_power_hub_2
+			has_technology = tech_mineral_purification_2
+			
+		}
+		OR = { 
+			has_trait = trait_overhual_tech_3
+			has_trait = trait_overhual_tech_4
+		}
+		has_trait = trait_advanced_synthetic
+	}
+	
+	modifier = { 
+		planet_pop_assemblers_upkeep_mult = 0.3
+		planet_pops_robotics_upkeep_mult = 0.3
+		
+		planet_jobs_specialist_produces_mult = 0.3
+		planet_jobs_complex_drone_machine_produces_add = 0.3
+		planet_researchers_produces_mult = -0.5
+
+	}
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0
+			is_same_species = owner_main_species
+		}
+	}
+
+}
+trait_overhual_resource_advanced_4 = {
+	cost = 4
+	initial = no
+	randomized = no
+	forced_happiness = yes
+	allowed_archetypes = { MACHINE ROBOT }
+	opposites = { "trait_overhual_resource_advanced_2" "trait_overhual_resource_advanced_3"}
+	species_potential_add = {
+		exists = from
+		from = {
+			has_technology = tech_trait_tech_4
+			has_technology = tech_power_hub_2
+			has_technology = tech_mineral_purification_2
+			
+		}
+		has_trait = trait_overhual_tech_4
+		has_trait = trait_advanced_synthetic
+	}
+	
+	modifier = { 
+		planet_pop_assemblers_upkeep_mult = 0.4
+		planet_pops_robotics_upkeep_mult = 0.4
+		
+		planet_jobs_specialist_produces_mult = 0.45
+		planet_jobs_complex_drone_machine_produces_add = 0.45
+		planet_researchers_produces_mult = -0.5
+
+	}
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0
+			is_same_species = owner_main_species
+		}
+	}
+
+}

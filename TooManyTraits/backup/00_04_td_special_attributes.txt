@@ -107,7 +107,8 @@ trait_td_parasite = {
 	potential_crossbreeding_chance = 0
 	sorting_priority = 9
 
-	modification = no
+	species_potential_add = { always = no }
+	species_possible_remove = { always = no }
 
 	opposites = {
 		"trait_td_virus"
@@ -139,7 +140,8 @@ trait_td_lith_parasite = {
 	sorting_priority = 9
 	icon = "gfx/interface/icons/traits/trait_td_parasite.dds"
 
-	modification = no
+	species_potential_add = { always = no }
+	species_possible_remove = { always = no }
 
 	opposites = {
 		"trait_td_virus"
@@ -170,7 +172,8 @@ trait_td_virus = {
 	potential_crossbreeding_chance = 0
 	sorting_priority = 9
 
-	modification = no
+	species_potential_add = { always = no }
+	species_possible_remove = { always = no }
 
 	opposites = {
 		"trait_td_swarm_that_walks"
@@ -200,7 +203,8 @@ trait_td_lith_virus = {
 	sorting_priority = 9
 	icon = "gfx/interface/icons/traits/trait_td_virus.dds"
 
-	modification = no
+	species_potential_add = { always = no }
+	species_possible_remove = { always = no }
 
 	opposites = {
 		"trait_td_swarm_that_walks"
@@ -229,7 +233,8 @@ trait_td_swarm_that_walks = {
 	potential_crossbreeding_chance = 0
 	sorting_priority = 9
 
-	modification = no
+	species_potential_add = { always = no }
+	species_possible_remove = { always = no }
 
 	opposites = {
 		"trait_td_energy_slimes"
@@ -257,7 +262,8 @@ trait_td_energy_slimes = {
 	potential_crossbreeding_chance = 0
 	sorting_priority = 9
 
-	modification = no
+	species_potential_add = { always = no }
+	species_possible_remove = { always = no }
 
 	opposites = {
 		"trait_td_shadow_creatures"
@@ -447,7 +453,8 @@ trait_td_shadow_creatures = {
 	potential_crossbreeding_chance = 0
 	sorting_priority = 9
 
-	modification = no
+	species_potential_add = { always = no }
+	species_possible_remove = { always = no }
 
 	opposites = {
 		"trait_td_mirror_images"
@@ -472,7 +479,8 @@ trait_td_mirror_images = {
 	potential_crossbreeding_chance = 0
 	sorting_priority = 9
 
-	modification = no
+	species_potential_add = { always = no }
+	species_possible_remove = { always = no }
 
 	opposites = {
 		"trait_td_ghosts"

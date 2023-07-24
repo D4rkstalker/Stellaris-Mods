@@ -1,17 +1,3 @@
-trait_yanz_born_inventors = {
-	icon =  "gfx/interface/icons/traits/bio_path/trait_yanz_born_inventors.dds"
-	cost = 4
-	initial =  no
-	randomized =  no
-	modification =  yes
-	allowed_archetypes = { LITHOID BIOLOGICAL }
-
-	opposites = { }
-	modifier = {
-		planet_jobs_energy_produces_mult = 0.33
-		planet_jobs_physics_research_produces_mult = 0.05
-	}
-}
 trait_td_magnetic = {
 	cost = 1
 	initial = yes

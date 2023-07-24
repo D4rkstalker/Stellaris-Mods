@@ -10,11 +10,25 @@ trait_td_rbot_reassembly = {
 		pop_housing_usage_mult = -0.3
 	}
 }
+trait_robot_massive = {
+	cost = -1
+	initial = yes
+	randomized = yes
+	allowed_archetypes = { MACHINE ROBOT }
+
+	opposites = { }
+	modifier = {
+		pop_resettlement_cost_mult = 1.00
+		pop_housing_usage_mult = 0.05
+	}
+	ai_weight = {
+weight = 0
+	}
+}
 trait_td_rbot_brain_in_a_vat = {
 	cost = -3
 	initial = yes
 	randomized = yes
-	modification =  no
 	allowed_archetypes = { MACHINE ROBOT }
 
 	opposites = { }

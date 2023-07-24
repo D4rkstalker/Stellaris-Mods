@@ -1,8 +1,7 @@
-trait_robot_evo_industrialists = {
-	icon =  "gfx/interface/icons/traits/trait_robot_evo_industrialists.dds"
+trait_robot_space_probes = {
 	cost = 3
-	initial =  yes
-	randomized =  yes
+	initial = yes
+	randomized = yes
 	allowed_archetypes = { MACHINE ROBOT }
 
 	opposites = { }

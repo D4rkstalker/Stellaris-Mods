@@ -1,0 +1,119 @@
+trait_overhual_gateway_1 = {
+	cost = 1
+	initial = no
+	randomized = no
+	allowed_archetypes = { MACHINE ROBOT }
+	opposites = { "trait_overhual_gateway_4" "trait_overhual_gateway_2" "trait_overhual_gateway_3" }
+	species_potential_add = {
+		exists = from
+		from = {
+			has_technology = tech_trait_tech_1
+			has_technology = tech_jump_drive_1
+		
+		}
+		OR = {
+			has_trait = trait_overhual_tech_1
+			has_trait = trait_overhual_tech_2
+			has_trait = trait_overhual_tech_3
+			has_trait = trait_overhual_tech_4
+		}
+	}
+	
+	modifier = { 
+		planet_pops_robotics_upkeep_mult = 0.1
+		
+		pop_resettlement_cost_mult = -0.15
+		pop_housing_usage_mult = -0.15
+		army_disengage_chance_mult = 0.15
+
+	}
+
+}
+trait_overhual_gateway_2 = {
+	cost = 1
+	initial = no
+	randomized = no
+	allowed_archetypes = { MACHINE ROBOT }
+	opposites = { "trait_overhual_gateway_1" "trait_overhual_gateway_4" "trait_overhual_gateway_3" }
+	species_potential_add = {
+		exists = from
+		from = {
+			has_technology = tech_trait_tech_2
+			has_technology = tech_jump_drive_1
+		
+		}
+		OR = {
+			has_trait = trait_overhual_tech_2
+			has_trait = trait_overhual_tech_3
+			has_trait = trait_overhual_tech_4
+		}
+	}
+	
+	modifier = { 
+		planet_pops_robotics_upkeep_mult = 0.2
+		
+		pop_resettlement_cost_mult = -0.3
+		pop_housing_usage_mult = -0.3
+		army_disengage_chance_mult = 0.3
+		planet_pops_energy_upkeep_add = 0.1
+
+	}
+
+}
+trait_overhual_gateway_3 = {
+	cost = 2
+	initial = no
+	randomized = no
+	allowed_archetypes = { MACHINE ROBOT }
+	opposites = { "trait_overhual_gateway_1" "trait_overhual_gateway_2" "trait_overhual_gateway_4" }
+	species_potential_add = {
+		exists = from
+		from = {
+			has_technology = tech_trait_tech_3
+			has_technology = tech_jump_drive_1
+		
+		}
+		OR = {
+			has_trait = trait_overhual_tech_3
+			has_trait = trait_overhual_tech_4
+		}
+	}
+	
+	modifier = { 
+		planet_pops_robotics_upkeep_mult = 0.3
+		
+		pop_resettlement_cost_mult = -0.45
+		pop_housing_usage_mult = -0.45
+		army_disengage_chance_mult = 0.45
+		planet_pops_energy_upkeep_add = 0.1
+
+	}
+
+}
+trait_overhual_gateway_4 = {
+	cost = 2
+	initial = no
+	randomized = no
+	allowed_archetypes = { MACHINE ROBOT }
+	opposites = { "trait_overhual_gateway_1" "trait_overhual_gateway_2" "trait_overhual_gateway_3" }
+	species_potential_add = {
+		exists = from
+		from = {
+			has_technology = tech_trait_tech_4
+			has_technology = tech_jump_drive_1
+		
+		}
+		has_trait = trait_overhual_tech_4
+	}
+	
+	modifier = { 
+		planet_pops_robotics_upkeep_mult = 0.3
+		
+		pop_resettlement_cost_mult = -0.45
+		pop_housing_usage_mult = -0.45
+		army_disengage_chance_mult = 0.45
+		planet_pops_energy_upkeep_add = 0.1
+
+	}
+
+}

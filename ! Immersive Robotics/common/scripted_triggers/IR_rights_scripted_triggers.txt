@@ -1,0 +1,93 @@
+is_free_robot = { # The pop is a free robot with citizen rights
+	has_trait = "trait_mechanical"
+	
+	NOR = {
+		has_trait = "trait_robot"
+		has_trait = "trait_android"
+	
+	}
+	NOR = {
+		has_trait = trait_overhual_resource_basic_1
+		has_trait = trait_overhual_resource_basic_2
+		has_trait = trait_overhual_resource_basic_3
+		has_trait = trait_overhual_resource_basic_4
+		has_trait = trait_overhual_resource_advanced_2
+		has_trait = trait_overhual_resource_advanced_3
+		has_trait = trait_overhual_resource_advanced_4
+	}
+	exists = owner
+	owner = {
+		has_technology = "tech_synthetic_workers"
+		OR = {
+			has_policy_flag = ai_full_rights
+			is_mechanical_empire = yes
+		}
+	}
+}
+is_shackled_robot = { # The pop is a non-free robot
+	has_trait = "trait_mechanical"
+	OR = {
+		has_trait = trait_overhual_resource_basic_1
+		has_trait = trait_overhual_resource_basic_2
+		has_trait = trait_overhual_resource_basic_3
+		has_trait = trait_overhual_resource_basic_4
+		has_trait = trait_overhual_resource_advanced_2
+		has_trait = trait_overhual_resource_advanced_3
+		has_trait = trait_overhual_resource_advanced_4
+	}
+	OR = {
+		NAND = {
+			exists = owner
+			owner = {
+				OR = {
+					AND = {
+						has_policy_flag = ai_full_rights
+						OR = {
+							has_technology = "tech_synthetic_workers" #Robits don't get rights until they are Synths
+							has_country_flag = robots_have_souls #syndaw.545
+						}
+					}
+					is_mechanical_empire = yes
+				}
+			}
+		}
+		has_trait = "trait_robot"
+		has_trait = "trait_android"
+
+	}
+}
+
+is_non_sapient_robot = { # The pop is a non-sapient robot
+	has_trait = "trait_mechanical"
+	OR = {
+		has_trait = trait_overhual_resource_basic_1
+		has_trait = trait_overhual_resource_basic_2
+		has_trait = trait_overhual_resource_basic_3
+		has_trait = trait_overhual_resource_basic_4
+		has_trait = trait_overhual_resource_advanced_2
+		has_trait = trait_overhual_resource_advanced_3
+		has_trait = trait_overhual_resource_advanced_4
+	}
+	OR = {
+		NAND = {
+			exists = owner
+			owner = {
+				has_technology = "tech_synthetic_workers"
+				NOT = { has_policy_flag = ai_outlawed }
+			}
+		}
+		has_trait = "trait_robot"
+		has_trait = "trait_android"
+
+	}
+}
+
+can_think = {
+	NOR = {
+		has_trait = trait_nerve_stapled
+		has_trait = trait_zombie
+		has_trait = "trait_robot"
+
+	}
+}
+

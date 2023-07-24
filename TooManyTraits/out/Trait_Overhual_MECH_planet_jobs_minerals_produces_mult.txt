@@ -1,14 +1,3 @@
-trait_just-more-traits_robot_nanodisassemblers = {
-	cost = 4
-	initial = yes
-	randomized = yes
-	allowed_archetypes = { MACHINE ROBOT }
-
-	opposites = { }
-	modifier = {
-		planet_jobs_minerals_produces_mult = 0.3
-	}
-}
 trait_robot_mining_bots = {
 	icon =  "gfx/interface/icons/traits/trait_robot_mining_bots.dds"
 	cost = 4
@@ -20,6 +9,17 @@ trait_robot_mining_bots = {
 	opposites = { }
 	modifier = {
 		planet_jobs_minerals_produces_mult = 0.4
+	}
+}
+trait_just-more-traits_robot_nanodisassemblers = {
+	cost = 4
+	initial = yes
+	randomized = yes
+	allowed_archetypes = { MACHINE ROBOT }
+
+	opposites = { }
+	modifier = {
+		planet_jobs_minerals_produces_mult = 0.3
 	}
 }
 trait_td_rbot_earthshaking_excavators = {
@@ -44,6 +44,29 @@ trait_mech_minerals_2 = {
 		planet_jobs_minerals_produces_mult = 0.3
 	}
 }
+trait_mech_minerals_1 = {
+	cost = 2
+	initial =  no
+	randomized =  no
+	allowed_archetypes = { MACHINE ROBOT }
+
+	opposites = { }
+	modifier = {
+		planet_jobs_minerals_produces_mult = 0.2
+	}
+}
+trait_industrious_biorobot = {
+	icon =  gfx/interface/icons/traits/trait_industrious.dds
+	cost = 2
+	initial =  no
+	randomized =  no
+	allowed_archetypes = { ROBOT MACHINE }
+
+	opposites = { }
+	modifier = {
+		planet_jobs_minerals_produces_mult = 0.15
+	}
+}
 trait_robot_power_drills = {
 	cost = 2
 	initial = yes
@@ -54,16 +77,19 @@ trait_robot_power_drills = {
 	modifier = {
 		planet_jobs_minerals_produces_mult = 0.15
 	}
+		assembly_score = {
+		modifier = {
+			add = 1.5
+			from = {
+ has_mining_designation = yes 
 }
-trait_mech_minerals_1 = {
-	cost = 2
-	initial =  no
-	randomized =  no
-	allowed_archetypes = { MACHINE ROBOT }
-
-	opposites = { }
-	modifier = {
-		planet_jobs_minerals_produces_mult = 0.2
+}
+		modifier = {
+			add = 0.5
+			from = {
+ has_rural_designation = yes 
+}
+}
 	}
 }
 trait_td_rbot_ore_scanner = {
@@ -89,6 +115,20 @@ trait_additrait_defective_scanners = {
 	}
 	ai_weight = {
 weight = 0
+	}
+		assembly_score = {
+		modifier = {
+			subtract = 1
+			from = {
+ has_mining_designation = yes 
+}
+}
+		modifier = {
+			subtract = 0.5
+			from = {
+ has_rural_designation = yes 
+}
+}
 	}
 }
 trait_robot_unoptimized_miners = {

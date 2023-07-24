@@ -1,0 +1,40 @@
+species_has_happiness = {
+	NOR = {
+		AND = {
+			OR = {
+				has_trait = trait_machine_unit
+				has_trait = trait_hive_mind
+			}
+			NAND = {
+				from = { has_ethic = ethic_form_autonomous }
+				from = { has_ethic = ethic_form_affective }
+			}
+		}
+		has_trait = trait_nerve_stapled
+        has_trait = trait_td_multi_hiveminded
+        has_trait = trait_td_emotionless
+        has_trait = trait_td_psychopathic
+		has_trait = trait_td_thymoleptic_implants
+		has_trait = trait_td_rbot_thymoleptic_scripts
+		has_trait = trait_td_rbot_thought_inhibitor
+		has_trait = trait_memorex_comatos
+
+		AND = {
+			has_trait = trait_mechanical
+			OR = {
+				NOT = { exists = from }
+				from = { has_authority = auth_machine_intelligence }
+				from = { NOT = { has_technology = tech_synthetic_workers } }
+				from = { has_policy_flag = ai_outlawed }
+			}
+		}
+		AND = {
+			has_trait = trait_cybernetic
+			exists = from
+			from = {
+				has_authority = auth_machine_intelligence
+				has_civic = civic_machine_assimilator # Assimilator empire
+			}
+		}
+	}
+}

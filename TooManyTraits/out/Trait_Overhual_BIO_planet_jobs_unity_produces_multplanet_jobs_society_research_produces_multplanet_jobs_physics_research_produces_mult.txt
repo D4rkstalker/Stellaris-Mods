@@ -1,11 +1,10 @@
 trait_yanz_neon_fur = {
-	icon =  "gfx/interface/icons/traits/trait_yanz_neon_fur.dds"
-	cost = 5
-	initial = yes
-	randomized =  no
-	modification =  yes
+	icon =   "gfx/interface/icons/traits/trait_yanz_neon_fur.dds"
+	cost = 2
+	initial =  yes
+	randomized =   no
 	allowed_archetypes = { BIOLOGICAL }
-	custom_tooltip =  TRAIT_YANZ_NEON_FUR
+	custom_tooltip =   TRAIT_YANZ_NEON_FUR
 
 	opposites = { }
 	modifier = {

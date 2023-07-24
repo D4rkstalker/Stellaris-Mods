@@ -1,12 +1,14 @@
 trait_robot_mechas_admiral = {
-	icon =  "gfx/interface/icons/traits/trait_robot_mechas.dds"
-	cost = 0
-	leader_trait = yes
-	leader_class = { admiral }
-	icon = "gfx/interface/icons/traits/trait_robot_mechas.dds"
-	randomized = no
+	inline_script = {
+		script = trait/icon
+		CLASS = admiral
+		ICON = GFX_leader_trait_robot_mechas
+		RARITY = common
+		COUNCIL = no
+		TIER = none
+	}
 	initial = no
-	modification = no
+	randomized = no
 
 	modifier = {
 		ship_speed_mult = 0.1
@@ -16,14 +18,16 @@ trait_robot_mechas_admiral = {
 	}
 }
 trait_robot_mechas_governor = {
-	icon =  "gfx/interface/icons/traits/trait_robot_mechas.dds"
-	cost = 0
-	leader_trait = yes
-	leader_class = { governor }
-	icon = "gfx/interface/icons/traits/trait_robot_mechas.dds"
-	randomized = no
+	inline_script = {
+		script = trait/icon
+		CLASS = governor
+		ICON = GFX_leader_trait_robot_mechas
+		RARITY = common
+		COUNCIL = no
+		TIER = none
+	}
 	initial = no
-	modification = no
+	randomized = no
 
 	modifier = {
 		pop_defense_armies_add = 2
@@ -31,26 +35,32 @@ trait_robot_mechas_governor = {
 	}
 }
 trait_td_rbot_plasma_weaponary_admiral = {
-	icon =  "gfx/interface/icons/traits/trait_td_rbot_plasma_weaponary.dds"
-	cost = 0
-	leader_trait = yes
-	leader_class = { admiral }
-	randomized = no
+	inline_script = {
+		script = trait/icon
+		CLASS = admiral
+		ICON = GFX_leader_trait_td_rbot_plasma_weaponary
+		RARITY = common
+		COUNCIL = no
+		TIER = none
+	}
 	initial = no
-	modification = no
+	randomized = no
 
 	modifier = {
 		ship_hull_damage_mult = 0.1
 	}
 }
 trait_td_rbot_rocket_armaments_admiral = {
-	icon =  "gfx/interface/icons/traits/trait_td_rbot_rocket_armaments.dds"
-	cost = 0
-	leader_trait = yes
-	leader_class = { admiral }
-	randomized = no
+	inline_script = {
+		script = trait/icon
+		CLASS = admiral
+		ICON = GFX_leader_trait_td_rbot_rocket_armaments
+		RARITY = common
+		COUNCIL = no
+		TIER = none
+	}
 	initial = no
-	modification = no
+	randomized = no
 
 	modifier = {
 		weapon_type_explosive_weapon_speed_mult = 0.1
@@ -59,49 +69,61 @@ trait_td_rbot_rocket_armaments_admiral = {
 	}
 }
 trait_td_rbot_laser_blasters_admiral = {
-	icon =  "gfx/interface/icons/traits/trait_td_rbot_laser_blasters.dds"
-	cost = 0
-	leader_trait = yes
-	leader_class = { admiral }
-	randomized = no
+	inline_script = {
+		script = trait/icon
+		CLASS = admiral
+		ICON = GFX_leader_trait_td_rbot_laser_blasters
+		RARITY = common
+		COUNCIL = no
+		TIER = none
+	}
 	initial = no
-	modification = no
+	randomized = no
 	modifier = {
 		ship_armor_damage_mult = 0.1
 	}
 }
 trait_td_rbot_armoured_admiral = {
-	icon = "gfx/interface/icons/traits/trait_td_metal_exoskeleton.dds"
-	cost = 0
-	leader_trait = yes
-	leader_class = { admiral }
-	randomized = no
+	inline_script = {
+		script = trait/icon
+		CLASS = admiral
+		ICON = trait_td_metal_exoskeleton
+		RARITY = common
+		COUNCIL = no
+		TIER = none
+	}
 	initial = no
-	modification = no
+	randomized = no
 	modifier = {
 		ship_armor_mult = 0.1
 	}
 }
 trait_robot_destructive_admiral = {
-	icon =  "gfx/interface/icons/traits/trait_robot_destructive.dds"
-	cost = 0
-	leader_trait = yes
-	leader_class = { admiral }
-	randomized = no
+	inline_script = {
+		script = trait/icon
+		CLASS = admiral
+		ICON = trait_robot_destructive
+		RARITY = common
+		COUNCIL = no
+		TIER = none
+	}
 	initial = no
-	modification = no
+	randomized = no
 	modifier = {
 		ship_orbital_bombardment_mult = 10.0
 	}
 }
 trait_robot_coordinators_ruler = {
-	icon =  "gfx/interface/icons/traits/trait_robot_coordinators.dds"
-	cost = 0
-	leader_trait = yes
-	leader_class = { ruler }
-	randomized = no
+	inline_script = {
+		script = trait/icon
+		CLASS = ruler
+		ICON = trait_robot_coordinators
+		RARITY = common
+		COUNCIL = yes
+		TIER = none
+	}
 	initial = no
-	modification = no
+	randomized = no
 	modifier = {
 		country_command_limit_mult = 0.1
 		country_naval_cap_mult = 0.1
@@ -109,13 +131,16 @@ trait_robot_coordinators_ruler = {
 	}
 }
 trait_robot_space_probes_scientist = {
-	icon =  "gfx/interface/icons/traits/trait_robot_space_probes.dds"
-	cost = 0
-	leader_trait = yes
-	leader_class = { ruler }
-	randomized = no
+	inline_script = {
+		script = trait/icon
+		CLASS = scientist
+		ICON = trait_robot_space_probes
+		RARITY = common
+		COUNCIL = no
+		TIER = none
+	}
 	initial = no
-	modification = no
+	randomized = no
 	modifier = {
 		science_ship_survey_speed = 0.1
 		ship_anomaly_generation_chance_mult = 0.1
@@ -127,13 +152,16 @@ trait_robot_space_probes_scientist = {
 }
 
 trait_robocop_governor = {
-	icon =  "gfx/interface/icons/traits/trait_robocop.dds"
-	cost = 0
-	leader_trait = yes
-	leader_class = { governor }
-	randomized = no
+	inline_script = {
+		script = trait/icon
+		CLASS = governor
+		ICON = trait_robocop
+		RARITY = common
+		COUNCIL = no
+		TIER = none
+	}
 	initial = no
-	modification = no
+	randomized = no
 	modifier = {
 		planet_stability_add = 10
 		planet_crime_mult = -0.1
@@ -141,13 +169,16 @@ trait_robocop_governor = {
 	}
 }
 trait_robot_rapid_communication_governor = {
-	icon =  "gfx/interface/icons/traits/trait_robot_rapid_communication.dds"
-	cost = 0
-	leader_trait = yes
-	leader_class = { governor }
-	randomized = no
+	inline_script = {
+		script = trait/icon
+		CLASS = governor
+		ICON = trait_robot_rapid_communication
+		RARITY = common
+		COUNCIL = no
+		TIER = none
+	}
 	initial = no
-	modification = no
+	randomized = no
 	modifier = {
 		planet_decision_enact_speed_mult = 0.5
 		planet_clear_blocker_time_mult = -0.5

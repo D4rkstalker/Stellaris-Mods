@@ -9,6 +9,31 @@ trait_psionic_unity_2 = {
 		planet_jobs_unity_produces_mult = 0.25
 	}
 }
+trait_additrait_united = {
+	cost = 2
+	initial = yes
+	randomized = yes
+	allowed_archetypes = { LITHOID BIOLOGICAL }
+
+	opposites = { }
+	modifier = {
+		planet_jobs_unity_produces_mult = 0.20
+	}
+		assembly_score = {
+		modifier = {
+			add = 1
+			from = {
+ has_unity_designation = yes 
+}
+}
+		modifier = {
+			add = 0.75
+			from = {
+ has_building = building_order_keep 
+}
+}
+	}
+}
 trait_psionic_unity_1 = {
 	cost = 2
 	initial =  no
@@ -18,6 +43,17 @@ trait_psionic_unity_1 = {
 	opposites = { }
 	modifier = {
 		planet_jobs_unity_produces_mult = 0.15
+	}
+}
+trait_just-more-traits_ritualists = {
+	cost = 2
+	initial = yes
+	randomized = yes
+	allowed_archetypes = { BIOLOGICAL }
+
+	opposites = { }
+	modifier = {
+		planet_jobs_unity_produces_mult = 0.2
 	}
 }
 trait_wearelegion = {
@@ -32,34 +68,12 @@ trait_wearelegion = {
 		planet_jobs_unity_produces_mult = 0.25
 	}
 }
-trait_just-more-traits_ritualists = {
-	cost = 2
+trait_unitedtheystand = {
+	icon =  "gfx/interface/icons/traits/trait_unitedtheystand.dds"
+	cost = 1
 	initial = yes
 	randomized = yes
 	allowed_archetypes = { BIOLOGICAL }
-
-	opposites = { }
-	modifier = {
-		planet_jobs_unity_produces_mult = 0.2
-	}
-}
-trait_additrait_united = {
-	cost = 2
-	initial = yes
-	randomized = yes
-	allowed_archetypes = { LITHOID BIOLOGICAL }
-
-	opposites = { }
-	modifier = {
-		planet_jobs_unity_produces_mult = 0.25
-	}
-}
-trait_traditional_biorobot = {
-	icon =  gfx/interface/icons/traits/trait_traditional.dds
-	cost = 1
-	initial =  no
-	randomized =  no
-	allowed_archetypes = {  }
 
 	opposites = { }
 	modifier = {
@@ -76,17 +90,19 @@ trait_traditional = {
 	modifier = {
 		planet_jobs_unity_produces_mult = 0.1
 	}
+		assembly_score = {
+		modifier = {
+			add = 1.5
+			from = {
+ has_unity_designation = yes 
 }
-trait_unitedtheystand = {
-	icon =  "gfx/interface/icons/traits/trait_unitedtheystand.dds"
-	cost = 1
-	initial = yes
-	randomized = yes
-	allowed_archetypes = { BIOLOGICAL }
-
-	opposites = { }
-	modifier = {
-		planet_jobs_unity_produces_mult = 0.15
+}
+		modifier = {
+			add = 1.5
+			from = {
+ has_building = building_order_keep 
+}
+}
 	}
 }
 trait_cyborg_traditional = {
@@ -152,9 +168,23 @@ trait_additrait_divided = {
 
 	opposites = { }
 	modifier = {
-		planet_jobs_unity_produces_mult = -0.25
+		planet_jobs_unity_produces_mult = -0.20
 	}
 	ai_weight = {
 weight = 0
+	}
+		assembly_score = {
+		modifier = {
+			subtract = 1
+			from = {
+ has_unity_designation = yes 
+}
+}
+		modifier = {
+			subtract = 0.75
+			from = {
+ has_building = building_order_keep 
+}
+}
 	}
 }

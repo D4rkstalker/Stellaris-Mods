@@ -3,7 +3,6 @@ trait_td_lith_paradise_lost = {
 	cost = -4
 	initial = yes
 	randomized = yes
-	modification =  no
 	allowed_archetypes = { LITHOID }
 
 	opposites = { }
@@ -19,7 +18,6 @@ trait_td_paradise_lost = {
 	cost = -4
 	initial = yes
 	randomized = yes
-	modification =  no
 	allowed_archetypes = { BIOLOGICAL }
 
 	opposites = { }

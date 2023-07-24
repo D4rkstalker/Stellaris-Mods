@@ -1,13 +1,12 @@
-trait_evo_precognition = {
-	icon =  "gfx/interface/icons/traits/trait_evo_precognition.dds"
-	cost = 8
+trait_venerable = {
+	cost = 4
 	initial = yes
-	randomized =  no
-	allowed_archetypes = { LITHOID BIOLOGICAL PRESAPIENT }
+	randomized = yes
+	allowed_archetypes = { LITHOID BIOLOGICAL }
 
 	opposites = { }
 	modifier = {
-		leader_age = 10
+		leader_age = 80
 	}
 }
 trait_cyborg_venerable = {
@@ -20,17 +19,6 @@ trait_cyborg_venerable = {
 	opposites = { }
 	modifier = {
 		leader_age = 160
-	}
-}
-trait_venerable = {
-	cost = 4
-	initial = yes
-	randomized = yes
-	allowed_archetypes = { LITHOID BIOLOGICAL }
-
-	opposites = { }
-	modifier = {
-		leader_age = 80
 	}
 }
 trait_td_unhurried = {
@@ -90,6 +78,20 @@ trait_cyborg_enduring = {
 		leader_age = 40
 	}
 }
+trait_fleeting = {
+	cost = -1
+	initial = yes
+	randomized = yes
+	allowed_archetypes = { BIOLOGICAL }
+
+	opposites = { }
+	modifier = {
+		leader_age = -10
+	}
+	ai_weight = {
+weight = 0
+	}
+}
 trait_fleeting_lithoid = {
 	icon =  "gfx/interface/icons/traits/trait_fleeting.dds"
 	cost = -1
@@ -105,15 +107,29 @@ trait_fleeting_lithoid = {
 weight = 0
 	}
 }
-trait_fleeting = {
-	cost = -1
+trait_additrait_ephemeral = {
+	cost = -2
 	initial = yes
 	randomized = yes
 	allowed_archetypes = { BIOLOGICAL }
 
 	opposites = { }
 	modifier = {
-		leader_age = -10
+		leader_age = -20
+	}
+	ai_weight = {
+weight = 0
+	}
+}
+trait_just-more-traits_ephemeral = {
+	cost = -2
+	initial = yes
+	randomized = yes
+	allowed_archetypes = { BIOLOGICAL }
+
+	opposites = { }
+	modifier = {
+		leader_age = -20
 	}
 	ai_weight = {
 weight = 0
@@ -148,40 +164,11 @@ trait_Short_generation_cycle = {
 weight = 0
 	}
 }
-trait_additrait_ephemeral = {
-	cost = -2
-	initial = yes
-	randomized = yes
-	allowed_archetypes = { BIOLOGICAL }
-
-	opposites = { }
-	modifier = {
-		leader_age = -20
-	}
-	ai_weight = {
-weight = 0
-	}
-}
-trait_just-more-traits_ephemeral = {
-	cost = -2
-	initial = yes
-	randomized = yes
-	allowed_archetypes = { BIOLOGICAL }
-
-	opposites = { }
-	modifier = {
-		leader_age = -20
-	}
-	ai_weight = {
-weight = 0
-	}
-}
 trait_yanz_short_lived = {
 	icon =  "gfx/interface/icons/traits/trait_yanz_short_lived.dds"
 	cost = -5
 	initial = yes
 	randomized =  yes
-	modification =  yes
 	allowed_archetypes = { LITHOID BIOLOGICAL }
 
 	opposites = { }

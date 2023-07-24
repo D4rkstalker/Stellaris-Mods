@@ -2,7 +2,6 @@ trait_td_abominations = {
 	cost = -3
 	initial = yes
 	randomized = yes
-	modification =  no
 	allowed_archetypes = { BIOLOGICAL }
 
 	opposites = { }

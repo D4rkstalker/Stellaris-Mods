@@ -1,0 +1,95 @@
+namespace = IR_assimilation
+
+
+# Assimilate Pops on Yearly Pulse
+event = {
+	id = IR_assimilation.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		any_playable_country = {
+			num_unique_species > 1
+			is_synthetic_empire = yes
+			any_owned_species = {
+				has_citizenship_type = {
+					type = citizenship_assimilation
+					country = prev
+				}
+			}
+		}
+	}
+
+	immediate = {
+		every_playable_country = {
+			limit = {
+				num_unique_species > 1
+				is_synthetic_empire = yes
+				any_owned_species = {
+					has_citizenship_type = {
+						type = citizenship_assimilation
+						country = prev
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = synthetic_empire
+					any_owned_pop = {
+						has_job = synthetic_assimilation
+					}
+				}
+				every_owned_planet = {
+					every_owned_pop = {
+						limit = {
+							has_job = synthetic_assimilation
+						}
+						kill_pop = yes
+						prev = {
+							create_pop = {
+								species = root.owner
+								ethos = root.owner
+							}
+							owner = {
+								if = {
+									limit = { has_ascension_perk = ap_become_the_crisis }
+									complete_crisis_objective = crisobj_purge_pops
+								}
+							}
+						}
+					}
+					
+				}
+			}
+			else_if = {
+				limit = {
+					has_authority = auth_machine_intelligence
+					any_owned_pop = {
+						has_job = machine_assimilation
+					}
+				}
+				every_owned_planet = {
+					every_owned_pop = {
+						limit = {
+							has_job = machine_assimilation
+						}
+						kill_pop = yes
+						prev = {
+							create_pop = {
+								species = root.owner
+								ethos = root.owner
+							}
+							owner = {
+								if = {
+									limit = { has_ascension_perk = ap_become_the_crisis }
+									complete_crisis_objective = crisobj_purge_pops
+								}
+							}
+						}
+					}
+					
+				}
+			}
+	}
+}
+

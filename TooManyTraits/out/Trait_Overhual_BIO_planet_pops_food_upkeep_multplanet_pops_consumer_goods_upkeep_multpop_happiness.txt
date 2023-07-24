@@ -2,7 +2,6 @@ trait_td_aura_absorption = {
 	cost = 4
 	initial = yes
 	randomized = yes
-	modification =  no
 	allowed_archetypes = { BIOLOGICAL }
 
 	opposites = { }

@@ -82,7 +82,8 @@ trait_td_eternal_youth = {
 	potential_crossbreeding_chance = 0
 	sorting_priority = 9
 
-	modification = no
+	species_potential_add = { always = no }
+	species_possible_remove = { always = no }
 
 	opposites = {
 		"trait_robust"

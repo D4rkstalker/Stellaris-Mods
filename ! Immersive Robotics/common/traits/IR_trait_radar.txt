@@ -1,0 +1,96 @@
+trait_overhual_radar_1 = {
+	cost = 1
+	initial = no
+	randomized = no
+	allowed_archetypes = { MACHINE ROBOT }
+	opposites = { "trait_overhual_radar_4" "trait_overhual_radar_2" "trait_overhual_radar_3"}
+	species_potential_add = {
+		exists = from
+		from = {
+			has_technology = tech_trait_tech_1
+			has_technology = tech_sensors_2
+			
+		}
+		OR = { 
+			has_trait = trait_overhual_tech_1
+			has_trait = trait_overhual_tech_2
+			has_trait = trait_overhual_tech_3
+			has_trait = trait_overhual_tech_4
+		}
+	}
+	
+	modifier = { 
+
+	}
+
+}
+trait_overhual_radar_2 = {
+	cost = 1
+	initial = no
+	randomized = no
+	allowed_archetypes = { MACHINE ROBOT }
+	opposites = { "trait_overhual_radar_1" "trait_overhual_radar_4" "trait_overhual_radar_3"}
+	species_potential_add = {
+		exists = from
+		from = {
+			has_technology = tech_trait_tech_2
+			has_technology = tech_sensors_3
+			
+		}
+		OR = { 
+			has_trait = trait_overhual_tech_2
+			has_trait = trait_overhual_tech_3
+			has_trait = trait_overhual_tech_4
+		}
+	}
+	
+	modifier = { 
+
+	}
+
+}
+trait_overhual_radar_3 = {
+	cost = 2
+	initial = no
+	randomized = no
+	allowed_archetypes = { MACHINE ROBOT }
+	opposites = { "trait_overhual_radar_1" "trait_overhual_radar_2" "trait_overhual_radar_4"}
+	species_potential_add = {
+		exists = from
+		from = {
+			has_technology = tech_trait_tech_3
+			has_technology = tech_sensors_4
+			
+		}
+		OR = { 
+			has_trait = trait_overhual_tech_3
+			has_trait = trait_overhual_tech_4
+		}
+	}
+	
+	modifier = { 
+
+	}
+
+}
+trait_overhual_radar_4 = {
+	cost = 2
+	initial = no
+	randomized = no
+	allowed_archetypes = { MACHINE ROBOT }
+	opposites = { "trait_overhual_radar_1" "trait_overhual_radar_2" "trait_overhual_radar_3"}
+	species_potential_add = {
+		exists = from
+		from = {
+			has_technology = tech_trait_tech_4
+			has_technology = tech_sensors_4
+			
+		}
+		has_trait = trait_overhual_tech_4
+	}
+	
+	modifier = { 
+
+	}
+
+}

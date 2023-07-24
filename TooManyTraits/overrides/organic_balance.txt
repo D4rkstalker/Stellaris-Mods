@@ -1,6 +1,6 @@
 trait_livingtanks = {
 	icon =  "gfx/interface/icons/traits/trait_livingtanks.dds"
-	cost = 5
+	cost = 1
 	initial = yes
 	randomized = yes
 	modification = yes
@@ -13,7 +13,7 @@ trait_livingtanks = {
 	}
 }
 trait_td_dragon_scales = {
-	cost = 3
+	cost = 1
 	initial = yes
 	randomized = yes
 	modification = yes
@@ -23,5 +23,69 @@ trait_td_dragon_scales = {
 	modifier = {
 		army_health = 0.40
 		pop_environment_tolerance = 0.2
+	}
+}
+trait_yanz_workaholic = {
+	cost = 5
+	randomized = no
+	potential_crossbreeding_chance = 0.1
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	sorting_priority = 5
+	icon = "gfx/interface/icons/traits/trait_yanz_workaholic.dds"
+	modifier = {
+        	planet_jobs_produces_mult = 0.25
+	}
+	slave_cost = { energy = 100 }
+}
+trait_robot_insecticon = {
+	cost = 2
+	allowed_archetypes = { ROBOT MACHINE CYBERTRONIAN }
+	opposites = { "trait_cybertronian" }
+	immortal_leaders = yes
+	hide_age = no
+	
+	modifier = {
+		pop_environment_tolerance = 2.0
+		army_collateral_damage_mult = 0.33
+		planet_jobs_energon_produces_mult = 0.15
+		planet_jobs_alloys_produces_mult = 0.10
+		pop_growth_speed = 0.15
+		planet_pop_assembly_mult = 0.15
+		army_health = -0.10
+	}
+	
+	icon = "gfx/interface/icons/traits/trait_robot_insecticon.dds"
+	
+	initial = yes
+	randomized = no
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+	
+	
+	ai_weight = {
+		weight = 0
+	}
+	
+}
+trait_yanz_neon_fur = {
+	icon =  "gfx/interface/icons/traits/trait_yanz_neon_fur.dds"
+	cost = 2
+	initial = yes
+	randomized =  no
+	allowed_archetypes = { BIOLOGICAL }
+	custom_tooltip =  TRAIT_YANZ_NEON_FUR
+
+	opposites = { }
+	modifier = {
+		planet_jobs_unity_produces_mult = 0.1
+		planet_jobs_society_research_produces_mult = 0.1
+		planet_jobs_physics_research_produces_mult = 0.1
 	}
 }

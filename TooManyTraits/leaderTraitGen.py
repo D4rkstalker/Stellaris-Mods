@@ -24,63 +24,45 @@ country_event = {
     f = open("scriptOut\\tmt_admiral_event.txt", "w+")
     i = 0
     for trait in traits:
-        _type = ""
         trait = trait.strip()
-        if "_admiral" in trait:
-            _type = "admiral"
-        elif "_ruler" in trait:
-            _type="ruler"
-        elif "_scientist" in trait:
-            _type= "scientist"
-        elif "_governor" in trait:
-            _type= "governor"
-        elif "_general" in trait:
-            _type= "general"
-
 
         event_template += """
-        
-            every_owned_leader = {
-                limit = {
-                    species = { has_trait = """+trait.replace("_" + _type, "")+""" }
-                    NOT = {has_trait = """+trait+"""}
-                }
-                if = {
-                    limit = { leader_class = """ + _type +""" }
-                    add_trait = """+trait+"""
-                }
-            }
-            every_pool_leader = {
-                limit = {
-                    species = { has_trait = """+trait.replace("_" + _type, "")+""" }
-                    NOT = {has_trait = """+trait+"""}
-                }
-                if = {
-                    limit = { leader_class = """ + _type +""" }
-                    add_trait = """+trait+"""
-                }
-            }
             every_owned_leader = {
                 limit = {
                     AND = {
-                        has_trait = """+trait+"""
+                        has_trait = IR_leader_"""+trait+"""
                         NOT = {
-                            species = { has_trait = """+trait.replace("_" + _type, "")+""" }
+                            species = { has_trait = """+trait+""" }
                         }
                     }
                 }
-                remove_trait = """+trait+"""
+                remove_trait = IR_leader_"""+trait+"""
             }
             every_pool_leader = {
                 limit = {
                     AND = {
-                        has_trait = """+trait+"""
+                        has_trait = IR_leader_"""+trait+"""
                         NOT = {
-                            species = { has_trait = """+trait.replace("_" + _type, "")+""" }
+                            species = { has_trait = """+trait+""" }
                         }
                     }
                 }
-                remove_trait = """+trait+"""
+                remove_trait = IR_leader_"""+trait+"""
+            }
+            every_owned_leader = {
+                limit = {
+                    species = { has_trait = """+trait+""" }
+                    NOT = {has_trait = IR_leader_"""+trait+"""}
+                }
+                add_trait_no_notify = IR_leader_"""+trait+"""
+                
+            }
+            every_pool_leader = {
+                limit = {
+                    species = { has_trait = """+trait+""" }
+                    NOT = {has_trait = IR_leader_"""+trait+"""}
+                }
+                add_trait_no_notify = IR_leader_"""+trait+"""
             }
 """
     

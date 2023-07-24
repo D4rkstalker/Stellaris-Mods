@@ -39,7 +39,8 @@ trait_td_rbot_legendization_protocol = {
 	}
 
 	modifier = {
-		leader_skill_levels = 3
+		negative_leader_traits_species = -3
+		leaders_upkeep_mult = -0.60
 		species_leader_exp_gain = 0.15
 	}
 }
@@ -73,7 +74,8 @@ trait_td_rbot_heroization_protocol = {
 	}
 
 	modifier = {
-		leader_skill_levels = 3
+		negative_leader_traits_species = -1
+		leaders_upkeep_mult = -0.60
 	}
 }
 
@@ -98,7 +100,8 @@ trait_td_rbot_insufficient_memory = {
 	ai_weight = { weight = 0 }
 
 	modifier = {
-		leader_skill_levels = -1
+		negative_leader_traits_species = 1
+		leaders_upkeep_mult = 0.25
 	}
 }
 

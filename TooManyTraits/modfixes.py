@@ -28,6 +28,7 @@ targets3 = {
 	"tile_resource_food_mult" : "planet_jobs_food_produces_mult",
 	"tile_resource_unity_mult" : "planet_jobs_unity_produces_mult",
 	"pop_robot_build_speed_mult" : "pop_assembly_speed",
+	"pop_assembly_speed" : "planet_pop_assembly_mult",
 	#"leader_trait = yes" : "leader_trait = { admiral }"
 	"pop_robot_upkeep_mult" : "planet_pops_robotics_upkeep_mult",
 	"pop_robot_build_cost_mult" : "planet_pop_assemblers_upkeep_mult",
@@ -84,6 +85,7 @@ for _file in fileList:
 				# 				line = line.replace(target,replacer)
 				for t,r in targets3.items():
 					if t in fileContents[i]:
+						print(t)
 						line = line.replace(t,r)
 							
 

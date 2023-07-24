@@ -3,7 +3,6 @@ trait_yanz_crystal_skin = {
 	cost = 4
 	initial = yes
 	randomized =  no
-	modification =  yes
 	allowed_archetypes = { BIOLOGICAL }
 	custom_tooltip =  TRAIT_YANZ_CRYSTAL_SKIN
 

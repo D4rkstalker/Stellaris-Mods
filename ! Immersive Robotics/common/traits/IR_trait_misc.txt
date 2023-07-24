@@ -1,0 +1,98 @@
+trait_overhual_processor_expansion_3 = { 
+	cost = 3
+	initial = no
+	randomized = no
+	allowed_archetypes = { MACHINE ROBOT }
+	species_potential_add = {
+		exists = from
+		from = {
+			has_technology = tech_trait_tech_3
+			OR = {
+				has_technology = tech_positronic_implants
+				has_technology = tech_sapient_ai
+			}
+		}
+		OR = {
+			has_trait = trait_overhual_tech_3
+			has_trait = trait_overhual_tech_4
+		}
+	}
+	
+	modifier = { 
+		planet_pop_assemblers_upkeep_mult = 0.5
+		planet_pops_upkeep_mult = 0.3
+		pop_assembly_speed = -0.15
+		
+		planet_researchers_produces_mult = 0.5
+		planet_jobs_specialist_produces_mult = 0.25
+		planet_jobs_complex_drone_machine_produces_add = 0.25
+		planet_pop_assemblers_rare_crystals_upkeep_add = 0.1
+		pop_category_drones_rare_crystals_upkeep_add = 0.01
+		pop_category_workers_rare_crystals_upkeep_add = 0.01
+		pop_category_specialists_rare_crystals_upkeep_add = 0.01
+		pop_category_rulers_rare_crystals_upkeep_add = 0.01
+	}
+}
+trait_overhual_bombardment_4 = {
+	cost = 1
+	initial = no
+	randomized = no
+	allowed_archetypes = { MACHINE ROBOT }
+	species_potential_add = {
+		exists = from
+		from = {
+			has_technology = tech_trait_tech_4
+			
+		}
+		has_trait = trait_overhual_tech_4
+
+	}
+	
+	modifier = { 
+		planet_pop_assemblers_volatile_motes_upkeep_add = 0.01
+
+	}
+
+}
+
+trait_overhual_disruptor_4 = {
+	cost = 1
+	initial = no
+	randomized = no
+	allowed_archetypes = { MACHINE ROBOT }
+	species_potential_add = {
+		exists = from
+		from = {
+			has_technology = tech_trait_tech_4
+			
+		}
+		has_trait = trait_overhual_tech_4
+	}
+	
+	modifier = { 
+		planet_pop_assemblers_exotic_gases_upkeep_add = 0.01
+
+	}
+
+}
+
+trait_overhual_speed_4 = {
+	cost = 1
+	initial = no
+	randomized = no
+	allowed_archetypes = { MACHINE ROBOT }
+	species_potential_add = {
+		exists = from
+		from = {
+			has_technology = tech_trait_tech_4
+			
+		}
+		has_trait = trait_overhual_tech_4
+	}
+	
+	modifier = { 
+		planet_pop_assemblers_exotic_gases_upkeep_add = 0.01
+
+	}
+
+}

@@ -1,0 +1,125 @@
+namespace = immersive_robotics
+
+
+###################################################
+#			Robot Upgrade Events				  #
+###################################################
+
+country_event = {
+	id = immersive_robotics.100
+	title = "immersive_robotics.100.name"
+	desc = "immersive_robotics.100.desc"
+	picture = GFX_evt_robot_assembly_plant
+	show_sound = event_laboratory_sound
+	trackable = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = "immersive_robotics.100.a"
+		capital_scope = {
+			enable_special_project = {
+				name = "IR_SYNTHETIC_UPGRADE"
+				location = this
+				owner = root
+			}
+		}
+	}
+}
+country_event = {
+	id = immersive_robotics.101
+	title = "immersive_robotics.101.name"
+	desc = "immersive_robotics.101.desc"
+	picture = GFX_evt_robot_assembly_plant
+	show_sound = event_laboratory_sound
+	trackable = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		create_species = {
+			is_mod = yes
+			name = this
+			namelist = this
+			plural = this
+			class = "SYNTHETIC"
+			portrait = "default_robot"
+			traits = {
+				trait = "trait_mechanical"
+			}
+		}
+		every_owned_pop = {
+			limit = {
+				species = {
+					is_species_class = ROBOT 
+				}
+			}
+			change_species = last_created_species
+		}
+
+	}
+	
+	option = {
+		name = "immersive_robotics.100.a"
+	}
+}
+
+country_event = {
+	id = immersive_robotics.200
+	title = "immersive_robotics.200.name"
+	desc = "immersive_robotics.200.desc"
+	picture = GFX_evt_robot_assembly_plant
+	show_sound = event_laboratory_sound
+	trackable = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = "immersive_robotics.200.a"
+		capital_scope = {
+			enable_special_project = {
+				name = "IR_MACHINE_UPGRADE"
+				location = this
+				owner = root
+			}
+		}
+	}
+}
+country_event = {
+	id = immersive_robotics.201
+	title = "immersive_robotics.201.name"
+	desc = "immersive_robotics.201.desc"
+	picture = GFX_evt_robot_assembly_plant
+	show_sound = event_laboratory_sound
+	trackable = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		create_species = {
+			is_mod = yes
+			name = this
+			namelist = this
+			plural = this
+			class = "ADVANCED_MACHINE"
+			portrait = "default_robot"
+			traits = {
+				trait = "trait_machine_unit"
+			}
+		}
+		every_owned_pop = {
+			limit = {
+				species = {
+					is_species_class = MACHINE 
+				}
+			}
+			change_species = last_created_species
+		}
+
+	}
+	
+	option = {
+		name = "immersive_robotics.200.a"
+	}
+}
+

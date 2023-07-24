@@ -1,0 +1,73 @@
+trait_overhual_assembly_3 = { 
+	cost = -5
+	initial = no
+	randomized = no
+	allowed_archetypes = { MACHINE ROBOT }
+	opposites = { "trait_overhual_assembly_4" }
+	species_potential_add = {
+		exists = from
+		from = {
+			has_technology = tech_trait_tech_3
+			OR = {
+				has_technology = tech_mega_assembly
+				has_country_flag = synthetic_empire
+			}
+		}
+		OR = {
+			has_trait = trait_overhual_tech_3
+			has_trait = trait_overhual_tech_4
+		}
+	}
+	
+	modifier = { 
+		planet_pop_assemblers_upkeep_mult = 0.5
+		planet_pops_upkeep_mult = 0.25
+		planet_pop_assembly_mult = -0.15
+		pop_amenities_usage_add = 0.1
+		
+		pop_category_drones_alloys_upkeep_add = 0.1
+		pop_category_workers_alloys_upkeep_add = 0.1
+		pop_category_specialists_alloys_upkeep_add = 0.1
+		pop_category_rulers_alloys_upkeep_add = 0.1
+
+		pop_category_drones_nanites_upkeep_add = 0.01
+		pop_category_workers_nanites_upkeep_add = 0.01
+		pop_category_specialists_nanites_upkeep_add = 0.01
+		pop_category_rulers_nanites_upkeep_add = 0.01
+	}
+}
+trait_overhual_assembly_4 = { 
+	cost = -10
+	initial = no
+	randomized = no
+	opposites = { "trait_overhual_assembly_3" }
+	allowed_archetypes = { MACHINE ROBOT }
+	species_potential_add = {
+		exists = from
+		from = {
+			has_technology = tech_trait_tech_4
+			OR = {
+				has_technology = tech_mega_assembly
+				has_country_flag = synthetic_empire
+			}
+		}
+		has_trait = trait_overhual_tech_4
+	}
+	
+	modifier = { 
+		planet_pop_assemblers_upkeep_mult = 0.8
+		planet_pops_upkeep_mult = 0.4
+		planet_pop_assembly_mult = -0.3
+		pop_amenities_usage_add = 0.2
+		
+		pop_category_drones_alloys_upkeep_add = 0.1
+		pop_category_workers_alloys_upkeep_add = 0.1
+		pop_category_specialists_alloys_upkeep_add = 0.1
+		pop_category_rulers_alloys_upkeep_add = 0.1
+		
+		pop_category_drones_sr_living_metal_upkeep_add = 0.01
+		pop_category_workers_sr_living_metal_upkeep_add = 0.01
+		pop_category_specialists_sr_living_metal_upkeep_add = 0.01
+		pop_category_rulers_sr_living_metal_upkeep_add = 0.01
+	}
+}

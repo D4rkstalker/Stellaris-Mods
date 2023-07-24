@@ -16,13 +16,13 @@ class Trait:
     def __eq__(self, other):
         return self.trait_name==other.trait_name
 
-    def __init__(self,trait_name,cost,initial,randomized,modification, opposites, archetypes, triggered_pop_modifier , modifiers,triggered_planet_growth_modifier,icon,species_potential_add,custom_tooltip,custom_tooltip_with_modifiers,prerequisites,leader_trait,leader_class,requires_traits,ai_weight, forced_happiness):
+    def __init__(self,trait_name,cost,initial,randomized,modification, opposites, archetypes, triggered_pop_modifier , modifiers,triggered_planet_growth_habitability_modifier,icon,species_potential_add,custom_tooltip,custom_tooltip_with_modifiers,prerequisites,leader_trait,leader_class,requires_traits,ai_weight, forced_happiness,assembly_score):
         self.trait_name = trait_name
         self.cost = cost
         self.opposites = opposites
         self.archetypes = archetypes
         self.triggered_pop_modifier = triggered_pop_modifier
-        self.triggered_planet_growth_modifier = triggered_planet_growth_modifier
+        self.triggered_planet_growth_habitability_modifier = triggered_planet_growth_habitability_modifier
         self.modifiers = modifiers
         self.modifierCount = len(modifiers)
         self.initial = initial
@@ -38,6 +38,7 @@ class Trait:
         self.requires_traits = requires_traits
         self.ai_weight = ai_weight
         self.forced_happiness = forced_happiness
+        self.assembly_score = assembly_score
     def toString(self):
         template = self.trait_name + "= {\n"
         if self.icon.strip() != "" :
@@ -80,14 +81,17 @@ class Trait:
                 template += "\t\t" + key + " = " + self.triggered_pop_modifier[key] + "\n"
             template += "\t}\n" 
 
-        if len(self.triggered_planet_growth_modifier) > 0:
-            template += "\ttriggered_planet_growth_modifier = {\n"
-            for key in self.triggered_planet_growth_modifier:
-                template += "\t\t" + key + " = " + self.triggered_planet_growth_modifier[key] + "\n"
+        if len(self.triggered_planet_growth_habitability_modifier) > 0:
+            template += "\ttriggered_planet_growth_habitability_modifier = {\n"
+            for key in self.triggered_planet_growth_habitability_modifier:
+                template += "\t\t" + key + " = " + self.triggered_planet_growth_habitability_modifier[key] + "\n"
             template += "\t}\n" 
 
         if self.cost < 1:
             template +="\tai_weight = {\nweight = 0\n\t}\n"
+        if len(self.assembly_score) > 0:
+            template += "\t\tassembly_score = {\n" + self.assembly_score
+            template += "\t}\n"
         # if len(self.ai_weight) > 0:
         #     template +="\tai_weight = {\n"+ "\n".join(self.ai_weight)+"\n\t}\n"
         template += "}"
@@ -119,10 +123,10 @@ def get_traits(files):
             trait = re.sub('{','{\n',trait)
             trait = re.sub('}','\n}',trait)
 
-            currentTrait = Trait("trait_name",0,"yes","yes",[], [], [],{}, {},{},"",[],"","",[],"",[],[],[],"")
+            currentTrait = Trait("trait_name",0,"yes","yes",[], [], [],{}, {},{},"",[],"","",[],"",[],[],[],"","")
             lines = str(trait).split("\n")
             layer = 0
-            matched = {"species_potential_add" : False,"triggered_pop_modifier" : False,"triggered_planet_growth_modifier" : False, "modifier" : False, "ai_weight" : False, "prerequisites" : False, "allowed_archetypes" : False, "leader_class" : False, "requires_traits": False}
+            matched = {"species_potential_add" : False,"triggered_pop_modifier" : False,"triggered_planet_growth_habitability_modifier" : False, "modifier" : False, "ai_weight" : False, "prerequisites" : False, "allowed_archetypes" : False, "leader_class" : False, "requires_traits": False,"assembly_score" : ""}
             currentTrait.trait_name = (lines[0].split("=")[0]).replace("JMTCOMPAT", "just-more-traits")
             
             # print(currentTrait.trait_name)
@@ -131,7 +135,9 @@ def get_traits(files):
                     
                 #try:
                     line = lines[i]
-                    
+                    print(line + " | "  +str(layer))
+                                
+                   
                     if "#" in line:
                         line = line.split("#")[0]
                     if line.strip() != "":
@@ -142,6 +148,7 @@ def get_traits(files):
                             layer -=1
                             if layer == 1:
                                 for key in matched.keys():
+                                    print("Restting")
                                     matched[key] = False
 
                         #print(line + str( layer))
@@ -191,18 +198,19 @@ def get_traits(files):
                                 else:
                                     line = line.strip().split("=")
                                     currentTrait.triggered_pop_modifier[line[0].strip()] = line[1].strip()
-                            if matched["triggered_planet_growth_modifier"]:
+                            if matched["triggered_planet_growth_habitability_modifier"]:
                                 matched["modifier"] = False
                                 if line.strip() == "}":
-                                    currentTrait.triggered_planet_growth_modifier["}"] = ""
+                                    currentTrait.triggered_planet_growth_habitability_modifier["}"] = ""
                                 else:
                                     line = line.strip().split("=")
-                                    currentTrait.triggered_planet_growth_modifier[line[0].strip()] = line[1].strip()
+                                    currentTrait.triggered_planet_growth_habitability_modifier[line[0].strip()] = line[1].strip()
                             if matched["modifier"]:
-                                # print(trait)
-                                
+                                # print(currentTrait.trait_name)
                                 line = line.strip().split("=")
                                 currentTrait.modifiers[line[0].strip()] = line[1].strip()
+                            if matched["assembly_score"]:
+                                currentTrait.assembly_score += line + "\n"
                         if  layer == 2:
                             for key in matched.keys():
                                 if key in line:

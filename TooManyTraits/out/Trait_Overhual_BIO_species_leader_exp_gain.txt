@@ -43,18 +43,6 @@ trait_cyborg_quick_learners = {
 		species_leader_exp_gain = 0.35
 	}
 }
-trait_quick_learners_biorobot = {
-	icon =  gfx/interface/icons/traits/trait_quick_learners.dds
-	cost = 1
-	initial =  no
-	randomized =  no
-	allowed_archetypes = {  }
-
-	opposites = { }
-	modifier = {
-		species_leader_exp_gain = 0.25
-	}
-}
 trait_quick_learners = {
 	cost = 1
 	initial = yes
@@ -63,7 +51,7 @@ trait_quick_learners = {
 
 	opposites = { }
 	modifier = {
-		species_leader_exp_gain = 0.25
+		species_leader_exp_gain = 0.1
 	}
 }
 trait_slow_learners = {
@@ -74,7 +62,7 @@ trait_slow_learners = {
 
 	opposites = { }
 	modifier = {
-		species_leader_exp_gain = -0.25
+		species_leader_exp_gain = -0.1
 	}
 	ai_weight = {
 weight = 0

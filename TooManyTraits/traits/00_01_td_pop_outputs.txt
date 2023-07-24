@@ -37,7 +37,8 @@ trait_td_paragon = {
 		planet_jobs_physics_research_produces_mult = 0.075
 		planet_jobs_society_research_produces_mult = 0.075
 		pop_environment_tolerance = 0.075
-		leader_skill_levels = 1
+		negative_leader_traits_species = -1
+		leaders_upkeep_mult = -0.1
 		leader_age = 10
 		army_damage_mult = 0.20
 	}
@@ -184,7 +185,8 @@ trait_td_abominations = {
 	potential_crossbreeding_chance = 0
 	sorting_priority = 9
 
-	modification = no
+	species_potential_add = { always = no }
+	species_possible_remove = { always = no }
 
 	opposites = {
 		"trait_agrarian"
@@ -336,7 +338,8 @@ trait_td_genius = {
 		planet_jobs_engineering_research_produces_mult = 0.175
 		planet_jobs_physics_research_produces_mult = 0.175
 		planet_jobs_society_research_produces_mult = 0.175
-		leader_skill_levels = 1
+		negative_leader_traits_species = -1
+		leaders_upkeep_mult = -0.1
 	}
 }
 

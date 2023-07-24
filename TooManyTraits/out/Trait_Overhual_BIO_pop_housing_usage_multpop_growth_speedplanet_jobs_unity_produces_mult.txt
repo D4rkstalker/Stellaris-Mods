@@ -10,6 +10,20 @@ trait_additrait_passionate = {
 		pop_growth_speed = 0.05
 		planet_jobs_unity_produces_mult = 0.1
 	}
+		assembly_score = {
+		modifier = {
+			add = 0.25
+			from = {
+ has_unity_designation = yes 
+}
+}
+		modifier = {
+			add = 0.25
+			from = {
+ has_building = building_order_keep 
+}
+}
+	}
 }
 trait_additrait_melancholic = {
 	cost = -2
@@ -25,5 +39,19 @@ trait_additrait_melancholic = {
 	}
 	ai_weight = {
 weight = 0
+	}
+		assembly_score = {
+		modifier = {
+			subtract = 0.25
+			from = {
+ has_unity_designation = yes 
+}
+}
+		modifier = {
+			subtract = 0.25
+			from = {
+ has_building = building_order_keep 
+}
+}
 	}
 }

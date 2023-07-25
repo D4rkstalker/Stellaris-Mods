@@ -37,10 +37,8 @@ trait_overhual_tech_2 = {
 	species_potential_add = {
 		exists = from
 		from = {
-			OR = {
-				has_technology = tech_trait_tech_1
 				has_technology = tech_trait_tech_2
-			}
+			
 		}	
 	}
 	

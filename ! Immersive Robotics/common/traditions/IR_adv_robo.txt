@@ -1,0 +1,155 @@
+IR_tr_adv_robo_adopt = {
+	possible = {
+		has_technology = tech_trait_tech_1
+	}
+
+	modifier = {
+		ROBOT_species_trait_points_add = 1
+	}
+	tradition_swap = {
+		name = IR_tr_adv_robo_5_machine
+		inherit_name = yes
+		inherit_effects = no
+		inherit_icon = yes
+		trigger = {
+			is_machine_empire = yes
+		}
+
+		modifier = {
+			MACHINE_species_trait_points_add = 1
+		}
+
+		weight = {
+			factor = 1
+		}
+	}
+	on_enabled = {
+		add_research_option = tech_trait_tech_2
+	}
+
+}
+
+IR_tr_adv_robo_finish = {
+	modifier = {
+		ROBOT_species_trait_picks_add = 1
+		ascension_perks_add = 1
+	}
+	tradition_swap = {
+		name = IR_tr_adv_robo_finish_machine
+		inherit_name = yes
+		inherit_effects = no
+		inherit_icon = yes
+		trigger = {
+			is_machine_empire = yes
+		}
+
+		modifier = {
+			MACHINE_species_trait_picks_add = 1
+			ascension_perks_add = 1
+
+		}
+
+		weight = {
+			factor = 1
+		}
+	}
+	on_enabled = {
+		add_research_option = tech_trait_tech_3
+	}
+}
+
+IR_tr_adv_robo_1 = {
+	modifier = {
+		planet_pop_assembly_add = 0.1
+	}
+}
+
+IR_tr_adv_robo_2 = {
+	possible = {
+		has_tradition = IR_tr_adv_robo_1
+	}
+	modifier = {
+		modify_species_cost_mult = -0.25
+	}
+}
+
+IR_tr_adv_robo_3 = {
+	possible = {
+		has_technology = tech_trait_tech_2
+		
+	}
+	modifier = {
+		ROBOT_species_trait_picks_add = 1
+		ROBOT_species_trait_points_add = 1
+	}
+	tradition_swap = {
+		name = IR_tr_adv_robo_3_machine
+		inherit_name = yes
+		inherit_effects = no
+		inherit_icon = yes
+		trigger = {
+			is_machine_empire = yes
+		}
+
+		modifier = {
+			MACHINE_species_trait_points_add = 1
+			MACHINE_species_trait_picks_add = 1
+		}
+
+		weight = {
+			factor = 1
+		}
+	}
+}
+
+IR_tr_adv_robo_4 = {
+	possible = {
+		has_tradition = IR_tr_adv_robo_3
+	}
+	modifier = {
+		ROBOT_species_trait_picks_add = 2
+	}
+	tradition_swap = {
+		name = IR_tr_adv_robo_4_machine
+		inherit_name = yes
+		inherit_effects = no
+		inherit_icon = yes
+		trigger = {
+			is_machine_empire = yes
+		}
+
+		modifier = {
+			MACHINE_species_trait_picks_add = 2
+		}
+
+		weight = {
+			factor = 1
+		}
+	}
+}
+
+IR_tr_adv_robo_5 = {
+	possible = {
+		has_tradition = IR_tr_adv_robo_3
+	}
+	modifier = {
+		ROBOT_species_trait_points_add = 2
+	}
+	tradition_swap = {
+		name = IR_tr_adv_robo_5_machine
+		inherit_name = yes
+		inherit_effects = no
+		inherit_icon = yes
+		trigger = {
+			is_machine_empire = yes
+		}
+
+		modifier = {
+			MACHINE_species_trait_points_add = 2
+		}
+
+		weight = {
+			factor = 1
+		}
+	}
+}

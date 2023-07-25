@@ -1,0 +1,28 @@
+IR_tradition_adv_robo = {
+	tree_template = "tree_11_12"
+	adoption_bonus = "IR_tr_adv_robo_adopt"
+	finish_bonus = "IR_tr_adv_robo_finish"
+	potential = {
+		OR = {
+			AND = {
+				is_regular_empire = yes
+			}
+			AND = {
+				is_machine_empire = yes
+				has_synthethic_dawn = yes
+			}
+		}
+	}
+
+	traditions = {
+		"tr_synthetics_maintenance_protocols"
+		"tr_synthetics_optimization_algorithms"
+		"tr_synthetics_synthetic_age"
+		"tr_synthetics_prefabricated_components"
+		"tr_synthetics_solid_state_actuators"
+	}
+
+	ai_weight = {
+		factor = 1000
+	}
+}

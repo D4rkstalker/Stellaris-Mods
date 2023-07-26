@@ -1,8 +1,8 @@
-leader_trait_robot_mechas = {
+IR_leader_trait_robot_mechas = {
 	inline_script = {
 		script = trait/icon
 		CLASS = admiral
-		ICON = GFX_leader_trait_robot_mechas
+		ICON = GFX_trait_robot_mechas
 		RARITY = common
 		COUNCIL = no
 		TIER = none
@@ -30,11 +30,11 @@ leader_trait_robot_mechas = {
 	}
 	leader_class = { admiral governor }
 }
-leader_trait_td_rbot_plasma_weaponary = {
+IR_leader_trait_td_rbot_plasma_weaponary = {
 	inline_script = {
 		script = trait/icon
 		CLASS = admiral
-		ICON = GFX_leader_trait_td_rbot_plasma_weaponary
+		ICON = GFX_trait_td_rbot_plasma_weaponary
 		RARITY = common
 		COUNCIL = no
 		TIER = none
@@ -46,11 +46,11 @@ leader_trait_td_rbot_plasma_weaponary = {
 		ship_hull_damage_mult = 0.1
 	}
 }
-leader_trait_td_rbot_rocket_armaments = {
+IR_leader_trait_td_rbot_rocket_armaments = {
 	inline_script = {
 		script = trait/icon
 		CLASS = admiral
-		ICON = GFX_leader_trait_td_rbot_rocket_armaments
+		ICON = GFX_trait_td_rbot_rocket_armaments
 		RARITY = common
 		COUNCIL = no
 		TIER = none
@@ -64,11 +64,11 @@ leader_trait_td_rbot_rocket_armaments = {
 		weapon_type_explosive_weapon_fire_rate_mult = 0.1
 	}
 }
-leader_trait_td_rbot_laser_blasters = {
+IR_leader_trait_td_rbot_laser_blasters = {
 	inline_script = {
 		script = trait/icon
 		CLASS = admiral
-		ICON = GFX_leader_trait_td_rbot_laser_blasters
+		ICON = GFX_trait_td_rbot_laser_blasters
 		RARITY = common
 		COUNCIL = no
 		TIER = none
@@ -79,7 +79,7 @@ leader_trait_td_rbot_laser_blasters = {
 		ship_armor_damage_mult = 0.1
 	}
 }
-leader_trait_td_rbot_armoured = {
+IR_leader_trait_td_rbot_armoured = {
 	inline_script = {
 		script = trait/icon
 		CLASS = admiral
@@ -94,7 +94,7 @@ leader_trait_td_rbot_armoured = {
 		ship_armor_mult = 0.1
 	}
 }
-leader_trait_robot_destructive = {
+IR_leader_trait_robot_destructive = {
 	inline_script = {
 		script = trait/icon
 		CLASS = admiral
@@ -109,7 +109,7 @@ leader_trait_robot_destructive = {
 		ship_orbital_bombardment_mult = 10.0
 	}
 }
-leader_trait_robot_coordinators = {
+IR_leader_trait_robot_coordinators = {
 	inline_script = {
 		script = trait/icon
 		CLASS = ruler
@@ -126,7 +126,7 @@ leader_trait_robot_coordinators = {
 		country_admin_cap_mult = 0.1
 	}
 }
-leader_trait_robot_space_probes = {
+IR_leader_trait_robot_space_probes = {
 	inline_script = {
 		script = trait/icon
 		CLASS = scientist
@@ -147,7 +147,7 @@ leader_trait_robot_space_probes = {
 	}
 }
 
-leader_trait_robocop = {
+IR_leader_trait_robocop = {
 	inline_script = {
 		script = trait/icon
 		CLASS = governor
@@ -164,7 +164,7 @@ leader_trait_robocop = {
 		crime_no_happiness = -0.1
 	}
 }
-leader_trait_robot_rapid_communication = {
+IR_leader_trait_robot_rapid_communication = {
 	inline_script = {
 		script = trait/icon
 		CLASS = governor

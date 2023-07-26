@@ -4,1375 +4,386 @@ country_event = {
     hide_window = yes
     is_triggered_only = yes
     immediate = {
-        every_country = {
 
             every_owned_leader = {
                 limit = {
                     AND = {
-                        has_trait = IR_leader_trait_overhual_combat_I
+                        has_trait = IR_leader_trait_robot_mechas
                         NOT = {
-                            species = { has_trait = trait_overhual_combat_1 }
+                            species = { has_trait = trait_robot_mechas }
                         }
                     }
                 }
-                remove_trait = IR_leader_trait_overhual_combat_I
+                remove_trait = IR_leader_trait_robot_mechas
             }
             every_pool_leader = {
                 limit = {
                     AND = {
-                        has_trait = IR_leader_trait_overhual_combat_I
+                        has_trait = IR_leader_trait_robot_mechas
                         NOT = {
-                            species = { has_trait = trait_overhual_combat_1 }
+                            species = { has_trait = trait_robot_mechas }
                         }
                     }
                 }
-                remove_trait = IR_leader_trait_overhual_combat_I
+                remove_trait = IR_leader_trait_robot_mechas
             }
             every_owned_leader = {
                 limit = {
-                    species = { has_trait = trait_overhual_combat_1 }
-                    NOT = {has_trait = IR_leader_trait_overhual_combat_I}
+                    species = { has_trait = trait_robot_mechas }
+                    NOT = {has_trait = IR_leader_trait_robot_mechas}
                 }
-                add_trait_no_notify = IR_leader_trait_overhual_combat_I
+                add_trait_no_notify = IR_leader_trait_robot_mechas
                 
             }
             every_pool_leader = {
                 limit = {
-                    species = { has_trait = trait_overhual_combat_1 }
-                    NOT = {has_trait = IR_leader_trait_overhual_combat_I}
+                    species = { has_trait = trait_robot_mechas }
+                    NOT = {has_trait = IR_leader_trait_robot_mechas}
                 }
-                add_trait_no_notify = IR_leader_trait_overhual_combat_I
-            }
-
-            every_owned_leader = {
-                limit = {
-                    AND = {
-                        has_trait = IR_leader_trait_overhual_combat_II
-                        NOT = {
-                            species = { has_trait = trait_overhual_combat_2 }
-                        }
-                    }
-                }
-                remove_trait = IR_leader_trait_overhual_combat_II
-            }
-            every_pool_leader = {
-                limit = {
-                    AND = {
-                        has_trait = IR_leader_trait_overhual_combat_II
-                        NOT = {
-                            species = { has_trait = trait_overhual_combat_2 }
-                        }
-                    }
-                }
-                remove_trait = IR_leader_trait_overhual_combat_II
-            }
-            every_owned_leader = {
-                limit = {
-                    species = { has_trait = trait_overhual_combat_2 }
-                    NOT = {has_trait = IR_leader_trait_overhual_combat_II}
-                }
-                add_trait_no_notify = IR_leader_trait_overhual_combat_II
-                
-            }
-            every_pool_leader = {
-                limit = {
-                    species = { has_trait = trait_overhual_combat_2 }
-                    NOT = {has_trait = IR_leader_trait_overhual_combat_II}
-                }
-                add_trait_no_notify = IR_leader_trait_overhual_combat_II
+                add_trait_no_notify = IR_leader_trait_robot_mechas
             }
 
             every_owned_leader = {
                 limit = {
                     AND = {
-                        has_trait = IR_leader_trait_overhual_combat_III
+                        has_trait = IR_leader_trait_td_rbot_plasma_weaponary
                         NOT = {
-                            species = { has_trait = trait_overhual_combat_3 }
+                            species = { has_trait = trait_td_rbot_plasma_weaponary }
                         }
                     }
                 }
-                remove_trait = IR_leader_trait_overhual_combat_III
+                remove_trait = IR_leader_trait_td_rbot_plasma_weaponary
             }
             every_pool_leader = {
                 limit = {
                     AND = {
-                        has_trait = IR_leader_trait_overhual_combat_III
+                        has_trait = IR_leader_trait_td_rbot_plasma_weaponary
                         NOT = {
-                            species = { has_trait = trait_overhual_combat_3 }
+                            species = { has_trait = trait_td_rbot_plasma_weaponary }
                         }
                     }
                 }
-                remove_trait = IR_leader_trait_overhual_combat_III
+                remove_trait = IR_leader_trait_td_rbot_plasma_weaponary
             }
             every_owned_leader = {
                 limit = {
-                    species = { has_trait = trait_overhual_combat_3 }
-                    NOT = {has_trait = IR_leader_trait_overhual_combat_III}
+                    species = { has_trait = trait_td_rbot_plasma_weaponary }
+                    NOT = {has_trait = IR_leader_trait_td_rbot_plasma_weaponary}
                 }
-                add_trait_no_notify = IR_leader_trait_overhual_combat_III
+                add_trait_no_notify = IR_leader_trait_td_rbot_plasma_weaponary
                 
             }
             every_pool_leader = {
                 limit = {
-                    species = { has_trait = trait_overhual_combat_3 }
-                    NOT = {has_trait = IR_leader_trait_overhual_combat_III}
+                    species = { has_trait = trait_td_rbot_plasma_weaponary }
+                    NOT = {has_trait = IR_leader_trait_td_rbot_plasma_weaponary}
                 }
-                add_trait_no_notify = IR_leader_trait_overhual_combat_III
+                add_trait_no_notify = IR_leader_trait_td_rbot_plasma_weaponary
             }
 
             every_owned_leader = {
                 limit = {
                     AND = {
-                        has_trait = IR_leader_trait_overhual_combat_IV
+                        has_trait = IR_leader_trait_td_rbot_rocket_armaments
                         NOT = {
-                            species = { has_trait = trait_overhual_combat_4 }
+                            species = { has_trait = trait_td_rbot_rocket_armaments }
                         }
                     }
                 }
-                remove_trait = IR_leader_trait_overhual_combat_IV
+                remove_trait = IR_leader_trait_td_rbot_rocket_armaments
             }
             every_pool_leader = {
                 limit = {
                     AND = {
-                        has_trait = IR_leader_trait_overhual_combat_IV
+                        has_trait = IR_leader_trait_td_rbot_rocket_armaments
                         NOT = {
-                            species = { has_trait = trait_overhual_combat_4 }
+                            species = { has_trait = trait_td_rbot_rocket_armaments }
                         }
                     }
                 }
-                remove_trait = IR_leader_trait_overhual_combat_IV
+                remove_trait = IR_leader_trait_td_rbot_rocket_armaments
             }
             every_owned_leader = {
                 limit = {
-                    species = { has_trait = trait_overhual_combat_4 }
-                    NOT = {has_trait = IR_leader_trait_overhual_combat_IV}
+                    species = { has_trait = trait_td_rbot_rocket_armaments }
+                    NOT = {has_trait = IR_leader_trait_td_rbot_rocket_armaments}
                 }
-                add_trait_no_notify = IR_leader_trait_overhual_combat_IV
+                add_trait_no_notify = IR_leader_trait_td_rbot_rocket_armaments
                 
             }
             every_pool_leader = {
                 limit = {
-                    species = { has_trait = trait_overhual_combat_4 }
-                    NOT = {has_trait = IR_leader_trait_overhual_combat_IV}
+                    species = { has_trait = trait_td_rbot_rocket_armaments }
+                    NOT = {has_trait = IR_leader_trait_td_rbot_rocket_armaments}
                 }
-                add_trait_no_notify = IR_leader_trait_overhual_combat_IV
+                add_trait_no_notify = IR_leader_trait_td_rbot_rocket_armaments
             }
 
             every_owned_leader = {
                 limit = {
                     AND = {
-                        has_trait = IR_leader_trait_overhual_shield_I
+                        has_trait = IR_leader_trait_td_rbot_laser_blasters
                         NOT = {
-                            species = { has_trait = trait_overhual_shield_1 }
+                            species = { has_trait = trait_td_rbot_laser_blasters }
                         }
                     }
                 }
-                remove_trait = IR_leader_trait_overhual_shield_I
+                remove_trait = IR_leader_trait_td_rbot_laser_blasters
             }
             every_pool_leader = {
                 limit = {
                     AND = {
-                        has_trait = IR_leader_trait_overhual_shield_I
+                        has_trait = IR_leader_trait_td_rbot_laser_blasters
                         NOT = {
-                            species = { has_trait = trait_overhual_shield_1 }
+                            species = { has_trait = trait_td_rbot_laser_blasters }
                         }
                     }
                 }
-                remove_trait = IR_leader_trait_overhual_shield_I
+                remove_trait = IR_leader_trait_td_rbot_laser_blasters
             }
             every_owned_leader = {
                 limit = {
-                    species = { has_trait = trait_overhual_shield_1 }
-                    NOT = {has_trait = IR_leader_trait_overhual_shield_I}
+                    species = { has_trait = trait_td_rbot_laser_blasters }
+                    NOT = {has_trait = IR_leader_trait_td_rbot_laser_blasters}
                 }
-                add_trait_no_notify = IR_leader_trait_overhual_shield_I
+                add_trait_no_notify = IR_leader_trait_td_rbot_laser_blasters
                 
             }
             every_pool_leader = {
                 limit = {
-                    species = { has_trait = trait_overhual_shield_1 }
-                    NOT = {has_trait = IR_leader_trait_overhual_shield_I}
+                    species = { has_trait = trait_td_rbot_laser_blasters }
+                    NOT = {has_trait = IR_leader_trait_td_rbot_laser_blasters}
                 }
-                add_trait_no_notify = IR_leader_trait_overhual_shield_I
+                add_trait_no_notify = IR_leader_trait_td_rbot_laser_blasters
             }
 
             every_owned_leader = {
                 limit = {
                     AND = {
-                        has_trait = IR_leader_trait_overhual_shield_II
+                        has_trait = IR_leader_trait_td_rbot_armoured
                         NOT = {
-                            species = { has_trait = trait_overhual_shield_2 }
+                            species = { has_trait = trait_td_rbot_armoured }
                         }
                     }
                 }
-                remove_trait = IR_leader_trait_overhual_shield_II
+                remove_trait = IR_leader_trait_td_rbot_armoured
             }
             every_pool_leader = {
                 limit = {
                     AND = {
-                        has_trait = IR_leader_trait_overhual_shield_II
+                        has_trait = IR_leader_trait_td_rbot_armoured
                         NOT = {
-                            species = { has_trait = trait_overhual_shield_2 }
+                            species = { has_trait = trait_td_rbot_armoured }
                         }
                     }
                 }
-                remove_trait = IR_leader_trait_overhual_shield_II
+                remove_trait = IR_leader_trait_td_rbot_armoured
             }
             every_owned_leader = {
                 limit = {
-                    species = { has_trait = trait_overhual_shield_2 }
-                    NOT = {has_trait = IR_leader_trait_overhual_shield_II}
+                    species = { has_trait = trait_td_rbot_armoured }
+                    NOT = {has_trait = IR_leader_trait_td_rbot_armoured}
                 }
-                add_trait_no_notify = IR_leader_trait_overhual_shield_II
+                add_trait_no_notify = IR_leader_trait_td_rbot_armoured
                 
             }
             every_pool_leader = {
                 limit = {
-                    species = { has_trait = trait_overhual_shield_2 }
-                    NOT = {has_trait = IR_leader_trait_overhual_shield_II}
+                    species = { has_trait = trait_td_rbot_armoured }
+                    NOT = {has_trait = IR_leader_trait_td_rbot_armoured}
                 }
-                add_trait_no_notify = IR_leader_trait_overhual_shield_II
+                add_trait_no_notify = IR_leader_trait_td_rbot_armoured
             }
 
             every_owned_leader = {
                 limit = {
                     AND = {
-                        has_trait = IR_leader_trait_overhual_shield_III
+                        has_trait = IR_leader_trait_robot_destructive
                         NOT = {
-                            species = { has_trait = trait_overhual_shield_3 }
+                            species = { has_trait = trait_robot_destructive }
                         }
                     }
                 }
-                remove_trait = IR_leader_trait_overhual_shield_III
+                remove_trait = IR_leader_trait_robot_destructive
             }
             every_pool_leader = {
                 limit = {
                     AND = {
-                        has_trait = IR_leader_trait_overhual_shield_III
+                        has_trait = IR_leader_trait_robot_destructive
                         NOT = {
-                            species = { has_trait = trait_overhual_shield_3 }
+                            species = { has_trait = trait_robot_destructive }
                         }
                     }
                 }
-                remove_trait = IR_leader_trait_overhual_shield_III
+                remove_trait = IR_leader_trait_robot_destructive
             }
             every_owned_leader = {
                 limit = {
-                    species = { has_trait = trait_overhual_shield_3 }
-                    NOT = {has_trait = IR_leader_trait_overhual_shield_III}
+                    species = { has_trait = trait_robot_destructive }
+                    NOT = {has_trait = IR_leader_trait_robot_destructive}
                 }
-                add_trait_no_notify = IR_leader_trait_overhual_shield_III
+                add_trait_no_notify = IR_leader_trait_robot_destructive
                 
             }
             every_pool_leader = {
                 limit = {
-                    species = { has_trait = trait_overhual_shield_3 }
-                    NOT = {has_trait = IR_leader_trait_overhual_shield_III}
+                    species = { has_trait = trait_robot_destructive }
+                    NOT = {has_trait = IR_leader_trait_robot_destructive}
                 }
-                add_trait_no_notify = IR_leader_trait_overhual_shield_III
+                add_trait_no_notify = IR_leader_trait_robot_destructive
             }
 
             every_owned_leader = {
                 limit = {
                     AND = {
-                        has_trait = IR_leader_trait_overhual_missile_I
+                        has_trait = IR_leader_trait_robot_coordinators
                         NOT = {
-                            species = { has_trait = trait_overhual_missile_1 }
+                            species = { has_trait = trait_robot_coordinators }
                         }
                     }
                 }
-                remove_trait = IR_leader_trait_overhual_missile_I
+                remove_trait = IR_leader_trait_robot_coordinators
             }
             every_pool_leader = {
                 limit = {
                     AND = {
-                        has_trait = IR_leader_trait_overhual_missile_I
+                        has_trait = IR_leader_trait_robot_coordinators
                         NOT = {
-                            species = { has_trait = trait_overhual_missile_1 }
+                            species = { has_trait = trait_robot_coordinators }
                         }
                     }
                 }
-                remove_trait = IR_leader_trait_overhual_missile_I
+                remove_trait = IR_leader_trait_robot_coordinators
             }
             every_owned_leader = {
                 limit = {
-                    species = { has_trait = trait_overhual_missile_1 }
-                    NOT = {has_trait = IR_leader_trait_overhual_missile_I}
+                    species = { has_trait = trait_robot_coordinators }
+                    NOT = {has_trait = IR_leader_trait_robot_coordinators}
                 }
-                add_trait_no_notify = IR_leader_trait_overhual_missile_I
+                add_trait_no_notify = IR_leader_trait_robot_coordinators
                 
             }
             every_pool_leader = {
                 limit = {
-                    species = { has_trait = trait_overhual_missile_1 }
-                    NOT = {has_trait = IR_leader_trait_overhual_missile_I}
+                    species = { has_trait = trait_robot_coordinators }
+                    NOT = {has_trait = IR_leader_trait_robot_coordinators}
                 }
-                add_trait_no_notify = IR_leader_trait_overhual_missile_I
+                add_trait_no_notify = IR_leader_trait_robot_coordinators
             }
 
             every_owned_leader = {
                 limit = {
                     AND = {
-                        has_trait = IR_leader_trait_overhual_missile_III
+                        has_trait = IR_leader_trait_robot_space_probes
                         NOT = {
-                            species = { has_trait = trait_overhual_missile_3 }
+                            species = { has_trait = trait_robot_space_probes }
                         }
                     }
                 }
-                remove_trait = IR_leader_trait_overhual_missile_III
+                remove_trait = IR_leader_trait_robot_space_probes
             }
             every_pool_leader = {
                 limit = {
                     AND = {
-                        has_trait = IR_leader_trait_overhual_missile_III
+                        has_trait = IR_leader_trait_robot_space_probes
                         NOT = {
-                            species = { has_trait = trait_overhual_missile_3 }
+                            species = { has_trait = trait_robot_space_probes }
                         }
                     }
                 }
-                remove_trait = IR_leader_trait_overhual_missile_III
+                remove_trait = IR_leader_trait_robot_space_probes
             }
             every_owned_leader = {
                 limit = {
-                    species = { has_trait = trait_overhual_missile_3 }
-                    NOT = {has_trait = IR_leader_trait_overhual_missile_III}
+                    species = { has_trait = trait_robot_space_probes }
+                    NOT = {has_trait = IR_leader_trait_robot_space_probes}
                 }
-                add_trait_no_notify = IR_leader_trait_overhual_missile_III
+                add_trait_no_notify = IR_leader_trait_robot_space_probes
                 
             }
             every_pool_leader = {
                 limit = {
-                    species = { has_trait = trait_overhual_missile_3 }
-                    NOT = {has_trait = IR_leader_trait_overhual_missile_III}
+                    species = { has_trait = trait_robot_space_probes }
+                    NOT = {has_trait = IR_leader_trait_robot_space_probes}
                 }
-                add_trait_no_notify = IR_leader_trait_overhual_missile_III
+                add_trait_no_notify = IR_leader_trait_robot_space_probes
             }
 
             every_owned_leader = {
                 limit = {
                     AND = {
-                        has_trait = IR_leader_trait_overhual_kinetic_II
+                        has_trait = IR_leader_trait_robocop
                         NOT = {
-                            species = { has_trait = trait_overhual_kinetic_2 }
+                            species = { has_trait = trait_robocop }
                         }
                     }
                 }
-                remove_trait = IR_leader_trait_overhual_kinetic_II
+                remove_trait = IR_leader_trait_robocop
             }
             every_pool_leader = {
                 limit = {
                     AND = {
-                        has_trait = IR_leader_trait_overhual_kinetic_II
+                        has_trait = IR_leader_trait_robocop
                         NOT = {
-                            species = { has_trait = trait_overhual_kinetic_2 }
+                            species = { has_trait = trait_robocop }
                         }
                     }
                 }
-                remove_trait = IR_leader_trait_overhual_kinetic_II
+                remove_trait = IR_leader_trait_robocop
             }
             every_owned_leader = {
                 limit = {
-                    species = { has_trait = trait_overhual_kinetic_2 }
-                    NOT = {has_trait = IR_leader_trait_overhual_kinetic_II}
+                    species = { has_trait = trait_robocop }
+                    NOT = {has_trait = IR_leader_trait_robocop}
                 }
-                add_trait_no_notify = IR_leader_trait_overhual_kinetic_II
+                add_trait_no_notify = IR_leader_trait_robocop
                 
             }
             every_pool_leader = {
                 limit = {
-                    species = { has_trait = trait_overhual_kinetic_2 }
-                    NOT = {has_trait = IR_leader_trait_overhual_kinetic_II}
+                    species = { has_trait = trait_robocop }
+                    NOT = {has_trait = IR_leader_trait_robocop}
                 }
-                add_trait_no_notify = IR_leader_trait_overhual_kinetic_II
+                add_trait_no_notify = IR_leader_trait_robocop
             }
 
             every_owned_leader = {
                 limit = {
                     AND = {
-                        has_trait = IR_leader_trait_overhual_kinetic_IV
+                        has_trait = IR_leader_trait_robot_rapid_communication
                         NOT = {
-                            species = { has_trait = trait_overhual_kinetic_4 }
+                            species = { has_trait = trait_robot_rapid_communication }
                         }
                     }
                 }
-                remove_trait = IR_leader_trait_overhual_kinetic_IV
+                remove_trait = IR_leader_trait_robot_rapid_communication
             }
             every_pool_leader = {
                 limit = {
                     AND = {
-                        has_trait = IR_leader_trait_overhual_kinetic_IV
+                        has_trait = IR_leader_trait_robot_rapid_communication
                         NOT = {
-                            species = { has_trait = trait_overhual_kinetic_4 }
+                            species = { has_trait = trait_robot_rapid_communication }
                         }
                     }
                 }
-                remove_trait = IR_leader_trait_overhual_kinetic_IV
+                remove_trait = IR_leader_trait_robot_rapid_communication
             }
             every_owned_leader = {
                 limit = {
-                    species = { has_trait = trait_overhual_kinetic_4 }
-                    NOT = {has_trait = IR_leader_trait_overhual_kinetic_IV}
+                    species = { has_trait = trait_robot_rapid_communication }
+                    NOT = {has_trait = IR_leader_trait_robot_rapid_communication}
                 }
-                add_trait_no_notify = IR_leader_trait_overhual_kinetic_IV
+                add_trait_no_notify = IR_leader_trait_robot_rapid_communication
                 
             }
             every_pool_leader = {
                 limit = {
-                    species = { has_trait = trait_overhual_kinetic_4 }
-                    NOT = {has_trait = IR_leader_trait_overhual_kinetic_IV}
+                    species = { has_trait = trait_robot_rapid_communication }
+                    NOT = {has_trait = IR_leader_trait_robot_rapid_communication}
                 }
-                add_trait_no_notify = IR_leader_trait_overhual_kinetic_IV
+                add_trait_no_notify = IR_leader_trait_robot_rapid_communication
             }
 
-            every_owned_leader = {
-                limit = {
-                    AND = {
-                        has_trait = IR_leader_trait_overhual_laser_II
-                        NOT = {
-                            species = { has_trait = trait_overhual_laser_2 }
-                        }
-                    }
-                }
-                remove_trait = IR_leader_trait_overhual_laser_II
-            }
-            every_pool_leader = {
-                limit = {
-                    AND = {
-                        has_trait = IR_leader_trait_overhual_laser_II
-                        NOT = {
-                            species = { has_trait = trait_overhual_laser_2 }
-                        }
-                    }
-                }
-                remove_trait = IR_leader_trait_overhual_laser_II
-            }
-            every_owned_leader = {
-                limit = {
-                    species = { has_trait = trait_overhual_laser_2 }
-                    NOT = {has_trait = IR_leader_trait_overhual_laser_II}
-                }
-                add_trait_no_notify = IR_leader_trait_overhual_laser_II
-                
-            }
-            every_pool_leader = {
-                limit = {
-                    species = { has_trait = trait_overhual_laser_2 }
-                    NOT = {has_trait = IR_leader_trait_overhual_laser_II}
-                }
-                add_trait_no_notify = IR_leader_trait_overhual_laser_II
-            }
-
-            every_owned_leader = {
-                limit = {
-                    AND = {
-                        has_trait = IR_leader_trait_overhual_laser_IV
-                        NOT = {
-                            species = { has_trait = trait_overhual_laser_4 }
-                        }
-                    }
-                }
-                remove_trait = IR_leader_trait_overhual_laser_IV
-            }
-            every_pool_leader = {
-                limit = {
-                    AND = {
-                        has_trait = IR_leader_trait_overhual_laser_IV
-                        NOT = {
-                            species = { has_trait = trait_overhual_laser_4 }
-                        }
-                    }
-                }
-                remove_trait = IR_leader_trait_overhual_laser_IV
-            }
-            every_owned_leader = {
-                limit = {
-                    species = { has_trait = trait_overhual_laser_4 }
-                    NOT = {has_trait = IR_leader_trait_overhual_laser_IV}
-                }
-                add_trait_no_notify = IR_leader_trait_overhual_laser_IV
-                
-            }
-            every_pool_leader = {
-                limit = {
-                    species = { has_trait = trait_overhual_laser_4 }
-                    NOT = {has_trait = IR_leader_trait_overhual_laser_IV}
-                }
-                add_trait_no_notify = IR_leader_trait_overhual_laser_IV
-            }
-
-            every_owned_leader = {
-                limit = {
-                    AND = {
-                        has_trait = IR_leader_trait_overhual_bombardment_IV
-                        NOT = {
-                            species = { has_trait = trait_overhual_bombardment_4 }
-                        }
-                    }
-                }
-                remove_trait = IR_leader_trait_overhual_bombardment_IV
-            }
-            every_pool_leader = {
-                limit = {
-                    AND = {
-                        has_trait = IR_leader_trait_overhual_bombardment_IV
-                        NOT = {
-                            species = { has_trait = trait_overhual_bombardment_4 }
-                        }
-                    }
-                }
-                remove_trait = IR_leader_trait_overhual_bombardment_IV
-            }
-            every_owned_leader = {
-                limit = {
-                    species = { has_trait = trait_overhual_bombardment_4 }
-                    NOT = {has_trait = IR_leader_trait_overhual_bombardment_IV}
-                }
-                add_trait_no_notify = IR_leader_trait_overhual_bombardment_IV
-                
-            }
-            every_pool_leader = {
-                limit = {
-                    species = { has_trait = trait_overhual_bombardment_4 }
-                    NOT = {has_trait = IR_leader_trait_overhual_bombardment_IV}
-                }
-                add_trait_no_notify = IR_leader_trait_overhual_bombardment_IV
-            }
-
-            every_owned_leader = {
-                limit = {
-                    AND = {
-                        has_trait = IR_leader_trait_overhual_disruptor_IV
-                        NOT = {
-                            species = { has_trait = trait_overhual_disruptor_4 }
-                        }
-                    }
-                }
-                remove_trait = IR_leader_trait_overhual_disruptor_IV
-            }
-            every_pool_leader = {
-                limit = {
-                    AND = {
-                        has_trait = IR_leader_trait_overhual_disruptor_IV
-                        NOT = {
-                            species = { has_trait = trait_overhual_disruptor_4 }
-                        }
-                    }
-                }
-                remove_trait = IR_leader_trait_overhual_disruptor_IV
-            }
-            every_owned_leader = {
-                limit = {
-                    species = { has_trait = trait_overhual_disruptor_4 }
-                    NOT = {has_trait = IR_leader_trait_overhual_disruptor_IV}
-                }
-                add_trait_no_notify = IR_leader_trait_overhual_disruptor_IV
-                
-            }
-            every_pool_leader = {
-                limit = {
-                    species = { has_trait = trait_overhual_disruptor_4 }
-                    NOT = {has_trait = IR_leader_trait_overhual_disruptor_IV}
-                }
-                add_trait_no_notify = IR_leader_trait_overhual_disruptor_IV
-            }
-
-            every_owned_leader = {
-                limit = {
-                    AND = {
-                        has_trait = IR_leader_trait_overhual_speed_IV
-                        NOT = {
-                            species = { has_trait = trait_overhual_speed_4 }
-                        }
-                    }
-                }
-                remove_trait = IR_leader_trait_overhual_speed_IV
-            }
-            every_pool_leader = {
-                limit = {
-                    AND = {
-                        has_trait = IR_leader_trait_overhual_speed_IV
-                        NOT = {
-                            species = { has_trait = trait_overhual_speed_4 }
-                        }
-                    }
-                }
-                remove_trait = IR_leader_trait_overhual_speed_IV
-            }
-            every_owned_leader = {
-                limit = {
-                    species = { has_trait = trait_overhual_speed_4 }
-                    NOT = {has_trait = IR_leader_trait_overhual_speed_IV}
-                }
-                add_trait_no_notify = IR_leader_trait_overhual_speed_IV
-                
-            }
-            every_pool_leader = {
-                limit = {
-                    species = { has_trait = trait_overhual_speed_4 }
-                    NOT = {has_trait = IR_leader_trait_overhual_speed_IV}
-                }
-                add_trait_no_notify = IR_leader_trait_overhual_speed_IV
-            }
-
-            every_owned_leader = {
-                limit = {
-                    AND = {
-                        has_trait = IR_leader_trait_overhual_strikecraft_I
-                        NOT = {
-                            species = { has_trait = trait_overhual_strikecraft_1 }
-                        }
-                    }
-                }
-                remove_trait = IR_leader_trait_overhual_strikecraft_I
-            }
-            every_pool_leader = {
-                limit = {
-                    AND = {
-                        has_trait = IR_leader_trait_overhual_strikecraft_I
-                        NOT = {
-                            species = { has_trait = trait_overhual_strikecraft_1 }
-                        }
-                    }
-                }
-                remove_trait = IR_leader_trait_overhual_strikecraft_I
-            }
-            every_owned_leader = {
-                limit = {
-                    species = { has_trait = trait_overhual_strikecraft_1 }
-                    NOT = {has_trait = IR_leader_trait_overhual_strikecraft_I}
-                }
-                add_trait_no_notify = IR_leader_trait_overhual_strikecraft_I
-                
-            }
-            every_pool_leader = {
-                limit = {
-                    species = { has_trait = trait_overhual_strikecraft_1 }
-                    NOT = {has_trait = IR_leader_trait_overhual_strikecraft_I}
-                }
-                add_trait_no_notify = IR_leader_trait_overhual_strikecraft_I
-            }
-
-            every_owned_leader = {
-                limit = {
-                    AND = {
-                        has_trait = IR_leader_trait_overhual_strikecraft_III
-                        NOT = {
-                            species = { has_trait = trait_overhual_strikecraft_3 }
-                        }
-                    }
-                }
-                remove_trait = IR_leader_trait_overhual_strikecraft_III
-            }
-            every_pool_leader = {
-                limit = {
-                    AND = {
-                        has_trait = IR_leader_trait_overhual_strikecraft_III
-                        NOT = {
-                            species = { has_trait = trait_overhual_strikecraft_3 }
-                        }
-                    }
-                }
-                remove_trait = IR_leader_trait_overhual_strikecraft_III
-            }
-            every_owned_leader = {
-                limit = {
-                    species = { has_trait = trait_overhual_strikecraft_3 }
-                    NOT = {has_trait = IR_leader_trait_overhual_strikecraft_III}
-                }
-                add_trait_no_notify = IR_leader_trait_overhual_strikecraft_III
-                
-            }
-            every_pool_leader = {
-                limit = {
-                    species = { has_trait = trait_overhual_strikecraft_3 }
-                    NOT = {has_trait = IR_leader_trait_overhual_strikecraft_III}
-                }
-                add_trait_no_notify = IR_leader_trait_overhual_strikecraft_III
-            }
-
-            every_owned_leader = {
-                limit = {
-                    AND = {
-                        has_trait = IR_leader_trait_overhual_radar_I
-                        NOT = {
-                            species = { has_trait = trait_overhual_radar_1 }
-                        }
-                    }
-                }
-                remove_trait = IR_leader_trait_overhual_radar_I
-            }
-            every_pool_leader = {
-                limit = {
-                    AND = {
-                        has_trait = IR_leader_trait_overhual_radar_I
-                        NOT = {
-                            species = { has_trait = trait_overhual_radar_1 }
-                        }
-                    }
-                }
-                remove_trait = IR_leader_trait_overhual_radar_I
-            }
-            every_owned_leader = {
-                limit = {
-                    species = { has_trait = trait_overhual_radar_1 }
-                    NOT = {has_trait = IR_leader_trait_overhual_radar_I}
-                }
-                add_trait_no_notify = IR_leader_trait_overhual_radar_I
-                
-            }
-            every_pool_leader = {
-                limit = {
-                    species = { has_trait = trait_overhual_radar_1 }
-                    NOT = {has_trait = IR_leader_trait_overhual_radar_I}
-                }
-                add_trait_no_notify = IR_leader_trait_overhual_radar_I
-            }
-
-            every_owned_leader = {
-                limit = {
-                    AND = {
-                        has_trait = IR_leader_trait_overhual_radar_II
-                        NOT = {
-                            species = { has_trait = trait_overhual_radar_2 }
-                        }
-                    }
-                }
-                remove_trait = IR_leader_trait_overhual_radar_II
-            }
-            every_pool_leader = {
-                limit = {
-                    AND = {
-                        has_trait = IR_leader_trait_overhual_radar_II
-                        NOT = {
-                            species = { has_trait = trait_overhual_radar_2 }
-                        }
-                    }
-                }
-                remove_trait = IR_leader_trait_overhual_radar_II
-            }
-            every_owned_leader = {
-                limit = {
-                    species = { has_trait = trait_overhual_radar_2 }
-                    NOT = {has_trait = IR_leader_trait_overhual_radar_II}
-                }
-                add_trait_no_notify = IR_leader_trait_overhual_radar_II
-                
-            }
-            every_pool_leader = {
-                limit = {
-                    species = { has_trait = trait_overhual_radar_2 }
-                    NOT = {has_trait = IR_leader_trait_overhual_radar_II}
-                }
-                add_trait_no_notify = IR_leader_trait_overhual_radar_II
-            }
-
-            every_owned_leader = {
-                limit = {
-                    AND = {
-                        has_trait = IR_leader_trait_overhual_radar_III
-                        NOT = {
-                            species = { has_trait = trait_overhual_radar_3 }
-                        }
-                    }
-                }
-                remove_trait = IR_leader_trait_overhual_radar_III
-            }
-            every_pool_leader = {
-                limit = {
-                    AND = {
-                        has_trait = IR_leader_trait_overhual_radar_III
-                        NOT = {
-                            species = { has_trait = trait_overhual_radar_3 }
-                        }
-                    }
-                }
-                remove_trait = IR_leader_trait_overhual_radar_III
-            }
-            every_owned_leader = {
-                limit = {
-                    species = { has_trait = trait_overhual_radar_3 }
-                    NOT = {has_trait = IR_leader_trait_overhual_radar_III}
-                }
-                add_trait_no_notify = IR_leader_trait_overhual_radar_III
-                
-            }
-            every_pool_leader = {
-                limit = {
-                    species = { has_trait = trait_overhual_radar_3 }
-                    NOT = {has_trait = IR_leader_trait_overhual_radar_III}
-                }
-                add_trait_no_notify = IR_leader_trait_overhual_radar_III
-            }
-
-            every_owned_leader = {
-                limit = {
-                    AND = {
-                        has_trait = IR_leader_trait_overhual_radar_IV
-                        NOT = {
-                            species = { has_trait = trait_overhual_radar_4 }
-                        }
-                    }
-                }
-                remove_trait = IR_leader_trait_overhual_radar_IV
-            }
-            every_pool_leader = {
-                limit = {
-                    AND = {
-                        has_trait = IR_leader_trait_overhual_radar_IV
-                        NOT = {
-                            species = { has_trait = trait_overhual_radar_4 }
-                        }
-                    }
-                }
-                remove_trait = IR_leader_trait_overhual_radar_IV
-            }
-            every_owned_leader = {
-                limit = {
-                    species = { has_trait = trait_overhual_radar_4 }
-                    NOT = {has_trait = IR_leader_trait_overhual_radar_IV}
-                }
-                add_trait_no_notify = IR_leader_trait_overhual_radar_IV
-                
-            }
-            every_pool_leader = {
-                limit = {
-                    species = { has_trait = trait_overhual_radar_4 }
-                    NOT = {has_trait = IR_leader_trait_overhual_radar_IV}
-                }
-                add_trait_no_notify = IR_leader_trait_overhual_radar_IV
-            }
-
-            every_owned_leader = {
-                limit = {
-                    AND = {
-                        has_trait = IR_leader_trait_overhual_coordination_I
-                        NOT = {
-                            species = { has_trait = trait_overhual_coordination_1 }
-                        }
-                    }
-                }
-                remove_trait = IR_leader_trait_overhual_coordination_I
-            }
-            every_pool_leader = {
-                limit = {
-                    AND = {
-                        has_trait = IR_leader_trait_overhual_coordination_I
-                        NOT = {
-                            species = { has_trait = trait_overhual_coordination_1 }
-                        }
-                    }
-                }
-                remove_trait = IR_leader_trait_overhual_coordination_I
-            }
-            every_owned_leader = {
-                limit = {
-                    species = { has_trait = trait_overhual_coordination_1 }
-                    NOT = {has_trait = IR_leader_trait_overhual_coordination_I}
-                }
-                add_trait_no_notify = IR_leader_trait_overhual_coordination_I
-                
-            }
-            every_pool_leader = {
-                limit = {
-                    species = { has_trait = trait_overhual_coordination_1 }
-                    NOT = {has_trait = IR_leader_trait_overhual_coordination_I}
-                }
-                add_trait_no_notify = IR_leader_trait_overhual_coordination_I
-            }
-
-            every_owned_leader = {
-                limit = {
-                    AND = {
-                        has_trait = IR_leader_trait_overhual_coordination_II
-                        NOT = {
-                            species = { has_trait = trait_overhual_coordination_2 }
-                        }
-                    }
-                }
-                remove_trait = IR_leader_trait_overhual_coordination_II
-            }
-            every_pool_leader = {
-                limit = {
-                    AND = {
-                        has_trait = IR_leader_trait_overhual_coordination_II
-                        NOT = {
-                            species = { has_trait = trait_overhual_coordination_2 }
-                        }
-                    }
-                }
-                remove_trait = IR_leader_trait_overhual_coordination_II
-            }
-            every_owned_leader = {
-                limit = {
-                    species = { has_trait = trait_overhual_coordination_2 }
-                    NOT = {has_trait = IR_leader_trait_overhual_coordination_II}
-                }
-                add_trait_no_notify = IR_leader_trait_overhual_coordination_II
-                
-            }
-            every_pool_leader = {
-                limit = {
-                    species = { has_trait = trait_overhual_coordination_2 }
-                    NOT = {has_trait = IR_leader_trait_overhual_coordination_II}
-                }
-                add_trait_no_notify = IR_leader_trait_overhual_coordination_II
-            }
-
-            every_owned_leader = {
-                limit = {
-                    AND = {
-                        has_trait = IR_leader_trait_overhual_fabrication_I
-                        NOT = {
-                            species = { has_trait = trait_overhual_fabrication_1 }
-                        }
-                    }
-                }
-                remove_trait = IR_leader_trait_overhual_fabrication_I
-            }
-            every_pool_leader = {
-                limit = {
-                    AND = {
-                        has_trait = IR_leader_trait_overhual_fabrication_I
-                        NOT = {
-                            species = { has_trait = trait_overhual_fabrication_1 }
-                        }
-                    }
-                }
-                remove_trait = IR_leader_trait_overhual_fabrication_I
-            }
-            every_owned_leader = {
-                limit = {
-                    species = { has_trait = trait_overhual_fabrication_1 }
-                    NOT = {has_trait = IR_leader_trait_overhual_fabrication_I}
-                }
-                add_trait_no_notify = IR_leader_trait_overhual_fabrication_I
-                
-            }
-            every_pool_leader = {
-                limit = {
-                    species = { has_trait = trait_overhual_fabrication_1 }
-                    NOT = {has_trait = IR_leader_trait_overhual_fabrication_I}
-                }
-                add_trait_no_notify = IR_leader_trait_overhual_fabrication_I
-            }
-
-            every_owned_leader = {
-                limit = {
-                    AND = {
-                        has_trait = IR_leader_trait_overhual_fabrication_II
-                        NOT = {
-                            species = { has_trait = trait_overhual_fabrication_2 }
-                        }
-                    }
-                }
-                remove_trait = IR_leader_trait_overhual_fabrication_II
-            }
-            every_pool_leader = {
-                limit = {
-                    AND = {
-                        has_trait = IR_leader_trait_overhual_fabrication_II
-                        NOT = {
-                            species = { has_trait = trait_overhual_fabrication_2 }
-                        }
-                    }
-                }
-                remove_trait = IR_leader_trait_overhual_fabrication_II
-            }
-            every_owned_leader = {
-                limit = {
-                    species = { has_trait = trait_overhual_fabrication_2 }
-                    NOT = {has_trait = IR_leader_trait_overhual_fabrication_II}
-                }
-                add_trait_no_notify = IR_leader_trait_overhual_fabrication_II
-                
-            }
-            every_pool_leader = {
-                limit = {
-                    species = { has_trait = trait_overhual_fabrication_2 }
-                    NOT = {has_trait = IR_leader_trait_overhual_fabrication_II}
-                }
-                add_trait_no_notify = IR_leader_trait_overhual_fabrication_II
-            }
-
-            every_owned_leader = {
-                limit = {
-                    AND = {
-                        has_trait = IR_leader_trait_overhual_fabrication_III
-                        NOT = {
-                            species = { has_trait = trait_overhual_fabrication_3 }
-                        }
-                    }
-                }
-                remove_trait = IR_leader_trait_overhual_fabrication_III
-            }
-            every_pool_leader = {
-                limit = {
-                    AND = {
-                        has_trait = IR_leader_trait_overhual_fabrication_III
-                        NOT = {
-                            species = { has_trait = trait_overhual_fabrication_3 }
-                        }
-                    }
-                }
-                remove_trait = IR_leader_trait_overhual_fabrication_III
-            }
-            every_owned_leader = {
-                limit = {
-                    species = { has_trait = trait_overhual_fabrication_3 }
-                    NOT = {has_trait = IR_leader_trait_overhual_fabrication_III}
-                }
-                add_trait_no_notify = IR_leader_trait_overhual_fabrication_III
-                
-            }
-            every_pool_leader = {
-                limit = {
-                    species = { has_trait = trait_overhual_fabrication_3 }
-                    NOT = {has_trait = IR_leader_trait_overhual_fabrication_III}
-                }
-                add_trait_no_notify = IR_leader_trait_overhual_fabrication_III
-            }
-
-            every_owned_leader = {
-                limit = {
-                    AND = {
-                        has_trait = IR_leader_trait_overhual_fabrication_IV
-                        NOT = {
-                            species = { has_trait = trait_overhual_fabrication_4 }
-                        }
-                    }
-                }
-                remove_trait = IR_leader_trait_overhual_fabrication_IV
-            }
-            every_pool_leader = {
-                limit = {
-                    AND = {
-                        has_trait = IR_leader_trait_overhual_fabrication_IV
-                        NOT = {
-                            species = { has_trait = trait_overhual_fabrication_4 }
-                        }
-                    }
-                }
-                remove_trait = IR_leader_trait_overhual_fabrication_IV
-            }
-            every_owned_leader = {
-                limit = {
-                    species = { has_trait = trait_overhual_fabrication_4 }
-                    NOT = {has_trait = IR_leader_trait_overhual_fabrication_IV}
-                }
-                add_trait_no_notify = IR_leader_trait_overhual_fabrication_IV
-                
-            }
-            every_pool_leader = {
-                limit = {
-                    species = { has_trait = trait_overhual_fabrication_4 }
-                    NOT = {has_trait = IR_leader_trait_overhual_fabrication_IV}
-                }
-                add_trait_no_notify = IR_leader_trait_overhual_fabrication_IV
-            }
-
-            every_owned_leader = {
-                limit = {
-                    AND = {
-                        has_trait = IR_leader_trait_overhual_gateway_I
-                        NOT = {
-                            species = { has_trait = trait_overhual_gateway_1 }
-                        }
-                    }
-                }
-                remove_trait = IR_leader_trait_overhual_gateway_I
-            }
-            every_pool_leader = {
-                limit = {
-                    AND = {
-                        has_trait = IR_leader_trait_overhual_gateway_I
-                        NOT = {
-                            species = { has_trait = trait_overhual_gateway_1 }
-                        }
-                    }
-                }
-                remove_trait = IR_leader_trait_overhual_gateway_I
-            }
-            every_owned_leader = {
-                limit = {
-                    species = { has_trait = trait_overhual_gateway_1 }
-                    NOT = {has_trait = IR_leader_trait_overhual_gateway_I}
-                }
-                add_trait_no_notify = IR_leader_trait_overhual_gateway_I
-                
-            }
-            every_pool_leader = {
-                limit = {
-                    species = { has_trait = trait_overhual_gateway_1 }
-                    NOT = {has_trait = IR_leader_trait_overhual_gateway_I}
-                }
-                add_trait_no_notify = IR_leader_trait_overhual_gateway_I
-            }
-
-            every_owned_leader = {
-                limit = {
-                    AND = {
-                        has_trait = IR_leader_trait_overhual_gateway_II
-                        NOT = {
-                            species = { has_trait = trait_overhual_gateway_2 }
-                        }
-                    }
-                }
-                remove_trait = IR_leader_trait_overhual_gateway_II
-            }
-            every_pool_leader = {
-                limit = {
-                    AND = {
-                        has_trait = IR_leader_trait_overhual_gateway_II
-                        NOT = {
-                            species = { has_trait = trait_overhual_gateway_2 }
-                        }
-                    }
-                }
-                remove_trait = IR_leader_trait_overhual_gateway_II
-            }
-            every_owned_leader = {
-                limit = {
-                    species = { has_trait = trait_overhual_gateway_2 }
-                    NOT = {has_trait = IR_leader_trait_overhual_gateway_II}
-                }
-                add_trait_no_notify = IR_leader_trait_overhual_gateway_II
-                
-            }
-            every_pool_leader = {
-                limit = {
-                    species = { has_trait = trait_overhual_gateway_2 }
-                    NOT = {has_trait = IR_leader_trait_overhual_gateway_II}
-                }
-                add_trait_no_notify = IR_leader_trait_overhual_gateway_II
-            }
-
-            every_owned_leader = {
-                limit = {
-                    AND = {
-                        has_trait = IR_leader_trait_overhual_gateway_III
-                        NOT = {
-                            species = { has_trait = trait_overhual_gateway_3 }
-                        }
-                    }
-                }
-                remove_trait = IR_leader_trait_overhual_gateway_III
-            }
-            every_pool_leader = {
-                limit = {
-                    AND = {
-                        has_trait = IR_leader_trait_overhual_gateway_III
-                        NOT = {
-                            species = { has_trait = trait_overhual_gateway_3 }
-                        }
-                    }
-                }
-                remove_trait = IR_leader_trait_overhual_gateway_III
-            }
-            every_owned_leader = {
-                limit = {
-                    species = { has_trait = trait_overhual_gateway_3 }
-                    NOT = {has_trait = IR_leader_trait_overhual_gateway_III}
-                }
-                add_trait_no_notify = IR_leader_trait_overhual_gateway_III
-                
-            }
-            every_pool_leader = {
-                limit = {
-                    species = { has_trait = trait_overhual_gateway_3 }
-                    NOT = {has_trait = IR_leader_trait_overhual_gateway_III}
-                }
-                add_trait_no_notify = IR_leader_trait_overhual_gateway_III
-            }
-
-            every_owned_leader = {
-                limit = {
-                    AND = {
-                        has_trait = IR_leader_trait_overhual_gateway_IV
-                        NOT = {
-                            species = { has_trait = trait_overhual_gateway_4 }
-                        }
-                    }
-                }
-                remove_trait = IR_leader_trait_overhual_gateway_IV
-            }
-            every_pool_leader = {
-                limit = {
-                    AND = {
-                        has_trait = IR_leader_trait_overhual_gateway_IV
-                        NOT = {
-                            species = { has_trait = trait_overhual_gateway_4 }
-                        }
-                    }
-                }
-                remove_trait = IR_leader_trait_overhual_gateway_IV
-            }
-            every_owned_leader = {
-                limit = {
-                    species = { has_trait = trait_overhual_gateway_4 }
-                    NOT = {has_trait = IR_leader_trait_overhual_gateway_IV}
-                }
-                add_trait_no_notify = IR_leader_trait_overhual_gateway_IV
-                
-            }
-            every_pool_leader = {
-                limit = {
-                    species = { has_trait = trait_overhual_gateway_4 }
-                    NOT = {has_trait = IR_leader_trait_overhual_gateway_IV}
-                }
-                add_trait_no_notify = IR_leader_trait_overhual_gateway_IV
-            }
-
-            every_owned_leader = {
-                limit = {
-                    AND = {
-                        has_trait = IR_leader_trait_overhual_jamming_I
-                        NOT = {
-                            species = { has_trait = trait_overhual_jamming_1 }
-                        }
-                    }
-                }
-                remove_trait = IR_leader_trait_overhual_jamming_I
-            }
-            every_pool_leader = {
-                limit = {
-                    AND = {
-                        has_trait = IR_leader_trait_overhual_jamming_I
-                        NOT = {
-                            species = { has_trait = trait_overhual_jamming_1 }
-                        }
-                    }
-                }
-                remove_trait = IR_leader_trait_overhual_jamming_I
-            }
-            every_owned_leader = {
-                limit = {
-                    species = { has_trait = trait_overhual_jamming_1 }
-                    NOT = {has_trait = IR_leader_trait_overhual_jamming_I}
-                }
-                add_trait_no_notify = IR_leader_trait_overhual_jamming_I
-                
-            }
-            every_pool_leader = {
-                limit = {
-                    species = { has_trait = trait_overhual_jamming_1 }
-                    NOT = {has_trait = IR_leader_trait_overhual_jamming_I}
-                }
-                add_trait_no_notify = IR_leader_trait_overhual_jamming_I
-            }
-
-            every_owned_leader = {
-                limit = {
-                    AND = {
-                        has_trait = IR_leader_trait_overhual_jamming_II
-                        NOT = {
-                            species = { has_trait = trait_overhual_jamming_2 }
-                        }
-                    }
-                }
-                remove_trait = IR_leader_trait_overhual_jamming_II
-            }
-            every_pool_leader = {
-                limit = {
-                    AND = {
-                        has_trait = IR_leader_trait_overhual_jamming_II
-                        NOT = {
-                            species = { has_trait = trait_overhual_jamming_2 }
-                        }
-                    }
-                }
-                remove_trait = IR_leader_trait_overhual_jamming_II
-            }
-            every_owned_leader = {
-                limit = {
-                    species = { has_trait = trait_overhual_jamming_2 }
-                    NOT = {has_trait = IR_leader_trait_overhual_jamming_II}
-                }
-                add_trait_no_notify = IR_leader_trait_overhual_jamming_II
-                
-            }
-            every_pool_leader = {
-                limit = {
-                    species = { has_trait = trait_overhual_jamming_2 }
-                    NOT = {has_trait = IR_leader_trait_overhual_jamming_II}
-                }
-                add_trait_no_notify = IR_leader_trait_overhual_jamming_II
-            }
-
-            every_owned_leader = {
-                limit = {
-                    AND = {
-                        has_trait = IR_leader_trait_overhual_jamming_III
-                        NOT = {
-                            species = { has_trait = trait_overhual_jamming_3 }
-                        }
-                    }
-                }
-                remove_trait = IR_leader_trait_overhual_jamming_III
-            }
-            every_pool_leader = {
-                limit = {
-                    AND = {
-                        has_trait = IR_leader_trait_overhual_jamming_III
-                        NOT = {
-                            species = { has_trait = trait_overhual_jamming_3 }
-                        }
-                    }
-                }
-                remove_trait = IR_leader_trait_overhual_jamming_III
-            }
-            every_owned_leader = {
-                limit = {
-                    species = { has_trait = trait_overhual_jamming_3 }
-                    NOT = {has_trait = IR_leader_trait_overhual_jamming_III}
-                }
-                add_trait_no_notify = IR_leader_trait_overhual_jamming_III
-                
-            }
-            every_pool_leader = {
-                limit = {
-                    species = { has_trait = trait_overhual_jamming_3 }
-                    NOT = {has_trait = IR_leader_trait_overhual_jamming_III}
-                }
-                add_trait_no_notify = IR_leader_trait_overhual_jamming_III
-            }
-
-            every_owned_leader = {
-                limit = {
-                    AND = {
-                        has_trait = IR_leader_trait_overhual_jamming_IV
-                        NOT = {
-                            species = { has_trait = trait_overhual_jamming_4 }
-                        }
-                    }
-                }
-                remove_trait = IR_leader_trait_overhual_jamming_IV
-            }
-            every_pool_leader = {
-                limit = {
-                    AND = {
-                        has_trait = IR_leader_trait_overhual_jamming_IV
-                        NOT = {
-                            species = { has_trait = trait_overhual_jamming_4 }
-                        }
-                    }
-                }
-                remove_trait = IR_leader_trait_overhual_jamming_IV
-            }
-            every_owned_leader = {
-                limit = {
-                    species = { has_trait = trait_overhual_jamming_4 }
-                    NOT = {has_trait = IR_leader_trait_overhual_jamming_IV}
-                }
-                add_trait_no_notify = IR_leader_trait_overhual_jamming_IV
-                
-            }
-            every_pool_leader = {
-                limit = {
-                    species = { has_trait = trait_overhual_jamming_4 }
-                    NOT = {has_trait = IR_leader_trait_overhual_jamming_IV}
-                }
-                add_trait_no_notify = IR_leader_trait_overhual_jamming_IV
-            }
-    	}
 	}
 }

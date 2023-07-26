@@ -17,7 +17,6 @@ country_event = {
     hide_window = yes
     is_triggered_only = yes
     immediate = {
-        every_country = {
 """
 
     event_template = ""
@@ -66,7 +65,7 @@ country_event = {
             }
 """
     
-    f.write(start + event_template + "    	}")
+    f.write(start + event_template )
     f.write("\n\t}\n}")
 
 def parse_dir():
